@@ -8,16 +8,15 @@ import java.io.File;
 
 public class GamePanel extends JPanel {
 
-    int xScreenPlace = 0;
+    float xScreenPlace = 0;
 
-    private BufferedImage cheese;
-    int[][] map;
+    private BufferedImage tomato;
+    Tile[][] map;
 
-    public GamePanel() {
-        File file = new File("Cheese.jpg");
+    public GamePanel(Tile[][] map) {
 
-
-        cheese = Images.ReadImage(file);
+        this.map = map;
+        tomato = Images.ReadImage(new File("images/Cheese.jpg"));
     }
 
     @Override
@@ -25,9 +24,24 @@ public class GamePanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        for (int x = 0; x < 1024; x = x + 64) {
-            for (int y = 0; y < 768; y = y + 64) {
-                g2.drawImage(cheese, null, x, y);
+        for (int x = 0; x < 16; x++) {
+            for (int y = 0; y < 12; y++) {
+                BufferedImage image = null;
+                switch (map[x][y]) {
+                    case TOMATO:
+                        image = tomato;
+                        break;
+                    case STEM:
+                        break;
+                    case PIT:
+                        break;
+                    case AIR:
+                        break;
+                    case GROUND:
+                        break;
+                }
+                g2.drawImage(image, null, x, y);
+
             }
         }
 

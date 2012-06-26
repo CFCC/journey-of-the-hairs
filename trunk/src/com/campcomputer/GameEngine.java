@@ -3,10 +3,10 @@ package com.campcomputer;
 import java.util.Collection;
 
 public class GameEngine {
-    final static int MAIN_CHAR = 1;
 
-    Entity player;
-    Collection<Entity> Entities;
+    private Tile[][] Map;
+    private Entity player;
+    private Collection<Entity> Entities;
 
 
     public GameEngine() {
@@ -14,7 +14,7 @@ public class GameEngine {
     }
 
     private void InitializeMap() {
-        Tile[][] Map = new Tile[16][12];
+        Map = new Tile[16][12];
         for (int x = 0; x < Map.length; x++)
             for (int y = 0; y < Map[0].length; y++)
                 Map[x][y] = Tile.AIR;
@@ -33,6 +33,9 @@ public class GameEngine {
         return Entities;
     }
 
+    public Tile[][] getMap() {
+        return Map;
+    }
 
     public void tick(){
 
