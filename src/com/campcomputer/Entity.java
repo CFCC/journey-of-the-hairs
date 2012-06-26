@@ -5,6 +5,10 @@ public class Entity {
     private float y = 0;
     private int health = 100;
 
+    private float xVel = 0;
+    private float yVel = 0;
+
+
     public float getX() {
         return x;
     }
@@ -27,5 +31,21 @@ public class Entity {
 
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    public float getxVel() {
+        return xVel;
+    }
+
+    public void setxVel(float xVel) {
+        this.xVel = xVel;
+    }
+
+    public float getyVel() {
+        return yVel;
+    }
+
+    public void setyVel(float yVel) {
+        this.yVel = yVel;
     }
 }
