@@ -28,3 +28,4 @@ public class GamePanel extends JPanel {
         g2.drawImage(cheese, null, 100, 100);
     }
 }
+
