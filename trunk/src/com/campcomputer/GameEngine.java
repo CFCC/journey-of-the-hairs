@@ -41,10 +41,10 @@ public class GameEngine {
         player.setxVel(1);
     }
     public void jump(){
-
+        player.setyVel(3);
     }
     public void gravity(){
-        //maintain acceleration 15 down
+        player.setyVel(-1);
     }
     public void acceleration(){
         //increase velocity/tick
