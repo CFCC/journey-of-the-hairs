@@ -1,5 +1,5 @@
 package com.campcomputer;
 
 public enum Tile {
-    TOMATO,STEM,PIT,AIR,GROUND;
+    PLANT,LETTUCE,CARROT,AIR,GROUND
 }

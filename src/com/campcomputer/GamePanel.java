@@ -36,13 +36,13 @@ public class GamePanel extends JPanel {
             for (int y = 0; y < 12; y++) {
                 BufferedImage image = null;
                 switch (map[x][y]) {
-                    case TOMATO:
+                    case PLANT:
                         image = tomato;
                         break;
-                    case STEM:
-                        image = stem;
-                        break;
-                    case PIT:
+//                    case STEM:
+//                        image = stem;
+//                        break;
+                    case CARROT:
                         image = pit;
                         break;
                     case AIR:

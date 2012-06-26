@@ -26,9 +26,9 @@ public class GameEngine {
                 Map[x][y] = Tile.AIR;
         for (int i = 0; i < Map.length; i++)
             Map[i][11] = Tile.GROUND;
-        Map[6][10] = Tile.TOMATO;
-        Map[4][10] = Tile.STEM;
-        Map[5][11] = Tile.PIT;
+        Map[6][10] = Tile.PLANT;
+//        Map[4][10] = Tile.STEM;
+        Map[5][11] = Tile.CARROT;
     }
 
     public Entity getPlayer() {
