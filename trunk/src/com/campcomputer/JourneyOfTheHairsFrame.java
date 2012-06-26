@@ -18,6 +18,8 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
         add(new GamePanel(engine.getMap()));
 
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
         setSize(1024, 768);
     }
 }
