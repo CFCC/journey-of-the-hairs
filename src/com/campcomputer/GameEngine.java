@@ -1,5 +1,7 @@
 package com.campcomputer;
 
+import com.campcomputer.entity.Player;
+
 import java.util.Collection;
 
 public class GameEngine {
@@ -11,6 +13,10 @@ public class GameEngine {
 
     public GameEngine() {
         InitializeMap();
+
+        player = new Player();
+        player.setX(2);
+        player.setY(7);
     }
 
     private void InitializeMap() {
@@ -37,23 +43,45 @@ public class GameEngine {
         return Map;
     }
 
-    public void tick(){
-
+    public void tick() {
+        applyGravity();
     }
-    public void moveForward(){
+
+    public void moveForward() {
         player.setxVel(1);
     }
-    public void jump(){
+
+    public void moveBackward() {
+        player.setxVel(-1);
+    }
+
+    public void jump() {
         player.setyVel(3);
     }
-    public void gravity(){
+
+    public void applyGravity() {
         player.setyVel(-1);
     }
-    public void acceleration(){
+
+    public void acceleration() {
         //increase velocity/tick
     }
-    public void velocity(){
+
+    public void velocity() {
         //increase coordinate/tick
     }
+
+    public void isPlayerClose() {
+        //see if enemy is within a certain range of player
+    }
+
+    public void isPlayerAbove() {
+        //if player is on a platform, he shouldn't fall
+    }
+
+    public void isPlayerBelow() {
+        //
+    }
+
 }
 
