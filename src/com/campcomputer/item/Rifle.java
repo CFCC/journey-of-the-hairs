@@ -1,4 +1,4 @@
-package com.campcomputer.Item;
+package com.campcomputer.item;
 
 import com.campcomputer.Item;
 

@@ -11,12 +11,20 @@ public class GamePanel extends JPanel {
     float xScreenPlace = 0;
 
     private BufferedImage tomato;
+    private BufferedImage ground;
+    private BufferedImage stem;
+    private BufferedImage pit;
+    private BufferedImage air;
     Tile[][] map;
 
     public GamePanel(Tile[][] map) {
 
         this.map = map;
         tomato = Images.ReadImage(new File("images/Cheese.jpg"));
+        ground = Images.ReadImage(new File("images/Cheese.jpg"));
+        stem = Images.ReadImage(new File("images/Solidago_radula_stem.jpg"));
+        pit = Images.ReadImage(new File("images/Sky_Blue.png"));
+        air = Images.ReadImage(new File("images/Sky_Blue.png"));
     }
 
     @Override
@@ -32,15 +40,19 @@ public class GamePanel extends JPanel {
                         image = tomato;
                         break;
                     case STEM:
+                        image = stem;
                         break;
                     case PIT:
+                        image = pit;
                         break;
                     case AIR:
+                        image = air;
                         break;
                     case GROUND:
+                        image = ground;
                         break;
                 }
-                g2.drawImage(image, null, x, y);
+                g2.drawImage(image, null, x * 64, y * 64);
 
             }
         }
