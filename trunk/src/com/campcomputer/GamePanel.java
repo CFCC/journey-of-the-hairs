@@ -20,8 +20,8 @@ public class GamePanel extends JPanel {
     public GamePanel(Tile[][] map) {
 
         this.map = map;
-        tomato = Images.ReadImage(new File("images/Cheese.jpg"));
-        ground = Images.ReadImage(new File("images/Cheese.jpg"));
+        tomato = Images.ReadImage(new File("images/tomato.jpg"));
+        ground = Images.ReadImage(new File("images/ground.jpg"));
         stem = Images.ReadImage(new File("images/Solidago_radula_stem.jpg"));
         pit = Images.ReadImage(new File("images/Sky_Blue.png"));
         air = Images.ReadImage(new File("images/Sky_Blue.png"));
