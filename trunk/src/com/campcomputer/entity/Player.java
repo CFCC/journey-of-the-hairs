@@ -1,8 +1,9 @@
 package com.campcomputer.entity;
 
 import com.campcomputer.Entity;
+import com.campcomputer.GameEngine;
 
 public class Player extends Entity {
 
-	public Player() {super(engine);}
+	public Player(GameEngine engine) {super(engine);}
 }
