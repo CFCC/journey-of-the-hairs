@@ -1,41 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/campcomputer/Item.java" line="4" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/campcomputer/Item.java" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frames/chucknorris/6.png" />
-      <change type="DELETED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still006.png" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\Clips\Walker Texas Ranger 1\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still006.png" afterPath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker%20Texas%20Ranger%20-%20The%20Avenging%20Angel%20Final%20Fight%20(hq).mp4.Still006.png" />
-    </list>
-    <list id="176436bb-23b8-4349-bbe4-a3f96156004c" name="Failed commit: Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frames/chucknorris/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frames/chucknorris/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frames/chucknorris/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frames/chucknorris/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frames/chucknorris/5.png" />
-      <change type="DELETED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still001.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still002.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still003.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still004.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still005.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Entity.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/RocketWorm.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/RocketWorm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
-      <change type="MOVED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\Clips\Walker Texas Ranger 1\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still001.png" afterPath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker%20Texas%20Ranger%20-%20The%20Avenging%20Angel%20Final%20Fight%20(hq).mp4.Still001.png" />
-      <change type="MOVED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\Clips\Walker Texas Ranger 1\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still002.png" afterPath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker%20Texas%20Ranger%20-%20The%20Avenging%20Angel%20Final%20Fight%20(hq).mp4.Still002.png" />
-      <change type="MOVED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\Clips\Walker Texas Ranger 1\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still003.png" afterPath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker%20Texas%20Ranger%20-%20The%20Avenging%20Angel%20Final%20Fight%20(hq).mp4.Still003.png" />
-      <change type="MOVED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\Clips\Walker Texas Ranger 1\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still004.png" afterPath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker%20Texas%20Ranger%20-%20The%20Avenging%20Angel%20Final%20Fight%20(hq).mp4.Still004.png" />
-      <change type="MOVED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\Clips\Walker Texas Ranger 1\Walker Texas Ranger - The Avenging Angel Final Fight (hq).mp4.Still005.png" afterPath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\frames\chucknorris\Walker%20Texas%20Ranger%20-%20The%20Avenging%20Angel%20Final%20Fight%20(hq).mp4.Still005.png" />
-      <change type="MOVED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\Clips\Walker Texas Ranger 1" afterPath="$PROJECT_DIR$/frames/chucknorris" />
-      <change type="MOVED" beforePath="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\Clips" afterPath="$PROJECT_DIR$/frames" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,14 +14,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/JourneyOfTheHairs$Cheese.coverage" NAME="Cheese Coverage Results" MODIFIED="1340652336872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.campcomputer.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JourneyOfTheHairs$JourneyOfTheHairs.coverage" NAME="JourneyOfTheHairs Coverage Results" MODIFIED="1340724990772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.campcomputer.*</FILTER>
-    </SUITE>
-  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -101,76 +61,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GamePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GamePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChuckNorris.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="10" selection-start="385" selection-end="385" vertical-scroll-proportion="0.2199688">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameEngine.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameEngine.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DragonFly.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="21" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+            <state line="35" column="0" selection-start="880" selection-end="880" vertical-scroll-proportion="0.3309481">
               <folding>
-                <element signature="e#476#491#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RocketWorm.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/RocketWorm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuicideStinkBug.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -185,30 +82,27 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/campcomputer/Item/Rifle.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/Item/Shotgun.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/Item/MachineGun.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/Item/MiniGun.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/Item.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/item/Pistol.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/Tile.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java" />
+        <option value="$PROJECT_DIR$/src/JourneyOfTheHairs.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairs.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/GamePanel.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/RocketWorm.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java" />
+        <option value="$PROJECT_DIR$/src/GameBoard.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/GameBoard.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/Tile.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
       </list>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.7" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="267" />
-    <option name="y" value="109" />
-    <option name="width" value="1613" />
-    <option name="height" value="1031" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -217,7 +111,9 @@
     <OptionsSetting value="false" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -236,20 +132,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,7 +146,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemId" value="JounreyOfTheHairs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,7 +156,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemId" value="JounreyOfTheHairs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -292,7 +174,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="JounreyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="campcomputer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="item" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JounreyOfTheHairs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -308,38 +212,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frames" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chucknorris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -348,6 +220,20 @@
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -366,20 +252,19 @@
     <property name="project.structure.side.proportion" value="0.20000006" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.campcomputer.entity" />
-      <recent name="com.campcomputer" />
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.campcomputer.Tile" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\images" />
-      <recent name="C:\Users\cosmotic\Desktop\JourneyOfTheHairs" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.campcomputer" />
     </key>
   </component>
   <component name="RestoreUpdateTree">
@@ -397,7 +282,10 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="44">C:\Users\cosmotic\Desktop\JourneyOfTheHairs\src\com\campcomputer\Entity.java</PATH>
+            <PATH vcs="svn" revision="47">C:\Users\Jordan\JounreyOfTheHairs\images\background.png</PATH>
+            <PATH vcs="svn" revision="47">C:\Users\Jordan\JounreyOfTheHairs\images\sketch.png</PATH>
+            <PATH vcs="svn" revision="47">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\GamePanel.java</PATH>
+            <PATH vcs="svn" revision="47">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\Entity.java</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -495,6 +383,17 @@
     </UpdateInfo>
   </component>
   <component name="RunManager" selected="Application.JourneyOfTheHairs">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -502,7 +401,42 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
       <method>
+        <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -517,8 +451,10 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method>
+        <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -535,8 +471,10 @@
       <module name="" />
       <envs />
       <method>
+        <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -559,34 +497,22 @@
       <envs />
       <patterns />
       <method>
+        <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.MapConverter" />
       <item index="1" class="java.lang.String" itemvalue="Application.JourneyOfTheHairs" />
     </list>
-    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-    </configuration>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SliceManager">
-    <option name="analysisUIOptions">
-      <AnalysisUIOptions />
-    </option>
-  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -602,7 +528,7 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
-    <configuration useDefault="true">C:\Users\cosmotic\AppData\Roaming\Subversion</configuration>
+    <configuration useDefault="true">C:\Users\Jordan\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
@@ -610,20 +536,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\cosmotic\Desktop\JourneyOfTheHairs" />
-          <option name="myCopyRoot" value="C:\Users\cosmotic\Desktop\JourneyOfTheHairs" />
+          <option name="myVcsRoot" value="C:\Users\Jordan\JounreyOfTheHairs" />
+          <option name="myCopyRoot" value="C:\Users\Jordan\JounreyOfTheHairs" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\.idea" />
-          <option name="myCopyRoot" value="C:\Users\cosmotic\Desktop\JourneyOfTheHairs\.idea" />
+          <option name="myVcsRoot" value="C:\Users\Jordan\JounreyOfTheHairs\.idea" />
+          <option name="myCopyRoot" value="C:\Users\Jordan\JounreyOfTheHairs\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\cosmotic\Desktop\JourneyOfTheHairs" />
-          <option name="myCopyRoot" value="C:\Users\cosmotic\Desktop\JourneyOfTheHairs" />
+          <option name="myVcsRoot" value="C:\Users\Jordan\JounreyOfTheHairs" />
+          <option name="myCopyRoot" value="C:\Users\Jordan\JounreyOfTheHairs" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -631,77 +557,89 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="" />
-      <changelist id="176436bb-23b8-4349-bbe4-a3f96156004c" name="Failed commit: Default" comment="" />
       <created>1340641694334</created>
       <updated>1340641694334</updated>
     </task>
     <task id="LOCAL-00001">
-      <created>1340644367105</created>
-      <updated>1340644367105</updated>
+      <created>1340717093128</created>
+      <updated>1340717093128</updated>
     </task>
     <task id="LOCAL-00002">
-      <created>1340644744103</created>
-      <updated>1340644744103</updated>
+      <created>1340721278102</created>
+      <updated>1340721278102</updated>
     </task>
     <task id="LOCAL-00003">
-      <created>1340716585102</created>
-      <updated>1340716585102</updated>
+      <created>1340723716110</created>
+      <updated>1340723716110</updated>
     </task>
     <task id="LOCAL-00004">
-      <created>1340721151103</created>
-      <updated>1340721151103</updated>
+      <created>1340724079102</created>
+      <updated>1340724079102</updated>
     </task>
     <task id="LOCAL-00005">
-      <created>1340726531102</created>
-      <updated>1340726531102</updated>
+      <created>1340736884107</created>
+      <updated>1340736884107</updated>
     </task>
     <task id="LOCAL-00006">
-      <created>1340737036104</created>
-      <updated>1340737036104</updated>
+      <created>1340806702103</created>
+      <updated>1340806702103</updated>
     </task>
     <task id="LOCAL-00007">
-      <created>1340737502103</created>
-      <updated>1340737502103</updated>
+      <created>1340808380102</created>
+      <updated>1340808380102</updated>
     </task>
     <task id="LOCAL-00008">
-      <created>1340806051102</created>
-      <updated>1340806051102</updated>
+      <created>1340809133102</created>
+      <updated>1340809133102</updated>
     </task>
-    <task id="LOCAL-00009">
-      <created>1340809185102</created>
-      <updated>1340809185102</updated>
-    </task>
-    <task id="LOCAL-00010">
-      <created>1340810812102</created>
-      <updated>1340810812102</updated>
-    </task>
-    <task id="LOCAL-00011">
-      <created>1340810864102</created>
-      <updated>1340810864102</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="267" y="109" width="1613" height="1031" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24660634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31731984" sideWeight="0.75339365" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4649321" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.84931505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989726" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3122172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280543" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24886191" sideWeight="0.67808217" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21182266" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -760,42 +698,39 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frames/chucknorris/2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frames/chucknorris/3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frames/chucknorris/4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frames/chucknorris/5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frames/chucknorris/1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frames/chucknorris/6.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GamePanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/Pistol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="13" selection-start="76" selection-end="76" vertical-scroll-proportion="0.12164579" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JourneyOfTheHairs.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="8" selection-start="223" selection-end="223" vertical-scroll-proportion="0.23160763" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/carrot rotated.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/hare back.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.15260324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/images/hare forward.png">
@@ -803,59 +738,52 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/hare forward1.png">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cheese.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/images/sketch.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/RocketWorm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/images/sketchmap.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#476#491#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="19" column="1" selection-start="282" selection-end="282" vertical-scroll-proportion="0.5474061" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="10" selection-start="385" selection-end="385" vertical-scroll-proportion="0.2199688">
-          <folding />
+        <state line="20" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.57781756" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="25" selection-start="71" selection-end="71" vertical-scroll-proportion="0.09123435" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="-1.7066189" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="880" selection-end="880" vertical-scroll-proportion="0.3309481">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -868,7 +796,19 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.20000006" />
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

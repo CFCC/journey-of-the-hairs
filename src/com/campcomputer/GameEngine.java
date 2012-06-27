@@ -33,7 +33,6 @@ public class GameEngine {
         for (int i = 0; i < map.length; i++)
             map[i][11] = Tile.GROUND;
         map[6][10] = Tile.CHEESE;
-//        map[4][10] = Tile.STEM;
         map[5][10] = Tile.CHEESE;
         map[5][9] = Tile.CHEESE;
         map[6][9] = Tile.CHEESE;
@@ -64,7 +63,7 @@ public class GameEngine {
         while (map[((int) playerX)][((int) (playerY + 1))] != Tile.GROUND) {
             float newvy = player.getyVel() + 1;
             player.setyVel(newvy);
-            playerY = playerY++;
+            playerY++;
             if (map[((int) playerX)][((int) (playerY + 1))] == Tile.GROUND) {
                 player.setyVel(0);
                 player.setY(playerY);
@@ -83,14 +82,14 @@ public class GameEngine {
     public void jump() {
         float playerY = player.getY();
         float playerOldY = player.getY();
-        float playerX = player.getX();
+        //float playerX = player.getX();
         player.setyVel(-2);
-        while (map[((int) playerX)][((int) (playerY - 1))] != Tile.GROUND && playerOldY - 2 != playerY) {
+        /*while (map[((int) playerX)][((int) (playerY - 1))] != Tile.GROUND && playerOldY - 2 != playerY) {
             player.setyVel(-2);
             playerY = playerY--;
             if (map[((int) playerX)][((int) (playerY - 1))] == Tile.GROUND)
                 applyMovement();
-        }
+        }*/
         if (playerOldY - 2 == playerY)
             applyMovement();
     }
@@ -109,7 +108,6 @@ public class GameEngine {
     }
 
     public boolean isPlayerAbove() {
-
         return false;
     }
 
