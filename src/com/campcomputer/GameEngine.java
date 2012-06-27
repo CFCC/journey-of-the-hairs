@@ -44,15 +44,21 @@ public class GameEngine {
     }
 
     public void tick() {
-        applyGravity();
         applyMovement();
     }
 
     private void applyMovement() {
-        //if gety(player)+1=gety(rock)->stop applying gravity
-
-
-            player.setyVel(0);
+        float playerY = player.getY();
+        float playerX = player.getX();
+        while (map[((int) playerX)][((int) (playerY + 1))] != Tile.GROUND) {
+            float newvy = player.getyVel() + 1;
+            player.setyVel(newvy);
+            playerY = playerY++;
+            if (map[((int) playerX)][((int) (playerY + 1))] == Tile.GROUND) {
+                player.setyVel(0);
+                player.setY(playerY);
+            }
+        }
     }
 
     public void moveForward() {
@@ -65,11 +71,6 @@ public class GameEngine {
 
     public void jump() {
         player.setyVel(-3);
-    }
-
-    public void applyGravity() {
-        float newvy=player.getyVel()+1;
-        player.setyVel(newvy);
     }
 
     public void acceleration() {
