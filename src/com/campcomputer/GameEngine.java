@@ -20,7 +20,7 @@ public class GameEngine {
     }
 
     private void InitializeMap() {
-        Map = new Tile[16][12];
+        Map = new Tile[200][12];
         for (int x = 0; x < Map.length; x++)
             for (int y = 0; y < Map[0].length; y++)
                 Map[x][y] = Tile.AIR;
@@ -28,7 +28,8 @@ public class GameEngine {
             Map[i][11] = Tile.GROUND;
         Map[6][10] = Tile.PLANT;
 //        Map[4][10] = Tile.STEM;
-        Map[5][11] = Tile.CARROT;
+        Map[5][11] = Tile.PIT;
+        Map[4][10] = Tile.CARROT;
     }
 
     public Entity getPlayer() {
