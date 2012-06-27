@@ -35,7 +35,7 @@ public class GamePanel extends JPanel {
         cheese = Images.ReadImage(new File("images/cheese_oh_cheese.jpg"));
         hareForward = Images.ReadImage(new File("images/hare forward.png"));
 
-        mapBackground = Images.ReadImage(new File("images/sketch.png"));
+        mapBackground = Images.ReadImage(new File("images/background.png"));
 
     }
 
