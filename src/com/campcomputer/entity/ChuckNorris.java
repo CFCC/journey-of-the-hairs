@@ -7,6 +7,15 @@ public class ChuckNorris extends Entity {
 
 	public ChuckNorris(GameEngine engine) {
 		super(engine);
+
+
+	}
+
+	public void tick() {
+		if (engine.isPlayerClose()) {
+			// walk/jog/run towards the player: engine.moveRight() or engine.moveLeft()
+			engine.moveForward();
+		}
 	}
 
 	public void attacks(){
@@ -22,7 +31,7 @@ public class ChuckNorris extends Entity {
 	}
 
 	public void lasereyes(){
-
+		//if player is within sight, the lasers will hit him.
 	}
 
 	public void armor() {

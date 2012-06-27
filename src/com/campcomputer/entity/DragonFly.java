@@ -12,6 +12,10 @@ public class DragonFly extends Entity {
 
 	public void attacks() {
 
+		engine.isPlayerClose();
+
+		// if the player is close,
+		// 		fly towards it: engine.moveLeft() or engine.moveRight()
 	}
 
 	public void eats() {
@@ -19,6 +23,15 @@ public class DragonFly extends Entity {
 	}
 
 	public void chasePlayer1() {
+		if (flyingenergy > 0) {
+			// go towards the player,
+			// solid object in the way
+		}
+	}
 
+	public void tick() {
+		if (engine.isPlayerAbove()) {
+			//fly towards player: engine.moveRight or engine.moveLeft)
+		}
 	}
 }
