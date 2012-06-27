@@ -9,7 +9,12 @@ public class SuicideStinkBug extends Entity {
 		super(engine);
 }
 
-	public void blowup() {
+    @Override
+    protected void loadImages() {
+
+    }
+
+    public void blowup() {
 
 		engine.isPlayerClose();
 
