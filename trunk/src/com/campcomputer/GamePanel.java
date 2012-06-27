@@ -16,7 +16,12 @@ public class GamePanel extends JPanel {
     private BufferedImage air;
     private BufferedImage pit;
     private BufferedImage cheese;
+
     private BufferedImage hareForward;
+
+    private BufferedImage mapBackground;
+
+
     GameEngine ourGameEngine;
 
     public GamePanel(GameEngine theGameEngine) {
@@ -27,8 +32,11 @@ public class GamePanel extends JPanel {
         carrot = Images.ReadImage(new File("images/carrot rotated.png"));
         air = Images.ReadImage(new File("images/Sky_Blue.png"));
         pit = Images.ReadImage(new File("images/Sky_Blue.png"));
-        cheese = Images.ReadImage((new File("images/cheese_oh_cheese.jpg")));
-        hareForward = Images.ReadImage((new File("images/hare forward.png")));
+        cheese = Images.ReadImage(new File("images/cheese_oh_cheese.jpg"));
+        hareForward = Images.ReadImage(new File("images/hare forward.png"));
+
+        mapBackground = Images.ReadImage(new File("images/background.png"));
+
     }
 
     @Override
@@ -36,6 +44,17 @@ public class GamePanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
+        //drawTiles(g2);
+
+        g2.drawImage(mapBackground, null, (int) (-xScreenPlace * 64), 0);
+
+        for (Entity entity : ourGameEngine.getEntities()) {
+
+            g2.drawImage(hareForward, null, (int) (entity.getX() * 64),(int)(entity.getY() * 64));
+        }
+    }
+
+    private void drawTiles(Graphics2D g2) {
         int xFirst = (int) xScreenPlace;
 
         Tile[][] map = ourGameEngine.getMap();
@@ -66,10 +85,6 @@ public class GamePanel extends JPanel {
                 g2.drawImage(image, null, (int) ((x - xScreenPlace) * 64), y * 64);
 
             }
-        }
-
-        for (Entity entity : ourGameEngine.getEntities()) {
-            g2.drawImage(hareForward, null, (int) (entity.getX() * 64),(int)(entity.getY() * 64));
         }
     }
 }
