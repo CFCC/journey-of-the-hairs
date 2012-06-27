@@ -1,8 +1,11 @@
 package com.campcomputer;
 
 import com.campcomputer.entity.ChuckNorris;
+import com.campcomputer.entity.DragonFly;
 import com.campcomputer.entity.Player;
 
+import java.awt.*;
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -60,15 +63,23 @@ public class GameEngine {
     private void applyMovement() {
         float playerY = player.getY();
         float playerX = player.getX();
+        // gravity accelerates player if no ground below player
         while (map[((int) playerX)][((int) (playerY + 1))] != Tile.GROUND) {
-            float newvy = player.getyVel() + 1;
+            float newvy = player.getyVel() + 1; //accelerate player
             player.setyVel(newvy);
-            playerY++;
-            if (map[((int) playerX)][((int) (playerY + 1))] == Tile.GROUND) {
-                player.setyVel(0);
-                player.setY(playerY);
-            }
         }
+
+        // player doesn't fall through ground
+        if (map[((int) playerX)][((int) (playerY + 1))] == Tile.GROUND) {
+            player.setyVel(0);
+        }
+
+        // player doesn't run through blocks
+        if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR || map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR)
+            player.setxVel(0);
+
+        player.setX(player.getX() + player.getxVel());
+        player.setY(player.getY() + player.getyVel());
     }
 
     public void moveForward() {
@@ -102,13 +113,16 @@ public class GameEngine {
         //increase coordinate/tick
     }
 
-    public boolean isPlayerClose() {
-        //see if enemy is within a certain range of player
-        return false;
+    public boolean isPlayerClose(Entity entity) {
+
+        Point2D playerPosition = new Point2D.Float(player.getX(), player.getY());
+        Point2D entityPosition = new Point2D.Float(entity.getX(), entity.getY());
+
+        return playerPosition.distance(entityPosition) < 10f;
     }
 
     public boolean isPlayerAbove() {
-        return false;
+        return true;
     }
 
     public void isPlayerBelow() {
