@@ -8,23 +8,25 @@ import java.io.File;
 
 public class GamePanel extends JPanel {
 
-    float xScreenPlace = 0;
+    float xScreenPlace = 0f;
 
     private BufferedImage tomato;
     private BufferedImage ground;
-    private BufferedImage stem;
-    private BufferedImage pit;
+    private BufferedImage carrot;
     private BufferedImage air;
-    Tile[][] map;
+    private BufferedImage pit;
+    private BufferedImage cheese;
+    GameEngine ourGameEngine;
 
-    public GamePanel(Tile[][] map) {
+    public GamePanel(GameEngine theGameEngine) {
 
-        this.map = map;
+        this.ourGameEngine = theGameEngine;
         tomato = Images.ReadImage(new File("images/tomato.jpg"));
         ground = Images.ReadImage(new File("images/ground.jpg"));
-        stem = Images.ReadImage(new File("images/Solidago_radula_stem.jpg"));
-        pit = Images.ReadImage(new File("images/Sky_Blue.png"));
+        carrot = Images.ReadImage(new File("images/carrot rotated.png"));
         air = Images.ReadImage(new File("images/Sky_Blue.png"));
+        pit = Images.ReadImage(new File("images/Sky_Blue.png"));
+        cheese = Images.ReadImage((new File("images/cheese_oh_cheese.jpg")));
     }
 
     @Override
@@ -32,18 +34,19 @@ public class GamePanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        for (int x = 0; x < 16; x++) {
+        int xFirst = (int) xScreenPlace;
+
+        Tile[][] map= ourGameEngine.getMap();
+
+        for (int x = xFirst; x < xFirst + 17; x++) {
             for (int y = 0; y < 12; y++) {
                 BufferedImage image = null;
                 switch (map[x][y]) {
                     case PLANT:
                         image = tomato;
                         break;
-//                    case STEM:
-//                        image = stem;
-//                        break;
                     case CARROT:
-                        image = pit;
+                        image = carrot;
                         break;
                     case AIR:
                         image = air;
@@ -51,17 +54,21 @@ public class GamePanel extends JPanel {
                     case GROUND:
                         image = ground;
                         break;
+                    case PIT:
+                        image = pit;
+                        break;
+                    case CHEESE:
+                        image = cheese;
+                        break;
                 }
-                g2.drawImage(image, null, x * 64, y * 64);
+                g2.drawImage(image, null, (int)((x - xScreenPlace) * 64), y * 64);
 
             }
         }
 
-//        g2.setColor(Color.orange);
-//        g2.drawRect(10, 20, 30, 40);
-//        g2.drawImage(cheese, null, 100, 100);
+        for (Entity entity : ourGameEngine.getEntities()) {
 
-
+        }
     }
 }
 

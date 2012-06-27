@@ -16,7 +16,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
         new BoxLayout(this, BoxLayout.X_AXIS);     
 
-        add(new GamePanel(engine.getMap()));
+        add(new GamePanel(engine));
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
