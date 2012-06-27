@@ -2,33 +2,42 @@ package com.campcomputer;
 
 import com.campcomputer.entity.Player;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class GameEngine {
 
     private Tile[][] map;
     private Entity player;
-    private Collection<Entity> Entities;
+    private ArrayList<Entity> entities = new ArrayList<Entity>();
 
 
     public GameEngine() {
         InitializeMap();
 
-        player = new Player();
-        player.setX(2);
-        player.setY(7);
+        player = new Player(this);
+        player.setX(10);
+        player.setY(10);
+
+        entities.add(player);
     }
 
     private void InitializeMap() {
-        map = new Tile[16][12];
+        map = new Tile[200][12];
         for (int x = 0; x < map.length; x++)
             for (int y = 0; y < map[0].length; y++)
                 map[x][y] = Tile.AIR;
         for (int i = 0; i < map.length; i++)
             map[i][11] = Tile.GROUND;
-        map[6][10] = Tile.PLANT;
+        map[6][10] = Tile.CHEESE;
 //        map[4][10] = Tile.STEM;
-        map[5][11] = Tile.CARROT;
+        map[5][10] = Tile.CHEESE;
+        map[5][9] = Tile.CHEESE;
+        map[6][9] = Tile.CHEESE;
+        map[5][8] = Tile.CHEESE;
+        map[6][8] = Tile.CHEESE;
+
     }
 
     public Entity getPlayer() {
@@ -36,7 +45,7 @@ public class GameEngine {
     }
 
     public Collection<Entity> getEntities() {
-        return Entities;
+        return entities;
     }
 
     public Tile[][] getMap() {

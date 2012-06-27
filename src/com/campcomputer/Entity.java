@@ -8,6 +8,11 @@ public class Entity {
     private float xVel = 0;
     private float yVel = 0;
 
+    private GameEngine engine;
+
+    public Entity(GameEngine engine) {
+        this.engine = engine;
+    }
 
     public float getX() {
         return x;

@@ -16,6 +16,7 @@ public class GamePanel extends JPanel {
     private BufferedImage air;
     private BufferedImage pit;
     private BufferedImage cheese;
+    private BufferedImage hareForward;
     GameEngine ourGameEngine;
 
     public GamePanel(GameEngine theGameEngine) {
@@ -27,6 +28,7 @@ public class GamePanel extends JPanel {
         air = Images.ReadImage(new File("images/Sky_Blue.png"));
         pit = Images.ReadImage(new File("images/Sky_Blue.png"));
         cheese = Images.ReadImage((new File("images/cheese_oh_cheese.jpg")));
+        hareForward = Images.ReadImage((new File("images/hare forward.png")));
     }
 
     @Override
@@ -36,7 +38,7 @@ public class GamePanel extends JPanel {
 
         int xFirst = (int) xScreenPlace;
 
-        Tile[][] map= ourGameEngine.getMap();
+        Tile[][] map = ourGameEngine.getMap();
 
         for (int x = xFirst; x < xFirst + 17; x++) {
             for (int y = 0; y < 12; y++) {
@@ -61,13 +63,13 @@ public class GamePanel extends JPanel {
                         image = cheese;
                         break;
                 }
-                g2.drawImage(image, null, (int)((x - xScreenPlace) * 64), y * 64);
+                g2.drawImage(image, null, (int) ((x - xScreenPlace) * 64), y * 64);
 
             }
         }
 
         for (Entity entity : ourGameEngine.getEntities()) {
-
+            g2.drawImage(hareForward, null, (int) (entity.getX() * 64),(int)(entity.getY() * 64));
         }
     }
 }
