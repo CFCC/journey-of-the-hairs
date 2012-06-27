@@ -11,8 +11,8 @@ public class GamePanel extends JPanel {
     float xScreenPlace = 0f;
 
     private BufferedImage tomato;
-    private BufferedImage ground;
     private BufferedImage carrot;
+    private BufferedImage ground;
     private BufferedImage air;
     private BufferedImage pit;
     private BufferedImage cheese;
@@ -35,7 +35,7 @@ public class GamePanel extends JPanel {
         cheese = Images.ReadImage(new File("images/cheese_oh_cheese.jpg"));
         hareForward = Images.ReadImage(new File("images/hare forward.png"));
 
-        mapBackground = Images.ReadImage(new File("images/background.png"));
+        mapBackground = Images.ReadImage(new File("images/sketch.png"));
 
     }
 
@@ -50,7 +50,7 @@ public class GamePanel extends JPanel {
 
         for (Entity entity : ourGameEngine.getEntities()) {
 
-            g2.drawImage(hareForward, null, (int) (entity.getX() * 64),(int)(entity.getY() * 64));
+
         }
     }
 

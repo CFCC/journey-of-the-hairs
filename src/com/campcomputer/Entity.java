@@ -77,4 +77,8 @@ public abstract class Entity {
 	}
 
     abstract protected void loadImages();
+
+    public List<BufferedImage> getFrames() {
+        return frames;
+    }
 }
