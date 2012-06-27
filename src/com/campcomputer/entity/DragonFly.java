@@ -10,7 +10,12 @@ public class DragonFly extends Entity {
 		super(engine);
 	}
 
-	public void attacks() {
+    @Override
+    protected void loadImages() {
+
+    }
+
+    public void attacks() {
 
 		engine.isPlayerClose();
 

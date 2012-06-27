@@ -8,7 +8,12 @@ public class RocketWorm extends Entity {
 		super(engine);
 	}
 
-	public void shootrockets() {
+    @Override
+    protected void loadImages() {
+
+    }
+
+    public void shootrockets() {
 
 		engine.isPlayerClose();
 

@@ -1,5 +1,6 @@
 package com.campcomputer;
 
+import com.campcomputer.entity.ChuckNorris;
 import com.campcomputer.entity.Player;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class GameEngine {
         player.setY(10);
 
         entities.add(player);
+        entities.add(new ChuckNorris(this));
     }
 
     private void InitializeMap() {
@@ -101,12 +103,14 @@ public class GameEngine {
         //increase coordinate/tick
     }
 
-    public void isPlayerClose() {
+    public boolean isPlayerClose() {
         //see if enemy is within a certain range of player
+        return false;
     }
 
-    public void isPlayerAbove() {
+    public boolean isPlayerAbove() {
 
+        return false;
     }
 
     public void isPlayerBelow() {

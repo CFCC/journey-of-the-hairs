@@ -1,6 +1,11 @@
 package com.campcomputer;
 
-public class Entity {
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Entity {
     private float x = 0;
     private float y = 0;
     private int health = 100;
@@ -12,9 +17,11 @@ public class Entity {
 	private boolean facingRight = true;
 
     protected GameEngine engine;
+    protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
 
     public Entity(GameEngine engine) {
         this.engine = engine;
+        loadImages();
     }
 
     public float getX() {
@@ -68,4 +75,6 @@ public class Entity {
 	public boolean isAffectedByGravity() {
 		return affectedByGravity;
 	}
+
+    abstract protected void loadImages();
 }
