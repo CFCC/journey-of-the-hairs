@@ -7,16 +7,26 @@ public class SuicideStinkBug extends Entity {
 
 	public SuicideStinkBug(GameEngine engine) {
 		super(engine);
-}
+	}
+
+	@Override
+	public void tick() {
+
+	}
 
     @Override
-    protected void loadImages() {
+    public void loadImages() {
 
     }
 
+	@Override
+	public void attack(Entity entity) {
+
+	}
+
     public void blowup() {
 
-		engine.isPlayerClose();
+		engine.isPlayerClose(this);
 
 		// explode within 5 tiles of player.
 		// explosion has a 10 tile radius.
@@ -27,7 +37,7 @@ public class SuicideStinkBug extends Entity {
 
 	public void chasesplayer1() {
 
-		engine.isPlayerClose();
+		engine.isPlayerClose(this);
 
 		// move towards player: engine.moveLeft() or engine.moveRight()
 		// solid object is in the way.

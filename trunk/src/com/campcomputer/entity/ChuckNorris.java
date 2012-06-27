@@ -26,14 +26,15 @@ public class ChuckNorris extends Entity {
         frames.add(Images.ReadImage(new File("frames/chucknorris/6.png")));
     }
 
+	@Override
     public void tick() {
-		if (engine.isPlayerClose()) {
-			// walk/jog/run towards the player: engine.moveRight() or engine.moveLeft()
-			engine.moveForward();
+		if (engine.isPlayerClose(this)) {
+			attack(engine.getPlayer());
 		}
 	}
 
-	public void attacks(){
+	@Override
+	public void attack(Entity entity){
 
 	}
 
