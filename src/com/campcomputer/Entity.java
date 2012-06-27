@@ -8,7 +8,10 @@ public class Entity {
     private float xVel = 0;
     private float yVel = 0;
 
-    private GameEngine engine;
+	private boolean affectedByGravity = true;
+	private boolean facingRight = true;
+
+    protected GameEngine engine;
 
     public Entity(GameEngine engine) {
         this.engine = engine;
@@ -53,4 +56,16 @@ public class Entity {
     public void setyVel(float yVel) {
         this.yVel = yVel;
     }
+
+	public boolean isFacingRight() {
+		return facingRight;
+	}
+
+	public boolean isFacingLeft() {
+		return !facingRight;
+	}
+
+	public boolean isAffectedByGravity() {
+		return affectedByGravity;
+	}
 }
