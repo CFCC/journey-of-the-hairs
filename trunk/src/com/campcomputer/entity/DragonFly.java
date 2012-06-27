@@ -8,35 +8,50 @@ public class DragonFly extends Entity {
 
 	public DragonFly(GameEngine engine) {
 		super(engine);
+		setAffectedByGravity(false);
 	}
 
-    @Override
-    protected void loadImages() {
+	@Override
+	protected void tick() {
+		if (engine.isPlayerAbove(this)) {
+			moveUp();
+		} else if (engine.isPlayerBelow(this)) {
+			moveDown();
+		} else if (engine.isPlayerClose(this)) {
+			attack();
+			//Try to dodge solid objects.....
+		} else {
 
-    }
+		}
+	}
 
-    public void attacks() {
+	@Override
+	protected void loadImages() {
 
-		engine.isPlayerClose();
+	}
 
-		// if the player is close,
-		// 		fly towards it: engine.moveLeft() or engine.moveRight()
+	public void attack() {
+
 	}
 
 	public void eats() {
 
 	}
 
-	public void chasePlayer1() {
-		if (flyingenergy > 0) {
-			// go towards the player,
-			// solid object in the way
-		}
+
+	public void breathfire() {
+		Player player = engine.getPlayer();
+		player.setHealth(player.getHealth() - getAttackDamage());
 	}
 
-	public void tick() {
-		if (engine.isPlayerAbove()) {
-			//fly towards player: engine.moveRight or engine.moveLeft)
+	public void chasePlayer1() {
+		if (flyingenergy > 0) {
+			// fly towards the player,
+			// solid object in the way
+		}
+		if (flyingenergy < 0) {
+			//walk towards the player,
+			// can also jump.
 		}
 	}
 }
