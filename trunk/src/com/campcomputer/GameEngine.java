@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public class GameEngine {
 
-    private Tile[][] Map;
+    private Tile[][] map;
     private Entity player;
     private Collection<Entity> Entities;
 
@@ -20,16 +20,15 @@ public class GameEngine {
     }
 
     private void InitializeMap() {
-        Map = new Tile[200][12];
-        for (int x = 0; x < Map.length; x++)
-            for (int y = 0; y < Map[0].length; y++)
-                Map[x][y] = Tile.AIR;
-        for (int i = 0; i < Map.length; i++)
-            Map[i][11] = Tile.GROUND;
-        Map[6][10] = Tile.PLANT;
-//        Map[4][10] = Tile.STEM;
-        Map[5][11] = Tile.PIT;
-        Map[4][10] = Tile.CARROT;
+        map = new Tile[16][12];
+        for (int x = 0; x < map.length; x++)
+            for (int y = 0; y < map[0].length; y++)
+                map[x][y] = Tile.AIR;
+        for (int i = 0; i < map.length; i++)
+            map[i][11] = Tile.GROUND;
+        map[6][10] = Tile.PLANT;
+//        map[4][10] = Tile.STEM;
+        map[5][11] = Tile.CARROT;
     }
 
     public Entity getPlayer() {
@@ -41,11 +40,19 @@ public class GameEngine {
     }
 
     public Tile[][] getMap() {
-        return Map;
+        return map;
     }
 
     public void tick() {
         applyGravity();
+        applyMovement();
+    }
+
+    private void applyMovement() {
+        //if gety(player)+1=gety(rock)->stop applying gravity
+
+
+            player.setyVel(0);
     }
 
     public void moveForward() {
@@ -57,11 +64,12 @@ public class GameEngine {
     }
 
     public void jump() {
-        player.setyVel(3);
+        player.setyVel(-3);
     }
 
     public void applyGravity() {
-        player.setyVel(-1);
+        float newvy=player.getyVel()+1;
+        player.setyVel(newvy);
     }
 
     public void acceleration() {
@@ -77,11 +85,11 @@ public class GameEngine {
     }
 
     public void isPlayerAbove() {
-        //if player is on a platform, he shouldn't fall
+
     }
 
     public void isPlayerBelow() {
-        //
+
     }
 
 }
