@@ -8,14 +8,24 @@ public class RocketWorm extends Entity {
 		super(engine);
 	}
 
-    @Override
-    protected void loadImages() {
+	@Override
+	public void tick() {
 
-    }
+	}
+
+	@Override
+	public void loadImages() {
+
+	}
+
+	@Override
+	public void attack(Entity entity) {
+
+	}
 
     public void shootrockets() {
 
-		engine.isPlayerClose();
+		engine.isPlayerClose(this);
 
 
 		// when player is 20 tiles away, worm will surface

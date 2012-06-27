@@ -11,4 +11,14 @@ public class Player extends Entity {
     protected void loadImages() {
 
     }
+
+	@Override
+	public void tick() {
+
+	}
+
+	@Override
+	public void attack(Entity entity) {
+
+	}
 }
