@@ -1,14 +1,15 @@
 package com.campcomputer;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Entity {
-    private float x = 0;
+	private int health = 100;
+	private int attackDamage = 10;
+
+	private float x = 0;
     private float y = 0;
-    private int health = 100;
 
     private float xVel = 0;
     private float yVel = 0;
@@ -68,6 +69,10 @@ public abstract class Entity {
 		return facingRight;
 	}
 
+	public void setEngine(GameEngine engine) {
+		this.engine = engine;
+	}
+
 	public boolean isFacingLeft() {
 		return !facingRight;
 	}
@@ -76,7 +81,35 @@ public abstract class Entity {
 		return affectedByGravity;
 	}
 
-    abstract protected void loadImages();
+	public void setAffectedByGravity(boolean affectedByGravity) {
+		this.affectedByGravity = affectedByGravity;
+	}
+
+	public void moveLeft() {
+		setX(getX() - getxVel());
+	}
+
+	public void moveRight() {
+		setX(getX() + getxVel());
+	}
+
+	public void moveUp() {
+		setY(getY() + getyVel());
+	}
+
+	public void moveDown() {
+		setY(getY() - getyVel());
+	}
+
+	public int getAttackDamage() {
+		return attackDamage;
+	}
+	public void setAttackDamage(int attackDamage) {
+		this.attackDamage = attackDamage;
+	}
+
+	abstract protected void loadImages();
+	abstract protected void tick();
 
     public List<BufferedImage> getFrames() {
         return frames;
