@@ -70,7 +70,18 @@ public class GameEngine {
     }
 
     public void jump() {
-        player.setyVel(-3);
+        float playerY = player.getY();
+        float playerOldY = player.getY();
+        float playerX = player.getX();
+        player.setyVel(-2);
+        while (map[((int) playerX)][((int) (playerY - 1))] != Tile.GROUND && playerOldY - 2 != playerY) {
+            player.setyVel(-2);
+            playerY = playerY--;
+            if (map[((int) playerX)][((int) (playerY - 1))] == Tile.GROUND)
+                applyMovement();
+        }
+        if (playerOldY - 2 == playerY)
+            applyMovement();
     }
 
     public void acceleration() {
