@@ -13,7 +13,7 @@ import java.util.List;
 public class GameEngine {
 
     private Tile[][] map;
-    private Entity player;
+    private Player player;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
 
 
@@ -44,7 +44,7 @@ public class GameEngine {
 
     }
 
-    public Entity getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
@@ -125,9 +125,10 @@ public class GameEngine {
         return true;
     }
 
-    public void isPlayerBelow() {
+    public boolean isPlayerBelow() {
 
-    }
+		return false;
+	}
 
 }
 
