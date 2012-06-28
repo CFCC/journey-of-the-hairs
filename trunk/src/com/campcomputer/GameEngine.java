@@ -1,7 +1,6 @@
 package com.campcomputer;
 
-import com.campcomputer.entity.ChuckNorris;
-import com.campcomputer.entity.Player;
+import com.campcomputer.entity.*;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
@@ -44,8 +43,25 @@ public class GameEngine {
         chuckNorris.setX(5);
         chuckNorris.setY(5);
 
+        DragonFly dragonFly = new DragonFly(this);
+        dragonFly.setX(3);
+        dragonFly.setY(3);
+
+        SuicideStinkBug stinkbug = new SuicideStinkBug(this);
+        stinkbug.setX(9);
+        stinkbug.setY(1);
+
+        RocketWorm worm = new RocketWorm(this);
+        worm.setX(7);
+        worm.setY(8);
+
+
+
         entities.add(player);
         entities.add(chuckNorris);
+        entities.add(dragonFly);
+        entities.add(stinkbug);
+        entities.add(worm);
     }
 
     private void InitializeMap() {
