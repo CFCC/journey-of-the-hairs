@@ -9,18 +9,14 @@ import java.io.File;
 import java.util.List;
 
 public class ChuckNorris extends Entity {
-	int punch = 30;
-	int roundhousekick = 100;
-	int lasereyes = 50;
-	int armor = 25;
-
-
-
+	private int punch = 30;
+	private int roundhousekick = 100;
+	private int lasereyes = 50;
+	private int armor = 25;
 
     public ChuckNorris(GameEngine engine) {
 		super(engine);
-		setHealth(999901);
-
+		setHealth(9001);
 	}
 
     @Override
@@ -46,8 +42,8 @@ public class ChuckNorris extends Entity {
 
 	}
 
-	public void punches(){
-		getAttackDamage() ;
+	public void punch(Entity entity){
+
 	}
 
 	public void roudhousekick(){
@@ -63,7 +59,7 @@ public class ChuckNorris extends Entity {
 	}
 
 	public void healing() {
-
+		setHealth(getHealth() + healingDamage);
 
 	}
 }
