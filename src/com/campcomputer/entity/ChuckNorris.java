@@ -36,6 +36,10 @@ public class ChuckNorris extends Entity {
 		if (engine.isPlayerClose(this)) {
 			attack(engine.getPlayer());
 		}
+
+		if (getHealth(CurrentHealth <= 1125)) {
+
+		}
 	}
 
 	@Override
