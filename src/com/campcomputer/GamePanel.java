@@ -15,6 +15,8 @@ public class GamePanel extends JPanel {
 
     private static final int TILE_SIZE = 64;
     float xScreenPlace = 0f;
+    float lastHealth = 0;
+
 
     private BufferedImage tomato;
     private BufferedImage carrot;
@@ -48,6 +50,16 @@ public class GamePanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+
+        if (ourGameEngine.getPlayer().getHealth() < lastHealth){
+            g2.setColor(Color.red);
+            g2.fillRect(0,0, getWidth(), getHeight());
+            lastHealth = 0;
+            return;
+        }
+        lastHealth = ourGameEngine.getPlayer().getHealth();
+
+
 
         xScreenPlace = 0;
         if(ourGameEngine.getPlayer().getX() >= 8) {
