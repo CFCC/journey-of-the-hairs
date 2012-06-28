@@ -2,9 +2,13 @@ package com.campcomputer.entity;
 
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
+import com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
+import com.sun.java.swing.action.OkAction;
 
 public class DragonFly extends Entity {
 	int flyingenergy;
+	int breathfiredamage = 33;
+	int eatsdamage = 2;
 
 	public DragonFly(GameEngine engine) {
 		super(engine);
@@ -36,14 +40,23 @@ public class DragonFly extends Entity {
 
     }
 
-    public void eats() {
-
+	/**
+	 * Attempts to eat the entity. Since the DragonFlies are small, it doesn't do a lot of damage to a player, but the
+	 * dragonfly gains health from eating.
+	 *
+	 * @param entity the thing to eat
+	 */
+    public void eats(Entity entity) {
+		entity.setHealth(entity.getHealth() - this.eatsdamage);
 	}
 
 
-	public void breathfire() {
-		Player player = engine.getPlayer();
-		player.setHealth(player.getHealth() - getAttackDamage());
+	/**
+	 * Breathe fire onto the given entity, usually a player. Instantly does a bunch of damage to it.
+	 * @param entity the thing to breathe fire on.
+	 */
+	public void breathfire(Entity entity) {
+		entity.setHealth(entity.getHealth() - this.breathfiredamage);
 	}
 
 	public void chasePlayer1() {
