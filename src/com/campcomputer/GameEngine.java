@@ -12,22 +12,22 @@ import static com.campcomputer.Tile.*;
 public class GameEngine {
 
     private Tile[][] map = {
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    CARROT,    GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    CARROT,    GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    CARROT,    GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    CARROT,    GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       PLANT,     AIR,       AIR,       AIR,       AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       PLANT,     PLANT,     AIR,       AIR,       AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       PLANT,     PLANT,     AIR,       AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       PLANT,     AIR,       AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       PLANT,     AIR,       AIR,       PLANT,     AIR,       AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       PLANT,     AIR,       AIR,       PLANT,     AIR,       AIR,       GROUND,    GROUND,    },
-            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       GROUND,    GROUND,    },
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, AIR, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, AIR, AIR, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, AIR, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, PLANT, AIR, AIR, PLANT, AIR, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, PLANT, AIR, AIR, PLANT, AIR, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND, GROUND,},
     };
     private Player player;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
@@ -88,16 +88,30 @@ public class GameEngine {
     private void applyMovement() {
         float playerY = player.getY();
         float playerX = player.getX();
-        // gravity accelerates player if no ground below player
-        //??????
+        //gravity accelerates player if no ground below player
+        //find if not air below
+        float playerYVel = player.getyVel();
+        player.setyVel(playerYVel++);
+        player.setY(playerY + playerYVel);
+        playerY = player.getY();
+        if (playerY - 1 < 0)
+            player.setyVel(0);
+        else if (map[((int) playerX)][((int) (playerY - 1))] != Tile.AIR)
+            player.setyVel(0);
 
 
         // player doesn't fall through ground
-        if (map[((int) playerX)][((int) (playerY + 1))] == Tile.GROUND) {
-            player.setyVel(0);
+        if (map[((int) playerX)][((int) (playerY + 1))] != Tile.AIR) {
+            playerY = player.getY();
+            player.setY(playerY - playerYVel);
         }
+        if (playerX - 1 == 0)
+            moveForward();
+        if (playerY - 1 == 0)
+            player.setY(1);
 
-
+        if (playerY < 0)
+            player.setY(1);
         // player doesn't run through blocks
         if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
             //only go left
@@ -105,8 +119,7 @@ public class GameEngine {
         if (player.getX() - 1 < 0) {
             player.setxVel(0);
             moveForward();
-        }
-        else if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
+        } else if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
             //only go right
             player.setxVel(0);
 
@@ -119,6 +132,9 @@ public class GameEngine {
             entity.setxVel(entity.getxVel() * .3f);
             if (Math.abs(entity.getxVel()) < .1)
                 entity.setxVel(0);
+            entity.setyVel(entity.getyVel() * .3f);
+            if (Math.abs(entity.getyVel()) < .1)
+                entity.setyVel(0);
         }
 
     }
@@ -132,7 +148,6 @@ public class GameEngine {
     }
 
     public void jump() {
-        float playerY = player.getY();
         float playerOldY = player.getY();
         //float playerX = player.getX();
         player.setyVel(-2);
@@ -142,8 +157,11 @@ public class GameEngine {
             if (map[((int) playerX)][((int) (playerY - 1))] == Tile.GROUND)
                 applyMovement();
         }*/
-        if (playerOldY - 2 == playerY)
+        if (playerOldY - 2 == player.getY()) {
+            player.setyVel(0);
+            player.setY(player.getY() - player.getyVel());
             applyMovement();
+        }
     }
 
     public void acceleration(int x, int y) {
