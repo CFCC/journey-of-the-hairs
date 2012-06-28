@@ -1,8 +1,5 @@
 package com.campcomputer;
 
-import com.campcomputer.entity.Player;
-import com.sun.xml.internal.ws.api.pipe.Engine;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -49,11 +46,11 @@ public class GamePanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        xScreenPlace = ourGameEngine.getPlayer().getX();
-        if(ourGameEngine.getPlayer().getX() == 8) {
+        xScreenPlace = 0;
+        if(ourGameEngine.getPlayer().getX() >= 8) {
             xScreenPlace = ourGameEngine.getPlayer().getX() - 8;
         }
-        if (ourGameEngine.getPlayer().getX() == 192) {
+        if (ourGameEngine.getPlayer().getX() == ourGameEngine.getMap().length) {
             xScreenPlace = ourGameEngine.getPlayer().getX() + 16;
         }
 
@@ -63,6 +60,7 @@ public class GamePanel extends JPanel {
         for (Entity entity : ourGameEngine.getEntities()) {
             if (entity.getFrames().size() > 0) {
                 g2.drawImage(entity.getCurrentFrame(), null, (int) ((entity.getX()- xScreenPlace)  * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
+                g2.drawImage(cheese, null, 10, 10);
             }
         }
 
