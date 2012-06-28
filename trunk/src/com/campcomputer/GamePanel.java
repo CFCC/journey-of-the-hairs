@@ -50,13 +50,19 @@ public class GamePanel extends JPanel {
         Graphics2D g2 = (Graphics2D) g;
 
         xScreenPlace = ourGameEngine.getPlayer().getX();
+        if(ourGameEngine.getPlayer().getX() == 8) {
+            xScreenPlace = ourGameEngine.getPlayer().getX() - 8;
+        }
+        if (ourGameEngine.getPlayer().getX() == 192) {
+            xScreenPlace = ourGameEngine.getPlayer().getX() + 16;
+        }
 
 
         g2.drawImage(mapBackground, null, (int) (-xScreenPlace * TILE_SIZE), 0);
 
         for (Entity entity : ourGameEngine.getEntities()) {
             if (entity.getFrames().size() > 0) {
-                g2.drawImage(entity.getCurrentFrame(), null, (int) (entity.getX() * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
+                g2.drawImage(entity.getCurrentFrame(), null, (int) ((entity.getX()- xScreenPlace)  * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
             }
         }
 
@@ -69,7 +75,7 @@ public class GamePanel extends JPanel {
 
         Tile[][] map = ourGameEngine.getMap();
 
-        for (int x = xFirst; x < xFirst + 17; x++) {
+        for (int x = xFirst; x < xFirst + 17 && x < map.length; x++) {
             for (int y = 0; y < 12; y++) {
                 Color color = null;
                 switch (map[x][y]) {
