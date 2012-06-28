@@ -21,8 +21,8 @@ public class GameEngine {
         InitializeMap();
 
         player = new Player(this);
-        player.setX(0);
-        player.setY(10);
+        player.setX(1);
+        player.setY(0);
 
         ChuckNorris chuckNorris = new ChuckNorris(this);
         chuckNorris.setX(5);
@@ -71,15 +71,14 @@ public class GameEngine {
         float playerY = player.getY();
         float playerX = player.getX();
         // gravity accelerates player if no ground below player
-        while (map[((int) playerX)][((int) (playerY + 1))] != Tile.GROUND) {
-            float newvy = player.getyVel() + 1; //accelerate player
-            player.setyVel(newvy);
-        }
+        //??????
+
 
         // player doesn't fall through ground
         if (map[((int) playerX)][((int) (playerY + 1))] == Tile.GROUND) {
             player.setyVel(0);
         }
+
 
         // player doesn't run through blocks
         if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
