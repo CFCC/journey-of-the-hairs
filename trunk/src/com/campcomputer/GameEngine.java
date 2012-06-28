@@ -82,8 +82,12 @@ public class GameEngine {
         }
 
         // player doesn't run through blocks
-        if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR || map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR)
-            player.setxVel(0);
+        if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR)
+            //only go left
+            player.setxVel(-1);
+        if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR)
+            //only go right
+            player.setxVel(1);
 
         player.setX(player.getX() + player.getxVel());
         player.setY(player.getY() + player.getyVel());
