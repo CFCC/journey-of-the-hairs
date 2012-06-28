@@ -1,5 +1,8 @@
 package com.campcomputer;
 
+import com.campcomputer.entity.Player;
+import com.sun.xml.internal.ws.api.pipe.Engine;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;

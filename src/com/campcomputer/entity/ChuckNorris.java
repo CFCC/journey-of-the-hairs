@@ -1,11 +1,8 @@
 package com.campcomputer.entity;
 
-import com.apple.eawt.FullScreenUtilities;
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
-import com.sun.tools.corba.se.idl.constExpr.Times;
-import com.sun.xml.internal.ws.api.message.HeaderList;
 
 import java.io.File;
 
