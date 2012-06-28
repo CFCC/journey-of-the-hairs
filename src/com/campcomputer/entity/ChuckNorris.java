@@ -1,5 +1,6 @@
 package com.campcomputer.entity;
 
+import com.apple.eawt.FullScreenUtilities;
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
@@ -14,7 +15,8 @@ public class ChuckNorris extends Entity {
 	private int roundhousekick = 100;
 	private int lasereyes = 50;
 	private int armor = 25;
-	int healing;
+	int healed = 0;
+
     public ChuckNorris(GameEngine engine) {
 		super(engine);
 		setHealth(maxhealth);
@@ -37,10 +39,9 @@ public class ChuckNorris extends Entity {
 			attack(engine.getPlayer());
 		}
 
-		if (getHealth() <= 1125) {
-			healing();
-			(int 'n' Number of Times healed)
-		if healed once, do not heal again}
+		//if (getHealth() <= 1125) {
+		//	healing();
+		//if (healed once){do not heal again }
 	}
 
 	@Override
@@ -67,6 +68,6 @@ public class ChuckNorris extends Entity {
 
 	public void healing() {
 		setHealth(maxhealth);
-
+		//	healed onece
 	}
 }
