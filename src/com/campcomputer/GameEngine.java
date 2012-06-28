@@ -112,12 +112,26 @@ public class GameEngine {
             applyMovement();
     }
 
-    public void acceleration() {
-        //increase velocity/tick
+    public void acceleration(int x, int y) {
+        if (x == 1) {
+            velocity(1, player);
+        }
+        if (x == 2) {
+            velocity(2, player);
+        }
     }
 
-    public void velocity() {
-        //increase coordinate/tick
+    public void velocity(int x, Entity object) {
+        if (x == 1) {
+            int objectX = (int) object.getX();
+            objectX++;
+            object.setX(objectX);
+        }
+        if (x == 2) {
+            int objectX = (int) object.getX();
+            objectX--;
+            object.setX(objectX);
+        }
     }
 
     public boolean isPlayerClose(Entity entity) {
@@ -133,9 +147,8 @@ public class GameEngine {
     }
 
     public boolean isPlayerBelow(Entity entity) {
-
-		return false;
-	}
+        return false;
+    }
 
 }
 
