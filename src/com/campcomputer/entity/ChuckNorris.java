@@ -17,47 +17,49 @@ public class ChuckNorris extends Entity {
 	private int armor = 25;
 	int healed = 0;
 
-    public ChuckNorris(GameEngine engine) {
+	public ChuckNorris(GameEngine engine) {
 		super(engine);
 		setHealth(maxhealth);
 	}
 
-    @Override
-    protected void loadImages() {
-        frames.add(Images.ReadImage(new File("frames/chucknorris/1.png")));
-        frames.add(Images.ReadImage(new File("frames/chucknorris/2.png")));
- 		frames.add(Images.ReadImage(new File("frames/chucknorris/3.png")));
-        frames.add(Images.ReadImage(new File("frames/chucknorris/4.png")));
-        frames.add(Images.ReadImage(new File("frames/chucknorris/5.png")));
-        frames.add(Images.ReadImage(new File("frames/chucknorris/6.png")));
-    }
+	@Override
+	protected void loadImages() {
+		frames.add(Images.ReadImage(new File("frames/chucknorris/1.png")));
+		frames.add(Images.ReadImage(new File("frames/chucknorris/2.png")));
+		frames.add(Images.ReadImage(new File("frames/chucknorris/3.png")));
+		frames.add(Images.ReadImage(new File("frames/chucknorris/4.png")));
+		frames.add(Images.ReadImage(new File("frames/chucknorris/5.png")));
+		frames.add(Images.ReadImage(new File("frames/chucknorris/6.png")));
+	}
 
 	@Override
 	public void tick() {
-        super.tick();
+		super.tick();
 		if (engine.isPlayerClose(this)) {
 			attack(engine.getPlayer());
 		}
 
-		//if (getHealth() <= 1125) {
-		//	healing();
-		//if (healed once){do not heal again }
+		if (healed < 1) {
+			if (getHealth() <= 1125) {
+				healing();
+			}
+		}
 	}
 
 	@Override
-	public void attack(Entity entity){
+	public void attack(Entity entity) {
 
 	}
 
-	public void punch(Entity entity){
+	public void punch(Entity entity) {
 
 	}
 
-	public void roudhousekick(){
+	public void roudhousekick() {
 
 	}
 
-	public void lasereyes(){
+	public void lasereyes() {
 
 	}
 
@@ -68,6 +70,6 @@ public class ChuckNorris extends Entity {
 
 	public void healing() {
 		setHealth(maxhealth);
-		//	healed onece
+		healed = 1;
 	}
 }
