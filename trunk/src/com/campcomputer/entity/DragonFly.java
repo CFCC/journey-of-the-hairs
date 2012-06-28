@@ -48,6 +48,7 @@ public class DragonFly extends Entity {
 	 */
     public void eats(Entity entity) {
 		entity.setHealth(entity.getHealth() - this.eatsdamage);
+
 	}
 
 
