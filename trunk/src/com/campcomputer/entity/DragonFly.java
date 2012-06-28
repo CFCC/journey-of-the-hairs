@@ -4,9 +4,9 @@ import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 
 public class DragonFly extends Entity {
-	int flyingenergy;
-	int breathfiredamage = 33;
-	int eatsdamage = 2;
+	private int flyingEnergy;
+	private int breathFireDamage = 33;
+	private int eatingDamage = 2;
 
 	public DragonFly(GameEngine engine) {
 		super(engine);
@@ -47,11 +47,11 @@ public class DragonFly extends Entity {
 	 */
     public void eats(Entity entity) {
 		// make the enemy lose health
-		entity.setHealth(entity.getHealth() - this.eatsdamage);
+		entity.setHealth(entity.getHealth() - this.eatingDamage);
 
 		if (entity.getHealth() <= 0) {
-		// makes the dragonfly gain health
-		setHealth(getHealth() + eatsdamage * 1/2);
+			// makes the dragonfly gain health
+			 setHealth(getHealth() + eatingDamage * 1/2);
 		}
 	}
 
@@ -61,17 +61,42 @@ public class DragonFly extends Entity {
 	 * @param entity the thing to breathe fire on.
 	 */
 	public void breathfire(Entity entity) {
-		entity.setHealth(entity.getHealth() - this.breathfiredamage);
+		entity.setHealth(entity.getHealth() - this.breathFireDamage);
 	}
 
 	public void chasePlayer1() {
-		if (flyingenergy > 0) {
+		if (flyingEnergy > 0) {
 			// fly towards the player,
 			// solid object in the way
 		}
-		if (flyingenergy < 0) {
+		if (flyingEnergy < 0) {
 			//walk towards the player,
 			// can also jump.
 		}
+	}
+
+
+	public int getBreathFireDamage() {
+		return breathFireDamage;
+	}
+
+	public void setBreathFireDamage(int breathFireDamage) {
+		this.breathFireDamage = breathFireDamage;
+	}
+
+	public int getEatingDamage() {
+		return eatingDamage;
+	}
+
+	public void setEatingDamage(int eatingDamage) {
+		this.eatingDamage = eatingDamage;
+	}
+
+	public int getFlyingEnergy() {
+		return flyingEnergy;
+	}
+
+	public void setFlyingEnergy(int flyingEnergy) {
+		this.flyingEnergy = flyingEnergy;
 	}
 }
