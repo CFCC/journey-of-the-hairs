@@ -39,7 +39,6 @@ public class GameEngine {
 
 
     public GameEngine() {
-        InitializeMap();
 
         player = new Player(this);
         player.setX(1);
@@ -70,23 +69,6 @@ public class GameEngine {
         entities.add(worm);
     }
 
-    private void InitializeMap() {
-
-/* Each line is one row of tiles; each column is one column */
-//        map = new Tile[200][12];
-//        for (int x = 0; x < map.length; x++)
-//            for (int y = 0; y < map[0].length; y++)
-//                map[x][y] = Tile.AIR;
-//        for (int i = 0; i < map.length; i++)
-//        map[i][11] = Tile.GROUND;
-//        map[6][10] = Tile.CHEESE;
-//        map[5][10] = Tile.CHEESE;
-//        map[5][9] = Tile.CHEESE;
-//        map[6][9] = Tile.CHEESE;
-//        map[5][8] = Tile.CHEESE;
-//        map[6][8] = Tile.CHEESE;
-
-    }
 
     public Player getPlayer() {
         return player;
@@ -116,45 +98,6 @@ public class GameEngine {
     }
 
     private void applyMovement() {
-//        float pY = player.getY();
-//        float playerX = player.getX();
-//        //gravity accelerates player if no ground below player
-//        //find if not air below
-//        float playerYVel = player.getyVel();
-//        player.setyVel(playerYVel++);
-//        player.setY(pY + playerYVel);
-//        pY = player.getY();
-//        if (pY - 1 < 0)
-//            player.setyVel(0);
-//        else if (map[((int) playerX)][((int) (pY - 1))] != Tile.AIR)
-//            player.setyVel(0);
-//
-//
-//        // player doesn't fall through ground
-//        if (map[((int) playerX)][((int) (pY + 1))] != Tile.AIR) {
-//            float playerRoundY = player.getY() - (player.getY() % 1);
-//            player.setyVel(0);
-//            player.setY(playerRoundY + 1);
-//        }
-//        if (playerX - 1 == 0)
-//            moveForward();
-//        if (pY - 1 == 0)
-//            player.setY(1);
-//
-//        if (pY < 0)
-//            player.setY(1);
-//        // player doesn't run through blocks
-//        if (map[((int) playerX + 1)][((int) (pY))] != Tile.AIR && player.getxVel() > 0)
-//            //only go left
-//            player.setxVel(0);
-//        if (player.getX() - 1 < 0) {
-//            player.setxVel(0);
-//            moveForward();
-//        } else if (map[((int) playerX - 1)][((int) (pY))] != Tile.AIR && player.getxVel() > 0)
-//            //only go right
-//            player.setxVel(0);
-
-
         for (Entity entity : entities) {
 
             float x = entity.getX();
@@ -225,29 +168,6 @@ public class GameEngine {
         Point firstSolid = findFirstSolid(player.getX(), player.getY(),0,1,0,0,map.length, map[0].length);
         if (firstSolid!= null && firstSolid.y- player.getY() <= 1)
             player.setyVel(JUMP_POWER);
-    }
-
-    public void acceleration(int x, int y) {
-        if (x == 1) {
-            velocity(1, player);
-
-        }
-        if (x == 2) {
-            velocity(2, player);
-        }
-    }
-
-    public void velocity(int x, Entity object) {
-        if (x == 1) {
-            int objectX = (int) object.getX();
-            objectX++;
-            object.setX(objectX);
-        }
-        if (x == 2) {
-            int objectX = (int) object.getX();
-            objectX--;
-            object.setX(objectX);
-        }
     }
 
     public boolean isPlayerClose(Entity entity) {
