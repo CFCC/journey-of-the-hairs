@@ -85,11 +85,9 @@ public class GameEngine {
         if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR)
             //only go left
             player.setxVel(-1);
-            player.setxVel(0);
         if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR)
             //only go right
             player.setxVel(1);
-            player.setxVel(0);
 
         player.setX(player.getX() + player.getxVel());
         player.setY(player.getY() + player.getyVel());
