@@ -20,7 +20,7 @@ public class DragonFly extends Entity {
 			moveDown();
 		} else if (engine.isPlayerClose(this)) {
 			attack(engine.getPlayer());
-			//Try to dodge solid objects.....
+			//Try to dodge solid objects.....or else!
 		} else {
 
 		}

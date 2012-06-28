@@ -1,5 +1,7 @@
 package com.campcomputer;
 
+import com.campcomputer.entity.Player;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
