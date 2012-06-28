@@ -50,7 +50,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
             }
         });
 
-        Timer t = new Timer(30, new ActionListener() {
+        Timer t = new Timer(1000/30, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 

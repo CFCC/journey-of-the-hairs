@@ -32,6 +32,11 @@ public class GamePanel extends JPanel {
 
     GameEngine ourGameEngine;
 
+    private float[] dashPattern = { 1,1};
+    private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT,
+                                                       BasicStroke.JOIN_MITER, 10,
+                                                       dashPattern, 0);;
+
     public GamePanel(GameEngine theGameEngine) {
 
         this.ourGameEngine = theGameEngine;
@@ -78,7 +83,7 @@ public class GamePanel extends JPanel {
             }
         }
 
-        drawTiles(g2);
+        //drawTiles(g2);
     }
 
     private void drawTiles(Graphics2D g2) {
@@ -111,7 +116,8 @@ public class GamePanel extends JPanel {
                         break;
                 }
                 g2.setColor(color);
-                g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE)+5, y * TILE_SIZE+5,TILE_SIZE -10, TILE_SIZE -10);
+                g2.setStroke(tileStroke);
+                g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE)+1, y * TILE_SIZE+1,TILE_SIZE -2, TILE_SIZE -2);
                 //g2.drawImage(image, null, (int) ((x - xScreenPlace) * TILE_SIZE), y * TILE_SIZE);
 
             }
