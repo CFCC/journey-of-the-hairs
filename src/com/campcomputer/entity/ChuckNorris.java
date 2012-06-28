@@ -20,14 +20,14 @@ public class ChuckNorris extends Entity {
     protected void loadImages() {
         frames.add(Images.ReadImage(new File("frames/chucknorris/1.png")));
         frames.add(Images.ReadImage(new File("frames/chucknorris/2.png")));
-        frames.add(Images.ReadImage(new File("frames/chucknorris/3.png")));
+ 		       frames.add(Images.ReadImage(new File("frames/chucknorris/3.png")));
         frames.add(Images.ReadImage(new File("frames/chucknorris/4.png")));
         frames.add(Images.ReadImage(new File("frames/chucknorris/5.png")));
         frames.add(Images.ReadImage(new File("frames/chucknorris/6.png")));
     }
 
 	@Override
-    public void tick() {
+	public void tick() {
         super.tick();
 		if (engine.isPlayerClose(this)) {
 			attack(engine.getPlayer());
@@ -40,7 +40,7 @@ public class ChuckNorris extends Entity {
 	}
 
 	public void punches(){
-
+		getAttackDamage() ;
 	}
 
 	public void roudhousekick(){
