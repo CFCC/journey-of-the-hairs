@@ -7,9 +7,28 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static com.campcomputer.Tile.*;
+
 public class GameEngine {
 
-    private Tile[][] map;
+    private Tile[][] map = {
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    CARROT,    GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    CARROT,    GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    CARROT,    GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    CARROT,    GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       CARROT,    AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       PLANT,     AIR,       AIR,       AIR,       AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       PLANT,     PLANT,     AIR,       AIR,       AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       PLANT,     PLANT,     AIR,       AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       PLANT,     AIR,       AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       PLANT,     AIR,       AIR,       PLANT,     AIR,       AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       PLANT,     AIR,       AIR,       PLANT,     AIR,       AIR,       GROUND,    GROUND,    },
+            { AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       AIR,       GROUND,    GROUND,    },
+    };
     private Player player;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
 
@@ -30,18 +49,20 @@ public class GameEngine {
     }
 
     private void InitializeMap() {
-        map = new Tile[200][12];
-        for (int x = 0; x < map.length; x++)
-            for (int y = 0; y < map[0].length; y++)
-                map[x][y] = Tile.AIR;
-        for (int i = 0; i < map.length; i++)
-            map[i][11] = Tile.GROUND;
-        map[6][10] = Tile.CHEESE;
-        map[5][10] = Tile.CHEESE;
-        map[5][9] = Tile.CHEESE;
-        map[6][9] = Tile.CHEESE;
-        map[5][8] = Tile.CHEESE;
-        map[6][8] = Tile.CHEESE;
+
+/* Each line is one row of tiles; each column is one column */
+//        map = new Tile[200][12];
+//        for (int x = 0; x < map.length; x++)
+//            for (int y = 0; y < map[0].length; y++)
+//                map[x][y] = Tile.AIR;
+//        for (int i = 0; i < map.length; i++)
+//            map[i][11] = Tile.GROUND;
+//        map[6][10] = Tile.CHEESE;
+//        map[5][10] = Tile.CHEESE;
+//        map[5][9] = Tile.CHEESE;
+//        map[6][9] = Tile.CHEESE;
+//        map[5][8] = Tile.CHEESE;
+//        map[6][8] = Tile.CHEESE;
 
     }
 

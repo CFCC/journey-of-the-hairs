@@ -87,10 +87,10 @@ public class MapConverter {
         System.out.println("import static com.campcomputer.Tile.*;");
         System.out.println();
         System.out.println("/* Each line is one row of tiles; each column is one column */");
-        System.out.println("String[][] map_" + file.getName().replaceAll("[^a-zA-Z0-9]", "_") + " = {");
-        for (int y = 0; y < grid[0].length; y++) {
+        System.out.println("Tile[][] map_" + file.getName().replaceAll("[^a-zA-Z0-9]", "_") + " = {");
+        for (int x = 0; x < grid.length; x++) {
             System.out.print("{ ");
-            for (int x = 0; x < grid.length; x++) {
+            for (int y = 0; y < grid[x].length; y++) {
                 String s = grid[x][y];
                 if (s == null) {
                     throw new RuntimeException("what?? " + x + "," + y);

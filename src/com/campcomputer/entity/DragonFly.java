@@ -3,7 +3,6 @@ package com.campcomputer.entity;
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 
-
 public class DragonFly extends Entity {
 	int flyingenergy;
 	int breathfiredamage = 33;
