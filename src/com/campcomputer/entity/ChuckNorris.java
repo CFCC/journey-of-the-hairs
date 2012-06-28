@@ -1,12 +1,5 @@
 package com.campcomputer.entity;
 
-import com.campcomputer.Entity;
-import com.campcomputer.GameEngine;
-import com.campcomputer.Images;
-
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.util.List;
 
 public class ChuckNorris extends Entity {
 
