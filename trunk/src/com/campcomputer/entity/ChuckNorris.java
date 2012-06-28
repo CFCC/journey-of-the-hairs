@@ -13,10 +13,10 @@ public class ChuckNorris extends Entity {
 	private int roundhousekick = 100;
 	private int lasereyes = 50;
 	private int armor = 25;
-
+	int healing;
     public ChuckNorris(GameEngine engine) {
 		super(engine);
-		setHealth(9001);
+		setHealth(9002);
 	}
 
     @Override
@@ -56,10 +56,11 @@ public class ChuckNorris extends Entity {
 
 	public void armor() {
 
+
 	}
 
 	public void healing() {
-		setHealth(getHealth() + healingDamage);
+		setHealth(9002);
 
 	}
 }
