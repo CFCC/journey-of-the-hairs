@@ -56,7 +56,7 @@ public class GameEngine {
 //            for (int y = 0; y < map[0].length; y++)
 //                map[x][y] = Tile.AIR;
 //        for (int i = 0; i < map.length; i++)
-//            map[i][11] = Tile.GROUND;
+//        map[i][11] = Tile.GROUND;
 //        map[6][10] = Tile.CHEESE;
 //        map[5][10] = Tile.CHEESE;
 //        map[5][9] = Tile.CHEESE;
@@ -102,8 +102,9 @@ public class GameEngine {
 
         // player doesn't fall through ground
         if (map[((int) playerX)][((int) (playerY + 1))] != Tile.AIR) {
-            playerY = player.getY();
-            player.setY(playerY - playerYVel);
+            float playerRoundY = player.getY() - (player.getY() % 1);
+            player.setyVel(0);
+            player.setY(playerRoundY + 1);
         }
         if (playerX - 1 == 0)
             moveForward();
@@ -148,6 +149,7 @@ public class GameEngine {
     }
 
     public void jump() {
+        //  if(map[((int) player.getX())][((int) player.getY()-1)]!=Tile.AIR){
         float playerOldY = player.getY();
         //float playerX = player.getX();
         player.setyVel(-2);
@@ -163,6 +165,7 @@ public class GameEngine {
             applyMovement();
         }
     }
+//}
 
     public void acceleration(int x, int y) {
         if (x == 1) {

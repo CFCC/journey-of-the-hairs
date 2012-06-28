@@ -6,9 +6,7 @@ import com.campcomputer.Images;
 import com.sun.tools.corba.se.idl.constExpr.Times;
 import com.sun.xml.internal.ws.api.message.HeaderList;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.List;
 
 public class ChuckNorris extends Entity {
 	private final int maxhealth = 9002;
