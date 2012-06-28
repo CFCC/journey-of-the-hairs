@@ -96,7 +96,7 @@ public class DragonFly extends Entity {
 		return flyingEnergy;
 	}
 
-	public void setFlyingEnergy(int flyingEnergy) {
+	public  void setFlyingEnergy(int flyingEnergy) {
 		this.flyingEnergy = flyingEnergy;
 	}
 }
