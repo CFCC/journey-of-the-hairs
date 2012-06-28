@@ -1,5 +1,8 @@
 package com.campcomputer;
 
+import com.campcomputer.entity.Player;
+import com.sun.xml.internal.ws.api.pipe.Engine;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -46,7 +49,8 @@ public class GamePanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        //drawTiles(g2);
+        xScreenPlace = ourGameEngine.getPlayer().getX();
+
 
         g2.drawImage(mapBackground, null, (int) (-xScreenPlace * TILE_SIZE), 0);
 
@@ -55,37 +59,42 @@ public class GamePanel extends JPanel {
                 g2.drawImage(entity.getCurrentFrame(), null, (int) (entity.getX() * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
             }
         }
+
+        drawTiles(g2);
     }
 
     private void drawTiles(Graphics2D g2) {
         int xFirst = (int) xScreenPlace;
 
+
         Tile[][] map = ourGameEngine.getMap();
 
         for (int x = xFirst; x < xFirst + 17; x++) {
             for (int y = 0; y < 12; y++) {
-                BufferedImage image = null;
+                Color color = null;
                 switch (map[x][y]) {
                     case PLANT:
-                        image = tomato;
+                         color = Color.green;
                         break;
                     case CARROT:
-                        image = carrot;
+                        color = Color.orange;
                         break;
                     case AIR:
-                        image = air;
+                        color = Color.blue;
                         break;
                     case GROUND:
-                        image = ground;
+                        color = new Color(150, 100, 50);
                         break;
                     case PIT:
-                        image = pit;
+                        color = Color.magenta;
                         break;
                     case CHEESE:
-                        image = cheese;
+                        color = Color.YELLOW;
                         break;
                 }
-                g2.drawImage(image, null, (int) ((x - xScreenPlace) * TILE_SIZE), y * TILE_SIZE);
+                g2.setColor(color);
+                g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE)+5, y * TILE_SIZE+5,TILE_SIZE -10, TILE_SIZE -10);
+                //g2.drawImage(image, null, (int) ((x - xScreenPlace) * TILE_SIZE), y * TILE_SIZE);
 
             }
         }
