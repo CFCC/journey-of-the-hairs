@@ -82,12 +82,12 @@ public class GameEngine {
         }
 
         // player doesn't run through blocks
-        if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR)
+        if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
             //only go left
-            player.setxVel(-1);
-        if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR)
+            player.setxVel(0);
+        if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
             //only go right
-            player.setxVel(1);
+            player.setxVel(0);
 
         player.setX(player.getX() + player.getxVel());
         player.setY(player.getY() + player.getyVel());
@@ -119,6 +119,7 @@ public class GameEngine {
     public void acceleration(int x, int y) {
         if (x == 1) {
             velocity(1, player);
+
         }
         if (x == 2) {
             velocity(2, player);
