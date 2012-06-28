@@ -24,8 +24,12 @@ public class GameEngine {
         player.setX(10);
         player.setY(10);
 
+        ChuckNorris chuckNorris = new ChuckNorris(this);
+        chuckNorris.setX(5);
+        chuckNorris.setY(5);
+
         entities.add(player);
-        entities.add(new ChuckNorris(this));
+        entities.add(chuckNorris);
     }
 
     private void InitializeMap() {
@@ -57,6 +61,9 @@ public class GameEngine {
     }
 
     public void tick() {
+        for (Entity entity : entities) {
+            entity.tick();
+        }
         applyMovement();
     }
 
@@ -121,11 +128,11 @@ public class GameEngine {
         return playerPosition.distance(entityPosition) < 10f;
     }
 
-    public boolean isPlayerAbove() {
+    public boolean isPlayerAbove(Entity entity) {
         return true;
     }
 
-    public boolean isPlayerBelow() {
+    public boolean isPlayerBelow(Entity entity) {
 
 		return false;
 	}

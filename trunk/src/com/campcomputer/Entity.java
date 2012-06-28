@@ -1,6 +1,7 @@
 package com.campcomputer;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,10 +20,13 @@ public abstract class Entity {
 
     protected GameEngine engine;
     protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
+    private int currentFrame = 0;
 
     public Entity(GameEngine engine) {
         this.engine = engine;
         loadImages();
+        if (frames.size() == 0)
+            frames.add(Images.ReadImage(new File("images/Cheese.jpg")));
     }
 
     public float getX() {
@@ -109,9 +113,20 @@ public abstract class Entity {
 	}
 
 	abstract protected void loadImages();
-	abstract protected void tick();
 
     public List<BufferedImage> getFrames() {
         return frames;
+    }
+
+    public void tick(){
+        currentFrame++;
+        if (currentFrame > frames.size() -1)
+            currentFrame = 0;
+    }
+
+    abstract public void attack(Entity entity);
+
+    public BufferedImage getCurrentFrame() {
+        return frames.get(currentFrame);
     }
 }

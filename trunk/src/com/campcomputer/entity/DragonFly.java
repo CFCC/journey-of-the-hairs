@@ -13,6 +13,7 @@ public class DragonFly extends Entity {
 
 	@Override
 	public void tick() {
+        super.tick();
 		if (engine.isPlayerAbove(this)) {
 			moveUp();
 		} else if (engine.isPlayerBelow(this)) {
@@ -30,12 +31,12 @@ public class DragonFly extends Entity {
 
 	}
 
-	@Override
-	public void attack(Entity entity) {
+    @Override
+    public void attack(Entity entity) {
 
-	}
+    }
 
-	public void eats() {
+    public void eats() {
 
 	}
 
