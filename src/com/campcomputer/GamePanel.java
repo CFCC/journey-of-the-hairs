@@ -60,7 +60,6 @@ public class GamePanel extends JPanel {
         for (Entity entity : ourGameEngine.getEntities()) {
             if (entity.getFrames().size() > 0) {
                 g2.drawImage(entity.getCurrentFrame(), null, (int) ((entity.getX()- xScreenPlace)  * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
-                g2.drawImage(cheese, null, 10, 10);
             }
         }
 
