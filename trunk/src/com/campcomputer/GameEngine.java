@@ -2,6 +2,7 @@ package com.campcomputer;
 
 import com.campcomputer.entity.*;
 
+import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,6 +10,11 @@ import java.util.Collection;
 import static com.campcomputer.Tile.*;
 
 public class GameEngine {
+
+    private static final float GRAVITY = .2f;
+    private static final float MINIMUM_X_VELOCITY = .3f;
+    private static final float JUMP_POWER = -1.5f;
+    private static final float MOVE_SPEED = .3f;
 
     private Tile[][] map = {
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, GROUND, GROUND,},
@@ -98,90 +104,128 @@ public class GameEngine {
         for (Entity entity : entities) {
             entity.tick();
         }
+        applyGravity();
         applyMovement();
     }
 
-    private void applyMovement() {
-        float playerY = player.getY();
-        float playerX = player.getX();
-        //gravity accelerates player if no ground below player
-        //find if not air below
-        float playerYVel = player.getyVel();
-        player.setyVel(playerYVel++);
-        player.setY(playerY + playerYVel);
-        playerY = player.getY();
-        if (playerY - 1 < 0)
-            player.setyVel(0);
-        else if (map[((int) playerX)][((int) (playerY - 1))] != Tile.AIR)
-            player.setyVel(0);
-
-
-        // player doesn't fall through ground
-        if (map[((int) playerX)][((int) (playerY + 1))] != Tile.AIR) {
-            float playerRoundY = player.getY() - (player.getY() % 1);
-            player.setyVel(0);
-            player.setY(playerRoundY + 1);
+    private void applyGravity() {
+        for (Entity entity : entities) {
+            if (entity.isAffectedByGravity())
+                entity.setyVel(entity.getyVel() + GRAVITY);
         }
-        if (playerX - 1 == 0)
-            moveForward();
-        if (playerY - 1 == 0)
-            player.setY(1);
+    }
 
-        if (playerY < 0)
-            player.setY(1);
-        // player doesn't run through blocks
-        if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
-            //only go left
-            player.setxVel(0);
-        if (player.getX() - 1 < 0) {
-            player.setxVel(0);
-            moveForward();
-        } else if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
-            //only go right
-            player.setxVel(0);
+    private void applyMovement() {
+//        float pY = player.getY();
+//        float playerX = player.getX();
+//        //gravity accelerates player if no ground below player
+//        //find if not air below
+//        float playerYVel = player.getyVel();
+//        player.setyVel(playerYVel++);
+//        player.setY(pY + playerYVel);
+//        pY = player.getY();
+//        if (pY - 1 < 0)
+//            player.setyVel(0);
+//        else if (map[((int) playerX)][((int) (pY - 1))] != Tile.AIR)
+//            player.setyVel(0);
+//
+//
+//        // player doesn't fall through ground
+//        if (map[((int) playerX)][((int) (pY + 1))] != Tile.AIR) {
+//            float playerRoundY = player.getY() - (player.getY() % 1);
+//            player.setyVel(0);
+//            player.setY(playerRoundY + 1);
+//        }
+//        if (playerX - 1 == 0)
+//            moveForward();
+//        if (pY - 1 == 0)
+//            player.setY(1);
+//
+//        if (pY < 0)
+//            player.setY(1);
+//        // player doesn't run through blocks
+//        if (map[((int) playerX + 1)][((int) (pY))] != Tile.AIR && player.getxVel() > 0)
+//            //only go left
+//            player.setxVel(0);
+//        if (player.getX() - 1 < 0) {
+//            player.setxVel(0);
+//            moveForward();
+//        } else if (map[((int) playerX - 1)][((int) (pY))] != Tile.AIR && player.getxVel() > 0)
+//            //only go right
+//            player.setxVel(0);
 
 
         for (Entity entity : entities) {
-            entity.setX(entity.getX() + entity.getxVel());
-            entity.setY(entity.getY() + entity.getyVel());
 
+            float x = entity.getX();
+            float y = entity.getY();
+            float vX = entity.getxVel();
+            float vY = entity.getyVel();
 
-            entity.setxVel(entity.getxVel() * .3f);
-            if (Math.abs(entity.getxVel()) < .1)
+            float newX = x + vX;
+            float newY = y + vY;
+
+            // Slow x movement
+            entity.setxVel(vX * MINIMUM_X_VELOCITY);
+            if (Math.abs(vX) < .1)
                 entity.setxVel(0);
-            entity.setyVel(entity.getyVel() * .3f);
-            if (Math.abs(entity.getyVel()) < .1)
-                entity.setyVel(0);
+
+            Point landingPoint1 = findFirstSolid(x, y, 0, 1, 0, 0, map.length, map[0].length);
+            Point landingPoint2 = findFirstSolid(x+1, y, 0, 1, 0, 0, map.length, map[0].length);
+
+            if (landingPoint1 != null || landingPoint2 != null) {
+                int highestLandingPoint;
+                if (landingPoint1 != null){
+                    highestLandingPoint = landingPoint1.y;
+                    if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
+                        highestLandingPoint = landingPoint2.y;
+                }else{
+                    highestLandingPoint = landingPoint2.y;
+                }
+                if (newY >= highestLandingPoint - 1) {
+                    newY = highestLandingPoint - 1;
+                    entity.setyVel(0);
+                }
+            }
+            entity.setX(newX);
+            entity.setY(newY);
         }
 
+    }
+
+    private Point findFirstSolid(float startX, float startY, int dX, int dY, int minX, int minY, int maxX, int maxY) {
+        int x = (int) startX;
+        int y = (int) startY;
+        while (x <= maxX && y <= maxY && x >= minX && y >= minY) {
+
+            switch (map[x][y]) {
+
+                case PLANT:
+                case LETTUCE:
+                case CARROT:
+                case GROUND:
+                    return new Point(x, y);
+            }
+
+            x += dX;
+            y += dY;
+        }
+        return null;
     }
 
     public void moveForward() {
-        player.setxVel(1);
+        player.setxVel(MOVE_SPEED);
     }
 
     public void moveBackward() {
-        player.setxVel(-1);
+        player.setxVel(-MOVE_SPEED);
     }
 
     public void jump() {
-        //  if(map[((int) player.getX())][((int) player.getY()-1)]!=Tile.AIR){
-        float playerOldY = player.getY();
-        //float playerX = player.getX();
-        player.setyVel(-2);
-        /*while (map[((int) playerX)][((int) (playerY - 1))] != Tile.GROUND && playerOldY - 2 != playerY) {
-            player.setyVel(-2);
-            playerY = playerY--;
-            if (map[((int) playerX)][((int) (playerY - 1))] == Tile.GROUND)
-                applyMovement();
-        }*/
-        if (playerOldY - 2 == player.getY()) {
-            player.setyVel(0);
-            player.setY(player.getY() - player.getyVel());
-            applyMovement();
-        }
+        Point firstSolid = findFirstSolid(player.getX(), player.getY(),0,1,0,0,map.length, map[0].length);
+        if (firstSolid!= null && firstSolid.y- player.getY() <= 1)
+            player.setyVel(JUMP_POWER);
     }
-//}
 
     public void acceleration(int x, int y) {
         if (x == 1) {
