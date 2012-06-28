@@ -3,6 +3,8 @@ package com.campcomputer.entity;
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
+import com.sun.tools.corba.se.idl.constExpr.Times;
+import com.sun.xml.internal.ws.api.message.HeaderList;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -39,7 +41,8 @@ public class ChuckNorris extends Entity {
 
 		if (getHealth() <= 1125) {
 			healing();
-		}
+			(int 'n' Number of Times healed)
+		if healed once, do not heal again}
 	}
 
 	@Override
