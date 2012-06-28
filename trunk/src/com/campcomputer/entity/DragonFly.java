@@ -2,8 +2,7 @@ package com.campcomputer.entity;
 
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
-import com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
-import com.sun.java.swing.action.OkAction;
+
 
 public class DragonFly extends Entity {
 	int flyingenergy;

@@ -1,14 +1,11 @@
 package com.campcomputer;
 
 import com.campcomputer.entity.ChuckNorris;
-import com.campcomputer.entity.DragonFly;
 import com.campcomputer.entity.Player;
 
-import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 public class GameEngine {
 
@@ -84,26 +81,33 @@ public class GameEngine {
         if (map[((int) playerX + 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
             //only go left
             player.setxVel(0);
-        if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
+        if (player.getX() - 1 < 0) {
+            player.setxVel(0);
+            moveForward();
+        }
+        else if (map[((int) playerX - 1)][((int) (playerY))] != Tile.AIR && player.getxVel() > 0)
             //only go right
             player.setxVel(0);
 
-        player.setX(player.getX() + player.getxVel());
-        player.setY(player.getY() + player.getyVel());
+
+        for (Entity entity : entities) {
+            entity.setX(entity.getX() + entity.getxVel());
+            entity.setY(entity.getY() + entity.getyVel());
+
+
+            entity.setxVel(entity.getxVel() * .3f);
+            if (Math.abs(entity.getxVel()) < .1)
+                entity.setxVel(0);
+        }
+
     }
 
     public void moveForward() {
         player.setxVel(1);
-        int playerVelocity = (int) player.getxVel();
-        playerVelocity--;
-        player.setxVel(playerVelocity);
     }
 
     public void moveBackward() {
         player.setxVel(-1);
-        int playerVelocity = (int) player.getxVel();
-        playerVelocity++;
-        player.setxVel(playerVelocity);
     }
 
     public void jump() {
