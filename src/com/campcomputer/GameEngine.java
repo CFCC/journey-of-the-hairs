@@ -95,10 +95,14 @@ public class GameEngine {
 
     public void moveForward() {
         player.setxVel(1);
+        int playerVelocity = (int) player.getxVel();
+        playerVelocity--;
     }
 
     public void moveBackward() {
         player.setxVel(-1);
+        int playerVelocity = (int) player.getxVel();
+        playerVelocity++;
     }
 
     public void jump() {

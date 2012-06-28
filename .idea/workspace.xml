@@ -64,7 +64,7 @@
       <file leaf-file-name="GameEngine.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="26" selection-start="2278" selection-end="2278" vertical-scroll-proportion="0.6386404">
+            <state line="98" column="25" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.608229">
               <folding>
                 <element signature="method#GameEngine#0;class#GameEngine#0" expanded="false" />
                 <element signature="method#InitializeMap#0;class#GameEngine#0" expanded="false" />
@@ -72,8 +72,6 @@
                 <element signature="method#getEntities#0;class#GameEngine#0" expanded="false" />
                 <element signature="method#getMap#0;class#GameEngine#0" expanded="false" />
                 <element signature="method#tick#0;class#GameEngine#0" expanded="false" />
-                <element signature="method#moveForward#0;class#GameEngine#0" expanded="false" />
-                <element signature="method#moveBackward#0;class#GameEngine#0" expanded="false" />
                 <element signature="method#jump#0;class#GameEngine#0" expanded="false" />
                 <element signature="method#isPlayerClose#0;class#GameEngine#0" expanded="false" />
               </folding>
@@ -524,7 +522,11 @@
       <created>1340891907107</created>
       <updated>1340891907107</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015">
+      <created>1340892274106</created>
+      <updated>1340892274106</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -716,7 +718,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="2278" selection-end="2278" vertical-scroll-proportion="0.6386404">
+        <state line="98" column="25" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.608229">
           <folding>
             <element signature="method#GameEngine#0;class#GameEngine#0" expanded="false" />
             <element signature="method#InitializeMap#0;class#GameEngine#0" expanded="false" />
@@ -724,8 +726,6 @@
             <element signature="method#getEntities#0;class#GameEngine#0" expanded="false" />
             <element signature="method#getMap#0;class#GameEngine#0" expanded="false" />
             <element signature="method#tick#0;class#GameEngine#0" expanded="false" />
-            <element signature="method#moveForward#0;class#GameEngine#0" expanded="false" />
-            <element signature="method#moveBackward#0;class#GameEngine#0" expanded="false" />
             <element signature="method#jump#0;class#GameEngine#0" expanded="false" />
             <element signature="method#isPlayerClose#0;class#GameEngine#0" expanded="false" />
           </folding>
