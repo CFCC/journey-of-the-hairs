@@ -1,11 +1,25 @@
 package com.campcomputer.entity;
 
+import com.campcomputer.Entity;
+import com.campcomputer.GameEngine;
+import com.campcomputer.Images;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.util.List;
 
 public class ChuckNorris extends Entity {
+	int punch = 30;
+	int roundhousekick = 100;
+	int lasereyes = 50;
+	int armor = 25;
+
+
+
 
     public ChuckNorris(GameEngine engine) {
 		super(engine);
-
+		setHealth(999901);
 
 	}
 
@@ -49,6 +63,7 @@ public class ChuckNorris extends Entity {
 	}
 
 	public void healing() {
+
 
 	}
 }
