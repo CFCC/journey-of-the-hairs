@@ -21,7 +21,7 @@ public class GameEngine {
         InitializeMap();
 
         player = new Player(this);
-        player.setX(10);
+        player.setX(0);
         player.setY(10);
 
         ChuckNorris chuckNorris = new ChuckNorris(this);
