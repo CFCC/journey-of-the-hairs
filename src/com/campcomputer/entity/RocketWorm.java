@@ -10,8 +10,9 @@ public class RocketWorm extends Entity {
 
 	@Override
 	public void tick() {
+        super.tick();
 
-	}
+    }
 
 	@Override
 	public void loadImages() {

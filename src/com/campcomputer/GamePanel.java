@@ -4,10 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.IdentityHashMap;
+import java.util.Map;
 
 
 public class GamePanel extends JPanel {
 
+    private static final int TILE_SIZE = 64;
     float xScreenPlace = 0f;
 
     private BufferedImage tomato;
@@ -20,7 +23,7 @@ public class GamePanel extends JPanel {
     private BufferedImage hareForward;
 
     private BufferedImage mapBackground;
-
+    private Map<Entity, Integer> currentFrames = new IdentityHashMap<Entity, Integer>();
 
     GameEngine ourGameEngine;
 
@@ -29,7 +32,6 @@ public class GamePanel extends JPanel {
         this.ourGameEngine = theGameEngine;
         tomato = Images.ReadImage(new File("images/tomato.jpg"));
         ground = Images.ReadImage(new File("images/ground.jpg"));
-        carrot = Images.ReadImage(new File("images/carrot rotated.png"));
         air = Images.ReadImage(new File("images/Sky_Blue.png"));
         pit = Images.ReadImage(new File("images/Sky_Blue.png"));
         cheese = Images.ReadImage(new File("images/cheese_oh_cheese.jpg"));
@@ -46,11 +48,12 @@ public class GamePanel extends JPanel {
 
         //drawTiles(g2);
 
-        g2.drawImage(mapBackground, null, (int) (-xScreenPlace * 64), 0);
+        g2.drawImage(mapBackground, null, (int) (-xScreenPlace * TILE_SIZE), 0);
 
         for (Entity entity : ourGameEngine.getEntities()) {
-
-
+            if (entity.getFrames().size() > 0) {
+                g2.drawImage(entity.getCurrentFrame(), null, (int) (entity.getX() * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
+            }
         }
     }
 
@@ -82,7 +85,7 @@ public class GamePanel extends JPanel {
                         image = cheese;
                         break;
                 }
-                g2.drawImage(image, null, (int) ((x - xScreenPlace) * 64), y * 64);
+                g2.drawImage(image, null, (int) ((x - xScreenPlace) * TILE_SIZE), y * TILE_SIZE);
 
             }
         }

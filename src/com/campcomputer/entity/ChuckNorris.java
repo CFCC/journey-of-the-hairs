@@ -28,6 +28,7 @@ public class ChuckNorris extends Entity {
 
 	@Override
     public void tick() {
+        super.tick();
 		if (engine.isPlayerClose(this)) {
 			attack(engine.getPlayer());
 		}
