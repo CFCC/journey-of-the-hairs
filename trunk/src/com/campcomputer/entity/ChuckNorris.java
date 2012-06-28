@@ -9,6 +9,7 @@ import java.io.File;
 import java.util.List;
 
 public class ChuckNorris extends Entity {
+	private final int maxhealth = 9002;
 	private int punch = 30;
 	private int roundhousekick = 100;
 	private int lasereyes = 50;
@@ -16,7 +17,7 @@ public class ChuckNorris extends Entity {
 	int healing;
     public ChuckNorris(GameEngine engine) {
 		super(engine);
-		setHealth(9002);
+		setHealth(maxhealth);
 	}
 
     @Override
@@ -60,7 +61,7 @@ public class ChuckNorris extends Entity {
 	}
 
 	public void healing() {
-		setHealth(9002);
+		setHealth(maxhealth);
 
 	}
 }
