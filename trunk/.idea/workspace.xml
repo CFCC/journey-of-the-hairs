@@ -64,9 +64,21 @@
       <file leaf-file-name="GameEngine.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="0" selection-start="2134" selection-end="2134" vertical-scroll-proportion="0.69588554">
+            <state line="114" column="43" selection-start="3157" selection-end="3157" vertical-scroll-proportion="0.5134168">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#GameEngine#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#InitializeMap#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#getPlayer#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#getEntities#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#getMap#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#tick#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#applyMovement#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#moveForward#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#moveBackward#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#jump#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#acceleration#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#velocity#0;class#GameEngine#0" expanded="false" />
+                <element signature="method#isPlayerClose#0;class#GameEngine#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,15 +88,6 @@
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="46" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DragonFly.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,7 +122,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -230,6 +233,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JounreyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -273,9 +290,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -300,6 +317,20 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\images\background.png</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\images\sketch.png</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\images\hare forward.png</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\GameEngine.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\JourneyOfTheHairsFrame.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\GamePanel.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\Entity.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\entity\DragonFly.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\entity\ChuckNorris.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\entity\Player.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\entity\RocketWorm.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\src\com\campcomputer\entity\SuicideStinkBug.java</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\3d files\worm.c4d</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\3d files\rocket.c4d</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -307,16 +338,9 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="CREATED" />
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB1.png</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB2.png</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB3.png</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB4.png</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB5.png</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB6.png</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB7.png</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB8.png</PATH>
-            <PATH vcs="svn" revision="49">C:\Users\Jordan\JounreyOfTheHairs\frames\chucknorrisB\ChuckNorrisB9.png</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\images\rocket_object_1.png</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\images\rocket.png</PATH>
+            <PATH vcs="svn" revision="59">C:\Users\Jordan\JounreyOfTheHairs\3d files\stage.c4d</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Deleted" />
@@ -430,6 +454,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -456,24 +498,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -620,7 +644,11 @@
       <created>1340820694259</created>
       <updated>1340820694259</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010">
+      <created>1340823322110</created>
+      <updated>1340823322110</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -644,14 +672,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.84931505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.510274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989726" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -659,15 +686,16 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24886191" sideWeight="0.67808217" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24885845" sideWeight="0.67808217" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21182266" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.510274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -731,16 +759,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JourneyOfTheHairs.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="8" selection-start="223" selection-end="223" vertical-scroll-proportion="0.23160763" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/carrot rotated.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -793,30 +811,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="984" selection-end="984" vertical-scroll-proportion="0.33242506">
+        <state line="31" column="19" selection-start="984" selection-end="984" vertical-scroll-proportion="0.33242506" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/rocket_object_1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/rocket.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.17889088">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="46" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="46" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="2134" selection-end="2134" vertical-scroll-proportion="0.69588554">
+        <state line="114" column="43" selection-start="3157" selection-end="3157" vertical-scroll-proportion="0.5134168">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#GameEngine#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#InitializeMap#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#getPlayer#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#getEntities#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#getMap#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#tick#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#applyMovement#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#moveForward#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#moveBackward#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#jump#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#acceleration#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#velocity#0;class#GameEngine#0" expanded="false" />
+            <element signature="method#isPlayerClose#0;class#GameEngine#0" expanded="false" />
           </folding>
         </state>
       </provider>
