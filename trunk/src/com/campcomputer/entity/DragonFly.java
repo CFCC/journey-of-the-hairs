@@ -11,6 +11,7 @@ public class DragonFly extends Entity {
 	public DragonFly(GameEngine engine) {
 		super(engine);
 		setAffectedByGravity(false);
+		setHealth(70);
 	}
 
 	@Override
@@ -45,8 +46,13 @@ public class DragonFly extends Entity {
 	 * @param entity the thing to eat
 	 */
     public void eats(Entity entity) {
+		// make the enemy lose health
 		entity.setHealth(entity.getHealth() - this.eatsdamage);
 
+		if (entity.getHealth() <= 0) {
+		// makes the dragonfly gain health
+		setHealth(getHealth() + eatsdamage * 1/2);
+		}
 	}
 
 
