@@ -8,6 +8,8 @@ import java.io.File;
 
 public class ChuckNorris extends Entity {
     private final int maxhealth = 9001;
+	private final int LOW_HEALTH_THRESHOLD = 1125;
+
 	private int punch = 1;
 	private int roundhousekick = 100;
 	private int lasereyes = 50;
@@ -31,12 +33,13 @@ public class ChuckNorris extends Entity {
 	@Override
 	public void tick() {
 		super.tick();
+
 		if (engine.isOnTopOfPlayer(this)) {
 			attack(engine.getPlayer());
 		}
 
 		if (healed < 1) {
-			if (getHealth() <= 1125) {
+			if (getHealth() <= LOW_HEALTH_THRESHOLD) {
 				healing();
 			}
 		}
@@ -44,6 +47,7 @@ public class ChuckNorris extends Entity {
 
 	@Override
 	public void attack(Entity entity) {
+
 	}
 
 	public void punch(Entity entity) {
@@ -51,7 +55,7 @@ public class ChuckNorris extends Entity {
 	}
 
 	public void roudhousekick(Entity entity) {
-		entity.setHealth(entity.getHealth() - roundhousekick)
+		entity.setHealth(entity.getHealth() - roundhousekick);
 	}
 
 	public void lasereyes(Entity entity) {
