@@ -182,7 +182,7 @@ public class GameEngine {
         return getDistanceBetweenEntityAndPlayer(entity) < 10f;
     }
 
-    private double getDistanceBetweenEntityAndPlayer(Entity entity) {
+    public double getDistanceBetweenEntityAndPlayer(Entity entity) {
         Point2D playerPosition = new Point2D.Float(player.getX(), player.getY());
         Point2D entityPosition = new Point2D.Float(entity.getX(), entity.getY());
 
