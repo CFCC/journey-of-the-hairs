@@ -45,7 +45,7 @@ public class GameEngine {
 
         ChuckNorris chuckNorris = new ChuckNorris(this);
         chuckNorris.setX(5);
-        chuckNorris.setY(5);
+        chuckNorris.setY(2);
 
         DragonFly dragonFly = new DragonFly(this);
         dragonFly.setX(3);
@@ -102,33 +102,35 @@ public class GameEngine {
             float y = entity.getY();
             float vX = entity.getxVel();
             float vY = entity.getyVel();
+            float height = entity.getHeight();
 
             float newX = x + vX;
             float newY = y + vY;
 
-            if (vY > 0) {
-                Point landingPoint1 = findFirstSolid(x, y, 0, 1, 0, 0, map.length, map[0].length);
-                Point landingPoint2 = findFirstSolid(x + 1, y, 0, 1, 0, 0, map.length, map[0].length);
 
-                if (landingPoint1 != null || landingPoint2 != null) {
-                    int highestLandingPoint;
-                    if (landingPoint1 != null) {
-                        highestLandingPoint = landingPoint1.y;
-                        if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
-                            highestLandingPoint = landingPoint2.y;
-                    } else {
+            if (vY > 0) {
+
+            Point landingPoint1 = findFirstSolid(x, y + height, 0, 1, 0, 0, map.length-1, map[0].length-1);
+            Point landingPoint2 = findFirstSolid(x+1, y + height, 0, 1, 0, 0, map.length-1, map[0].length-1);
+
+            if (landingPoint1 != null || landingPoint2 != null) {
+                int highestLandingPoint;
+                if (landingPoint1 != null){
+                    highestLandingPoint = landingPoint1.y;
+                    if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
                         highestLandingPoint = landingPoint2.y;
-                    }
-                    if (newY >= highestLandingPoint - 1) {
-                        newY = highestLandingPoint - 1;
-                        entity.setyVel(0);
-                    }
+                }else{
+                    highestLandingPoint = landingPoint2.y;
                 }
+                if (newY >= highestLandingPoint - height) {
+                    newY = highestLandingPoint - height;
+                    entity.setyVel(0);
+                }
+            }
             }
             entity.setX(newX);
             entity.setY(newY);
         }
-
 
     }
 
@@ -187,7 +189,7 @@ public class GameEngine {
         return playerPosition.distance(entityPosition);
     }
 
-    public boolean isOnTopOfPlayer(Entity entity) {
+    public boolean isOnTopOfPlayer(Entity entity){
         return getDistanceBetweenEntityAndPlayer(entity) < 1f;
     }
 

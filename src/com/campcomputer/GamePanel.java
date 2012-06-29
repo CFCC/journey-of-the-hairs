@@ -79,7 +79,7 @@ public class GamePanel extends JPanel {
             }
         }
 
-        //drawTiles(g2);
+        drawTiles(g2);
     }
 
     private void drawTiles(Graphics2D g2) {

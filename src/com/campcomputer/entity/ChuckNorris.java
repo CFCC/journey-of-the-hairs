@@ -68,7 +68,12 @@ public class ChuckNorris extends Entity {
 
 	}
 
-	public void healing() {
+    @Override
+    public int getHeight() {
+        return 4;
+    }
+
+    public void healing() {
 		setHealth(maxhealth);
 		healed = 1;
 	}

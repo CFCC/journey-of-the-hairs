@@ -71,6 +71,10 @@ public abstract class Entity {
         this.yVel = yVel;
     }
 
+    public int getHeight() {
+        return 1;
+    }
+
 	public boolean isFacingRight() {
 		return facingRight;
 	}
