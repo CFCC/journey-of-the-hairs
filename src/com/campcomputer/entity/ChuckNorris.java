@@ -44,19 +44,18 @@ public class ChuckNorris extends Entity {
 
 	@Override
 	public void attack(Entity entity) {
-		entity.setHealth(entity.getHealth() - punch);
 	}
 
 	public void punch(Entity entity) {
 		entity.setHealth(entity.getHealth() - punch);
 	}
 
-	public void roudhousekick() {
-
+	public void roudhousekick(Entity entity) {
+		entity.setHealth(entity.getHealth() - roundhousekick)
 	}
 
-	public void lasereyes() {
-
+	public void lasereyes(Entity entity) {
+		entity.setHealth(entity.getHealth() - lasereyes);
 	}
 
 	public void armor() {
