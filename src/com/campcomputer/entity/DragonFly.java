@@ -18,16 +18,15 @@ public class DragonFly extends Entity {
 	@Override
 	public void tick() {
         super.tick();
+
 		if (engine.isPlayerAbove(this)) {
 			moveUp();
 		} else if (engine.isPlayerBelow(this)) {
 			moveDown();
-		} else if (true) {
-			attack(engine.getPlayer());
 		} else if (engine.isPlayerClose(this)) {
-			//Try to dodge solid objects.....or else!
+            attack(engine.getPlayer());
 		} else {
-
+            // stand still
 		}
 	}
 
