@@ -11,39 +11,27 @@ import java.util.Map;
 public class GamePanel extends JPanel {
 
     public static final int TILE_SIZE = 64;
+    private static final Color BLOOD_COLOR = new Color(185, 0, 0);
     float xScreenPlace = 0f;
     float lastHealth = 0;
+    boolean showTiles = false;
 
-
-    private BufferedImage tomato;
-    private BufferedImage carrot;
-    private BufferedImage ground;
-    private BufferedImage air;
-    private BufferedImage pit;
-    private BufferedImage cheese;
-    private BufferedImage stinkbug;
-    private BufferedImage hareForward;
 
     private BufferedImage mapBackground;
     private Map<Entity, Integer> currentFrames = new IdentityHashMap<Entity, Integer>();
 
     GameEngine ourGameEngine;
 
-    private float[] dashPattern = { 1,1};
+    private float[] dashPattern = {1, 1};
     private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT,
-                                                       BasicStroke.JOIN_MITER, 10,
-                                                       dashPattern, 0);;
+            BasicStroke.JOIN_MITER, 10,
+            dashPattern, 0);
+    ;
 
     public GamePanel(GameEngine theGameEngine) {
 
         this.ourGameEngine = theGameEngine;
-        tomato = Images.ReadImage(new File("images/tomato.jpg"));
-        ground = Images.ReadImage(new File("images/ground.jpg"));
-        air = Images.ReadImage(new File("images/Sky_Blue.png"));
-        pit = Images.ReadImage(new File("images/Sky_Blue.png"));
-        hareForward = Images.ReadImage(new File("images/hare forward.png"));
-        stinkbug = Images.ReadImage(new File("images/stinkbug final.png"));
-        mapBackground = Images.ReadImage(new File("images/background.png"));
+        mapBackground = Images.ReadImage(new File("images/background improved.png"));
 
     }
 
@@ -52,22 +40,21 @@ public class GamePanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        if (ourGameEngine.getPlayer().getHealth() < lastHealth){
-            g2.setColor(Color.red);
-            g2.fillRect(0,0, getWidth(), getHeight());
+        if (ourGameEngine.getPlayer().getHealth() < lastHealth) {
+            g2.setColor(BLOOD_COLOR);
+            g2.fillRect(0, 0, getWidth(), getHeight());
             lastHealth = 0;
             return;
         }
         lastHealth = ourGameEngine.getPlayer().getHealth();
 
 
-
         xScreenPlace = 0;
-        if(ourGameEngine.getPlayer().getX() >= 8) {
+        if (ourGameEngine.getPlayer().getX() >= 8) {
             xScreenPlace = ourGameEngine.getPlayer().getX() - 8;
         }
-        if (ourGameEngine.getPlayer().getX() == ourGameEngine.getMap().length) {
-            xScreenPlace = ourGameEngine.getPlayer().getX() + 16;
+        if (ourGameEngine.getPlayer().getX() >= ourGameEngine.getMap().length - 8) {
+            xScreenPlace = ourGameEngine.getMap().length - 16;
         }
 
 
@@ -75,11 +62,12 @@ public class GamePanel extends JPanel {
 
         for (Entity entity : ourGameEngine.getEntities()) {
             if (entity.getFrames().size() > 0) {
-                g2.drawImage(entity.getCurrentFrame(), null, (int) ((entity.getX()- xScreenPlace)  * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
+                g2.drawImage(entity.getCurrentFrame(), null, (int) ((entity.getX() - xScreenPlace) * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
             }
         }
 
-        drawTiles(g2);
+        if (showTiles)
+            drawTiles(g2);
     }
 
     private void drawTiles(Graphics2D g2) {
@@ -93,7 +81,7 @@ public class GamePanel extends JPanel {
                 Color color = null;
                 switch (map[x][y]) {
                     case PLANT:
-                         color = Color.green;
+                        color = Color.green;
                         break;
                     case CARROT:
                         color = Color.orange;
@@ -113,11 +101,15 @@ public class GamePanel extends JPanel {
                 }
                 g2.setColor(color);
                 g2.setStroke(tileStroke);
-                g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE)+1, y * TILE_SIZE+1,TILE_SIZE -2, TILE_SIZE -2);
+                g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE) + 1, y * TILE_SIZE + 1, TILE_SIZE - 2, TILE_SIZE - 2);
                 //g2.drawImage(image, null, (int) ((x - xScreenPlace) * TILE_SIZE), y * TILE_SIZE);
 
             }
         }
+    }
+
+    public void toggleShowTiles() {
+        showTiles = !showTiles;
     }
 }
 

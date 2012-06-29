@@ -16,26 +16,74 @@ public class GameEngine {
     private static final float MOVE_SPEED = .3f;
 
     private Tile[][] map = {
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, AIR, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, AIR, AIR, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, AIR, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, PLANT, AIR, AIR, PLANT, AIR, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, PLANT, AIR, AIR, PLANT, AIR, AIR, GROUND, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, PLANT, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, PLANT, AIR, PLANT, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, PLANT, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, PLANT, PLANT, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
     };
+
     private Player player;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
-    int health = 100;
 
     public GameEngine() {
 
@@ -44,7 +92,7 @@ public class GameEngine {
         player.setY(0);
 
         ChuckNorris chuckNorris = new ChuckNorris(this);
-        chuckNorris.setX(5);
+        chuckNorris.setX(map.length - 5);
         chuckNorris.setY(2);
 
         DragonFly dragonFly = new DragonFly(this);
@@ -107,29 +155,40 @@ public class GameEngine {
             float newX = x + vX;
             float newY = y + vY;
 
-
+            // Do vertical collision detection only if we are falling (allows for jumping up through platforms)
             if (vY > 0) {
 
-            Point landingPoint1 = findFirstSolid(x, y + height, 0, 1, 0, 0, map.length-1, map[0].length-1);
-            Point landingPoint2 = findFirstSolid(x+1, y + height, 0, 1, 0, 0, map.length-1, map[0].length-1);
+                Point landingPoint1 = findFirstSolid(x, y + height, 0, 1, 0, 0, map.length - 1, map[0].length - 1);
+                Point landingPoint2 = findFirstSolid(x + 1, y + height, 0, 1, 0, 0, map.length - 1, map[0].length - 1);
 
-            if (landingPoint1 != null || landingPoint2 != null) {
-                int highestLandingPoint;
-                if (landingPoint1 != null){
-                    highestLandingPoint = landingPoint1.y;
-                    if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
+                if (landingPoint1 != null || landingPoint2 != null) {
+                    int highestLandingPoint;
+                    if (landingPoint1 != null) {
+                        highestLandingPoint = landingPoint1.y;
+                        if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
+                            highestLandingPoint = landingPoint2.y;
+                    } else {
                         highestLandingPoint = landingPoint2.y;
-                }else{
-                    highestLandingPoint = landingPoint2.y;
-                }
-                if (newY >= highestLandingPoint - height) {
-                    newY = highestLandingPoint - height;
-                    entity.setyVel(0);
+                    }
+                    if (newY >= highestLandingPoint - height) {
+                        newY = highestLandingPoint - height;
+                        entity.setyVel(0);
+                    }
                 }
             }
+            // Do horizontal collision detection only if we are standing still or falling
+            if (vY >= GRAVITY){
+                Point leftWall = findFirstSolid(x, y, -1, 0, 0, 0, map.length - 1, map[0].length - 1);
+                Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, map.length - 1, map[0].length - 1);
+                if (leftWall != null && newX < leftWall.x + 1)
+                    newX = leftWall.x + 1;
+                if (rightWall != null && newX > rightWall.x - 1)
+                    newX = rightWall.x - 1;
             }
+
             entity.setX(newX);
             entity.setY(newY);
+
         }
 
     }
@@ -189,7 +248,7 @@ public class GameEngine {
         return playerPosition.distance(entityPosition);
     }
 
-    public boolean isOnTopOfPlayer(Entity entity){
+    public boolean isOnTopOfPlayer(Entity entity) {
         return getDistanceBetweenEntityAndPlayer(entity) < 1f;
     }
 

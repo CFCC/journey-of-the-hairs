@@ -8,6 +8,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
 
     GameEngine engine;
+    private final GamePanel gamePanel;
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -16,7 +17,8 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
         new BoxLayout(this, BoxLayout.X_AXIS);
 
-        add(new GamePanel(engine));
+        gamePanel = new GamePanel(engine);
+        add(gamePanel);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,6 +39,8 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         break;
                     case KeyEvent.VK_SPACE:
                         engine.shoot(1,2);
+                    case KeyEvent.VK_T:
+                        gamePanel.toggleShowTiles();
                 }
 
             }
