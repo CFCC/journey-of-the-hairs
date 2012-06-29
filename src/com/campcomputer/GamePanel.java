@@ -21,7 +21,7 @@ public class GamePanel extends JPanel {
     private BufferedImage air;
     private BufferedImage pit;
     private BufferedImage cheese;
-
+    private BufferedImage stinkbug;
     private BufferedImage hareForward;
 
     private BufferedImage mapBackground;
@@ -41,9 +41,8 @@ public class GamePanel extends JPanel {
         ground = Images.ReadImage(new File("images/ground.jpg"));
         air = Images.ReadImage(new File("images/Sky_Blue.png"));
         pit = Images.ReadImage(new File("images/Sky_Blue.png"));
-        cheese = Images.ReadImage(new File("images/cheese_oh_cheese.jpg"));
         hareForward = Images.ReadImage(new File("images/hare forward.png"));
-
+        stinkbug = Images.ReadImage(new File("images/stinkbug final.png"));
         mapBackground = Images.ReadImage(new File("images/background.png"));
 
     }
