@@ -12,8 +12,8 @@ public class ChuckNorris extends Entity {
 	private final int LOW_HEALTH_THRESHOLD = 1125;
 
 	private int punch = 1;
-	private int roundhousekick = 1000;
-	private int lasereyes = 50;
+	private int roundhousekick = 10000;
+	private int beardpunch = 49;
 	int healed = 0;
 
 	public ChuckNorris(GameEngine engine) {
@@ -57,7 +57,7 @@ public class ChuckNorris extends Entity {
 		}
 
 		if (new Random().nextInt(100) < 40) {
-			lasereyes(entity);
+			beardpunch(entity);
 		}
 
 		if (new Random().nextInt(100) < 9) {
@@ -73,8 +73,8 @@ public class ChuckNorris extends Entity {
 		entity.setHealth(entity.getHealth() - roundhousekick);
 	}
 
-	public void lasereyes(Entity entity) {
-		entity.setHealth(entity.getHealth() - lasereyes);
+	public void beardpunch(Entity entity) {
+		entity.setHealth(entity.getHealth() - beardpunch);
 	}
 
 	public void armor() {
