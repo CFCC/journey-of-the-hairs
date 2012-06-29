@@ -185,6 +185,13 @@ public class GameEngine {
                     newX = rightWall.x - 1;
             }
 
+            if (newX < 0f) {
+                newX = 0;
+            }
+            float rightEdge = map.length - 1;
+            if (newX > rightEdge) {
+                newX = rightEdge;
+            }
             entity.setX(newX);
             entity.setY(newY);
 

@@ -37,8 +37,9 @@ public class JourneyOfTheHairsFrame extends JFrame {
                     case KeyEvent.VK_W:
                         engine.jump();
                         break;
-                    case KeyEvent.VK_T:
+                    case KeyEvent.VK_E:
                         gamePanel.toggleShowTiles();
+                        break;
                 }
 
             }
