@@ -3,7 +3,9 @@ package com.campcomputer.entity;
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 
+
 public class RocketWorm extends Entity {
+    public int health = 75;
 	public RocketWorm(GameEngine engine) {
 		super(engine);
 	}
