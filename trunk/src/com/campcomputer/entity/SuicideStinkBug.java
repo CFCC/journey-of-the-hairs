@@ -8,6 +8,8 @@ import java.io.File;
 
 public class SuicideStinkBug extends Entity {
 
+    public int health = 25;
+
 	public SuicideStinkBug(GameEngine engine) {
 		super(engine);
 	}

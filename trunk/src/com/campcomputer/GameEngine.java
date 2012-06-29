@@ -12,7 +12,6 @@ import static com.campcomputer.Tile.*;
 public class GameEngine {
 
     private static final float GRAVITY = .2f;
-    private static final float MINIMUM_X_VELOCITY = .3f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
 
@@ -36,7 +35,7 @@ public class GameEngine {
     };
     private Player player;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
-
+    int health = 100;
 
     public GameEngine() {
 
@@ -59,7 +58,6 @@ public class GameEngine {
         RocketWorm worm = new RocketWorm(this);
         worm.setX(7);
         worm.setY(8);
-
 
 
         entities.add(player);
@@ -108,31 +106,29 @@ public class GameEngine {
             float newX = x + vX;
             float newY = y + vY;
 
-            // Slow x movement
-            entity.setxVel(vX * MINIMUM_X_VELOCITY);
-            if (Math.abs(vX) < .1)
-                entity.setxVel(0);
+            if (vY > 0) {
+                Point landingPoint1 = findFirstSolid(x, y, 0, 1, 0, 0, map.length, map[0].length);
+                Point landingPoint2 = findFirstSolid(x + 1, y, 0, 1, 0, 0, map.length, map[0].length);
 
-            Point landingPoint1 = findFirstSolid(x, y, 0, 1, 0, 0, map.length, map[0].length);
-            Point landingPoint2 = findFirstSolid(x+1, y, 0, 1, 0, 0, map.length, map[0].length);
-
-            if (landingPoint1 != null || landingPoint2 != null) {
-                int highestLandingPoint;
-                if (landingPoint1 != null){
-                    highestLandingPoint = landingPoint1.y;
-                    if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
+                if (landingPoint1 != null || landingPoint2 != null) {
+                    int highestLandingPoint;
+                    if (landingPoint1 != null) {
+                        highestLandingPoint = landingPoint1.y;
+                        if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
+                            highestLandingPoint = landingPoint2.y;
+                    } else {
                         highestLandingPoint = landingPoint2.y;
-                }else{
-                    highestLandingPoint = landingPoint2.y;
-                }
-                if (newY >= highestLandingPoint - 1) {
-                    newY = highestLandingPoint - 1;
-                    entity.setyVel(0);
+                    }
+                    if (newY >= highestLandingPoint - 1) {
+                        newY = highestLandingPoint - 1;
+                        entity.setyVel(0);
+                    }
                 }
             }
             entity.setX(newX);
             entity.setY(newY);
         }
+
 
     }
 
@@ -156,18 +152,27 @@ public class GameEngine {
         return null;
     }
 
-    public void moveForward() {
+    public void startMoveForward() {
         player.setxVel(MOVE_SPEED);
     }
 
-    public void moveBackward() {
+    public void endMoveForward() {
+        player.setxVel(0);
+    }
+
+    public void startMoveBackward() {
         player.setxVel(-MOVE_SPEED);
     }
 
+    public void endMoveBackward() {
+        player.setxVel(0);
+    }
+
     public void jump() {
-        Point firstSolid = findFirstSolid(player.getX(), player.getY(),0,1,0,0,map.length, map[0].length);
-        if (firstSolid!= null && firstSolid.y- player.getY() <= 1)
+        Point firstSolid = findFirstSolid(player.getX(), player.getY(), 0, 1, 0, 0, map.length, map[0].length);
+        if (firstSolid != null && firstSolid.y - player.getY() <= 1) {
             player.setyVel(JUMP_POWER);
+        }
     }
 
     public boolean isPlayerClose(Entity entity) {
@@ -182,7 +187,7 @@ public class GameEngine {
         return playerPosition.distance(entityPosition);
     }
 
-    public boolean isOnTopOfPlayer(Entity entity){
+    public boolean isOnTopOfPlayer(Entity entity) {
         return getDistanceBetweenEntityAndPlayer(entity) < 1f;
     }
 
@@ -194,5 +199,9 @@ public class GameEngine {
         return false;
     }
 
+    public void shoot(float x, float y) {
+
+
+    }
 }
 

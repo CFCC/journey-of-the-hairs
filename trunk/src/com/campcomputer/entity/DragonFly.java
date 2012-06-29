@@ -7,6 +7,7 @@ public class DragonFly extends Entity {
 	private int flyingEnergy;
 	private int breathFireDamage = 33;
 	private int eatingDamage = 2;
+    public int health = 50;
 
 	public DragonFly(GameEngine engine) {
 		super(engine);

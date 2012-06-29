@@ -9,7 +9,6 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
     GameEngine engine;
 
-
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
 
@@ -28,21 +27,31 @@ public class JourneyOfTheHairsFrame extends JFrame {
             public void keyPressed(KeyEvent e) {
                 switch (e.getKeyCode()) {
                     case KeyEvent.VK_A:
-                        engine.moveBackward();
+                        engine.startMoveBackward();
                         break;
                     case KeyEvent.VK_D:
-                        engine.moveForward();
+                        engine.startMoveForward();
                         break;
                     case KeyEvent.VK_W:
                         engine.jump();
                         break;
+                    case KeyEvent.VK_SPACE:
+                        engine.shoot(1,2);
                 }
 
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
-                super.keyReleased(e);    //To change body of overridden methods use File | Settings | File Templates.
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_A:
+                        engine.endMoveBackward();
+                        break;
+                    case KeyEvent.VK_D:
+                        engine.endMoveForward();
+                        break;
+                }
+
             }
         });
 
@@ -56,7 +65,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
             }
         }));
 
-        Timer t = new Timer(30, new ActionListener() {
+        Timer t = new Timer(1000/30, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
