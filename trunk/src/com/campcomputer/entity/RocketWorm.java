@@ -20,6 +20,11 @@ public class RocketWorm extends Entity {
     }
 
     @Override
+    public boolean isAffectedByGravity() {
+        return false;
+    }
+
+    @Override
     public void tick() {
         super.tick();
         if (engine.isOnTopOfPlayer(this)) {

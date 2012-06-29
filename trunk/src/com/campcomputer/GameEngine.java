@@ -103,8 +103,8 @@ public class GameEngine {
         stinkbug.setY(1);
 
         RocketWorm worm = new RocketWorm(this);
-        worm.setX(7);
-        worm.setY(8);
+        worm.setX(32);
+        worm.setY(9);
 
 
         entities.add(player);
