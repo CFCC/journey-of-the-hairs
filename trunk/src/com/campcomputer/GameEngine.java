@@ -267,17 +267,20 @@ public class GameEngine {
     }
 
     public void shoot(float x, float y) {
+        ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
         for (Entity entity : entities) {
             if (!(entity instanceof Player)) {
                 Point2D shootLocation = new Point2D.Float(x, y);
                 Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
 
                 if (shootLocation.distance(entityLocation) < 1) {
-                    entity.attacked();
+                    if (!entity.attacked())
+                        entitiesToRemove.add(entity);
 
                 }
             }
         }
+        entities.removeAll(entitiesToRemove);
     }
 }
 
