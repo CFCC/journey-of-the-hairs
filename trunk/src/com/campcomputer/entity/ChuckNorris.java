@@ -11,7 +11,7 @@ public class ChuckNorris extends Entity {
 	private final int LOW_HEALTH_THRESHOLD = 1125;
 
 	private int punch = 1;
-	private int roundhousekick = 100;
+	private int roundhousekick = 1000;
 	private int lasereyes = 50;
 	int healed = 0;
 
