@@ -5,6 +5,7 @@ import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
 
 import java.io.File;
+import java.util.Random;
 
 public class ChuckNorris extends Entity {
     private final int maxhealth = 9001;
@@ -48,14 +49,27 @@ public class ChuckNorris extends Entity {
 		//Yes.
 		// How often should each attack happen? (What chance does each attack have to be the chosen one?)
 		//The roundhouse should not happen often. 51% of the punch happening. 40% of the lasereyes happening.
-		// While 9% of the roundhouse happening
+		// While 9% of the roundhouse happening.
+
+		// do the punch 51% of the time.
+		if (new Random().nextInt(100) < 51) {
+			punch(entity);
+		}
+
+		if (new Random().nextInt(100) < 40) {
+			lasereyes(entity);
+		}
+
+		if (new Random().nextInt(100) < 9) {
+			roundhousekick(entity);
+		}
 	}
 
 	public void punch(Entity entity) {
 		entity.setHealth(entity.getHealth() - punch);
 	}
 
-	public void roudhousekick(Entity entity) {
+	public void roundhousekick(Entity entity) {
 		entity.setHealth(entity.getHealth() - roundhousekick);
 	}
 
