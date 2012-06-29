@@ -42,7 +42,13 @@ public class ChuckNorris extends Entity {
 
 	@Override
 	public void attack(Entity entity) {
-		// It should attack........any attack at random.
+		// It should attack........any of the three attacks at random. Use roundhousekick at the end. ATTACK!
+
+		// Does ChuckNorris only do one attack at a time?
+		//Yes.
+		// How often should each attack happen? (What chance does each attack have to be the chosen one?)
+		//The roundhouse should not happen often. 51% of the punch happening. 40% of the lasereyes happening.
+		// While 9% of the roundhouse happening
 	}
 
 	public void punch(Entity entity) {
