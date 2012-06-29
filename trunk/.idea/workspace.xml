@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
@@ -61,19 +62,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChuckNorris.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ChuckNorris.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="14" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.6391572">
+            <state line="55" column="14" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DragonFly.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DragonFly.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="7" column="33" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0737489">
               <folding />
             </state>
           </provider>
@@ -82,16 +83,7 @@
       <file leaf-file-name="SuicideStinkBug.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="0" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0">
+            <state line="9" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -117,9 +109,9 @@
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/Tile.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
       </list>
     </option>
   </component>
@@ -691,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="125" column="0" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0">
@@ -705,16 +690,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
+        <state line="55" column="14" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="14" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.6391572">
+        <state line="9" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0737489">
           <folding />
         </state>
       </provider>

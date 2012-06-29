@@ -6,13 +6,13 @@ import com.campcomputer.GameEngine;
 public class DragonFly extends Entity {
 	private int flyingEnergy;
 	private int breathFireDamage = 33;
-	private int eatingDamage = 2;
+	private int eatingDamage = 10;
     public int health = 50;
 
 	public DragonFly(GameEngine engine) {
 		super(engine);
 		setAffectedByGravity(false);
-		setHealth(70);
+		setHealth(90);
 	}
 
 	@Override
