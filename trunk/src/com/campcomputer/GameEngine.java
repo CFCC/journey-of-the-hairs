@@ -176,7 +176,7 @@ public class GameEngine {
                 }
             }
             // Do horizontal collision detection only if we are standing still or falling
-            if (vY >= GRAVITY){
+            if (vY >= GRAVITY) {
                 Point leftWall = findFirstSolid(x, y, -1, 0, 0, 0, map.length - 1, map[0].length - 1);
                 Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, map.length - 1, map[0].length - 1);
                 if (leftWall != null && newX < leftWall.x + 1)
@@ -268,7 +268,15 @@ public class GameEngine {
 
     public void shoot(float x, float y) {
         for (Entity entity : entities) {
-                entity.attacked();
+            if (!(entity instanceof Player)) {
+                Point2D shootLocation = new Point2D.Float(x, y);
+                Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+
+                if (shootLocation.distance(entityLocation) < 1) {
+                    entity.attacked();
+
+                }
+            }
         }
     }
 }

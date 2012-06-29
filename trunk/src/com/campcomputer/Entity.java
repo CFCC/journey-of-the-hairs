@@ -147,9 +147,7 @@ public abstract class Entity {
         return frames;
 
     }
-
-    public void attacked() {
-        health = getHealth();
+        public void attacked(){
         setHealth(health -= 25);
         if (health < 1) {
             engine.getEntities().remove(this);
