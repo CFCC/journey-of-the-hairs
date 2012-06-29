@@ -11,7 +11,6 @@ public class ChuckNorris extends Entity {
 	private int punch = 1;
 	private int roundhousekick = 100;
 	private int lasereyes = 50;
-	private int armor = 25;
 	int healed = 0;
 
 	public ChuckNorris(GameEngine engine) {
