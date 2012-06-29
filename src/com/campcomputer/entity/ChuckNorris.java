@@ -51,6 +51,7 @@ public class ChuckNorris extends Entity {
 		//The roundhouse should not happen often. 51% of the punch happening. 40% of the lasereyes happening.
 		// While 9% of the roundhouse happening.
 
+		boolean hasAttacked = false;
 		// do the punch 51% of the time.
 		if (new Random().nextInt(100) < 51) {
 			punch(entity);
@@ -62,6 +63,7 @@ public class ChuckNorris extends Entity {
 
 		if (new Random().nextInt(100) < 9) {
 			roundhousekick(entity);
+		boolean hasattacked = true;
 		}
 	}
 
