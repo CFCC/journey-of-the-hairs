@@ -3,8 +3,14 @@ package com.campcomputer.entity;
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RocketWorm extends Entity {
+    protected List<BufferedImage> wormLeaveGround;
+    protected List<BufferedImage> wormEnterGround;
+
     public int health = 75;
 	public RocketWorm(GameEngine engine) {
 		super(engine);
@@ -13,15 +19,19 @@ public class RocketWorm extends Entity {
 	@Override
 	public void tick() {
         super.tick();
-
+        if (frames != wormLeaveGround && engine.isOnTopOfPlayer(this)){
+            frames = wormLeaveGround;
+            currentFrame = 0;
+        }
     }
 
 	@Override
 	public void loadImages() {
+        wormLeaveGround = loadFrames("wormLeaveGround");
+        wormEnterGround = loadFrames("wormEnterGround");
+    }
 
-	}
-
-	@Override
+    @Override
 	public void attack(Entity entity) {
 
 	}

@@ -22,7 +22,7 @@ public abstract class Entity {
 
     protected GameEngine engine;
     protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
-    private int currentFrame = 0;
+    protected int currentFrame = 0;
 
     public Entity(GameEngine engine) {
         this.engine = engine;
@@ -130,5 +130,18 @@ public abstract class Entity {
 
     public BufferedImage getCurrentFrame() {
         return frames.get(currentFrame);
+    }
+
+    protected List<BufferedImage> loadFrames(String name) {
+        List<BufferedImage> frames = new ArrayList<BufferedImage>();
+
+        File frameDir = new File("frames/" + name);
+
+        for (File file : frameDir.listFiles()) {
+            if (file.isFile())
+                frames.add(Images.ReadImage(file));
+        }
+        return frames;
+
     }
 }
