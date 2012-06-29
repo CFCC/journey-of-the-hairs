@@ -10,7 +10,6 @@ import java.util.Collection;
 import static com.campcomputer.Tile.*;
 
 public class GameEngine {
-
     private static final float GRAVITY = .2f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
@@ -261,8 +260,9 @@ public class GameEngine {
     }
 
     public void shoot(float x, float y) {
-
-
+        for (Entity entity : entities) {
+                entity.attacked();
+        }
     }
 }
 
