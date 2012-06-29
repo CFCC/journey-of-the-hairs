@@ -18,6 +18,7 @@ public class SuicideStinkBug extends Entity {
     public void tick() {
         super.tick();
 
+		moveLeft();
     }
 
     @Override
