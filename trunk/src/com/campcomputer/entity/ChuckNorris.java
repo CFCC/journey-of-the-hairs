@@ -47,7 +47,7 @@ public class ChuckNorris extends Entity {
 
 	@Override
 	public void attack(Entity entity) {
-
+		// It should attack........any attack at random.
 	}
 
 	public void punch(Entity entity) {
