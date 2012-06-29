@@ -6,12 +6,12 @@ import com.campcomputer.GameEngine;
 import java.util.Random;
 
 public class ChuckNorris extends Entity {
-    private final int maxhealth = 9001;
+    private final int maxhealth = 9000;
 	private final int LOW_HEALTH_THRESHOLD = 1125;
 
 	private int punch = 1;
-	private int roundhousekick = 100;
-	private int beardpunch = 49;
+	private int roundhousekick = 90;
+	private int beardpunch = 40;
 	int healed = 0;
 
 	public ChuckNorris(GameEngine engine) {
