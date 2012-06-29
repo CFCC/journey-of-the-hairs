@@ -1,24 +1,22 @@
 package com.campcomputer;
 
-import com.campcomputer.entity.Player;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Entity {
-	private int health = 100;
-	private int attackDamage = 10;
+    private int health = 100;
+    private int attackDamage = 10;
 
-	private float x = 0;
+    private float x = 0;
     private float y = 0;
 
     private float xVel = 0;
     private float yVel = 0;
 
-	private boolean affectedByGravity = true;
-	private boolean facingRight = true;
+    private boolean affectedByGravity = true;
+    private boolean facingRight = true;
 
     protected GameEngine engine;
     protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
@@ -75,58 +73,59 @@ public abstract class Entity {
         return 1;
     }
 
-	public boolean isFacingRight() {
-		return facingRight;
-	}
+    public boolean isFacingRight() {
+        return facingRight;
+    }
 
-	public void setEngine(GameEngine engine) {
-		this.engine = engine;
-	}
+    public void setEngine(GameEngine engine) {
+        this.engine = engine;
+    }
 
-	public boolean isFacingLeft() {
-		return !facingRight;
-	}
+    public boolean isFacingLeft() {
+        return !facingRight;
+    }
 
-	public boolean isAffectedByGravity() {
-		return affectedByGravity;
-	}
+    public boolean isAffectedByGravity() {
+        return affectedByGravity;
+    }
 
-	public void setAffectedByGravity(boolean affectedByGravity) {
-		this.affectedByGravity = affectedByGravity;
-	}
+    public void setAffectedByGravity(boolean affectedByGravity) {
+        this.affectedByGravity = affectedByGravity;
+    }
 
-	public void moveLeft() {
-		setX(getX() - getxVel());
-	}
+    public void moveLeft() {
+        setX(getX() - getxVel());
+    }
 
-	public void moveRight() {
-		setX(getX() + getxVel());
-	}
+    public void moveRight() {
+        setX(getX() + getxVel());
+    }
 
-	public void moveUp() {
-		setY(getY() + getyVel());
-	}
+    public void moveUp() {
+        setY(getY() + getyVel());
+    }
 
-	public void moveDown() {
-		setY(getY() - getyVel());
-	}
+    public void moveDown() {
+        setY(getY() - getyVel());
+    }
 
-	public int getAttackDamage() {
-		return attackDamage;
-	}
-	public void setAttackDamage(int attackDamage) {
-		this.attackDamage = attackDamage;
-	}
+    public int getAttackDamage() {
+        return attackDamage;
+    }
 
-	abstract protected void loadImages();
+    public void setAttackDamage(int attackDamage) {
+        this.attackDamage = attackDamage;
+    }
+
+    abstract protected void loadImages();
 
     public List<BufferedImage> getFrames() {
         return frames;
     }
 
-    public void tick(){
+    public void tick() {
         currentFrame++;
-        if (currentFrame > frames.size() -1)
+        if (currentFrame > frames.size() - 1)
             currentFrame = 0;
     }
 
@@ -147,5 +146,13 @@ public abstract class Entity {
         }
         return frames;
 
+    }
+
+    public void attacked() {
+        health = getHealth();
+        setHealth(health -= 25);
+        if (health < 1) {
+            engine.getEntities().remove(this);
+        }
     }
 }

@@ -2,9 +2,7 @@ package com.campcomputer.entity;
 
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
-import com.campcomputer.Images;
 
-import java.io.File;
 import java.util.Random;
 
 public class ChuckNorris extends Entity {
