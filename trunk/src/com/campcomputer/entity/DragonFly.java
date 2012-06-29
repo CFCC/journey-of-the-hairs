@@ -23,10 +23,8 @@ public class DragonFly extends Entity {
 			moveUp();
 		} else if (engine.isPlayerBelow(this)) {
 			moveDown();
-		} else if (engine.isPlayerClose(this)) {
-            attack(engine.getPlayer());
 		} else {
-            // stand still
+            moveLeft();
 		}
 	}
 
@@ -37,7 +35,7 @@ public class DragonFly extends Entity {
 
     @Override
     public void attack(Entity entity) {
-
+		breathfire(entity);
     }
 
 	/**
