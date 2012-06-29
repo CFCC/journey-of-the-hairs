@@ -1,8 +1,5 @@
 package com.campcomputer;
 
-import com.campcomputer.entity.Player;
-import com.sun.xml.internal.ws.api.pipe.Engine;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -13,7 +10,7 @@ import java.util.Map;
 
 public class GamePanel extends JPanel {
 
-    private static final int TILE_SIZE = 64;
+    public static final int TILE_SIZE = 64;
     float xScreenPlace = 0f;
     float lastHealth = 0;
 

@@ -2,11 +2,7 @@ package com.campcomputer;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.lang.reflect.InvocationTargetException;
+import java.awt.event.*;
 
 public class JourneyOfTheHairsFrame extends JFrame {
 
@@ -19,7 +15,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
         engine = new GameEngine();
 
-        new BoxLayout(this, BoxLayout.X_AXIS);     
+        new BoxLayout(this, BoxLayout.X_AXIS);
 
         add(new GamePanel(engine));
 
@@ -30,7 +26,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                switch(e.getKeyCode()){
+                switch (e.getKeyCode()) {
                     case KeyEvent.VK_A:
                         engine.moveBackward();
                         break;
@@ -50,7 +46,17 @@ public class JourneyOfTheHairsFrame extends JFrame {
             }
         });
 
-        Timer t = new Timer(1000/30, new ActionListener() {
+
+        addMouseListener((new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent mouseEvent) {
+                float X = mouseEvent.getX() / GamePanel.TILE_SIZE;
+                float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
+                engine.shoot(X, Y);
+            }
+        }));
+
+        Timer t = new Timer(30, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
