@@ -7,7 +7,7 @@ import com.campcomputer.Images;
 import java.io.File;
 
 public class ChuckNorris extends Entity {
-    private final int maxhealth = 9002;
+    private final int maxhealth = 9001;
 	private int punch = 1;
 	private int roundhousekick = 100;
 	private int lasereyes = 50;
@@ -44,11 +44,11 @@ public class ChuckNorris extends Entity {
 
 	@Override
 	public void attack(Entity entity) {
-        entity.setHealth(entity.getHealth()-punch);
+		entity.setHealth(entity.getHealth() - punch);
 	}
 
 	public void punch(Entity entity) {
-
+		entity.setHealth(entity.getHealth() - punch);
 	}
 
 	public void roudhousekick() {
