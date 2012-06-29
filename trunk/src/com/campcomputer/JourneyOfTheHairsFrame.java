@@ -52,7 +52,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
             public void mouseClicked(MouseEvent mouseEvent) {
                 float X = mouseEvent.getX() / GamePanel.TILE_SIZE;
                 float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
-                engine.shoot(X, Y);
+               // engine.shoot(X, Y);
             }
         }));
 

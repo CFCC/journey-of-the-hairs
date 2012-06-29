@@ -2,13 +2,15 @@ package com.campcomputer.entity;
 
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
+import com.campcomputer.Images;
+
+import java.io.File;
 
 public class SuicideStinkBug extends Entity {
 
 	public SuicideStinkBug(GameEngine engine) {
 		super(engine);
 	}
-
 	@Override
 	public void tick() {
         super.tick();
@@ -17,7 +19,7 @@ public class SuicideStinkBug extends Entity {
 
     @Override
     public void loadImages() {
-
+         frames.add(Images.ReadImage(new File("images/stinkbug final.png")));
     }
 
 	@Override
