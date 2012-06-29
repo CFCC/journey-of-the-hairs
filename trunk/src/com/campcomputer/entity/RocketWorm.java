@@ -2,8 +2,10 @@ package com.campcomputer.entity;
 
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
+import com.campcomputer.Images;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,7 @@ public class RocketWorm extends Entity {
     public void loadImages() {
         wormLeaveGround = loadFrames("wormLeaveGround");
         wormEnterGround = loadFrames("wormEnterGround");
+        frames.add(Images.ReadImage(new File("frames/wormLeaveGround/00.png")));
     }
 
      @Override

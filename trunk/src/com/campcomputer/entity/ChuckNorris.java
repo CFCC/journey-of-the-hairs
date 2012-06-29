@@ -2,7 +2,12 @@ package com.campcomputer.entity;
 
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
+import com.campcomputer.Images;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class ChuckNorris extends Entity {
@@ -14,15 +19,27 @@ public class ChuckNorris extends Entity {
 	private int beardpunch = 40;
 	int healed = 0;
 
-	public ChuckNorris(GameEngine engine) {
+
+    List<BufferedImage> standingFrames;
+    List<BufferedImage> punchFrames;
+    List<BufferedImage> roundhousekickFrames;
+    List<BufferedImage> smackFrames;
+
+
+    public ChuckNorris(GameEngine engine) {
 		super(engine);
 		setHealth(maxhealth);
 	}
 
 	@Override
 	protected void loadImages() {
-		frames = loadFrames("chucknorris");
-	}
+        standingFrames = new ArrayList<BufferedImage>();
+		standingFrames.add(Images.ReadImage(new File("frames/chucknorrissmack/1.png")));
+        punchFrames = loadFrames("chucknorrispunch");
+        smackFrames = loadFrames("chucknorrissmack");
+        roundhousekickFrames = loadFrames("chucknorrisroundhousekick");
+        frames = standingFrames;
+    }
 
 	@Override
 	public void tick() {
@@ -67,14 +84,17 @@ public class ChuckNorris extends Entity {
 
 	public void punch(Entity entity) {
 		entity.setHealth(entity.getHealth() - punch);
+        frames = punchFrames;
 	}
 
 	public void roundhousekick(Entity entity) {
 		entity.setHealth(entity.getHealth() - roundhousekick);
+        frames = roundhousekickFrames;
 	}
 
 	public void beardpunch(Entity entity) {
 		entity.setHealth(entity.getHealth() - beardpunch);
+        frames = roundhousekickFrames;
 	}
 
 	public void armor() {

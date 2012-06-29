@@ -2,6 +2,9 @@ package com.campcomputer.entity;
 
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
+import com.campcomputer.Images;
+
+import java.io.File;
 
 public class DragonFly extends Entity {
 	private int flyingEnergy;
@@ -30,7 +33,7 @@ public class DragonFly extends Entity {
 
 	@Override
 	protected void loadImages() {
-
+        frames.add(Images.ReadImage(new File("images/dragonfly.png")));
 	}
 
     @Override
