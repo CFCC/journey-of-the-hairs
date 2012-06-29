@@ -147,10 +147,9 @@ public abstract class Entity {
         return frames;
 
     }
-        public void attacked(){
+
+    public boolean attacked() {
         setHealth(health -= 25);
-        if (health < 1) {
-            engine.getEntities().remove(this);
-        }
+        return health > 0;
     }
 }
