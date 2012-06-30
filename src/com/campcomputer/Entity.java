@@ -159,4 +159,7 @@ public abstract class Entity {
 	public boolean isAffectedByHitDetection(){
 		return true;
 	}
+	public boolean canBeAttacked(){
+		return true;
+	}
 }
