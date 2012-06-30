@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="9a3d281b-b062-4e76-b765-7803aee6bd53" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
@@ -109,7 +110,7 @@
       <file leaf-file-name="GameEngine.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="266" column="0" selection-start="9565" selection-end="9565" vertical-scroll-proportion="0.0">
+            <state line="104" column="23" selection-start="5582" selection-end="5582" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +128,7 @@
       <file leaf-file-name="SuicideStinkBug.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="23" selection-start="623" selection-end="623" vertical-scroll-proportion="0.5719361">
+            <state line="15" column="22" selection-start="368" selection-end="368" vertical-scroll-proportion="0.36056837">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,11 +147,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/RocketWorm.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
       </list>
     </option>
@@ -622,7 +623,11 @@
       <created>1341025562105</created>
       <updated>1341025562105</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008">
+      <created>1341025713107</created>
+      <updated>1341025713107</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -729,13 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="0" selection-start="9565" selection-end="9565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="18" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
@@ -757,6 +755,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="23" selection-start="5582" selection-end="5582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/RocketWorm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="57" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
@@ -766,7 +771,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="23" selection-start="623" selection-end="623" vertical-scroll-proportion="0.5719361">
+        <state line="15" column="22" selection-start="368" selection-end="368" vertical-scroll-proportion="0.36056837">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
