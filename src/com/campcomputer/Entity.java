@@ -156,4 +156,7 @@ public abstract class Entity {
         setHealth(health -= 1);
         return health > 0;
     }
+	public boolean isAffectedByHitDetection(){
+		return true;
+	}
 }

@@ -100,4 +100,7 @@ public class DragonFly extends Entity {
 	public  void setFlyingEnergy(int flyingEnergy) {
 		this.flyingEnergy = flyingEnergy;
 	}
+	public boolean isAffectedByHitDetection() {
+		return false;
+	}
 }
