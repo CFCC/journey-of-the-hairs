@@ -8,7 +8,7 @@ import java.io.File;
 
 public class SuicideStinkBug extends Entity {
 
-	private static final int EXPLODE_RANGE = 2;
+	private static final int EXPLODE_RANGE = 1;
 	private static final int EXPLODE_DAMAGE = 10;
 
 

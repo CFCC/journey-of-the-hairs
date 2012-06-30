@@ -102,7 +102,7 @@ public class GameEngine {
 
 		SuicideStinkBug stinkbug = new SuicideStinkBug(this);
 		stinkbug.setX(9);
-		stinkbug.setY(1);
+		stinkbug.setY(7);
 
 		RocketWorm worm = new RocketWorm(this);
 		worm.setX(32);
