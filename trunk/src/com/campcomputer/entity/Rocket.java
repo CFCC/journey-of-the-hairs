@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Rocket extends Entity {
 
-	private static final int ROCKET_DAMAGE = 10;
+	private static final int ROCKET_DAMAGE = 1;
     private static final float SPEED_MAGNITUDE = 0.1f;
 
     List<BufferedImage> rocketLeft;
@@ -28,14 +28,8 @@ public class Rocket extends Entity {
     public void tick() {
         super.tick();
 
-
         float playerX = engine.getPlayer().getX();
         float playerY = engine.getPlayer().getY();
-
-        /*
-        float newXvel = (getX() + (getX() + playerX)) * SPEED_DIVISOR;
-        float newYvel = (getY() + (getY() + playerY)) * SPEED_DIVISOR;
-        */
 
         if (playerX < getX()) {
             frames = rocketLeft;
@@ -46,16 +40,13 @@ public class Rocket extends Entity {
         }
 
         if (playerY < getY()) {
-            frames = rocketRight;
             setyVel(-1 * SPEED_MAGNITUDE);
         } else {
-            frames = rocketRight;
             setyVel(SPEED_MAGNITUDE);
         }
 
         if (engine.isOnTopOfPlayer(this)) {
             engine.getPlayer().setHealth(engine.getPlayer().getHealth() - ROCKET_DAMAGE);
-            setHealth(0);
             engine.removeEntity(this);
         }
     }
@@ -64,15 +55,11 @@ public class Rocket extends Entity {
     protected void loadImages() {
         rocketLeft = new ArrayList<BufferedImage>(1);
         rocketRight = new ArrayList<BufferedImage>(1);
-        rocketLeft.add(Images.ReadImage(new File("images/rocket.png")));
 
-        BufferedImage original = rocketLeft.get(0);
-        BufferedImage flipped = new BufferedImage(original.getWidth(), original.getHeight(),BufferedImage.TYPE_4BYTE_ABGR);
+        rocketLeft.add(Images.ReadImage(new File("images/rocketLeft.png")));
+        rocketRight.add(Images.ReadImage(new File("images/rocketRight.png")));
 
-        Graphics2D g2 = (Graphics2D) flipped.getGraphics();
-        g2.drawImage(original, AffineTransform.getScaleInstance(-1, 1),null );
-        rocketRight.add(flipped);
-        frames = rocketLeft;
+        frames = rocketRight;
     }
 
     @Override

@@ -12,9 +12,14 @@ import java.util.List;
 
 public class Player extends Entity {
 
+    public static final int MAX_HEALTH = 100;
     List<BufferedImage> forwardFrames;
     List<BufferedImage> backwardFrames;
-    public Player(GameEngine engine) {super(engine);}
+
+    public Player(GameEngine engine) {
+        super(engine);
+        setHealth(MAX_HEALTH);
+    }
 
     @Override
     protected void loadImages() {
@@ -34,14 +39,14 @@ public class Player extends Entity {
             frames = forwardFrames;
     }
 
-	@Override
-	public void tick() {
+    @Override
+    public void tick() {
         super.tick();
 
     }
 
-	@Override
-	public void attack(Entity entity) {
+    @Override
+    public void attack(Entity entity) {
 
-	}
+    }
 }
