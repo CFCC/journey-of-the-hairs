@@ -262,7 +262,7 @@ public class GameEngine {
 	}
 
 	public boolean isOnTopOfPlayer(Entity entity) {
-		return getDistanceBetweenEntityAndPlayer(entity) < 1f;
+		return getDistanceBetweenEntityAndPlayer(entity) < 2f;
 	}
 
 	public boolean isPlayerAbove(Entity entity) {

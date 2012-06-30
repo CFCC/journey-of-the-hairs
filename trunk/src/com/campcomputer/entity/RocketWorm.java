@@ -3,29 +3,40 @@ package com.campcomputer.entity;
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
+import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RocketWorm extends Entity {
-    protected List<BufferedImage> wormLeaveGround;
-    protected List<BufferedImage> wormEnterGround;
+
+	protected List<BufferedImage> standing;
+	protected List<BufferedImage> wormLeaveGround;
+	protected List<BufferedImage> wormEnterGround;
 
 
     public RocketWorm(GameEngine engine) {
         super(engine);
-		setHealth(10);
+		setHealth(2);
     }
 
-    @Override
-    public boolean isAffectedByGravity() {
-        return false;
-    }
-
-    @Override
+	public int getHeight() {
+		return 2;
+	}
+	@Override
     public void tick() {
         super.tick();
+		if (frames == wormLeaveGround && currentFrame == wormLeaveGround.size() - 1) {
+			currentFrame = 0;
+			frames = wormEnterGround;
+		}
+		if (frames == wormEnterGround && currentFrame == wormEnterGround.size() - 1) {
+			currentFrame = 0;
+			frames = standing;
+		}
+
         if (engine.isOnTopOfPlayer(this)) {
             emerge();
         } else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0) {
@@ -36,13 +47,17 @@ public class RocketWorm extends Entity {
 			}
             shootrocket();
         }
+
     }
+
 
     @Override
     public void loadImages() {
         wormLeaveGround = loadFrames("wormLeaveGround");
         wormEnterGround = loadFrames("wormEnterGround");
-        frames.add(Images.ReadImage(new File("frames/wormLeaveGround/00.png")));
+		standing = new ArrayList<BufferedImage>(1);
+		standing.add(wormLeaveGround.get(0));
+        frames = standing;
     }
 
      @Override
@@ -76,4 +91,8 @@ public class RocketWorm extends Entity {
         // move underground in areas
         // can surface to shoot
     }
+
+	public boolean canBeAttacked() {
+		return frames != standing;
+	}
 }
