@@ -6,17 +6,16 @@ import com.campcomputer.Images;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class RocketWorm extends Entity {
     protected List<BufferedImage> wormLeaveGround;
     protected List<BufferedImage> wormEnterGround;
 
-    public int health = 75;
 
     public RocketWorm(GameEngine engine) {
         super(engine);
+		setHealth(10);
     }
 
     @Override
@@ -30,7 +29,12 @@ public class RocketWorm extends Entity {
         if (engine.isOnTopOfPlayer(this)) {
             emerge();
         } else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0) {
-            shootrockets(engine.getPlayer());
+			boolean foundRocket = false;
+			for (Entity entity  : engine.getEntities()) {
+				if (entity instanceof Rocket)
+					return;
+			}
+            shootrocket();
         }
     }
 
@@ -53,10 +57,11 @@ public class RocketWorm extends Entity {
         }
     }
 
-    public void shootrockets(Entity entity) {
+    public void shootrocket() {
         Rocket rocket = new Rocket(engine);
         rocket.setX(getX());
         rocket.setY(getY()+1);
+		engine.addEntity(rocket);
 
         // when player is 20 tiles away, worm will surface
         // come out of ground and engine.moveLeft or engine.moveRight.

@@ -11,24 +11,27 @@ import java.util.List;
 import java.util.Random;
 
 public class ChuckNorris extends Entity {
-    private final int maxhealth = 9000;
+
+	private final int MAX_HEALTH = 9000;
 	private final int LOW_HEALTH_THRESHOLD = 1125;
 
-	private int punch = 1;
-	private int roundhousekick = 90;
-	private int beardpunch = 40;
+	private int punchDamage = 1;
+	private int roundHouseKickDamage = 90;
+	private int beardPunchDamage = 40;
 	int healed = 0;
 
+	private static final int PUNCH_CHANCE = 51;
+	private static final int ROUND_HOUSE_CHANCE = 9;
+	private static final int BEARD_PUNCH_CHANCE = 40;
 
     List<BufferedImage> standingFrames;
     List<BufferedImage> punchFrames;
     List<BufferedImage> roundhousekickFrames;
     List<BufferedImage> smackFrames;
 
-
-    public ChuckNorris(GameEngine engine) {
+	public ChuckNorris(GameEngine engine) {
 		super(engine);
-		setHealth(maxhealth);
+		setHealth(MAX_HEALTH);
 	}
 
 	@Override
@@ -39,7 +42,7 @@ public class ChuckNorris extends Entity {
         smackFrames = loadFrames("chucknorrissmack");
         roundhousekickFrames = loadFrames("chucknorrisroundhousekick");
         frames = standingFrames;
-    }
+	}
 
 	@Override
 	public void tick() {
@@ -58,7 +61,7 @@ public class ChuckNorris extends Entity {
 
 	@Override
 	public void attack(Entity entity) {
-		// It should attack........any of the three attacks at random. Use roundhousekick at the end. ATTACK!
+		// It should attack........any of the three attacks at random. Use round house kick at the end. ATTACK!
 
 		// Does ChuckNorris only do one attack at a time?
 		//Yes.
@@ -66,39 +69,41 @@ public class ChuckNorris extends Entity {
 		//The roundhouse should not happen often. 51% of the punch happening. 40% of the lasereyes happening.
 		// While 9% of the roundhouse happening.
 
-		boolean hasAttacked = false;
-		// do the punch 51% of the time.
-		if (new Random().nextInt(100) < 51) {
+		int randomChance = new Random().nextInt(100);
+
+		if (randomChance < 33) {
 			punch(entity);
-			hasAttacked = true;
+		} else if (randomChance >= 33 && randomChance < 66) {
+			beardPunch(entity);
+		} else {
+			roundHouseKick(entity);
 		}
 
-		if (new Random().nextInt(100) < 40) {
-			beardpunch(entity);
-		}
 
-		if (new Random().nextInt(100) < 9) {
-			roundhousekick(entity);
-		}
 	}
 
 	public void punch(Entity entity) {
-		entity.setHealth(entity.getHealth() - punch);
-        frames = punchFrames;
+		if (new Random().nextInt(100) < PUNCH_CHANCE) {
+			entity.setHealth(entity.getHealth() - punchDamage);
+			frames = punchFrames;
+		}
 	}
 
-	public void roundhousekick(Entity entity) {
-		entity.setHealth(entity.getHealth() - roundhousekick);
-        frames = roundhousekickFrames;
+	public void roundHouseKick(Entity entity) {
+		if (new Random().nextInt(100) < ROUND_HOUSE_CHANCE) {
+			entity.setHealth(entity.getHealth() - roundHouseKickDamage);
+			frames = roundhousekickFrames;
+		}
 	}
 
-	public void beardpunch(Entity entity) {
-		entity.setHealth(entity.getHealth() - beardpunch);
-        frames = roundhousekickFrames;
+	public void beardPunch(Entity entity) {
+		if (new Random().nextInt(100) < BEARD_PUNCH_CHANCE) {
+			entity.setHealth(entity.getHealth() - beardPunchDamage);
+			frames = roundhousekickFrames;
+		}
 	}
 
 	public void armor() {
-
 
 	}
 
@@ -108,7 +113,7 @@ public class ChuckNorris extends Entity {
     }
 
     public void healing() {
-		setHealth(maxhealth);
+		setHealth(MAX_HEALTH);
 		healed = 1;
 	}
 }
