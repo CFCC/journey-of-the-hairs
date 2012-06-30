@@ -56,8 +56,8 @@ public class Rocket extends Entity {
         rocketLeft = new ArrayList<BufferedImage>(1);
         rocketRight = new ArrayList<BufferedImage>(1);
 
-        rocketLeft.add(Images.ReadImage(new File("images/rocketLeft.png")));
-        rocketRight.add(Images.ReadImage(new File("images/rocketRight.png")));
+        rocketLeft.add(Images.ReadImage("images/rocketLeft.png"));
+        rocketRight.add(Images.ReadImage("images/rocketRight.png"));
 
         frames = rocketRight;
     }

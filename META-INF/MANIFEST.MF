@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: images
+Main-Class: com.campcomputer.JourneyOfTheHairs
+

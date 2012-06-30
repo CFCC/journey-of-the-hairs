@@ -32,7 +32,7 @@ public class DragonFly extends Entity {
 
 	@Override
 	protected void loadImages() {
-        frames.add(Images.ReadImage(new File("images/dragonfly.png")));
+        frames.add(Images.ReadImage("images/dragonfly.png"));
 	}
 
     @Override
