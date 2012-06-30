@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Entity {
-    private int health = 100;
+    private int health = 1;
     private int attackDamage = 10;
 
     private float x = 0;
@@ -94,19 +94,23 @@ public abstract class Entity {
     }
 
     public void moveLeft() {
-        setX(getX() - getxVel());
+        setxVel(-0.1f);
+		setyVel(0);
     }
 
     public void moveRight() {
-        setX(getX() + getxVel());
+        setxVel(0.1f);
+		setyVel(0);
     }
 
     public void moveUp() {
-        setY(getY() + getyVel());
+        setxVel(0);
+		setyVel(0.1f);
     }
 
     public void moveDown() {
-        setY(getY() - getyVel());
+        setxVel(0);
+		setyVel(-0.1f);
     }
 
     public int getAttackDamage() {
@@ -149,7 +153,7 @@ public abstract class Entity {
     }
 
     public boolean attacked() {
-        setHealth(health -= 25);
+        setHealth(health -= 1);
         return health > 0;
     }
 }

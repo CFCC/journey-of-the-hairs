@@ -83,8 +83,10 @@ public class GameEngine {
 
     private Player player;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
+	private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
+	private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
 
-    public GameEngine() {
+	public GameEngine() {
 
         player = new Player(this);
         player.setX(1);
@@ -128,6 +130,11 @@ public class GameEngine {
     }
 
     public void tick() {
+		entities.addAll(entitiesToAdd);
+		entities.removeAll(entitiesToRemove);
+		entitiesToAdd.clear();
+		entitiesToRemove.clear();
+
         for (Entity entity : entities) {
             entity.tick();
         }
@@ -282,5 +289,8 @@ public class GameEngine {
         }
         entities.removeAll(entitiesToRemove);
     }
+
+	public void addEntity(Entity entity) {entitiesToAdd.add(entity);}
+	public void removeEntity(Entity entity){entitiesToRemove.add(entity);}
 }
 

@@ -8,9 +8,8 @@ import java.io.File;
 
 public class Rocket extends Entity {
 
-    private int rocketDamage = 50;
-
-    public Rocket(GameEngine engine) {
+	private static final int ROCKET_DAMAGE = 10;
+	public Rocket(GameEngine engine) {
         super(engine);
         setAffectedByGravity(false);
         setxVel(1);
@@ -19,14 +18,20 @@ public class Rocket extends Entity {
     @Override
     public void tick() {
         super.tick();
+		
+		float playerX = engine.getPlayer().getX();
+		float playerY = engine.getPlayer().getY();
+		float slope = (getX() + playerX) / (getY() + playerY);
+		float yIntercept = getY() - (slope * getX());
 
-        float playerX = engine.getPlayer().getX();
-        float playerY = engine.getPlayer().getY();
-        float slope = (getX() + playerX) / (getY() + playerY);
-        float yIntercept = getY() - (slope * getX());
+		setX(getX() + getxVel());
+		setY((slope * getX()) + yIntercept);
+		
+		if (engine.isOnTopOfPlayer(this)){
+			engine.getPlayer().setHealth(engine.getPlayer().getHealth() - ROCKET_DAMAGE);
+			engine.removeEntity(this);
+		}
 
-        setX(getX() + getxVel());
-        setY((slope * getX()) + yIntercept);
     }
 
     @Override

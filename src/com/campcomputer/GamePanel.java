@@ -111,5 +111,8 @@ public class GamePanel extends JPanel {
     public void toggleShowTiles() {
         showTiles = !showTiles;
     }
+	public float getxScreenPlace() {
+		return xScreenPlace;
+	}
 }
 
