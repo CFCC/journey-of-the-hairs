@@ -25,8 +25,8 @@ public class Player extends Entity {
     protected void loadImages() {
         forwardFrames = new ArrayList<BufferedImage>();
         backwardFrames = new ArrayList<BufferedImage>();
-        forwardFrames.add(Images.ReadImage(new File("images/hare forward.png")));
-        backwardFrames.add(Images.ReadImage(new File("images/hare back.png")));
+        forwardFrames.add(Images.ReadImage("images/hare forward.png"));
+        backwardFrames.add(Images.ReadImage("images/hare back.png"));
         frames = forwardFrames;
     }
 

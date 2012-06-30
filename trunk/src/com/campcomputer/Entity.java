@@ -26,7 +26,7 @@ public abstract class Entity {
         this.engine = engine;
         loadImages();
         if (frames.size() == 0)
-            frames.add(Images.ReadImage(new File("images/Cheese.jpg")));
+            frames.add(Images.ReadImage("images/Cheese.jpg"));
     }
 
     public float getX() {
@@ -142,11 +142,11 @@ public abstract class Entity {
     protected List<BufferedImage> loadFrames(String name) {
         List<BufferedImage> frames = new ArrayList<BufferedImage>();
 
-        File frameDir = new File("frames/" + name);
+        File frameDir = new File("images/frames/" + name);
 
         for (File file : frameDir.listFiles()) {
             if (file.isFile())
-                frames.add(Images.ReadImage(file));
+                frames.add(Images.ReadImage("frames/"+name + "/" + file.getName()));
         }
         return frames;
 

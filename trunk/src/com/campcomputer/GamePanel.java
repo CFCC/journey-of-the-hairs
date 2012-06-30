@@ -31,7 +31,7 @@ public class GamePanel extends JPanel {
     public GamePanel(GameEngine theGameEngine) {
 
         this.ourGameEngine = theGameEngine;
-        mapBackground = Images.ReadImage(new File("images/background improved.png"));
+        mapBackground = Images.ReadImage("images/background improved.png");
 
     }
 
