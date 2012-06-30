@@ -21,12 +21,14 @@ public class SuicideStinkBug extends Entity {
     public void tick() {
         super.tick();
 
+        if (engine.getDistanceBetweenEntityAndPlayer(this) < EXPLODE_RANGE) {
+            blowup();
+        }
+
 		if (engine.getPlayer().getX() < getX()) {
 			moveLeft();
 		} else if (engine.getPlayer().getX() > getX()) {
 			moveRight();
-		} else if (engine.getDistanceBetweenEntityAndPlayer(this) < EXPLODE_RANGE) {
-			blowup();
 		}
     }
 
