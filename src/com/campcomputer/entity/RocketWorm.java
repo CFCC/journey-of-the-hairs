@@ -25,6 +25,7 @@ public class RocketWorm extends Entity {
 	public int getHeight() {
 		return 2;
 	}
+
 	@Override
     public void tick() {
         super.tick();
@@ -39,7 +40,7 @@ public class RocketWorm extends Entity {
 
         if (engine.isOnTopOfPlayer(this)) {
             emerge();
-        } else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0) {
+        } else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0 && canBeAttacked()) {
 			for (Entity entity  : engine.getEntities()) {
 				if (entity instanceof Rocket) {
 					return;
@@ -49,7 +50,6 @@ public class RocketWorm extends Entity {
         }
 
     }
-
 
     @Override
     public void loadImages() {
@@ -77,19 +77,9 @@ public class RocketWorm extends Entity {
         rocket.setX(getX());
         rocket.setY(getY()+1);
 		engine.addEntity(rocket);
-
-        // when player is 20 tiles away, worm will surface
-        // come out of ground and engine.moveLeft or engine.moveRight.
-        // shoot rockets from mouth with target lock.
-        // reload: 2 seconds.
-        // shoot only from above ground.
-        // rockets cannot destroy a wall.
-        // if a wall is in the way, the worm will dig under the wall.
     }
 
     public void tunneling() {
-        // move underground in areas
-        // can surface to shoot
     }
 
 	public boolean canBeAttacked() {
