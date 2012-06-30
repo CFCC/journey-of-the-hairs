@@ -29,10 +29,10 @@ public class RocketWorm extends Entity {
         if (engine.isOnTopOfPlayer(this)) {
             emerge();
         } else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0) {
-			boolean foundRocket = false;
 			for (Entity entity  : engine.getEntities()) {
-				if (entity instanceof Rocket)
+				if (entity instanceof Rocket) {
 					return;
+                }
 			}
             shootrocket();
         }
