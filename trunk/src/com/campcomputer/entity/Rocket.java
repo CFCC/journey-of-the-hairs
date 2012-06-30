@@ -44,4 +44,7 @@ public class Rocket extends Entity {
     public void attack(Entity entity) {
 
     }
+	public boolean isAffectedByHitDetection() {
+		return false;
+	}
 }
