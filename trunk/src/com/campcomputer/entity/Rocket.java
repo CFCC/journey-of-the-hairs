@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Rocket extends Entity {
 
-	private static final int ROCKET_DAMAGE = 1;
+	private static final int ROCKET_DAMAGE = 50;
     private static final float SPEED_MAGNITUDE = 0.1f;
 
     List<BufferedImage> rocketLeft;

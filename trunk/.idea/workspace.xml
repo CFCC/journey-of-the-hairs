@@ -7,93 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/00.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/08.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/09.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormEnterGround/29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/00.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/08.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/09.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frames/wormLeaveGround/29.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/frames" afterPath="$PROJECT_DIR$/images/frames" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JourneyOfTheHairs.iml" afterPath="$PROJECT_DIR$/JourneyOfTheHairs.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Entity.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/GamePanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/GamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Images.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Images.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/frames/chucknorrispunch/6.png" afterPath="$PROJECT_DIR$/images/frames/chucknorrispunch/6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/background improved map.png" afterPath="$PROJECT_DIR$/images/images/background improved map.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/background improved.png" afterPath="$PROJECT_DIR$/images/images/background improved.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/background improved.psd" afterPath="$PROJECT_DIR$/images/images/background improved.psd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/dragonfly.png" afterPath="$PROJECT_DIR$/images/images/dragonfly.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/hare back.png" afterPath="$PROJECT_DIR$/images/images/hare back.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/hare forward.png" afterPath="$PROJECT_DIR$/images/images/hare forward.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/rocketLeft.png" afterPath="$PROJECT_DIR$/images/images/rocketLeft.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/rocketRight.png" afterPath="$PROJECT_DIR$/images/images/rocketRight.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/sketch.png" afterPath="$PROJECT_DIR$/images/images/sketch.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/sketchmap.png" afterPath="$PROJECT_DIR$/images/images/sketchmap.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/stinkbug.png" afterPath="$PROJECT_DIR$/images/images/stinkbug.png" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -124,8 +39,8 @@
         <option name="CONDITION_ENABLED" value="false" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -139,12 +54,29 @@
         <option name="CONDITION_ENABLED" value="false" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
     <breakpoint_rules />
-    <ui_properties />
+    <ui_properties>
+      <property name="line_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_flattenPackages" value="true" />
+      <property name="method_breakpoints_flattenPackages" value="true" />
+      <property name="field_breakpoints_flattenPackages" value="true" />
+      <property name="exception_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_groupByClasses" value="true" />
+      <property name="method_breakpoints_viewId" value="TABLE" />
+      <property name="field_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_flattenPackages" value="true" />
+      <property name="field_breakpoints_groupByClasses" value="true" />
+      <property name="method_breakpoints_groupByClasses" value="true" />
+      <property name="exception_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="method_breakpoints_groupByMethods" value="false" />
+    </ui_properties>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JourneyOfTheHairs" />
@@ -163,7 +95,7 @@
       <file leaf-file-name="ChuckNorris.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
+            <state line="20" column="19" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -178,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rocket.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Rocket.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="30" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0">
+            <state line="15" column="47" selection-start="384" selection-end="384" vertical-scroll-proportion="0.1535649">
               <folding />
             </state>
           </provider>
@@ -199,17 +131,23 @@
       <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="0" selection-start="2995" selection-end="2995" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="151" column="51" selection-start="2737" selection-end="2737" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#636#651#0" expanded="true" />
+                <element signature="e#2589#2604#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Images.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Images.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Images.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="5" selection-start="991" selection-end="991" vertical-scroll-proportion="0.546875">
-              <folding />
+            <state line="6" column="20" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -245,10 +183,10 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java" />
         <option value="/Volumes/Files/obive/Programs/Java/javadoc/src.zip!/java/lang/Class.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/Images.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java" />
       </list>
     </option>
   </component>
@@ -256,10 +194,10 @@
     <option name="jreName" value="1.7" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1411" />
-    <option name="y" value="685" />
-    <option name="width" value="1160" />
-    <option name="height" value="777" />
+    <option name="x" value="631" />
+    <option name="y" value="505" />
+    <option name="width" value="1553" />
+    <option name="height" value="952" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -341,6 +279,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="temp images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -381,6 +333,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -400,54 +370,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frames" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frames" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chucknorrissmack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frames" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chucknorrissmack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="originals" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,7 +380,7 @@
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="325" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="316" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="55" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="328" />
     <property name="OverrideImplement.combined" value="true" />
@@ -536,8 +458,6 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="170">$PROJECT_DIR$/src/com/campcomputer/GameEngine.java</PATH>
-            <PATH vcs="svn" revision="170">$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -559,6 +479,7 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="RESTORED" />
+            <PATH vcs="svn" revision="172">$PROJECT_DIR$/Cheese.jpg</PATH>
           </FILE-GROUP>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -595,7 +516,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="MERGED" />
-          <PATH vcs="svn" revision="170">$PROJECT_DIR$/.idea/workspace.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Not in repository" />
@@ -840,21 +760,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1411" y="685" width="1160" height="777" extended-state="0" />
-    <editor active="true" />
+    <frame x="631" y="505" width="1553" height="952" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647058" sideWeight="0.49840763" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22410291" sideWeight="0.49840763" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36151078" sideWeight="0.28382352" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36151078" sideWeight="0.7058824" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42941177" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26710963" sideWeight="0.19064328" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26710963" sideWeight="0.47251463" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42923978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22410291" sideWeight="0.49880573" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25707155" sideWeight="0.4968153" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.0" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25614035" sideWeight="0.4968153" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32865497" sideWeight="0.0" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -977,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="30" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Volumes/Files/obive/Programs/Java/javadoc/src.zip!/java/lang/StringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="429" column="0" selection-start="12959" selection-end="12959" vertical-scroll-proportion="0.0">
@@ -1012,13 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="0" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
@@ -1026,16 +932,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Images.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="0" selection-start="2995" selection-end="2995" vertical-scroll-proportion="0.0">
+        <state line="151" column="51" selection-start="2737" selection-end="2737" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#636#651#0" expanded="true" />
+            <element signature="e#2589#2604#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="19" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Images.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="991" selection-end="991" vertical-scroll-proportion="0.546875">
+        <state line="15" column="47" selection-start="384" selection-end="384" vertical-scroll-proportion="0.1535649">
           <folding />
         </state>
       </provider>
@@ -1087,7 +1013,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.20000006" />
+                <option value="0.20000005" />
               </list>
             </option>
           </splitter-proportions>
@@ -1100,6 +1026,7 @@
             <option name="proportions">
               <list>
                 <option value="0.20000005" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
