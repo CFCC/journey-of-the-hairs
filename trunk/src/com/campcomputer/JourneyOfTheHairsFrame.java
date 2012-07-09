@@ -40,6 +40,9 @@ public class JourneyOfTheHairsFrame extends JFrame {
                     case KeyEvent.VK_E:
                         gamePanel.toggleShowTiles();
                         break;
+                    case KeyEvent.VK_Q :
+                        engine.directions();
+                        break;
                 }
 
             }

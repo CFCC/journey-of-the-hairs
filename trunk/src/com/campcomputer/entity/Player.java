@@ -6,7 +6,6 @@ import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
