@@ -4,11 +4,11 @@ import com.campcomputer.Item;
 
 public class Pistol extends Item {
 
-    private int Damage = 20;
+    private int damage = 1;
 
-    private int FireRate = 2;
+    private int fireRate = 1;
 
-    private int BulletNumber = 1;
+    private int bulletNumber = 1;
 
-    private float BulletSpeed = 1f;
+    private float bulletSpeed = 1f;
 }

@@ -13,6 +13,7 @@ public class GameEngine {
     private static final float GRAVITY = .2f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
+    public static int whatWeapon;
 
     private Tile[][] map = {
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
@@ -114,6 +115,8 @@ public class GameEngine {
         entities.add(dragonFly);
         entities.add(stinkbug);
         entities.add(worm);
+
+        whatWeapon = 0;
     }
 
 
@@ -298,7 +301,9 @@ public class GameEngine {
     }
 
     public void getGrenadeGun() {
-
+        if (map[((int) player.getX())][((int) player.getY())]== Tile.GRENADEGUN){
+            //change weapon to grenade gun
+        }
     }
 
     public void getMiniGun() {
@@ -306,7 +311,9 @@ public class GameEngine {
     }
 
     public void getPistol() {
-
+        if(whatWeapon == 0){
+            //have a pistol by default
+        }
     }
 
     public void getRailgun() {
