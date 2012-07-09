@@ -15,7 +15,7 @@ public class GameEngine {
     private static final float MOVE_SPEED = .3f;
 
     private Tile[][] map = {
-            {PLAYERHEALTH, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CARROT, GROUND,},
@@ -295,6 +295,38 @@ public class GameEngine {
 
     public void removeEntity(Entity entity) {
         entitiesToRemove.add(entity);
+    }
+
+    public void getGrenadeGun() {
+
+    }
+
+    public void getMiniGun() {
+
+    }
+
+    public void getPistol() {
+
+    }
+
+    public void getRailgun() {
+
+    }
+
+    public void getRifle() {
+
+    }
+
+    public void getShotgun() {
+
+    }
+
+    public void userInfoBar() {
+
+    }
+
+    public void directions() {
+
     }
 }
 
