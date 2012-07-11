@@ -5,7 +5,7 @@ import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
 
 public class DragonFly extends Entity {
-    private int flyingEnergy;
+    private int flyingEnergy = 25;
     private int breathFireDamage = 33;
     private int eatingDamage = 10;
 
@@ -18,18 +18,27 @@ public class DragonFly extends Entity {
     @Override
     public void tick() {
         super.tick();
-
-        if (engine.isPlayerAbove(this) == 0) {
-            moveUp();
-        } else if (engine.isPlayerAbove(this) == 1) {
-            moveDown();
-        } else if (engine.isPlayerAbove(this) == 2) {
-            moveUp();
+        if (chasePlayer1() != 1) {
+            if (engine.isPlayerAbove(this) == 1) {
+                setyVel(getyVel() + 0.3f);
+                setY(getY() - getyVel());
+                flyingEnergy -= 2;
+            } else if (engine.isPlayerAbove(this) == 0) {
+                setyVel(getyVel() + 0.3f);
+                setY(getY() + getyVel());
+                flyingEnergy -= 1;
+            }
         }
+
         if (engine.isPlayerToLeft(this) == 0) {
             moveLeft();
+            flyingEnergy += 1;
         } else if (engine.isPlayerToLeft(this) == 1) {
             moveRight();
+            flyingEnergy += 1;
+        } else {
+            setxVel(0);
+            setX(getX());
         }
     }
 
@@ -72,15 +81,18 @@ public class DragonFly extends Entity {
         entity.setHealth(entity.getHealth() - this.breathFireDamage);
     }
 
-    public void chasePlayer1() {
-        if (flyingEnergy > 0) {
+    public int chasePlayer1() {
+        if (flyingEnergy > 7) {
             // fly towards the player,
             // solid object in the way
+            return 0;
         }
-        if (flyingEnergy < 0) {
+        if (flyingEnergy <= 0)
+            return 1;
             //walk towards the player,
             // can also jump.
-        }
+        else
+            return 2;
     }
 
 
