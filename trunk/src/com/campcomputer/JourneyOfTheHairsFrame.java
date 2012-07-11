@@ -40,8 +40,11 @@ public class JourneyOfTheHairsFrame extends JFrame {
                     case KeyEvent.VK_E:
                         gamePanel.toggleShowTiles();
                         break;
-                    case KeyEvent.VK_Q :
+                    case KeyEvent.VK_Q:
                         engine.directions();
+                        break;
+                    case KeyEvent.VK_S:
+                        engine.shoot();
                         break;
                 }
 
@@ -65,13 +68,13 @@ public class JourneyOfTheHairsFrame extends JFrame {
         addMouseListener((new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
-                float X = mouseEvent.getX() / GamePanel.TILE_SIZE +gamePanel.getxScreenPlace();
+                float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
                 float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
-                engine.shoot(X,Y);
+                engine.shoot(/*X,Y*/);
             }
         }));
 
-        Timer t = new Timer(1000/30, new ActionListener() {
+        Timer t = new Timer(1000 / 30, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 

@@ -143,6 +143,8 @@ public class GameEngine {
         }
         applyGravity();
         applyMovement();
+        if (player.getHealth() <= 0)
+            System.exit(0);
     }
 
     private void applyGravity() {
@@ -268,28 +270,58 @@ public class GameEngine {
         return getDistanceBetweenEntityAndPlayer(entity) < 2f;
     }
 
-    public boolean isPlayerAbove(Entity entity) {
-        return true;
+    public int isPlayerAbove(Entity entity) {
+        if (player.getY() > entity.getY())
+            return 0;
+        else if (player.getY() < entity.getY())
+            return 1;
+        else
+            return 2;
     }
 
-    public boolean isPlayerBelow(Entity entity) {
-        return false;
+    public int isPlayerToLeft(Entity entity) {
+        if (player.getX() < entity.getX())
+            return 0;
+        else if (player.getX() > entity.getX())
+            return 1;
+        else
+            return 2;
     }
 
-    public void shoot(float x, float y) {
-        ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-        for (Entity entity : entities) {
-            if (!(entity instanceof Player)) {
-                Point2D shootLocation = new Point2D.Float(x, y);
-                Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-
-                if (shootLocation.distance(entityLocation) < 2) {
-                    if (!entity.attacked())
-                        entitiesToRemove.add(entity);
+    public void shoot(/*float x, float y*/) {
+        float playerX = player.getX();
+        float playerY = player.getY();
+        if (player.isFacingLeft()) {
+            ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+            for (Entity entity : entities) {
+                if (!(entity instanceof Player)) {
+                    Point2D shootLocation = new Point2D.Float(playerX - 1, playerY);
+                    Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+                    if (shootLocation.distance(entityLocation) < 1) {
+                        if (!entity.attacked())
+                            entitiesToRemove.add(entity);
+                    }
                 }
             }
+            entities.removeAll(entitiesToRemove);
         }
-        entities.removeAll(entitiesToRemove);
+
+        if (player.isFacingRight()) {
+            ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+            for (Entity entity : entities) {
+                if (!(entity instanceof Player)) {
+                    Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
+                    Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+
+                    if (shootLocation.distance(entityLocation) < 1) {
+                        if (!entity.attacked())
+                            entitiesToRemove.add(entity);
+                    }
+                }
+            }
+            entities.removeAll(entitiesToRemove);
+        }
+
     }
 
     public void addEntity(Entity entity) {
@@ -301,7 +333,7 @@ public class GameEngine {
     }
 
     public void getGrenadeGun() {
-        if (map[((int) player.getX())][((int) player.getY())]== Tile.GRENADEGUN){
+        if (map[((int) player.getX())][((int) player.getY())] == Tile.GRENADEGUN) {
             //change weapon to grenade gun
         }
     }
@@ -311,7 +343,7 @@ public class GameEngine {
     }
 
     public void getPistol() {
-        if(whatWeapon == 0){
+        if (whatWeapon == 0) {
             //have a pistol by default
         }
     }
