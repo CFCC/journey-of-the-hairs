@@ -19,21 +19,21 @@ public class DragonFly extends Entity {
     public void tick() {
         super.tick();
         if (chasePlayer1() != 1) {
-            if (engine.isPlayerAbove(this) == 1) {
+            if (engine.isPlayerAbove(this) == false) {
                 setyVel(getyVel() + 0.3f);
                 setY(getY() - getyVel());
                 flyingEnergy -= 2;
-            } else if (engine.isPlayerAbove(this) == 0) {
+            } else if (engine.isPlayerAbove(this) == true) {
                 setyVel(getyVel() + 0.3f);
                 setY(getY() + getyVel());
                 flyingEnergy -= 1;
             }
         }
 
-        if (engine.isPlayerToLeft(this) == 0) {
+        if (engine.isPlayerToLeft(this) == true) {
             moveLeft();
             flyingEnergy += 1;
-        } else if (engine.isPlayerToLeft(this) == 1) {
+        } else if (engine.isPlayerToLeft(this) == false) {
             moveRight();
             flyingEnergy += 1;
         } else {

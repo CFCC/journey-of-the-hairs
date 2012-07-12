@@ -75,14 +75,15 @@ public class GameEngine {
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
-            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CHUCKNORRIS, CHUCKNORRIS, CHUCKNORRIS, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CHUCKNORRIS, CHUCKNORRIS, CHUCKNORRIS, GROUND,},
+            {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, CHUCKNORRIS, CHUCKNORRIS, CHUCKNORRIS, GROUND,},
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
     };
 
     private Player player;
+    private ChuckNorris chuckNorris;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
@@ -270,22 +271,27 @@ public class GameEngine {
         return getDistanceBetweenEntityAndPlayer(entity) < 2f;
     }
 
-    public int isPlayerAbove(Entity entity) {
-        if (player.getY() > entity.getY())
-            return 0;
-        else if (player.getY() < entity.getY())
-            return 1;
+    public boolean isOnTopOfPlayerChuckNorris () {
+        float pX = player.getX();
+        float pY = player.getY();
+        if(map [((int) pX)] [((int) pY)] == Tile.CHUCKNORRIS)
+            return true;
         else
-            return 2;
+            return false;
     }
 
-    public int isPlayerToLeft(Entity entity) {
-        if (player.getX() < entity.getX())
-            return 0;
-        else if (player.getX() > entity.getX())
-            return 1;
+    public boolean isPlayerAbove(Entity entity) {
+        if (player.getY() > entity.getY())
+            return true;
         else
-            return 2;
+            return false;
+    }
+
+    public boolean isPlayerToLeft(Entity entity) {
+        if (player.getX() < entity.getX())
+            return true;
+        else
+            return false;
     }
 
     public void shoot(/*float x, float y*/) {
