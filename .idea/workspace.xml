@@ -7,19 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Jordan\Desktop\Desktop Folders\Jordan CFCC\JOTH - Updated\images\images\pistol.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Entity.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Item.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Tile.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Tile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/GrenadeGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/GrenadeGun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/MiniGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/MiniGun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/Pistol.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/Pistol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/Railgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/Railgun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/Shotgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/Shotgun.java" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,33 +83,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameEngine.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameEngine.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="24" selection-start="6724" selection-end="6724" vertical-scroll-proportion="0.5719626">
+            <state line="121" column="24" selection-start="6724" selection-end="6724" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#13973#13979#0" expanded="true" />
+                <element signature="e#13972#13978#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JourneyOfTheHairsFrame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="JourneyOfTheHairsFrame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
+            <state line="60" column="2" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.3967684">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="44" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -172,24 +150,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rifle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shotgun.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/Shotgun.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="129" selection-end="143" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -203,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Rocket.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/item/Shotgun.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java" />
@@ -215,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/Tile.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/Item.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
       </list>
     </option>
@@ -669,7 +629,11 @@
       <created>1342056392238</created>
       <updated>1342056392238</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="&#10;">
+      <created>1342211208133</created>
+      <updated>1342211208133</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -784,21 +748,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/RocketWorm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/images/grenadegun.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="56" selection-start="462" selection-end="462" vertical-scroll-proportion="0.41564792">
@@ -848,33 +797,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/GrenadeGun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/MiniGun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="44" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -887,12 +813,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/images/hare forward.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/GrenadeGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="24" selection-start="6724" selection-end="6724" vertical-scroll-proportion="0.5719626">
+        <state line="121" column="24" selection-start="6724" selection-end="6724" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#13973#13979#0" expanded="true" />
+            <element signature="e#13972#13978#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="48" selection-start="3105" selection-end="3105" vertical-scroll-proportion="0.33271027">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="2" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.3967684">
+          <folding />
         </state>
       </provider>
     </entry>
