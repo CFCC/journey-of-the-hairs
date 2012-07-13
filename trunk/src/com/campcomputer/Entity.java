@@ -2,13 +2,8 @@ package com.campcomputer;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.security.CodeSource;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
 
 public abstract class Entity {
 	private int health = 1;
@@ -27,7 +22,9 @@ public abstract class Entity {
 	protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
 	protected int currentFrame = 0;
 
-	public Entity(GameEngine engine) {
+    private Item item;
+
+    public Entity(GameEngine engine) {
 		this.engine = engine;
 		loadImages();
 		if (frames.size() == 0)
@@ -179,7 +176,7 @@ public abstract class Entity {
 	}
 
 	public boolean attacked() {
-		setHealth(health -= 1);
+		setHealth(health -= item.getDamage());
 		return health > 0;
 	}
 	public boolean isAffectedByHitDetection() {

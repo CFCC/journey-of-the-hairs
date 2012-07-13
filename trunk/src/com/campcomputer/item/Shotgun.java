@@ -1,8 +1,9 @@
 package com.campcomputer.item;
 
+import com.campcomputer.GameEngine;
 import com.campcomputer.Item;
 
-public class Shotgun extends Item {
+public abstract class Shotgun extends Item {
     private int Damage = 1;
     //  How much damage the gun does.
     private int FireRate = 5;
@@ -11,4 +12,8 @@ public class Shotgun extends Item {
     // Number of bullets fired.
     private float BulletSpeed = 2f;
 // Speed of bullets.
+
+    public Shotgun(GameEngine engine) {
+        super(engine);
+    }
 }

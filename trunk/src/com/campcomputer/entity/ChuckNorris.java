@@ -15,7 +15,7 @@ public class ChuckNorris extends Entity {
 	private final int LOW_HEALTH_THRESHOLD = 1125;
 
 	private int punchDamage = 1;
-	private int roundHouseKickDamage = 90;
+	private int roundHouseKickDamage = Player.MAX_HEALTH;
 	private int beardPunchDamage = 40;
 	int healed = 0;
 
