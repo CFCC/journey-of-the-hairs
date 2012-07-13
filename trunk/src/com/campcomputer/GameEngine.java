@@ -273,10 +273,10 @@ public class GameEngine {
         return getDistanceBetweenEntityAndPlayer(entity) < 2f;
     }
 
-    public boolean isOnTopOfPlayerChuckNorris () {
+    public boolean isOnTopOfPlayerChuckNorris() {
         float pX = player.getX();
         float pY = player.getY();
-        if(map [((int) pX)] [((int) pY)] == Tile.CHUCKNORRIS)
+        if (map[((int) pX)][((int) pY)] == Tile.CHUCKNORRIS)
             return true;
         else
             return false;
@@ -340,7 +340,7 @@ public class GameEngine {
         entitiesToRemove.add(entity);
     }
 
-    public void getWeapon(){
+    public void getWeapon() {
         ArrayList<Tile> weaponToRemove = new ArrayList<Tile>();
         if (map[((int) player.getX())][((int) player.getY())] == Tile.GRENADEGUN) {
             whatWeapon = 1;
