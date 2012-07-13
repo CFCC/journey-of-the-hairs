@@ -14,6 +14,7 @@ public class GameEngine {
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
     public static int whatWeapon;
+    Item item;
 
     private Tile[][] map = {
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
@@ -118,6 +119,7 @@ public class GameEngine {
         entities.add(worm);
 
         whatWeapon = 0;
+        item.addItems();
     }
 
 
@@ -144,8 +146,8 @@ public class GameEngine {
         }
         applyGravity();
         applyMovement();
-        if (player.getHealth() <= 0)
-            System.exit(0);
+//        if (player.getHealth() <= 0)
+//            System.exit(0);
     }
 
     private void applyGravity() {
@@ -338,32 +340,59 @@ public class GameEngine {
         entitiesToRemove.add(entity);
     }
 
-    public void getGrenadeGun() {
+    public void getWeapon(){
+        ArrayList<Tile> weaponToRemove = new ArrayList<Tile>();
         if (map[((int) player.getX())][((int) player.getY())] == Tile.GRENADEGUN) {
-            //change weapon to grenade gun
+            whatWeapon = 1;
+            weaponToRemove.add(Tile.GRENADEGUN);
         }
-    }
-
-    public void getMiniGun() {
-
+        if (map[((int) player.getX())][((int) player.getY())] == Tile.MINIGUN) {
+            whatWeapon = 2;
+            weaponToRemove.add(Tile.MINIGUN);
+        }
+        if (map[((int) player.getX())][((int) player.getY())] == Tile.RAILGUN) {
+            whatWeapon = 3;
+            weaponToRemove.add(Tile.RAILGUN);
+        }
+        if (map[((int) player.getX())][((int) player.getY())] == Tile.RIFLE) {
+            whatWeapon = 4;
+            weaponToRemove.add(Tile.RIFLE);
+        }
+        if (map[((int) player.getX())][((int) player.getY())] == Tile.SHOTGUN) {
+            whatWeapon = 5;
+            weaponToRemove.add(Tile.SHOTGUN);
+        }
+        entities.removeAll(weaponToRemove);
     }
 
     public void getPistol() {
         if (whatWeapon == 0) {
-            //have a pistol by default
+        }
+    }
+
+    public void getGrenadeGun() {
+        if (whatWeapon == 1) {
+        }
+    }
+
+    public void getMiniGun() {
+        if (whatWeapon == 2) {
         }
     }
 
     public void getRailgun() {
-
+        if (whatWeapon == 3) {
+        }
     }
 
     public void getRifle() {
-
+        if (whatWeapon == 4) {
+        }
     }
 
     public void getShotgun() {
-
+        if (whatWeapon == 5) {
+        }
     }
 
     public void userInfoBar() {
@@ -371,7 +400,8 @@ public class GameEngine {
     }
 
     public void directions() {
-
+        if (whatWeapon == 0) {
+        }
     }
 }
 

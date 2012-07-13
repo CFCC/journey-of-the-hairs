@@ -1,8 +1,9 @@
 package com.campcomputer.item;
 
+import com.campcomputer.GameEngine;
 import com.campcomputer.Item;
 
-public class Pistol extends Item {
+public abstract class Pistol extends Item {
 
     private int damage = 1;
 
@@ -12,7 +13,7 @@ public class Pistol extends Item {
 
     private float bulletSpeed = 1f;
 
-    protected void loadImages() {
-//        frames.add(Images.ReadImage("images/pistol.png"));
+    public Pistol(GameEngine engine) {
+        super(engine);
     }
 }
