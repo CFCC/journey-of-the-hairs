@@ -27,6 +27,10 @@
     <ConfigurationWrapper RunnerId="Cover" />
     <ConfigurationWrapper RunnerId="Debug" />
     <ConfigurationWrapper RunnerId="Run" />
-    <method />
+    <method>
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="JourneyOfTheHairs:jar" />
+      </option>
+    </method>
   </configuration>
 </component>
