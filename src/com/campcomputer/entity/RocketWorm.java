@@ -3,10 +3,8 @@ package com.campcomputer.entity;
 import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,8 +51,8 @@ public class RocketWorm extends Entity {
 
     @Override
     public void loadImages() {
-        wormLeaveGround = loadFrames("wormLeaveGround");
-        wormEnterGround = loadFrames("wormEnterGround");
+        wormLeaveGround = Images.loadFrames("wormLeaveGround");
+        wormEnterGround = Images.loadFrames("wormEnterGround");
 		standing = new ArrayList<BufferedImage>(1);
 		standing.add(wormLeaveGround.get(0));
         frames = standing;

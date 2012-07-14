@@ -2,8 +2,13 @@ package com.campcomputer;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.security.CodeSource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 public abstract class Entity {
 	private int health = 1;
@@ -22,9 +27,9 @@ public abstract class Entity {
 	protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
 	protected int currentFrame = 0;
 
-    private Item item;
+	private Item item;
 
-    public Entity(GameEngine engine) {
+	public Entity(GameEngine engine) {
 		this.engine = engine;
 		loadImages();
 		if (frames.size() == 0)
@@ -139,40 +144,6 @@ public abstract class Entity {
 
 	public BufferedImage getCurrentFrame() {
 		return frames.get(currentFrame);
-	}
-
-	protected List<BufferedImage> loadFrames(String name) {
-		List<BufferedImage> frames = new ArrayList<BufferedImage>();
-
-//		try {
-//			CodeSource src = Entity.class.getProtectionDomain().getCodeSource();
-//			List<String> list = new ArrayList<String>();
-//
-//			if (src != null) {
-//				URL jar = src.getLocation();
-//				ZipInputStream zip = null;
-//
-//				zip = new ZipInputStream(jar.openStream());
-//
-//				ZipEntry ze = null;
-//
-//				while ((ze = zip.getNextEntry()) != null) {
-//					String entryName = ze.getName();
-//					System.out.println(entryName);
-//				}
-//			}
-//
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-
-		File frameDir = new File("images/frames/" + name);
-
-		for (File file : frameDir.listFiles()) {
-			if (file.isFile())
-				frames.add(Images.ReadImage("frames/" + name + "/" + file.getName()));
-		}
-		return frames;
 	}
 
 	public boolean attacked() {

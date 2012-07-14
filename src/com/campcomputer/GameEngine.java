@@ -119,7 +119,7 @@ public class GameEngine {
         entities.add(worm);
 
         whatWeapon = 0;
-        item.addItems();
+        //item.addItems();
     }
 
 
