@@ -13,8 +13,6 @@ public class GameEngine {
     private static final float GRAVITY = .2f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
-    public static int whatWeapon;
-    Item item;
 
     private Tile[][] map = {
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
@@ -84,7 +82,6 @@ public class GameEngine {
     };
 
     private Player player;
-    private ChuckNorris chuckNorris;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
@@ -117,9 +114,6 @@ public class GameEngine {
         entities.add(dragonFly);
         entities.add(stinkbug);
         entities.add(worm);
-
-        whatWeapon = 0;
-        //item.addItems();
     }
 
 
@@ -146,8 +140,6 @@ public class GameEngine {
         }
         applyGravity();
         applyMovement();
-//        if (player.getHealth() <= 0)
-//            System.exit(0);
     }
 
     private void applyGravity() {
@@ -296,7 +288,7 @@ public class GameEngine {
             return false;
     }
 
-    public void shoot(/*float x, float y*/) {
+    public void shoot() {
         float playerX = player.getX();
         float playerY = player.getY();
         if (player.isFacingLeft()) {
@@ -340,68 +332,12 @@ public class GameEngine {
         entitiesToRemove.add(entity);
     }
 
-    public void getWeapon() {
-        ArrayList<Tile> weaponToRemove = new ArrayList<Tile>();
-        if (map[((int) player.getX())][((int) player.getY())] == Tile.GRENADEGUN) {
-            whatWeapon = 1;
-            weaponToRemove.add(Tile.GRENADEGUN);
-        }
-        if (map[((int) player.getX())][((int) player.getY())] == Tile.MINIGUN) {
-            whatWeapon = 2;
-            weaponToRemove.add(Tile.MINIGUN);
-        }
-        if (map[((int) player.getX())][((int) player.getY())] == Tile.RAILGUN) {
-            whatWeapon = 3;
-            weaponToRemove.add(Tile.RAILGUN);
-        }
-        if (map[((int) player.getX())][((int) player.getY())] == Tile.RIFLE) {
-            whatWeapon = 4;
-            weaponToRemove.add(Tile.RIFLE);
-        }
-        if (map[((int) player.getX())][((int) player.getY())] == Tile.SHOTGUN) {
-            whatWeapon = 5;
-            weaponToRemove.add(Tile.SHOTGUN);
-        }
-        entities.removeAll(weaponToRemove);
-    }
-
-    public void getPistol() {
-        if (whatWeapon == 0) {
-        }
-    }
-
-    public void getGrenadeGun() {
-        if (whatWeapon == 1) {
-        }
-    }
-
-    public void getMiniGun() {
-        if (whatWeapon == 2) {
-        }
-    }
-
-    public void getRailgun() {
-        if (whatWeapon == 3) {
-        }
-    }
-
-    public void getRifle() {
-        if (whatWeapon == 4) {
-        }
-    }
-
-    public void getShotgun() {
-        if (whatWeapon == 5) {
-        }
-    }
-
-    public void userInfoBar() {
+      public void userInfoBar() {
 
     }
 
     public void directions() {
-        if (whatWeapon == 0) {
-        }
+
     }
 }
 
