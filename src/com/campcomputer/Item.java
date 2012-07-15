@@ -3,15 +3,10 @@ package com.campcomputer;
 import java.util.ArrayList;
 
 public abstract class Item extends Entity {
-    private ArrayList<Tile> items = new ArrayList<Tile>();
+    private ArrayList<Entity> items = new ArrayList<Entity>();
 
     public void addItems() {
-        items.add(Tile.PISTOL);
-        items.add(Tile.GRENADEGUN);
-        items.add(Tile.MINIGUN);
-        items.add(Tile.RAILGUN);
-        items.add(Tile.RIFLE);
-        items.add(Tile.SHOTGUN);
+
     }
 
     public int getDamage() {
