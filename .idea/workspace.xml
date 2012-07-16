@@ -8,15 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Entity.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Item.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/Pickup.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/Pickup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/GrenadeGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/GrenadeGun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/MiniGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/MiniGun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/Pistol.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/Pistol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/Railgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/Railgun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/item/Shotgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/item/Shotgun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,7 +101,7 @@
       <file leaf-file-name="Item.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="16" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
+            <state line="32" column="17" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,7 +110,16 @@
       <file leaf-file-name="GameEngine.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="27" selection-start="6622" selection-end="6622" vertical-scroll-proportion="0.5798923">
+            <state line="150" column="0" selection-start="7319" selection-end="7319" vertical-scroll-proportion="0.33224756">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JourneyOfTheHairs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="41" selection-start="87" selection-end="100" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,14 +142,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/SuicideStinkBug.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/Tile.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/Item.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/item/GrenadeGun.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/item/Rifle.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/item/Railgun.java" />
@@ -154,6 +153,10 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/item/Shotgun.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/item/MiniGun.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/Pickup.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/Item.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/Entity.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/entity/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairs.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
       </list>
     </option>
@@ -636,7 +639,11 @@
       <created>1342446455102</created>
       <updated>1342446455102</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="&#10;">
+      <created>1342471203118</created>
+      <updated>1342471203118</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -667,15 +674,16 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4280822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4280822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989726" sideWeight="0.49734244" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270548" sideWeight="0.0" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32534248" sideWeight="0.49840763" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2663126" sideWeight="0.11130137" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657555" sideWeight="0.74657536" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657555" sideWeight="0.57191783" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25342464" sideWeight="0.4968153" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -686,7 +694,6 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989726" sideWeight="0.49734244" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32534248" sideWeight="0.49840763" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -751,18 +758,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/DragonFly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="45" selection-start="1291" selection-end="1291" vertical-scroll-proportion="1.3429084">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/ChuckNorris.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="262" selection-end="262" vertical-scroll-proportion="0.12208258">
@@ -798,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/MiniGun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="39" selection-start="632" selection-end="632" vertical-scroll-proportion="0.5798923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/GrenadeGun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="39" selection-start="642" selection-end="642" vertical-scroll-proportion="0.5798923">
@@ -812,30 +800,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="372" selection-end="372" vertical-scroll-proportion="0.42728904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="104" selection-end="104" vertical-scroll-proportion="0.091561936">
+        <state line="2" column="12" selection-start="39" selection-end="39" vertical-scroll-proportion="0.06104129">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="197" selection-end="197" vertical-scroll-proportion="-2.5625">
+        <state line="10" column="13" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Tile.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="39" selection-end="39" vertical-scroll-proportion="0.06104129">
+        <state line="152" column="63" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -853,14 +834,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="16" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
+        <state line="32" column="17" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/entity/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairsFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/item/MiniGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="8" selection-start="520" selection-end="571" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/JourneyOfTheHairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="41" selection-start="87" selection-end="100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="27" selection-start="6622" selection-end="6622" vertical-scroll-proportion="0.5798923">
+        <state line="150" column="0" selection-start="7319" selection-end="7319" vertical-scroll-proportion="0.33224756">
           <folding />
         </state>
       </provider>
