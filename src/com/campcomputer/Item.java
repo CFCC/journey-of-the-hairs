@@ -32,6 +32,10 @@ public abstract class Item extends Entity {
         return ammoLeft;
     }
 
+    public void subtractAmmo(){
+        ammoLeft -= 1;
+    }
+
     public Item(GameEngine engine) {
         super(engine);
     }
@@ -42,10 +46,5 @@ public abstract class Item extends Entity {
 
     public float getY(){
         return y;
-    }
-
-    public void subtractAmmo(){
-        engine.shoot();
-        ammoLeft -= 1;
     }
 }

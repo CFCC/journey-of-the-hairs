@@ -293,35 +293,39 @@ public class GameEngine {
         float playerX = player.getX();
         float playerY = player.getY();
         if (player.isFacingLeft()) {
-            ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-            for (Entity entity : entities) {
-                if (!(entity instanceof Player)) {
-                    Point2D shootLocation = new Point2D.Float(playerX - 1, playerY);
-                    Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-                    if (shootLocation.distance(entityLocation) < 1) {
-                        if (!entity.attacked())
-                            entitiesToRemove.add(entity);
+            if (item.getAmmo() > 0) {
+                ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+                for (Entity entity : entities) {
+                    if (!(entity instanceof Player)) {
+                        Point2D shootLocation = new Point2D.Float(playerX - 1, playerY);
+                        Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+                        item.subtractAmmo();
+                        if (shootLocation.distance(entityLocation) < 1) {
+                            if (!entity.attacked())
+                                entitiesToRemove.add(entity);
+                        }
                     }
                 }
+                entities.removeAll(entitiesToRemove);
             }
-            entities.removeAll(entitiesToRemove);
         }
 
         if (player.isFacingRight()) {
-            ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-            for (Entity entity : entities) {
-                if (!(entity instanceof Player)) {
-                    Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
-                    Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-
-                    if (shootLocation.distance(entityLocation) < 1) {
-                        if (!entity.attacked())
-                            entitiesToRemove.add(entity);
+            if (item.getAmmo() > 0) {
+                ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+                for (Entity entity : entities) {
+                    if (!(entity instanceof Player)) {
+                        Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
+                        Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+                        item.subtractAmmo();
+                        if (shootLocation.distance(entityLocation) < 1) {
+                            if (!entity.attacked())
+                                entitiesToRemove.add(entity);
+                        }
                     }
                 }
+                entities.removeAll(entitiesToRemove);
             }
-            entities.removeAll(entitiesToRemove);
-            item.ammoLeft -= 1;
         }
     }
 
