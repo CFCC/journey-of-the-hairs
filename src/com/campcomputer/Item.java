@@ -1,9 +1,7 @@
 package com.campcomputer;
 
-import java.util.ArrayList;
-
 public abstract class Item extends Entity {
-    private ArrayList<Entity> items = new ArrayList<Entity>();
+
     int ammoLeft = 100;
     float bulletSpeed = 1f;
     int bulletNumber = 1;   // Number of bullets fired.
