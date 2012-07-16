@@ -6,10 +6,8 @@ import java.awt.event.*;
 
 public class JourneyOfTheHairsFrame extends JFrame {
 
-
     GameEngine engine;
     private final GamePanel gamePanel;
-    Item item;
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -45,7 +43,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        item.subtractAmmo();
+                        engine.shoot();
                         break;
                 }
 
@@ -64,7 +62,6 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
             }
         });
-
 
  //       addMouseListener((new MouseAdapter() {
  //           @Override
