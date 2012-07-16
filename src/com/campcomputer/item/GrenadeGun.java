@@ -1,6 +1,7 @@
 package com.campcomputer.item;
 
 import com.campcomputer.GameEngine;
+import com.campcomputer.Images;
 import com.campcomputer.Item;
 
 public abstract class GrenadeGun extends Item {
@@ -11,7 +12,11 @@ public abstract class GrenadeGun extends Item {
     private int BulletNumber = 1;
     // Number of bullets fired.
     private float BulletSpeed = 1;
-// Speed of bullets.
+    // Speed of bullets.
+
+    protected void loadImages() {
+        frames.add(Images.ReadImage("images/grenadeLauncher.png"));
+    }
 
     public GrenadeGun(GameEngine engine) {
         super(engine);

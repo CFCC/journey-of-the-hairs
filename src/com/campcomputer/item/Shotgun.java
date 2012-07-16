@@ -1,6 +1,7 @@
 package com.campcomputer.item;
 
 import com.campcomputer.GameEngine;
+import com.campcomputer.Images;
 import com.campcomputer.Item;
 
 public abstract class Shotgun extends Item {
@@ -13,6 +14,9 @@ public abstract class Shotgun extends Item {
     private float BulletSpeed = 2f;
 // Speed of bullets.
 
+    protected void loadImages() {
+    frames.add(Images.ReadImage("images/shotgun.png"));
+}
     public Shotgun(GameEngine engine) {
         super(engine);
     }

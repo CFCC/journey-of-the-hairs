@@ -13,6 +13,7 @@ public class GameEngine {
     private static final float GRAVITY = .2f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
+    Item item;
 
     private Tile[][] map = {
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
@@ -320,8 +321,8 @@ public class GameEngine {
                 }
             }
             entities.removeAll(entitiesToRemove);
+            item.ammoLeft -= 1;
         }
-
     }
 
     public void addEntity(Entity entity) {
@@ -332,7 +333,7 @@ public class GameEngine {
         entitiesToRemove.add(entity);
     }
 
-      public void userInfoBar() {
+    public void userInfoBar() {
 
     }
 
