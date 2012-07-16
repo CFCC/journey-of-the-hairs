@@ -1,6 +1,7 @@
 package com.campcomputer.item;
 
 import com.campcomputer.GameEngine;
+import com.campcomputer.Images;
 import com.campcomputer.Item;
 
 public abstract class Pistol extends Item {
@@ -12,6 +13,10 @@ public abstract class Pistol extends Item {
     private int bulletNumber = 1;
 
     private float bulletSpeed = 1f;
+
+    protected void loadImages() {
+        frames.add(Images.ReadImage("images/pistol.png"));
+    }
 
     public Pistol(GameEngine engine) {
         super(engine);

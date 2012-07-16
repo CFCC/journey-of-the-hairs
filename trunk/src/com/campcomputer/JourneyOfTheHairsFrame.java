@@ -9,6 +9,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
     GameEngine engine;
     private final GamePanel gamePanel;
+    Item item;
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -44,7 +45,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        engine.shoot();
+                        item.subtractAmmo();
                         break;
                 }
 
@@ -65,14 +66,14 @@ public class JourneyOfTheHairsFrame extends JFrame {
         });
 
 
-        addMouseListener((new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent mouseEvent) {
-                float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
-                float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
-                engine.shoot();
-            }
-        }));
+ //       addMouseListener((new MouseAdapter() {
+ //           @Override
+ //           public void mouseClicked(MouseEvent mouseEvent) {
+ //               float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
+ //               float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
+ //               engine.shoot();
+ //           }
+ //       }));
 
         Timer t = new Timer(1000 / 30, new ActionListener() {
             @Override
