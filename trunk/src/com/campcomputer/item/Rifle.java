@@ -1,10 +1,11 @@
 package com.campcomputer.item;
 
+import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
 import com.campcomputer.Item;
 
-public abstract class Rifle extends Item {
+public class Rifle extends Item {
     private int Damage = 1;
     //  How much damage the gun does.
     private int FireRate = 1;
@@ -17,6 +18,11 @@ public abstract class Rifle extends Item {
     protected void loadImages() {
     frames.add(Images.ReadImage("images/rifle.png"));
 }
+
+    @Override
+    public void attack(Entity entity) {
+    }
+
     public Rifle(GameEngine engine) {
         super(engine);
     }

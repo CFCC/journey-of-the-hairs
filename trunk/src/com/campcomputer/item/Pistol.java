@@ -1,10 +1,11 @@
 package com.campcomputer.item;
 
+import com.campcomputer.Entity;
 import com.campcomputer.GameEngine;
 import com.campcomputer.Images;
 import com.campcomputer.Item;
 
-public abstract class Pistol extends Item {
+public class Pistol extends Item {
 
     private int damage = 1;
 
@@ -16,6 +17,10 @@ public abstract class Pistol extends Item {
 
     protected void loadImages() {
         frames.add(Images.ReadImage("images/pistol.png"));
+    }
+
+    @Override
+    public void attack(Entity entity) {
     }
 
     public Pistol(GameEngine engine) {

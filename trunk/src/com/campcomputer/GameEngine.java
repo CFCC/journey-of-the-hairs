@@ -14,6 +14,7 @@ public class GameEngine {
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
     Item item;
+    Pickup pickup;
 
     private Tile[][] map = {
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
