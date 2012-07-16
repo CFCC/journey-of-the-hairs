@@ -148,4 +148,8 @@ public abstract class Entity {
 	public boolean canBeAttacked() {
 		return true;
 	}
+
+    public void userInfoBar() {
+        frames.add(Images.ReadImage("images/userInfoBar.png"));
+    }
 }

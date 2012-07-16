@@ -15,6 +15,8 @@ public class GameEngine {
     private static final float MOVE_SPEED = .3f;
     Item item;
     Pickup pickup;
+    Entity entity;
+    JourneyOfTheHairs JourneyOfTheHairs;
 
     private Tile[][] map = {
             {AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, AIR, GROUND,},
@@ -142,6 +144,12 @@ public class GameEngine {
         }
         applyGravity();
         applyMovement();
+
+        if (player.getHealth() <= 0 && player.lives >= 0) {
+            player.lives -= 1;
+            String x[]={"A","B"};
+            JourneyOfTheHairs.main(x);
+        }
     }
 
     private void applyGravity() {
@@ -336,10 +344,6 @@ public class GameEngine {
 
     public void removeEntity(Entity entity) {
         entitiesToRemove.add(entity);
-    }
-
-    public void userInfoBar() {
-
     }
 
     public void directions() {

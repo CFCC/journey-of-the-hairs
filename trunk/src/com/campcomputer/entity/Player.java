@@ -14,6 +14,7 @@ public class Player extends Entity {
     public static final int MAX_HEALTH = 100;
     List<BufferedImage> forwardFrames;
     List<BufferedImage> backwardFrames;
+    public int lives = 3;
 
     public Player(GameEngine engine) {
         super(engine);
