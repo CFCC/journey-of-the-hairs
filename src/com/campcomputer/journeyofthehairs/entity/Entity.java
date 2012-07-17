@@ -1,4 +1,7 @@
-package com.campcomputer;
+package com.campcomputer.journeyofthehairs.entity;
+
+import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.Images;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;

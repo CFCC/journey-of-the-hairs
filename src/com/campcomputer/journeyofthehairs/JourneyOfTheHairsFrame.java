@@ -1,4 +1,4 @@
-package com.campcomputer;
+package com.campcomputer.journeyofthehairs;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,6 +34,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.startMoveForward();
                         break;
                     case KeyEvent.VK_W:
+						System.out.println("jump");
                         engine.jump();
                         break;
                     case KeyEvent.VK_E:

@@ -1,9 +1,8 @@
-package com.campcomputer.item;
+package com.campcomputer.journeyofthehairs.item;
 
-import com.campcomputer.Entity;
-import com.campcomputer.GameEngine;
-import com.campcomputer.Images;
-import com.campcomputer.Item;
+import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.Images;
 
 public class Railgun extends Item {
     private int Damage = 9001;

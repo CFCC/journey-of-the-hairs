@@ -1,4 +1,4 @@
-package com.campcomputer;
+package com.campcomputer.journeyofthehairs;
 
 
 import javax.imageio.ImageIO;
@@ -84,7 +84,7 @@ public class MapConverter {
                 grid[xi][yi] = COLOR_CONSTANTS[maxColor];
             }
         }
-        System.out.println("import static com.campcomputer.Tile.*;");
+        System.out.println("import static com.campcomputer.journeyofthehairs.Tile.*;");
         System.out.println();
         System.out.println("/* Each line is one row of tiles; each column is one column */");
         System.out.println("Tile[][] map_" + file.getName().replaceAll("[^a-zA-Z0-9]", "_") + " = {");

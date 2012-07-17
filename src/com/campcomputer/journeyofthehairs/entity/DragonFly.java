@@ -1,8 +1,8 @@
-package com.campcomputer.entity;
+package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.Entity;
-import com.campcomputer.GameEngine;
-import com.campcomputer.Images;
+import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.Images;
 
 public class DragonFly extends Entity {
     private int flyingEnergy = 25;

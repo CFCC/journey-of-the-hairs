@@ -1,6 +1,8 @@
-package com.campcomputer;
+package com.campcomputer.journeyofthehairs;
 
-import com.campcomputer.entity.Player;
+import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.entity.Player;
+import com.campcomputer.journeyofthehairs.item.Item;
 
 import java.util.ArrayList;
 

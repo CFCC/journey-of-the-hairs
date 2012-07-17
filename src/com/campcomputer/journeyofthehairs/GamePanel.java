@@ -1,4 +1,6 @@
-package com.campcomputer;
+package com.campcomputer.journeyofthehairs;
+
+import com.campcomputer.journeyofthehairs.entity.Entity;
 
 import javax.swing.*;
 import java.awt.*;
