@@ -1,8 +1,9 @@
-package com.campcomputer.entity;
+package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.Entity;
-import com.campcomputer.GameEngine;
-import com.campcomputer.Images;
+import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.Images;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -71,7 +72,7 @@ public class RocketWorm extends Entity {
     }
 
     public void shootrocket() {
-        Rocket rocket = new Rocket(engine);
+        com.campcomputer.journeyofthehairs.entity.Rocket rocket = new com.campcomputer.journeyofthehairs.entity.Rocket(engine);
         rocket.setX(getX());
         rocket.setY(getY()+1);
 		engine.addEntity(rocket);

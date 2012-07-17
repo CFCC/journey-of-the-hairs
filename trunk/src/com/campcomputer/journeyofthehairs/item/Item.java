@@ -1,4 +1,7 @@
-package com.campcomputer;
+package com.campcomputer.journeyofthehairs.item;
+
+import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.entity.Entity;
 
 public abstract class Item extends Entity {
 
