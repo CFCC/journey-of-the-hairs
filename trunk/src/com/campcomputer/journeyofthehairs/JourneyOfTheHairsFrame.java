@@ -8,6 +8,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
     GameEngine engine;
     private final GamePanel gamePanel;
+    Menu menu;
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -34,7 +35,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.startMoveForward();
                         break;
                     case KeyEvent.VK_W:
-						System.out.println("jump");
+                        System.out.println("jump");
                         engine.jump();
                         break;
                     case KeyEvent.VK_E:
@@ -64,19 +65,26 @@ public class JourneyOfTheHairsFrame extends JFrame {
             }
         });
 
- //       addMouseListener((new MouseAdapter() {
- //           @Override
- //           public void mouseClicked(MouseEvent mouseEvent) {
- //               float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
- //               float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
- //               engine.shoot();
- //           }
- //       }));
+        //              addMouseListener((new MouseAdapter() {
+        //                  @Override
+        //                  public void mouseClicked(MouseEvent mouseEvent) {
+        //                      float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
+        //                      float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
+        //                      engine.shoot();
+        //                  }
+        //              }));
+
+        addMouseListener((new MouseAdapter() {
+            public void mouseClickedMenu(MouseEvent mouseEvent) {
+                float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
+                float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
+                menu.menuEffect(X, Y);
+            }
+        }));
 
         Timer t = new Timer(1000 / 30, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 engine.tick();
                 repaint();
 
