@@ -6,7 +6,6 @@ import com.campcomputer.journeyofthehairs.item.Item;
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class GameEngine {
     private static final float GRAVITY = .2f;
@@ -124,7 +123,7 @@ public class GameEngine {
         return player;
     }
 
-    public Collection<Entity> getEntities() {
+    public ArrayList<Entity> getEntities() {
         return entities;
     }
 
