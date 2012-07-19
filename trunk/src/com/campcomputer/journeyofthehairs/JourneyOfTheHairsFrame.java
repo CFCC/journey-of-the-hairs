@@ -11,7 +11,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
     GameEngine engine;
     private final GamePanel gamePanel;
     Menu menu;
-    Item item;
+    public Item item;
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -38,6 +38,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.startMoveForward();
                         break;
                     case KeyEvent.VK_W:
+//                        System.out.println("Jump");
                         engine.jump();
                         break;
                     case KeyEvent.VK_E:
@@ -48,6 +49,9 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         break;
                     case KeyEvent.VK_S:
                         engine.shoot(item.getAmmo());
+                        break;
+                    case KeyEvent.VK_ESCAPE:
+                        System.exit(0);
                         break;
                 }
 

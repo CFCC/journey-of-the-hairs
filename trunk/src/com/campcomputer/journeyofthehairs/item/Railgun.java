@@ -5,14 +5,19 @@ import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 
 public class Railgun extends Item {
-    private int Damage = 9001;
-    //  How much damage the gun does.
-    private int FireRate = 1;
-    // How many bullets fired per second or something.
-    private int BulletNumber = 1;
-    // Number of bullets fired.
-    private float BulletSpeed = 9000f;
-    // Speed of bullets.
+
+    Item item;
+    float x;
+    float y;
+
+    public void main(String[] args) {
+        item.setDamage(9001);
+        item.setFireRate(1);
+        item.setBulletNumber(1);
+        item.setBulletSpeed(9000f);
+        item.setItemX(x);
+        item.setItemY(y);
+    }
 
     protected void loadImages() {
         frames.add(Images.ReadImage("images/railgun.png"));
