@@ -5,14 +5,19 @@ import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 
 public class Rifle extends Item {
-    private int Damage = 1;
-    //  How much damage the gun does.
-    private int FireRate = 1;
-    // How many bullets fired per second or something.
-    private int BulletNumber = 20;
-    // Number of bullets fired.
-    private float BulletSpeed = 3f;
-// Speed of bullets.
+
+    Item item;
+    float x;
+    float y;
+
+    public void main(String[] args) {
+        item.setDamage(1);
+        item.setFireRate(1);
+        item.setBulletNumber(20);
+        item.setBulletSpeed(3f);
+        item.setItemX(x);
+        item.setItemY(y);
+    }
 
     protected void loadImages() {
     frames.add(Images.ReadImage("images/rifle.png"));

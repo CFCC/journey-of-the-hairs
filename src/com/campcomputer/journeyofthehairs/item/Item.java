@@ -13,6 +13,36 @@ public abstract class Item extends Entity {
     private float x = 0;
     private float y = 0;
 
+    public int setDamage(int x) {
+        damage = x;
+        return damage;
+    }
+
+    public int setFireRate (int x) {
+        fireRate = x;
+        return fireRate;
+    }
+
+    public int setBulletNumber (int x) {
+        bulletNumber = x;
+        return bulletNumber;
+    }
+
+    public float setBulletSpeed (float x) {
+        bulletSpeed = x;
+        return bulletSpeed;
+    }
+
+    public float setItemX (float X) {
+        x = X;
+        return x;
+    }
+
+    public float setItemY (float Y) {
+        y = Y;
+        return y;
+    }
+
     public int getDamage() {
         return damage;
     }
@@ -30,6 +60,7 @@ public abstract class Item extends Entity {
     }
 
     public int getAmmo(){
+        int ammoLeft = 100;
         return ammoLeft;
     }
 
