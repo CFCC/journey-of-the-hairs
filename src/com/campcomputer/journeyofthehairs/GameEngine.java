@@ -296,11 +296,11 @@ public class GameEngine {
             return false;
     }
 
-    public void shoot() {
+    public void shoot(int ammo) {
         float playerX = player.getX();
         float playerY = player.getY();
         if (player.isFacingLeft()) {
-            if (item.getAmmo() > 0) {
+            if (ammo > 0) {
                 ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
                 for (Entity entity : entities) {
                     if (!(entity instanceof Player)) {
@@ -318,7 +318,7 @@ public class GameEngine {
         }
 
         if (player.isFacingRight()) {
-            if (item.getAmmo() > 0) {
+            if (ammo > 0) {
                 ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
                 for (Entity entity : entities) {
                     if (!(entity instanceof Player)) {

@@ -1,5 +1,7 @@
 package com.campcomputer.journeyofthehairs;
 
+import com.campcomputer.journeyofthehairs.item.Item;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +11,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
     GameEngine engine;
     private final GamePanel gamePanel;
     Menu menu;
+    Item item;
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -35,7 +38,6 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.startMoveForward();
                         break;
                     case KeyEvent.VK_W:
-                        System.out.println("jump");
                         engine.jump();
                         break;
                     case KeyEvent.VK_E:
@@ -45,7 +47,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        engine.shoot();
+                        engine.shoot(item.getAmmo());
                         break;
                 }
 
