@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/main menu.png" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Desktop\Desktop Folders\Jordan CFCC\JOTH - Updated\src\com\campcomputer\journeyofthehairs\Instructions.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Menu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/MenuOptions.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/MenuOptions.java" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,10 +105,31 @@
       <file leaf-file-name="JourneyOfTheHairsFrame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="10" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.18337408">
+            <state line="39" column="39" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.16625917">
               <folding>
-                <element signature="e#2808#2992#0" expanded="true" />
-                <element signature="e#2981#2982#0" expanded="true" />
+                <element signature="e#2839#3023#0" expanded="true" />
+                <element signature="e#3012#3013#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JourneyOfTheHairs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="320" column="20" selection-start="17295" selection-end="17295" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#16556#16564#0" expanded="true" />
+                <element signature="e#17369#17377#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,8 +165,8 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/MenuOptions.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Instructions.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Menu.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" />
       </list>
     </option>
@@ -314,24 +332,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JOTH - Updated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -661,7 +661,11 @@
       <created>1342704379108</created>
       <updated>1342704379108</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="&#10;">
+      <created>1342726218102</created>
+      <updated>1342726218102</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -686,7 +690,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66952056" sideWeight="0.49840763" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -801,13 +805,6 @@
         <state line="6" column="13" selection-start="225" selection-end="225" vertical-scroll-proportion="0.13518886" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="57" selection-end="57" vertical-scroll-proportion="0.030520646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/MenuOptions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="40" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
@@ -850,16 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="9616" selection-end="9616" vertical-scroll-proportion="3.4343433">
-          <folding>
-            <element signature="e#16558#16566#0" expanded="true" />
-            <element signature="e#17381#17389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="13" selection-start="647" selection-end="647" vertical-scroll-proportion="0.16625917">
@@ -874,12 +861,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="320" column="20" selection-start="17295" selection-end="17295" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#16556#16564#0" expanded="true" />
+            <element signature="e#17369#17377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="10" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.18337408">
+        <state line="39" column="39" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.16625917">
           <folding>
-            <element signature="e#2808#2992#0" expanded="true" />
-            <element signature="e#2981#2982#0" expanded="true" />
+            <element signature="e#2839#3023#0" expanded="true" />
+            <element signature="e#3012#3013#0" expanded="true" />
           </folding>
         </state>
       </provider>
