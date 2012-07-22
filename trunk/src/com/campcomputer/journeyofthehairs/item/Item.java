@@ -5,13 +5,13 @@ import com.campcomputer.journeyofthehairs.entity.Entity;
 
 public abstract class Item extends Entity {
 
-    int ammoLeft = 100;
-    float bulletSpeed = 1f;
-    int bulletNumber = 1;   // Number of bullets fired.
-    int fireRate = 1;       // How many bullets fired per second.
-    int damage = 1;
-    private float x = 0;
-    private float y = 0;
+    int ammoLeft;
+    float bulletSpeed;
+    int bulletNumber;   // Number of bullets fired.
+    int fireRate;       // How many bullets fired per second.
+    int damage;
+    private static float x;
+    private static float y;
 
     public int setDamage(int x) {
         damage = x;
@@ -33,12 +33,12 @@ public abstract class Item extends Entity {
         return bulletSpeed;
     }
 
-    public float setItemX (float X) {
+    public static float setItemX(float X) {
         x = X;
         return x;
     }
 
-    public float setItemY (float Y) {
+    public static float setItemY(float Y) {
         y = Y;
         return y;
     }

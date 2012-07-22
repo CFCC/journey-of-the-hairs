@@ -1,6 +1,6 @@
 package com.campcomputer.journeyofthehairs;
 
-import com.campcomputer.journeyofthehairs.item.Item;
+import com.campcomputer.journeyofthehairs.item.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +11,14 @@ public class JourneyOfTheHairsFrame extends JFrame {
     GameEngine engine;
     private final GamePanel gamePanel;
     Menu menu;
-    public Item item;
+    Item item;
+    Pickup pickup;
+    Pistol pistol;
+    GrenadeGun grenadeGun;
+    MiniGun minigun;
+    Railgun railgun;
+    Rifle rifle;
+    Shotgun shotgun;
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -38,7 +45,6 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.startMoveForward();
                         break;
                     case KeyEvent.VK_W:
-//                        System.out.println("Jump");
                         engine.jump();
                         break;
                     case KeyEvent.VK_E:
@@ -52,6 +58,24 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         break;
                     case KeyEvent.VK_ESCAPE:
                         System.exit(0);
+                        break;
+                    case KeyEvent.VK_1:
+                        pickup.setActiveItem(pistol);
+                        break;
+                    case KeyEvent.VK_2:
+                        pickup.setActiveItem(shotgun);
+                        break;
+                    case KeyEvent.VK_3:
+                        pickup.setActiveItem(minigun);
+                        break;
+                    case KeyEvent.VK_4:
+                        pickup.setActiveItem(grenadeGun);
+                        break;
+                    case KeyEvent.VK_5:
+                        pickup.setActiveItem(rifle);
+                        break;
+                    case KeyEvent.VK_6:
+                        pickup.setActiveItem(railgun);
                         break;
                 }
 
@@ -79,14 +103,6 @@ public class JourneyOfTheHairsFrame extends JFrame {
         //                      engine.shoot();
         //                  }
         //              }));
-
-        addMouseListener((new MouseAdapter() {
-            public void mouseClickedMenu(MouseEvent mouseEvent) {
-                float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
-                float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
-                menu.menuEffect(X, Y);
-            }
-        }));
 
         Timer t = new Timer(1000 / 30, new ActionListener() {
             @Override

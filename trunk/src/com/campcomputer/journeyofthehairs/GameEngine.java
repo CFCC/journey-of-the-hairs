@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.*;
-import com.campcomputer.journeyofthehairs.item.Item;
+import com.campcomputer.journeyofthehairs.item.*;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -116,6 +116,10 @@ public class GameEngine {
         entities.add(dragonFly);
         entities.add(stinkbug);
         entities.add(worm);
+
+//        pickup.addToItems();
+        Railgun.setItemX(2);
+        Railgun.setItemY(10);
     }
 
 
