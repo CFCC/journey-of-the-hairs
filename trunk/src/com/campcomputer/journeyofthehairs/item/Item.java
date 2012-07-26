@@ -59,8 +59,12 @@ public abstract class Item extends Entity {
         return bulletSpeed;
     }
 
+    public int setAmmo(int ammo) {
+        ammoLeft = ammo;
+        return ammoLeft;
+    }
+
     public int getAmmo(){
-        int ammoLeft = 100;
         return ammoLeft;
     }
 

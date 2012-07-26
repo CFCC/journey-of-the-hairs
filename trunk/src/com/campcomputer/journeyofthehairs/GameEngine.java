@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.*;
-import com.campcomputer.journeyofthehairs.item.*;
+import com.campcomputer.journeyofthehairs.item.Item;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -11,10 +11,12 @@ public class GameEngine {
     private static final float GRAVITY = .2f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
-    Item item;
+    private Player player;
+    private ArrayList<Entity> entities = new ArrayList<Entity>();
+    private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
+    private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
     Pickup pickup;
-    Entity entity;
-    JourneyOfTheHairs JourneyOfTheHairs;
+    Item item;
 
     private Tile[][] map = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
@@ -83,11 +85,6 @@ public class GameEngine {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
     };
 
-    private Player player;
-    private ArrayList<Entity> entities = new ArrayList<Entity>();
-    private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
-    private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-
     public GameEngine() {
 
         player = new Player(this);
@@ -117,11 +114,9 @@ public class GameEngine {
         entities.add(stinkbug);
         entities.add(worm);
 
-//        pickup.addToItems();
-        Railgun.setItemX(2);
-        Railgun.setItemY(10);
+        player.lives = 3;
+        item.setAmmo(100);
     }
-
 
     public Player getPlayer() {
         return player;
@@ -146,11 +141,18 @@ public class GameEngine {
         }
         applyGravity();
         applyMovement();
+//        pickup.pickup();
 
-        if (player.getHealth() <= 0 && player.lives >= 0) {
-//           player.lives -= 1;
-//         String x[]={"A","B"};
-//       JourneyOfTheHairs.main(x);
+        if (player.getHealth() > 0)
+            player.isAlive = true;
+        else
+            player.isAlive = false;
+
+        if (player.getHealth() <= 0 && player.lives >= 0 && player.isAlive == false) {
+            player.lives -= 1;
+            player.setHealth(player.MAX_HEALTH);
+            String x[] = {"A", "B"};
+            JourneyOfTheHairs.main(x);
         }
     }
 
@@ -300,7 +302,8 @@ public class GameEngine {
             return false;
     }
 
-    public void shoot(int ammo) {
+    public void shoot() {
+        int ammo = item.getAmmo();
         float playerX = player.getX();
         float playerY = player.getY();
         if (player.isFacingLeft()) {
