@@ -54,7 +54,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        engine.shoot(item.getAmmo());
+                        engine.shoot();
                         break;
                     case KeyEvent.VK_ESCAPE:
                         System.exit(0);

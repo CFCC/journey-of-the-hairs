@@ -1,7 +1,6 @@
 package com.campcomputer.journeyofthehairs.entity;
 
 
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 
@@ -11,10 +10,11 @@ import java.util.List;
 
 public class Player extends Entity {
 
-    public static final int MAX_HEALTH = 100;
+    public static int MAX_HEALTH = 100;
     List<BufferedImage> forwardFrames;
     List<BufferedImage> backwardFrames;
-    public int lives = 3;
+    public int lives;
+    public boolean isAlive;
 
     public Player(GameEngine engine) {
         super(engine);
