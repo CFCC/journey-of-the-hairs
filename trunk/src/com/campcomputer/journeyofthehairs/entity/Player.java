@@ -14,7 +14,6 @@ public class Player extends Entity {
     List<BufferedImage> forwardFrames;
     List<BufferedImage> backwardFrames;
     public int lives;
-    public boolean isAlive;
 
     public Player(GameEngine engine) {
         super(engine);
@@ -45,6 +44,12 @@ public class Player extends Entity {
 
     }
 
+    public boolean isPlayerAlive() {
+        if (getHealth() <= 0)
+            return false;
+        else
+            return true;
+    }
     @Override
     public void attack(Entity entity) {
 

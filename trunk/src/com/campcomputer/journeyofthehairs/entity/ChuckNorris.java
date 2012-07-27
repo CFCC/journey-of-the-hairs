@@ -1,6 +1,5 @@
 package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 
@@ -47,7 +46,7 @@ public class ChuckNorris extends Entity {
 	public void tick() {
 		super.tick();
 
-		if (engine.isOnTopOfPlayerChuckNorris()) {
+		if (engine.isPlayerOnTopOfNorris()) {
 			attack(engine.getPlayer());
 		}
 
