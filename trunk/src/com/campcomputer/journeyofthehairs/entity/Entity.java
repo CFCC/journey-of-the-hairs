@@ -156,5 +156,6 @@ public abstract class Entity {
 
     public void userInfoBar() {
         frames.add(Images.ReadImage("images/userInfoBar.png"));
+
     }
 }

@@ -16,6 +16,7 @@ public class GameEngine {
     private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
     Item item;
+    UserInfoBar userInfoBar;
 
     private Tile[][] map = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
@@ -111,6 +112,13 @@ public class GameEngine {
         entities.add(dragonFly);
         entities.add(stinkbug);
         entities.add(worm);
+
+        ArrayList dEntities = dragonFly.getEntities();
+        dEntities.add(player);
+        dEntities.add(chuckNorris);
+        dEntities.add(dragonFly);
+        dEntities.add(stinkbug);
+        dEntities.add(worm);
     }
 
     public Player getPlayer() {
@@ -134,15 +142,17 @@ public class GameEngine {
         for (Entity entity : entities) {
             entity.tick();
         }
+        userInfoBar.tick();
         applyGravity();
         applyMovement();
 
         if (!player.isPlayerAlive() && player.lives >= 0) {
-            player.lives -= 1;
+            player.subtractLife();
             player.setHealth(player.MAX_HEALTH);
             String x[] = {"A", "B"};
             JourneyOfTheHairs.main(x);
         }
+        System.out.println(player.getHealth());
     }
 
     private void applyGravity() {
@@ -223,6 +233,7 @@ public class GameEngine {
                     return new Point(x, y);
             }
 
+            //dY over dX is the slope
             x += dX;
             y += dY;
         }
@@ -252,19 +263,19 @@ public class GameEngine {
         }
     }
 
-    public boolean isPlayerClose(Entity entity) {
-        return getDistanceBetweenEntityAndPlayer(entity) < 10f;
+    public boolean isEntityClose(Entity entity, Entity otherEntity) {
+        return getDistanceBetweenTwoEntities(entity, otherEntity) < 10f;
     }
 
-    public double getDistanceBetweenEntityAndPlayer(Entity entity) {
-        Point2D playerPosition = new Point2D.Float(player.getX(), player.getY());
-        Point2D entityPosition = new Point2D.Float(entity.getX(), entity.getY());
+    public double getDistanceBetweenTwoEntities(Entity entityOne, Entity entityTwo) {
+        Point2D entityOnePosition = new Point2D.Float(entityOne.getX(), entityOne.getY());
+        Point2D entityTwoPosition = new Point2D.Float(entityTwo.getX(), entityTwo.getY());
 
-        return playerPosition.distance(entityPosition);
+        return entityOnePosition.distance(entityTwoPosition);
     }
 
-    public boolean isOnTopOfPlayer(Entity entity) {
-        return getDistanceBetweenEntityAndPlayer(entity) < 2f;
+    public boolean isOnTopOfEntity(Entity entity, Entity otherEntity) {
+        return getDistanceBetweenTwoEntities(entity, otherEntity) < 2f;
     }
 
     public boolean isPlayerOnTopOfNorris() {
@@ -272,40 +283,32 @@ public class GameEngine {
     }
 
     public boolean isPlayerAbove(Entity entity) {
-        if (player.getY() > entity.getY())
-            return true;
-        else
-            return false;
+        return player.getY() > entity.getY();
     }
 
     public boolean isPlayerToLeft(Entity entity) {
-        if (player.getX() < entity.getX())
-            return true;
-        else
-            return false;
+        return player.getX() < entity.getX();
     }
 
     public void shoot() {
-        int ammo = item.getAmmo();
+        int ammoLeft = item.getAmmo();
         ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
         float playerX = player.getX();
         float playerY = player.getY();
-        if (player.isFacingLeft()) {
-            if (ammo > 0) {
-                for (Entity entity : entities) {
-                    Point2D shootLocation = new Point2D.Float(playerX - 1, playerY);
-                    Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-                    item.subtractAmmo();
-                    if (shootLocation.distance(entityLocation) < 1) {
-                        if (!entity.attacked())
-                            entitiesToRemove.add(entity);
-                    }
+        if (player.isFacingLeft() && ammoLeft > 0) {
+            for (Entity entity : entities) {
+                Point2D shootLocation = new Point2D.Float(playerX - 1, playerY);
+                Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+                item.subtractAmmo();
+                if (shootLocation.distance(entityLocation) < 1) {
+                    if (!entity.attacked())
+                        entitiesToRemove.add(entity);
                 }
             }
         }
 
         if (player.isFacingRight()) {
-            if (ammo > 0) {
+            if (ammoLeft > 0) {
                 for (Entity entity : entities) {
                     Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
                     Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());

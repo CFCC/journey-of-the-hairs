@@ -5,7 +5,6 @@ import com.campcomputer.journeyofthehairs.entity.Entity;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.IdentityHashMap;
 import java.util.Map;
 
@@ -28,7 +27,6 @@ public class GamePanel extends JPanel {
     private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT,
             BasicStroke.JOIN_MITER, 10,
             dashPattern, 0);
-    ;
 
     public GamePanel(GameEngine theGameEngine) {
 
