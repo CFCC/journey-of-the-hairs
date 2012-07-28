@@ -1,8 +1,6 @@
 package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
-import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.Images;
 
 import java.awt.image.BufferedImage;
@@ -14,6 +12,7 @@ public class RocketWorm extends Entity {
 	protected List<BufferedImage> standing;
 	protected List<BufferedImage> wormLeaveGround;
 	protected List<BufferedImage> wormEnterGround;
+    Player player;
 
 
     public RocketWorm(GameEngine engine) {
@@ -37,9 +36,9 @@ public class RocketWorm extends Entity {
 			frames = standing;
 		}
 
-        if (engine.isOnTopOfPlayer(this)) {
+        if (engine.isOnTopOfEntity(this, player)) {
             emerge();
-        } else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0 && canBeAttacked()) {
+        } else if (engine.getDistanceBetweenTwoEntities(this, player) < 5.0 && canBeAttacked()) {
 			for (Entity entity  : engine.getEntities()) {
 				if (entity instanceof Rocket) {
 					return;

@@ -5,7 +5,7 @@ import com.campcomputer.journeyofthehairs.entity.Entity;
 
 public abstract class Item extends Entity {
 
-    int ammoLeft;
+    public int ammo;
     float bulletSpeed;
     int bulletNumber;   // Number of bullets fired.
     int fireRate;       // How many bullets fired per second.
@@ -60,16 +60,16 @@ public abstract class Item extends Entity {
     }
 
     public int setAmmo(int ammo) {
-        ammoLeft = ammo;
-        return ammoLeft;
+        this.ammo = ammo;
+        return this.ammo;
     }
 
     public int getAmmo(){
-        return ammoLeft;
+        return ammo;
     }
 
     public void subtractAmmo(){
-        ammoLeft -= 1;
+        ammo -= 1;
     }
 
     public Item(GameEngine engine) {

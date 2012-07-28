@@ -1,14 +1,9 @@
 package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.Images;
 
-import java.awt.*;
-import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +11,7 @@ public class Rocket extends Entity {
 
 	private static final int ROCKET_DAMAGE = 50;
     private static final float SPEED_MAGNITUDE = 0.1f;
+    Player player;
 
     List<BufferedImage> rocketLeft;
     List<BufferedImage> rocketRight;
@@ -46,7 +42,7 @@ public class Rocket extends Entity {
             setyVel(SPEED_MAGNITUDE);
         }
 
-        if (engine.isOnTopOfPlayer(this)) {
+        if (engine.isOnTopOfEntity(this, player)) {
             engine.getPlayer().setHealth(engine.getPlayer().getHealth() - ROCKET_DAMAGE);
             engine.removeEntity(this);
         }

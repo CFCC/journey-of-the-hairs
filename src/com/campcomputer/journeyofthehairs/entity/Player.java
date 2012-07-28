@@ -45,11 +45,13 @@ public class Player extends Entity {
     }
 
     public boolean isPlayerAlive() {
-        if (getHealth() <= 0)
-            return false;
-        else
-            return true;
+        return getHealth() > 0;
     }
+
+    public void subtractLife() {
+        lives -= 1;
+    }
+
     @Override
     public void attack(Entity entity) {
 
