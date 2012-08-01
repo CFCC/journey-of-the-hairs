@@ -7,7 +7,6 @@ public class SuicideStinkBug extends Entity {
 
     private static final int EXPLODE_RANGE = 1;
     private static final int EXPLODE_DAMAGE = 10;
-    Player player;
 
 
     public SuicideStinkBug(GameEngine engine) {
@@ -19,7 +18,7 @@ public class SuicideStinkBug extends Entity {
     public void tick() {
         super.tick();
 
-        if (engine.getDistanceBetweenTwoEntities(this, player) < EXPLODE_RANGE)
+        if (engine.getDistanceBetweenTwoEntities(this, engine.getPlayer()) < EXPLODE_RANGE)
             blowup();
         if (engine.getPlayer().getX() < getX() && getX() - engine.getPlayer().getX() <= 5)
             moveLeft();

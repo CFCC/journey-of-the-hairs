@@ -2,13 +2,14 @@ package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.Player;
-import com.campcomputer.journeyofthehairs.item.*;
+import com.campcomputer.journeyofthehairs.item.Item;
 
 import java.util.ArrayList;
 
 public class Pickup {
+    GameEngine engine = new GameEngine();
     Item item;
-    Player player;
+    Player player = engine.getPlayer();
 
     private ArrayList<Item> inventory = new ArrayList<Item>();
 

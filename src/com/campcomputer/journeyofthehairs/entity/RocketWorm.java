@@ -9,56 +9,53 @@ import java.util.List;
 
 public class RocketWorm extends Entity {
 
-	protected List<BufferedImage> standing;
-	protected List<BufferedImage> wormLeaveGround;
-	protected List<BufferedImage> wormEnterGround;
-    Player player;
+    protected List<BufferedImage> standing;
+    protected List<BufferedImage> wormLeaveGround;
+    protected List<BufferedImage> wormEnterGround;
+    Player player = engine.getPlayer();
 
 
     public RocketWorm(GameEngine engine) {
         super(engine);
-		setHealth(2);
+        setHealth(2);
     }
 
-	public int getHeight() {
-		return 2;
-	}
+    public int getHeight() {
+        return 2;
+    }
 
-	@Override
+    @Override
     public void tick() {
         super.tick();
-		if (frames == wormLeaveGround && currentFrame == wormLeaveGround.size() - 1) {
-			currentFrame = 0;
-			frames = wormEnterGround;
-		}
-		if (frames == wormEnterGround && currentFrame == wormEnterGround.size() - 1) {
-			currentFrame = 0;
-			frames = standing;
-		}
-
+        if (frames == wormLeaveGround && currentFrame == wormLeaveGround.size() - 1) {
+            currentFrame = 0;
+            frames = wormEnterGround;
+        }
+        if (frames == wormEnterGround && currentFrame == wormEnterGround.size() - 1) {
+            currentFrame = 0;
+            frames = standing;
+        }
         if (engine.isOnTopOfEntity(this, player)) {
             emerge();
         } else if (engine.getDistanceBetweenTwoEntities(this, player) < 5.0 && canBeAttacked()) {
-			for (Entity entity  : engine.getEntities()) {
-				if (entity instanceof Rocket) {
-					return;
-                }
-			}
+            for (Entity entity : engine.getEntities()) {
+                if (entity instanceof Rocket)
+                    return;
+            }
             shootrocket();
         }
-
     }
 
     @Override
     public void loadImages() {
         wormLeaveGround = Images.loadFrames("wormLeaveGround");
         wormEnterGround = Images.loadFrames("wormEnterGround");
-		standing = new ArrayList<BufferedImage>(1);
-		standing.add(wormLeaveGround.get(0));
+        standing = new ArrayList<BufferedImage>(1);
+        standing.add(wormLeaveGround.get(0));
         frames = standing;
     }
 
-     @Override
+    @Override
     public void attack(Entity entity) {
 
     }
@@ -73,14 +70,14 @@ public class RocketWorm extends Entity {
     public void shootrocket() {
         com.campcomputer.journeyofthehairs.entity.Rocket rocket = new com.campcomputer.journeyofthehairs.entity.Rocket(engine);
         rocket.setX(getX());
-        rocket.setY(getY()+1);
-		engine.addEntity(rocket);
+        rocket.setY(getY() + 1);
+        engine.addEntity(rocket);
     }
 
     public void tunneling() {
     }
 
-	public boolean canBeAttacked() {
-		return frames != standing;
-	}
+    public boolean canBeAttacked() {
+        return frames != standing;
+    }
 }
