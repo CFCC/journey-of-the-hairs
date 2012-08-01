@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.*;
-import com.campcomputer.journeyofthehairs.item.Item;
+import com.campcomputer.journeyofthehairs.item.*;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -17,6 +17,8 @@ public class GameEngine {
     private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
     Item item;
     UserInfoBar userInfoBar;
+    Pickup pickup;
+    Pistol pistol;
 
     private Tile[][] map = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
@@ -107,6 +109,30 @@ public class GameEngine {
         worm.setX(32);
         worm.setY(9);
 
+        com.campcomputer.journeyofthehairs.item.MiniGun miniGun = new MiniGun(this);
+        miniGun.setX(0);
+        miniGun.setY(0);
+
+        com.campcomputer.journeyofthehairs.item.Railgun railgun = new Railgun(this);
+        railgun.setX(0);
+        railgun.setY(1);
+
+        com.campcomputer.journeyofthehairs.item.Rifle rifle = new Rifle(this);
+        rifle.setX(1);
+        rifle.setY(0);
+
+        com.campcomputer.journeyofthehairs.item.Shotgun shotgun = new  Shotgun(this);
+        shotgun.setX(1);
+        shotgun.setY(1);
+
+        com.campcomputer.journeyofthehairs.item.GrenadeGun grenadeGun = new GrenadeGun(this);
+        grenadeGun.setX(1);
+        grenadeGun.setY(2);
+
+        com.campcomputer.journeyofthehairs.item.Pistol pistol = new Pistol(this);
+        pistol.setX(2);
+        pistol.setY(1);
+
         entities.add(player);
         entities.add(chuckNorris);
         entities.add(dragonFly);
@@ -119,6 +145,9 @@ public class GameEngine {
         dEntities.add(dragonFly);
         dEntities.add(stinkbug);
         dEntities.add(worm);
+
+        item = pistol;
+        pickup = new Pickup();
     }
 
     public Player getPlayer() {
@@ -138,21 +167,28 @@ public class GameEngine {
         entities.removeAll(entitiesToRemove);
         entitiesToAdd.clear();
         entitiesToRemove.clear();
+        if (pickup == null)
+            System.out.println("null");
+        item = pickup.getActiveItem();
+        if (item == null)
+            item = pistol;
 
-        for (Entity entity : entities) {
+        for (Entity entity : entities)
             entity.tick();
-        }
-        userInfoBar.tick();
+
+//        userInfoBar.tick();
         applyGravity();
         applyMovement();
+        nextLife();
+    }
 
-        if (!player.isPlayerAlive() && player.lives >= 0) {
+    public void nextLife() {
+        if (!player.isPlayerAlive() && player.getLives() > 0) {
             player.subtractLife();
             player.setHealth(player.MAX_HEALTH);
             String x[] = {"A", "B"};
             JourneyOfTheHairs.main(x);
         }
-        System.out.println(player.getHealth());
     }
 
     private void applyGravity() {
@@ -264,11 +300,13 @@ public class GameEngine {
     }
 
     public boolean isEntityClose(Entity entity, Entity otherEntity) {
-        return getDistanceBetweenTwoEntities(entity, otherEntity) < 10f;
+        return getDistanceBetweenTwoEntities(entity, otherEntity) < 3f;
     }
 
-    public double getDistanceBetweenTwoEntities(Entity entityOne, Entity entityTwo) {
+    public double getDistanceBetweenTwoEntities(Entity entityOne, Entity x) {
         Point2D entityOnePosition = new Point2D.Float(entityOne.getX(), entityOne.getY());
+        Entity entityTwo = x;
+        System.out.println(entityTwo);
         Point2D entityTwoPosition = new Point2D.Float(entityTwo.getX(), entityTwo.getY());
 
         return entityOnePosition.distance(entityTwoPosition);
@@ -306,9 +344,7 @@ public class GameEngine {
                 }
             }
         }
-
-        if (player.isFacingRight()) {
-            if (ammoLeft > 0) {
+        if (player.isFacingRight() && ammoLeft > 0) {
                 for (Entity entity : entities) {
                     Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
                     Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
@@ -316,7 +352,6 @@ public class GameEngine {
                     if (shootLocation.distance(entityLocation) < 1) {
                         if (!entity.attacked())
                             entitiesToRemove.add(entity);
-                    }
                 }
             }
         }

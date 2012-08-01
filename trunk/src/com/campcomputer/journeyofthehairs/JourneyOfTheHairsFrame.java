@@ -11,14 +11,13 @@ public class JourneyOfTheHairsFrame extends JFrame {
     GameEngine engine;
     UserInfoBar infoBar;
     private final GamePanel gamePanel;
-    Pickup pickup;
-    Pistol pistol;
-    GrenadeGun grenadeGun;
-    MiniGun minigun;
-    Railgun railgun;
-    Rifle rifle;
-    Shotgun shotgun;
-    Menu menu;
+    Pickup pickup = new com.campcomputer.journeyofthehairs.Pickup();
+    Pistol pistol = new Pistol(engine);
+    GrenadeGun grenadeGun = new GrenadeGun(engine);
+    MiniGun minigun = new MiniGun(engine);
+    Railgun railgun = new Railgun(engine);
+    Rifle rifle = new Rifle(engine);
+    Shotgun shotgun = new Shotgun(engine);
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");

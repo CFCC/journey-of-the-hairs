@@ -10,10 +10,6 @@ public abstract class UserInfoBar extends Entity {
             {InfoBar.LIFEINFO, InfoBar.LIFE, InfoBar.NULL, InfoBar.HEALTHINFO, InfoBar.HEALTH, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL, InfoBar.NULL,},
     };
 
-    public void infoBarEffect(Float x, Float y) {
-//        if (userBar [x][y] == InfoBar.LIFEINFO)
-    }
-
     public UserInfoBar(GameEngine engine) {
         super(engine);
     }
@@ -23,7 +19,7 @@ public abstract class UserInfoBar extends Entity {
     }
 
     public void tick() {
-        setX(gamePanel.getxScreenPlace());
-        setY(0);
+//        setX(gamePanel.getxScreenPlace());
+//        setY(0);
     }
 }

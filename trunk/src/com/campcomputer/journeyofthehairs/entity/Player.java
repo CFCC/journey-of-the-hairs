@@ -41,7 +41,10 @@ public class Player extends Entity {
     @Override
     public void tick() {
         super.tick();
+    }
 
+    public int getLives() {
+        return lives;
     }
 
     public boolean isPlayerAlive() {

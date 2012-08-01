@@ -9,11 +9,6 @@ public class DragonFly extends Entity {
     private int flyingEnergy = 25;
     private int breathFireDamage = 33;
     private int eatingDamage = 10;
-    Player player;
-    ChuckNorris chuckNorris;
-    DragonFly dragonfly;
-    RocketWorm rocketWorm;
-    SuicideStinkBug stinkBug;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
 
     public DragonFly(GameEngine engine) {
@@ -29,16 +24,14 @@ public class DragonFly extends Entity {
     @Override
     public void tick() {
         super.tick();
-        if (chasePlayer1() != 1) {
-            if (!engine.isPlayerAbove(this)) {
-                setyVel(getyVel() + 0.3f);
-                setY(getY() - getyVel());
-                flyingEnergy -= 2;
-            } else if (engine.isPlayerAbove(this)) {
-                setyVel(getyVel() + 0.3f);
-                setY(getY() + getyVel());
-                flyingEnergy -= 1;
-            }
+        if (!engine.isPlayerAbove(this)) {
+            setyVel(getyVel() + 0.3f);
+            setY(getY() - getyVel());
+            flyingEnergy -= 2;
+        } else if (engine.isPlayerAbove(this)) {
+            setyVel(getyVel() + 0.3f);
+            setY(getY() + getyVel());
+            flyingEnergy -= 1;
         }
 
         if (engine.isPlayerToLeft(this)) {
@@ -67,8 +60,8 @@ public class DragonFly extends Entity {
     public void attack(Entity entity) {
         if (engine.isEntityClose(this, entity) && entity.getHealth() <= 10)
             eats(entity);
-        else if (engine.isEntityClose(this, entity))
-            breathfire(entity);
+//        if (engine.isEntityClose(this, entity))
+//            breathfire(entity);
     }
 
     /**
@@ -95,20 +88,9 @@ public class DragonFly extends Entity {
         entity.setHealth(entity.getHealth() - this.breathFireDamage);
     }
 
-    public int chasePlayer1() {
-        if (flyingEnergy > 7) {
-            // fly towards the player,
-            // solid object in the way
-            return 0;
-        }
-        if (flyingEnergy <= 0)
-            return 1;
-            //walk towards the player,
-            // can also jump.
-        else
-            return 2;
+    public boolean isThereFlyingEnergy() {
+        return flyingEnergy > 0;
     }
-
 
     public int getBreathFireDamage() {
         return breathFireDamage;
