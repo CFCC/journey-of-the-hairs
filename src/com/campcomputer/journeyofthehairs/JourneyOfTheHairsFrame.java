@@ -1,5 +1,6 @@
 package com.campcomputer.journeyofthehairs;
 
+import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.item.*;
 
 import javax.swing.*;
@@ -9,15 +10,21 @@ import java.awt.event.*;
 public class JourneyOfTheHairsFrame extends JFrame {
 
     GameEngine engine;
-    UserInfoBar infoBar;
     private final GamePanel gamePanel;
-    Pickup pickup = new com.campcomputer.journeyofthehairs.Pickup();
     Pistol pistol = new Pistol(engine);
     GrenadeGun grenadeGun = new GrenadeGun(engine);
     MiniGun minigun = new MiniGun(engine);
     Railgun railgun = new Railgun(engine);
     Rifle rifle = new Rifle(engine);
     Shotgun shotgun = new Shotgun(engine);
+    Item item = new Item(engine) {
+        @Override
+        protected void loadImages() {
+        }
+        @Override
+        public void attack(Entity entity) {
+        }
+    };
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -59,22 +66,22 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         System.exit(0);
                         break;
                     case KeyEvent.VK_1:
-                        pickup.setActiveItem(pistol);
+                        item.setActiveItem(pistol);
                         break;
                     case KeyEvent.VK_2:
-                        pickup.setActiveItem(shotgun);
+                        item.setActiveItem(shotgun);
                         break;
                     case KeyEvent.VK_3:
-                        pickup.setActiveItem(minigun);
+                        item.setActiveItem(minigun);
                         break;
                     case KeyEvent.VK_4:
-                        pickup.setActiveItem(grenadeGun);
+                        item.setActiveItem(grenadeGun);
                         break;
                     case KeyEvent.VK_5:
-                        pickup.setActiveItem(rifle);
+                        item.setActiveItem(rifle);
                         break;
                     case KeyEvent.VK_6:
-                        pickup.setActiveItem(railgun);
+                        item.setActiveItem(railgun);
                         break;
                 }
 
@@ -99,8 +106,6 @@ public class JourneyOfTheHairsFrame extends JFrame {
             public void mouseClicked(MouseEvent mouseEvent) {
                 float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
                 float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
- //               menu.menuEffect(X, Y);
- //               infoBar.infoBarEffect(X, Y);
             }
         }));
 

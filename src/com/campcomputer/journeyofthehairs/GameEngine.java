@@ -15,9 +15,10 @@ public class GameEngine {
     private ArrayList<Entity> entities = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-    Item item;
-    UserInfoBar userInfoBar;
-    Pickup pickup;
+    Item item = new Item(this) {
+        @Override protected void loadImages() {}
+        @Override public void attack(Entity entity) {}
+    };
     Pistol pistol;
 
     private Tile[][] map = {
@@ -88,7 +89,6 @@ public class GameEngine {
     };
 
     public GameEngine() {
-
         player = new Player(this);
         player.setX(1);
         player.setY(0);
@@ -121,7 +121,7 @@ public class GameEngine {
         rifle.setX(1);
         rifle.setY(0);
 
-        com.campcomputer.journeyofthehairs.item.Shotgun shotgun = new  Shotgun(this);
+        com.campcomputer.journeyofthehairs.item.Shotgun shotgun = new Shotgun(this);
         shotgun.setX(1);
         shotgun.setY(1);
 
@@ -146,8 +146,15 @@ public class GameEngine {
         dEntities.add(stinkbug);
         dEntities.add(worm);
 
+        ArrayList items = Item.getItems();
+        items.add(pistol);
+        items.add(grenadeGun);
+        items.add(miniGun);
+        items.add(railgun);
+        items.add(rifle);
+        items.add(shotgun);
+
         item = pistol;
-        pickup = new Pickup();
     }
 
     public Player getPlayer() {
@@ -167,16 +174,13 @@ public class GameEngine {
         entities.removeAll(entitiesToRemove);
         entitiesToAdd.clear();
         entitiesToRemove.clear();
-        if (pickup == null)
-            System.out.println("null");
-        item = pickup.getActiveItem();
+        item = Item.getActiveItem();
         if (item == null)
             item = pistol;
 
         for (Entity entity : entities)
             entity.tick();
 
-//        userInfoBar.tick();
         applyGravity();
         applyMovement();
         nextLife();
@@ -303,17 +307,21 @@ public class GameEngine {
         return getDistanceBetweenTwoEntities(entity, otherEntity) < 3f;
     }
 
-    public double getDistanceBetweenTwoEntities(Entity entityOne, Entity x) {
+    public double getDistanceBetweenTwoEntities(Entity entityOne, Entity entityTwo) {
+        Point2D entityTwoPosition = new Point2D.Float(player.getX(),player.getY());
         Point2D entityOnePosition = new Point2D.Float(entityOne.getX(), entityOne.getY());
-        Entity entityTwo = x;
-        System.out.println(entityTwo);
-        Point2D entityTwoPosition = new Point2D.Float(entityTwo.getX(), entityTwo.getY());
+        try {
+            entityTwoPosition = new Point2D.Float(entityTwo.getX(), entityTwo.getY());
+        }
+        catch (NullPointerException n) {
+            System.out.println("caught" + entityTwo);
+        }
 
         return entityOnePosition.distance(entityTwoPosition);
     }
 
     public boolean isOnTopOfEntity(Entity entity, Entity otherEntity) {
-        return getDistanceBetweenTwoEntities(entity, otherEntity) < 2f;
+        return getDistanceBetweenTwoEntities(entity, otherEntity) < 2;
     }
 
     public boolean isPlayerOnTopOfNorris() {
@@ -345,13 +353,13 @@ public class GameEngine {
             }
         }
         if (player.isFacingRight() && ammoLeft > 0) {
-                for (Entity entity : entities) {
-                    Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
-                    Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-                    item.subtractAmmo();
-                    if (shootLocation.distance(entityLocation) < 1) {
-                        if (!entity.attacked())
-                            entitiesToRemove.add(entity);
+            for (Entity entity : entities) {
+                Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
+                Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+                item.subtractAmmo();
+                if (shootLocation.distance(entityLocation) < 1) {
+                    if (!entity.attacked())
+                        entitiesToRemove.add(entity);
                 }
             }
         }

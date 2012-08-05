@@ -11,7 +11,7 @@ public class Rocket extends Entity {
 
 	private static final int ROCKET_DAMAGE = 50;
     private static final float SPEED_MAGNITUDE = 0.1f;
-    Player player;
+    Player player = new Player(new GameEngine());
 
     List<BufferedImage> rocketLeft;
     List<BufferedImage> rocketRight;
@@ -42,12 +42,11 @@ public class Rocket extends Entity {
             setyVel(SPEED_MAGNITUDE);
         }
 
-        if (engine.isOnTopOfEntity(this, player)) {
+        if (engine.getDistanceBetweenTwoEntities(this, player) < 2f) {
             engine.getPlayer().setHealth(engine.getPlayer().getHealth() - ROCKET_DAMAGE);
             engine.removeEntity(this);
         }
     }
-
     @Override
     protected void loadImages() {
         rocketLeft = new ArrayList<BufferedImage>(1);
