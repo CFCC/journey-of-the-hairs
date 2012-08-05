@@ -2,8 +2,15 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.entity.Player;
+
+import java.util.ArrayList;
 
 public abstract class Item extends Entity {
+
+    Player player = new Player(engine);
+    static Item activeItem;
+    Item item;
 
     public int ammo = 100;
     float bulletSpeed;
@@ -12,25 +19,56 @@ public abstract class Item extends Entity {
     int damage;
     private static float x;
     private static float y;
+    float pickupX = getX();
+    float pickupY = getY();
+    float playerX = player.getX();
+    float playerY = player.getY();
+
+    private ArrayList<Item> inventory = new ArrayList<Item>();
+    private static ArrayList<Item> items = new ArrayList<Item>();
 
     abstract protected void loadImages();
+
+    public void pickUpItem() {
+        if (pickupX == playerX && pickupY == playerY) {
+            inventory.add(item);
+            setActiveItem(item);
+        }
+    }
+
+    public static Item getActiveItem() {
+        return activeItem;
+    }
+
+    public Entity setActiveItem(Item entity) {
+        activeItem = entity;
+        setDamage(activeItem.getDamage());
+        setBulletNumber(activeItem.getBulletNumber());
+        setBulletSpeed(activeItem.getBulletSpeed());
+        setFireRate(activeItem.getFireRate());
+        return activeItem;
+    }
+
+    public static ArrayList getItems() {
+        return items;
+    }
 
     public int setDamage(int x) {
         damage = x;
         return damage;
     }
 
-    public int setFireRate (int x) {
+    public int setFireRate(int x) {
         fireRate = x;
         return fireRate;
     }
 
-    public int setBulletNumber (int x) {
+    public int setBulletNumber(int x) {
         bulletNumber = x;
         return bulletNumber;
     }
 
-    public float setBulletSpeed (float x) {
+    public float setBulletSpeed(float x) {
         bulletSpeed = x;
         return bulletSpeed;
     }
@@ -57,7 +95,7 @@ public abstract class Item extends Entity {
         return bulletNumber;
     }
 
-    public float getBulletSpeed(){
+    public float getBulletSpeed() {
         return bulletSpeed;
     }
 
@@ -66,11 +104,11 @@ public abstract class Item extends Entity {
         return this.ammo;
     }
 
-    public int getAmmo(){
+    public int getAmmo() {
         return ammo;
     }
 
-    public void subtractAmmo(){
+    public void subtractAmmo() {
         ammo -= 1;
     }
 
@@ -78,11 +116,11 @@ public abstract class Item extends Entity {
         super(engine);
     }
 
-    public float getX(){
+    public float getX() {
         return x;
     }
 
-    public float getY(){
+    public float getY() {
         return y;
     }
 }
