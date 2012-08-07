@@ -15,11 +15,16 @@ public class GameEngine {
     private ArrayList<Entity> entities = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+    ArrayList<Item> items = new ArrayList<Item>();
     Item item = new Item(this) {
-        @Override protected void loadImages() {}
-        @Override public void attack(Entity entity) {}
+        @Override
+        protected void loadImages() {
+        }
+
+        @Override
+        public void attack(Entity entity) {
+        }
     };
-    Pistol pistol;
 
     private Tile[][] map = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
@@ -139,26 +144,23 @@ public class GameEngine {
         entities.add(stinkbug);
         entities.add(worm);
 
-        ArrayList dEntities = dragonFly.getEntities();
-        dEntities.add(player);
-        dEntities.add(chuckNorris);
-        dEntities.add(dragonFly);
-        dEntities.add(stinkbug);
-        dEntities.add(worm);
-
-        ArrayList items = Item.getItems();
         items.add(pistol);
         items.add(grenadeGun);
         items.add(miniGun);
-        items.add(railgun);
         items.add(rifle);
+        items.add(railgun);
         items.add(shotgun);
 
-        item = pistol;
+        item.setItems(getItems());
+        this.item = pistol;
     }
 
     public Player getPlayer() {
         return player;
+    }
+
+    public ArrayList getItems() {
+        return items;
     }
 
     public ArrayList<Entity> getEntities() {
@@ -175,8 +177,6 @@ public class GameEngine {
         entitiesToAdd.clear();
         entitiesToRemove.clear();
         item = Item.getActiveItem();
-        if (item == null)
-            item = pistol;
 
         for (Entity entity : entities)
             entity.tick();
@@ -184,6 +184,7 @@ public class GameEngine {
         applyGravity();
         applyMovement();
         nextLife();
+        item.pickUpItem();
     }
 
     public void nextLife() {
@@ -308,14 +309,8 @@ public class GameEngine {
     }
 
     public double getDistanceBetweenTwoEntities(Entity entityOne, Entity entityTwo) {
-        Point2D entityTwoPosition = new Point2D.Float(player.getX(),player.getY());
         Point2D entityOnePosition = new Point2D.Float(entityOne.getX(), entityOne.getY());
-        try {
-            entityTwoPosition = new Point2D.Float(entityTwo.getX(), entityTwo.getY());
-        }
-        catch (NullPointerException n) {
-            System.out.println("caught" + entityTwo);
-        }
+        Point2D entityTwoPosition = new Point2D.Float(entityTwo.getX(), entityTwo.getY());
 
         return entityOnePosition.distance(entityTwoPosition);
     }
