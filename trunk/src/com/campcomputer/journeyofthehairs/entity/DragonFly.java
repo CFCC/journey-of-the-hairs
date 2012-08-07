@@ -15,10 +15,7 @@ public class DragonFly extends Entity {
         super(engine);
         setAffectedByGravity(false);
         setHealth(5);
-    }
-
-    public ArrayList getEntities() {
-        return entities;
+        entities = engine.getEntities();
     }
 
     @Override

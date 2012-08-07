@@ -10,8 +10,6 @@ public abstract class Item extends Entity {
 
     Player player = new Player(engine);
     static Item activeItem;
-    Item item;
-
     public int ammo = 100;
     float bulletSpeed;
     int bulletNumber;   // Number of bullets fired.
@@ -19,8 +17,6 @@ public abstract class Item extends Entity {
     int damage;
     private static float x;
     private static float y;
-    float pickupX = getX();
-    float pickupY = getY();
     float playerX = player.getX();
     float playerY = player.getY();
 
@@ -30,9 +26,13 @@ public abstract class Item extends Entity {
     abstract protected void loadImages();
 
     public void pickUpItem() {
-        if (pickupX == playerX && pickupY == playerY) {
-            inventory.add(item);
-            setActiveItem(item);
+        for (Item item : items) {
+            float pickupX = item.getX();
+            float pickupY = item.getY();
+            if (pickupX == playerX && pickupY == playerY) {
+                inventory.add(item);
+                setActiveItem(item);
+            }
         }
     }
 
@@ -40,13 +40,12 @@ public abstract class Item extends Entity {
         return activeItem;
     }
 
-    public Entity setActiveItem(Item entity) {
+    public void setActiveItem(Item entity) {
         activeItem = entity;
         setDamage(activeItem.getDamage());
         setBulletNumber(activeItem.getBulletNumber());
         setBulletSpeed(activeItem.getBulletSpeed());
         setFireRate(activeItem.getFireRate());
-        return activeItem;
     }
 
     public static ArrayList getItems() {
@@ -99,11 +98,6 @@ public abstract class Item extends Entity {
         return bulletSpeed;
     }
 
-    public int setAmmo(int ammo) {
-        this.ammo = ammo;
-        return this.ammo;
-    }
-
     public int getAmmo() {
         return ammo;
     }
@@ -122,5 +116,9 @@ public abstract class Item extends Entity {
 
     public float getY() {
         return y;
+    }
+
+    public void setItems(ArrayList newArrayList) {
+        items = newArrayList;
     }
 }
