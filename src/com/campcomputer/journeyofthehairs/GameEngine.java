@@ -184,7 +184,7 @@ public class GameEngine {
         applyGravity();
         applyMovement();
         nextLife();
-        item.pickUpItem();
+//        item.pickUpItem();
     }
 
     public void nextLife() {

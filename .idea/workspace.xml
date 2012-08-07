@@ -7,14 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Jordan\Desktop\Desktop Folders\Jordan CFCC\JOTH - Updated\src\com\campcomputer\journeyofthehairs\InfoBar.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Desktop\Desktop Folders\Jordan CFCC\JOTH - Updated\src\com\campcomputer\journeyofthehairs\Menu.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Desktop\Desktop Folders\Jordan CFCC\JOTH - Updated\src\com\campcomputer\journeyofthehairs\MenuOptions.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Desktop\Desktop Folders\Jordan CFCC\JOTH - Updated\src\com\campcomputer\journeyofthehairs\UserInfoBar.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/DragonFly.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/DragonFly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,7 +95,7 @@
       <file leaf-file-name="GameEngine.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="0" selection-start="12507" selection-end="12507" vertical-scroll-proportion="7.7078085">
+            <state line="186" column="2" selection-start="12509" selection-end="12509" vertical-scroll-proportion="0.77078086">
               <folding>
                 <element signature="e#677#683#0" expanded="true" />
                 <element signature="method#loadImages#0;class#707:864" expanded="false" />
@@ -669,7 +663,11 @@
       <created>1344177338134</created>
       <updated>1344177338134</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="&#10;">
+      <created>1344355865115</created>
+      <updated>1344355865115</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -885,7 +883,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="0" selection-start="12507" selection-end="12507" vertical-scroll-proportion="7.7078085">
+        <state line="186" column="2" selection-start="12509" selection-end="12509" vertical-scroll-proportion="0.77078086">
           <folding>
             <element signature="e#677#683#0" expanded="true" />
             <element signature="method#loadImages#0;class#707:864" expanded="false" />
