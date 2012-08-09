@@ -24,7 +24,6 @@ public abstract class Entity {
 	protected GameEngine engine;
 	protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
 	protected int currentFrame = 0;
-    Item item;
 
 	public Entity(GameEngine engine) {
 		this.engine = engine;
@@ -144,9 +143,11 @@ public abstract class Entity {
 	}
 
 	public boolean attacked() {
+        Item item = Item.getActiveItem();
 		setHealth(health -= (item.getDamage()*item.getBulletNumber()));
 		return health > 0;
 	}
+
 	public boolean isAffectedByHitDetection() {
 		return true;
 	}
