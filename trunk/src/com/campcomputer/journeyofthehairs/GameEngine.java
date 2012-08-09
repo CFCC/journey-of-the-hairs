@@ -152,7 +152,7 @@ public class GameEngine {
         items.add(shotgun);
 
         item.setItems(getItems());
-        this.item = pistol;
+        item.activeItem = pistol;
     }
 
     public Player getPlayer() {
@@ -184,7 +184,6 @@ public class GameEngine {
         applyGravity();
         applyMovement();
         nextLife();
-//        item.pickUpItem();
     }
 
     public void nextLife() {
@@ -316,7 +315,7 @@ public class GameEngine {
     }
 
     public boolean isOnTopOfEntity(Entity entity, Entity otherEntity) {
-        return getDistanceBetweenTwoEntities(entity, otherEntity) < 2;
+        return getDistanceBetweenTwoEntities(entity, otherEntity) < 2f;
     }
 
     public boolean isPlayerOnTopOfNorris() {
@@ -331,7 +330,7 @@ public class GameEngine {
         return player.getX() < entity.getX();
     }
 
-    public void shoot() {
+    public void shoot(Item item) {
         int ammoLeft = item.getAmmo();
         ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
         float playerX = player.getX();

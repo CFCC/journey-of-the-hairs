@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public abstract class Item extends Entity {
 
     Player player = new Player(engine);
-    static Item activeItem;
+    public static Item activeItem;
     public int ammo = 100;
     float bulletSpeed;
     int bulletNumber;   // Number of bullets fired.

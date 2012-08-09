@@ -60,7 +60,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        engine.shoot();
+                        engine.shoot(item.getActiveItem());
                         break;
                     case KeyEvent.VK_ESCAPE:
                         System.exit(0);
@@ -114,6 +114,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 engine.tick();
                 repaint();
+                item.pickUpItem();
 
             }
         });

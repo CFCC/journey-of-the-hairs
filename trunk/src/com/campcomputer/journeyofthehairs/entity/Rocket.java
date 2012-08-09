@@ -3,13 +3,14 @@ package com.campcomputer.journeyofthehairs.entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Rocket extends Entity {
 
-	private static final int ROCKET_DAMAGE = 50;
+    private static final int ROCKET_DAMAGE = 50;
     private static final float SPEED_MAGNITUDE = 0.1f;
     Player player = new Player(new GameEngine());
 
@@ -42,11 +43,14 @@ public class Rocket extends Entity {
             setyVel(SPEED_MAGNITUDE);
         }
 
-        if (engine.getDistanceBetweenTwoEntities(this, player) < 2f) {
+        Point2D entityOnePosition = new Point2D.Float(playerX, playerY);
+        Point2D entityTwoPosition = new Point2D.Float(getX(), getY());
+        if (entityOnePosition.distance(entityTwoPosition) < 2f) {
             engine.getPlayer().setHealth(engine.getPlayer().getHealth() - ROCKET_DAMAGE);
             engine.removeEntity(this);
         }
     }
+
     @Override
     protected void loadImages() {
         rocketLeft = new ArrayList<BufferedImage>(1);
@@ -62,7 +66,8 @@ public class Rocket extends Entity {
     public void attack(Entity entity) {
 
     }
-	public boolean isAffectedByHitDetection() {
-		return false;
-	}
+
+    public boolean isAffectedByHitDetection() {
+        return false;
+    }
 }
