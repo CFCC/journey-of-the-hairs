@@ -13,7 +13,7 @@ public abstract class Item extends Entity {
     public int ammo = 100;
     float bulletSpeed;
     int bulletNumber;   // Number of bullets fired.
-    int fireRate;       // How many bullets fired per second.
+    int fireRate;        // How many bullets fired per second.
     int damage;
     private static float x;
     private static float y;

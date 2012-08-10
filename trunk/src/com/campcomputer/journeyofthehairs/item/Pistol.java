@@ -6,21 +6,34 @@ import com.campcomputer.journeyofthehairs.Images;
 
 public class Pistol extends Item {
 
-    Item item;
-    float x;
-    float y;
+    float bulletSpeed = 1;
+    int bulletNumber = 1;   // Number of bullets fired.
+    int fireRate = 1;        // How many bullets fired per second.
+    int damage = 1;
 
-    public void main(String[] args) {
-        item.setDamage(1);
-        item.setFireRate(1);
-        item.setBulletNumber(1);
-        item.setBulletSpeed(1f);
-        item.setItemX(x);
-        item.setItemY(y);
+
+    public void loadImages() {
+        frames.add(Images.ReadImage("images/pistol.png"));
     }
 
-    protected void loadImages() {
-        frames.add(Images.ReadImage("images/pistol.png"));
+    @Override
+    public int getDamage() {
+        return damage;
+    }
+
+    @Override
+    public int getFireRate() {
+        return fireRate;
+    }
+
+    @Override
+    public int getBulletNumber() {
+        return bulletNumber;
+    }
+
+    @Override
+    public float getBulletSpeed() {
+        return bulletSpeed;
     }
 
     @Override

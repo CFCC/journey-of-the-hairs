@@ -18,10 +18,8 @@ public class JourneyOfTheHairsFrame extends JFrame {
     Rifle rifle = new Rifle(engine);
     Shotgun shotgun = new Shotgun(engine);
     Item item = new Item(engine) {
-        @Override
         protected void loadImages() {
         }
-        @Override
         public void attack(Entity entity) {
         }
     };
@@ -60,7 +58,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        engine.shoot(item.getActiveItem());
+                        engine.shoot(Item.activeItem);
                         break;
                     case KeyEvent.VK_ESCAPE:
                         System.exit(0);

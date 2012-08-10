@@ -10,10 +10,10 @@ import java.util.List;
 
 public class Player extends Entity {
 
-    public static int MAX_HEALTH = 100;
+    public static int MAX_HEALTH = 500;
     List<BufferedImage> forwardFrames;
     List<BufferedImage> backwardFrames;
-    public int lives;
+    public static int lives = 3;
 
     public Player(GameEngine engine) {
         super(engine);
