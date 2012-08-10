@@ -6,19 +6,34 @@ import com.campcomputer.journeyofthehairs.Images;
 
 public class Railgun extends Item {
 
-    Item item;
-    float x;
-    float y;
+    float bulletSpeed = 9000f;
+    int bulletNumber = 1;   // Number of bullets fired.
+    int fireRate = 1;        // How many bullets fired per second.
+    int damage = 9000;
 
-    public void main(String[] args) {
-        item.setDamage(9001);
-        item.setFireRate(1);
-        item.setBulletNumber(1);
-        item.setBulletSpeed(9000f);
-        item.setItemX(x);
-        item.setItemY(y);
+
+
+    @Override
+    public int getDamage() {
+        return damage;
     }
 
+    @Override
+    public int getFireRate() {
+        return fireRate;
+    }
+
+    @Override
+    public int getBulletNumber() {
+        return bulletNumber;
+    }
+
+    @Override
+    public float getBulletSpeed() {
+        return bulletSpeed;
+    }
+
+    @Override
     protected void loadImages() {
         frames.add(Images.ReadImage("images/railgun.png"));
     }

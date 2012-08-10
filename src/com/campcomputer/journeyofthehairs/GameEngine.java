@@ -11,7 +11,7 @@ public class GameEngine {
     private static final float GRAVITY = .2f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
-    private Player player;
+    private static Player player;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
     private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
@@ -25,6 +25,7 @@ public class GameEngine {
         public void attack(Entity entity) {
         }
     };
+    Entity stinkBug;
 
     private Tile[][] map = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
@@ -96,7 +97,7 @@ public class GameEngine {
     public GameEngine() {
         player = new Player(this);
         player.setX(1);
-        player.setY(0);
+        player.setY(6);
 
         com.campcomputer.journeyofthehairs.entity.ChuckNorris chuckNorris = new ChuckNorris(this);
         chuckNorris.setX(map.length - 5);
@@ -135,8 +136,8 @@ public class GameEngine {
         grenadeGun.setY(2);
 
         com.campcomputer.journeyofthehairs.item.Pistol pistol = new Pistol(this);
-        pistol.setX(2);
-        pistol.setY(1);
+        pistol.setX(5);
+        pistol.setY(5);
 
         entities.add(player);
         entities.add(chuckNorris);
@@ -152,7 +153,8 @@ public class GameEngine {
         items.add(shotgun);
 
         item.setItems(getItems());
-        item.activeItem = pistol;
+        Item.activeItem = pistol;
+        this.stinkBug = stinkbug;
     }
 
     public Player getPlayer() {
@@ -186,12 +188,12 @@ public class GameEngine {
         nextLife();
     }
 
-    public void nextLife() {
+    public static void nextLife() {
         if (!player.isPlayerAlive() && player.getLives() > 0) {
             player.subtractLife();
-            player.setHealth(player.MAX_HEALTH);
-            String x[] = {"A", "B"};
-            JourneyOfTheHairs.main(x);
+            player.setHealth(Player.MAX_HEALTH);
+            JourneyOfTheHairsFrame journeyOfTheHairsFrame = new JourneyOfTheHairsFrame();
+            journeyOfTheHairsFrame.setVisible(true);
         }
     }
 
@@ -301,10 +303,6 @@ public class GameEngine {
         if (firstSolid != null && firstSolid.y - player.getY() <= 1) {
             player.setyVel(JUMP_POWER);
         }
-    }
-
-    public boolean isEntityClose(Entity entity, Entity otherEntity) {
-        return getDistanceBetweenTwoEntities(entity, otherEntity) < 3f;
     }
 
     public double getDistanceBetweenTwoEntities(Entity entityOne, Entity entityTwo) {

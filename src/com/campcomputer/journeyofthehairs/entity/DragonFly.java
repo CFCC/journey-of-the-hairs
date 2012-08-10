@@ -6,8 +6,8 @@ import com.campcomputer.journeyofthehairs.Images;
 import java.util.ArrayList;
 
 public class DragonFly extends Entity {
-    private int flyingEnergy = 25;
-    private int breathFireDamage = 33;
+    private int flyingEnergy = 5;
+    private int breathFireDamage = 5;
     private int eatingDamage = 10;
     private ArrayList<Entity> entities = new ArrayList<Entity>();
 
@@ -24,7 +24,7 @@ public class DragonFly extends Entity {
         if (!engine.isPlayerAbove(this)) {
             setyVel(getyVel() + 0.3f);
             setY(getY() - getyVel());
-            flyingEnergy -= 2;
+            this.flyingEnergy -= 2;
         } else if (engine.isPlayerAbove(this)) {
             setyVel(getyVel() + 0.3f);
             setY(getY() + getyVel());
@@ -44,7 +44,8 @@ public class DragonFly extends Entity {
             setX(getX());
         }
         for (Entity entity : entities) {
-            attack(entity);
+            if (engine.isOnTopOfEntity(this, entity))
+                breathfire(entity);
         }
     }
 
@@ -55,10 +56,7 @@ public class DragonFly extends Entity {
 
     @Override
     public void attack(Entity entity) {
-        if (engine.isEntityClose(this, entity) && entity.getHealth() <= 10)
-            eats(entity);
-//        if (engine.isEntityClose(this, entity))
-//            breathfire(entity);
+
     }
 
     /**

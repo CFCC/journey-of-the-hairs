@@ -17,7 +17,6 @@ public class GamePanel extends JPanel {
     float lastHealth = 0;
     boolean showTiles = false;
 
-
     private BufferedImage mapBackground;
     private Map<Entity, Integer> currentFrames = new IdentityHashMap<Entity, Integer>();
 
@@ -39,7 +38,6 @@ public class GamePanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-
         if (ourGameEngine.getPlayer().getHealth() < lastHealth) {
             g2.setColor(BLOOD_COLOR);
             g2.fillRect(0, 0, getWidth(), getHeight());
@@ -47,7 +45,6 @@ public class GamePanel extends JPanel {
             return;
         }
         lastHealth = ourGameEngine.getPlayer().getHealth();
-
 
         xScreenPlace = 0;
         if (ourGameEngine.getPlayer().getX() >= 8) {
@@ -111,8 +108,9 @@ public class GamePanel extends JPanel {
     public void toggleShowTiles() {
         showTiles = !showTiles;
     }
-	public float getxScreenPlace() {
-		return xScreenPlace;
-	}
+
+    public float getxScreenPlace() {
+        return xScreenPlace;
+    }
 }
 
