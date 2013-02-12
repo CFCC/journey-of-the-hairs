@@ -2,7 +2,6 @@ package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.item.Item;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -143,15 +142,17 @@ public abstract class Entity {
 	}
 
 	public boolean attacked() {
-        Item item = Item.getActiveItem();
-		setHealth(health -= (item.getDamage()*item.getBulletNumber()));
+		setHealth(health -= 10);
 		return health > 0;
 	}
-
 	public boolean isAffectedByHitDetection() {
 		return true;
 	}
 	public boolean canBeAttacked() {
 		return true;
 	}
+
+    public void userInfoBar() {
+        frames.add(Images.ReadImage("images/userInfoBar.png"));
+    }
 }

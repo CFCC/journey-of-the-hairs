@@ -1,31 +1,21 @@
 package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.*;
-import com.campcomputer.journeyofthehairs.item.*;
+import com.campcomputer.journeyofthehairs.item.Item;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class GameEngine {
     private static final float GRAVITY = .2f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
-    private static Player player;
-    private ArrayList<Entity> entities = new ArrayList<Entity>();
-    private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
-    private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-    ArrayList<Item> items = new ArrayList<Item>();
-    Item item = new Item(this) {
-        @Override
-        protected void loadImages() {
-        }
-
-        @Override
-        public void attack(Entity entity) {
-        }
-    };
-    Entity stinkBug;
+    Item item;
+    Pickup pickup;
+    Entity entity;
+    JourneyOfTheHairs JourneyOfTheHairs;
 
     private Tile[][] map = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
@@ -94,10 +84,16 @@ public class GameEngine {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
     };
 
+    private Player player;
+    private ArrayList<Entity> entities = new ArrayList<Entity>();
+    private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
+    private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+
     public GameEngine() {
+
         player = new Player(this);
         player.setX(1);
-        player.setY(6);
+        player.setY(0);
 
         com.campcomputer.journeyofthehairs.entity.ChuckNorris chuckNorris = new ChuckNorris(this);
         chuckNorris.setX(map.length - 5);
@@ -115,57 +111,20 @@ public class GameEngine {
         worm.setX(32);
         worm.setY(9);
 
-        com.campcomputer.journeyofthehairs.item.MiniGun miniGun = new MiniGun(this);
-        miniGun.setX(0);
-        miniGun.setY(0);
-
-        com.campcomputer.journeyofthehairs.item.Railgun railgun = new Railgun(this);
-        railgun.setX(0);
-        railgun.setY(1);
-
-        com.campcomputer.journeyofthehairs.item.Rifle rifle = new Rifle(this);
-        rifle.setX(1);
-        rifle.setY(0);
-
-        com.campcomputer.journeyofthehairs.item.Shotgun shotgun = new Shotgun(this);
-        shotgun.setX(1);
-        shotgun.setY(1);
-
-        com.campcomputer.journeyofthehairs.item.GrenadeGun grenadeGun = new GrenadeGun(this);
-        grenadeGun.setX(1);
-        grenadeGun.setY(2);
-
-        com.campcomputer.journeyofthehairs.item.Pistol pistol = new Pistol(this);
-        pistol.setX(5);
-        pistol.setY(5);
 
         entities.add(player);
         entities.add(chuckNorris);
         entities.add(dragonFly);
         entities.add(stinkbug);
         entities.add(worm);
-
-        items.add(pistol);
-        items.add(grenadeGun);
-        items.add(miniGun);
-        items.add(rifle);
-        items.add(railgun);
-        items.add(shotgun);
-
-        item.setItems(getItems());
-        Item.activeItem = pistol;
-        this.stinkBug = stinkbug;
     }
+
 
     public Player getPlayer() {
         return player;
     }
 
-    public ArrayList getItems() {
-        return items;
-    }
-
-    public ArrayList<Entity> getEntities() {
+    public Collection<Entity> getEntities() {
         return entities;
     }
 
@@ -178,22 +137,17 @@ public class GameEngine {
         entities.removeAll(entitiesToRemove);
         entitiesToAdd.clear();
         entitiesToRemove.clear();
-        item = Item.getActiveItem();
 
-        for (Entity entity : entities)
+        for (Entity entity : entities) {
             entity.tick();
-
+        }
         applyGravity();
         applyMovement();
-        nextLife();
-    }
 
-    public static void nextLife() {
-        if (!player.isPlayerAlive() && player.getLives() > 0) {
-            player.subtractLife();
-            player.setHealth(Player.MAX_HEALTH);
-            JourneyOfTheHairsFrame journeyOfTheHairsFrame = new JourneyOfTheHairsFrame();
-            journeyOfTheHairsFrame.setVisible(true);
+        if (player.getHealth() <= 0 && player.lives >= 0) {
+            player.lives -= 1;
+            String x[]={"A","B"};
+            JourneyOfTheHairs.main(x);
         }
     }
 
@@ -229,9 +183,9 @@ public class GameEngine {
                             highestLandingPoint = landingPoint1.y;
                             if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
                                 highestLandingPoint = landingPoint2.y;
-                        } else
+                        } else {
                             highestLandingPoint = landingPoint2.y;
-
+                        }
                         if (newY >= highestLandingPoint - height) {
                             newY = highestLandingPoint - height;
                             entity.setyVel(0);
@@ -275,7 +229,6 @@ public class GameEngine {
                     return new Point(x, y);
             }
 
-            //dY over dX is the slope
             x += dX;
             y += dY;
         }
@@ -305,57 +258,83 @@ public class GameEngine {
         }
     }
 
-    public double getDistanceBetweenTwoEntities(Entity entityOne, Entity entityTwo) {
-        Point2D entityOnePosition = new Point2D.Float(entityOne.getX(), entityOne.getY());
-        Point2D entityTwoPosition = new Point2D.Float(entityTwo.getX(), entityTwo.getY());
+    public boolean isPlayerClose(Entity entity) {
 
-        return entityOnePosition.distance(entityTwoPosition);
+        return getDistanceBetweenEntityAndPlayer(entity) < 10f;
     }
 
-    public boolean isOnTopOfEntity(Entity entity, Entity otherEntity) {
-        return getDistanceBetweenTwoEntities(entity, otherEntity) < 2f;
+    public double getDistanceBetweenEntityAndPlayer(Entity entity) {
+        Point2D playerPosition = new Point2D.Float(player.getX(), player.getY());
+        Point2D entityPosition = new Point2D.Float(entity.getX(), entity.getY());
+
+        return playerPosition.distance(entityPosition);
     }
 
-    public boolean isPlayerOnTopOfNorris() {
-        return map[((int) player.getX())][((int) player.getY())] == Tile.CHUCKNORRIS;
+    public boolean isOnTopOfPlayer(Entity entity) {
+        return getDistanceBetweenEntityAndPlayer(entity) < 2f;
+    }
+
+    public boolean isOnTopOfPlayerChuckNorris() {
+        float pX = player.getX();
+        float pY = player.getY();
+        if (map[((int) pX)][((int) pY)] == Tile.CHUCKNORRIS)
+            return true;
+        else
+            return false;
     }
 
     public boolean isPlayerAbove(Entity entity) {
-        return player.getY() > entity.getY();
+        if (player.getY() > entity.getY())
+            return true;
+        else
+            return false;
     }
 
     public boolean isPlayerToLeft(Entity entity) {
-        return player.getX() < entity.getX();
+        if (player.getX() < entity.getX())
+            return true;
+        else
+            return false;
     }
 
-    public void shoot(Item item) {
-        int ammoLeft = item.getAmmo();
-        ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+    public void shoot() {
         float playerX = player.getX();
         float playerY = player.getY();
-        if (player.isFacingLeft() && ammoLeft > 0) {
-            for (Entity entity : entities) {
-                Point2D shootLocation = new Point2D.Float(playerX - 1, playerY);
-                Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-                item.subtractAmmo();
-                if (shootLocation.distance(entityLocation) < 1) {
-                    if (!entity.attacked())
-                        entitiesToRemove.add(entity);
+        if (player.isFacingLeft()) {
+            if (item.getAmmo() > 0) {
+                ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+                for (Entity entity : entities) {
+                    if (!(entity instanceof Player)) {
+                        Point2D shootLocation = new Point2D.Float(playerX - 1, playerY);
+                        Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+                        item.subtractAmmo();
+                        if (shootLocation.distance(entityLocation) < 1) {
+                            if (!entity.attacked())
+                                entitiesToRemove.add(entity);
+                        }
+                    }
                 }
+                entities.removeAll(entitiesToRemove);
             }
         }
-        if (player.isFacingRight() && ammoLeft > 0) {
-            for (Entity entity : entities) {
-                Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
-                Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-                item.subtractAmmo();
-                if (shootLocation.distance(entityLocation) < 1) {
-                    if (!entity.attacked())
-                        entitiesToRemove.add(entity);
+
+        if (player.isFacingRight()) {
+            if (item.getAmmo() > 0) {
+                ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+                for (Entity entity : entities) {
+                    if (!(entity instanceof Player)) {
+                        Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
+                        Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
+                        item.subtractAmmo();
+                        if (shootLocation.distance(entityLocation) < 1) {
+                            if (!entity.attacked())
+                                entitiesToRemove.add(entity);
+                        }
+                    }
                 }
+                entities.removeAll(entitiesToRemove);
             }
         }
-        entities.removeAll(entitiesToRemove);
     }
 
     public void addEntity(Entity entity) {

@@ -1,51 +1,44 @@
 package com.campcomputer.journeyofthehairs.entity;
 
+import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 
-import java.util.ArrayList;
-
 public class DragonFly extends Entity {
-    private int flyingEnergy = 5;
-    private int breathFireDamage = 5;
+    private int flyingEnergy = 25;
+    private int breathFireDamage = 33;
     private int eatingDamage = 10;
-    private ArrayList<Entity> entities = new ArrayList<Entity>();
 
     public DragonFly(GameEngine engine) {
         super(engine);
         setAffectedByGravity(false);
         setHealth(5);
-        entities = engine.getEntities();
     }
 
     @Override
     public void tick() {
         super.tick();
-        if (!engine.isPlayerAbove(this)) {
-            setyVel(getyVel() + 0.3f);
-            setY(getY() - getyVel());
-            this.flyingEnergy -= 2;
-        } else if (engine.isPlayerAbove(this)) {
-            setyVel(getyVel() + 0.3f);
-            setY(getY() + getyVel());
-            flyingEnergy -= 1;
+        if (chasePlayer1() != 1) {
+            if (engine.isPlayerAbove(this) == false) {
+                setyVel(getyVel() + 0.3f);
+                setY(getY() - getyVel());
+                flyingEnergy -= 2;
+            } else if (engine.isPlayerAbove(this) == true) {
+                setyVel(getyVel() + 0.3f);
+                setY(getY() + getyVel());
+                flyingEnergy -= 1;
+            }
         }
 
-        if (engine.isPlayerToLeft(this)) {
+        if (engine.isPlayerToLeft(this) == true) {
             moveLeft();
-            if (getX() < 1)
-                flyingEnergy += 1;
-        } else if (!engine.isPlayerToLeft(this)) {
+            flyingEnergy += 1;
+        } else if (engine.isPlayerToLeft(this) == false) {
             moveRight();
-            if (getX() < 1)
-                flyingEnergy += 1;
+            flyingEnergy += 1;
         } else {
             setxVel(0);
             setX(getX());
-        }
-        for (Entity entity : entities) {
-            if (engine.isOnTopOfEntity(this, entity))
-                breathfire(entity);
         }
     }
 
@@ -56,7 +49,10 @@ public class DragonFly extends Entity {
 
     @Override
     public void attack(Entity entity) {
-
+        if (engine.isPlayerClose(this) && entity.getHealth() <= 10)
+            eats(entity);
+        else if (engine.isPlayerClose(this))
+            breathfire(entity);
     }
 
     /**
@@ -67,10 +63,12 @@ public class DragonFly extends Entity {
      */
     public void eats(Entity entity) {
         // make the enemy lose health
-        entity.setHealth(entity.getHealth() - eatingDamage);
-        // makes the dragonfly gain health
-        setHealth(getHealth() + eatingDamage / 2);
+        entity.setHealth(entity.getHealth() - this.eatingDamage);
 
+        if (entity.getHealth() <= 0) {
+            // makes the dragonfly gain health
+            setHealth(getHealth() + eatingDamage * 1 / 2);
+        }
     }
 
 
@@ -83,9 +81,20 @@ public class DragonFly extends Entity {
         entity.setHealth(entity.getHealth() - this.breathFireDamage);
     }
 
-    public boolean isThereFlyingEnergy() {
-        return flyingEnergy > 0;
+    public int chasePlayer1() {
+        if (flyingEnergy > 7) {
+            // fly towards the player,
+            // solid object in the way
+            return 0;
+        }
+        if (flyingEnergy <= 0)
+            return 1;
+            //walk towards the player,
+            // can also jump.
+        else
+            return 2;
     }
+
 
     public int getBreathFireDamage() {
         return breathFireDamage;

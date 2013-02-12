@@ -5,39 +5,20 @@ import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 
 public class Rifle extends Item {
+    private int Damage = 1;
+    //  How much damage the gun does.
+    private int FireRate = 1;
+    // How many bullets fired per second or something.
+    private int BulletNumber = 20;
+    // Number of bullets fired.
+    private float BulletSpeed = 3f;
+// Speed of bullets.
 
-    float bulletSpeed = 3f;
-    int bulletNumber = 20;   // Number of bullets fired.
-    int fireRate = 1;        // How many bullets fired per second.
-    int damage = 1;
-
-
-
-    @Override
-    public int getDamage() {
-        return damage;
-    }
-
-    @Override
-    public int getFireRate() {
-        return fireRate;
-    }
-
-    @Override
-    public int getBulletNumber() {
-        return bulletNumber;
-    }
-
-    @Override
-    public float getBulletSpeed() {
-        return bulletSpeed;
-    }
-
-
-    @Override
     protected void loadImages() {
     frames.add(Images.ReadImage("images/rifle.png"));
 }
+
+    @Override
     public void attack(Entity entity) {
     }
 
