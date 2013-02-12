@@ -146,8 +146,6 @@ public class GameEngine {
 
         if (player.getHealth() <= 0 && player.lives >= 0) {
             player.lives -= 1;
-            String x[]={"A","B"};
-            JourneyOfTheHairs.main(x);
         }
     }
 
