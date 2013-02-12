@@ -1,7 +1,9 @@
 package com.campcomputer.journeyofthehairs.entity;
 
+import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.GameEngine;
 
 public class SuicideStinkBug extends Entity {
 
@@ -18,8 +20,10 @@ public class SuicideStinkBug extends Entity {
     public void tick() {
         super.tick();
 
-        if (engine.getDistanceBetweenTwoEntities(this, engine.getPlayer()) < EXPLODE_RANGE)
+        if (engine.getDistanceBetweenEntityAndPlayer(this) < EXPLODE_RANGE) {
             blowup();
+        }
+
         if (engine.getPlayer().getX() < getX() && getX() - engine.getPlayer().getX() <= 5)
             moveLeft();
         else if (engine.getPlayer().getX() > getX() && engine.getPlayer().getX() - getX() <= 5)
