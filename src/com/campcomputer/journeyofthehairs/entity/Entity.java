@@ -9,7 +9,6 @@ import java.util.List;
 
 public abstract class Entity {
 	private int health = 1;
-	private int attackDamage = 10;
 
 	private float x = 0;
 	private float y = 0;
@@ -55,19 +54,19 @@ public abstract class Entity {
 		this.health = health;
 	}
 
-	public float getxVel() {
+	public float getXVel() {
 		return xVel;
 	}
 
-	public void setxVel(float xVel) {
+	public void setXVel(float xVel) {
 		this.xVel = xVel;
 	}
 
-	public float getyVel() {
+	public float getYVel() {
 		return yVel;
 	}
 
-	public void setyVel(float yVel) {
+	public void setYVel(float yVel) {
 		this.yVel = yVel;
 	}
 
@@ -77,10 +76,6 @@ public abstract class Entity {
 
 	public boolean isFacingRight() {
 		return facingRight;
-	}
-
-	public void setEngine(GameEngine engine) {
-		this.engine = engine;
 	}
 
 	public boolean isFacingLeft() {
@@ -96,31 +91,23 @@ public abstract class Entity {
 	}
 
 	public void moveLeft() {
-		setxVel(-0.1f);
-		setyVel(0);
+		setXVel(-0.1f);
+		setYVel(0);
 	}
 
 	public void moveRight() {
-		setxVel(0.1f);
-		setyVel(0);
+		setXVel(0.1f);
+		setYVel(0);
 	}
 
 	public void moveUp() {
-		setxVel(0);
-		setyVel(0.1f);
+        setYVel(getYVel() + 0.3f);
+        setY(getY() - getYVel());
 	}
 
 	public void moveDown() {
-		setxVel(0);
-		setyVel(-0.1f);
-	}
-
-	public int getAttackDamage() {
-		return attackDamage;
-	}
-
-	public void setAttackDamage(int attackDamage) {
-		this.attackDamage = attackDamage;
+        setYVel(getYVel() + 0.3f);
+        setY(getY() + getYVel());
 	}
 
 	abstract protected void loadImages();
@@ -133,11 +120,10 @@ public abstract class Entity {
 		currentFrame++;
 		if (currentFrame > frames.size() - 1)
 			currentFrame = 0;
+
 	}
 
-	abstract public void attack(Entity entity);
-
-	public BufferedImage getCurrentFrame() {
+    public BufferedImage getCurrentFrame() {
 		return frames.get(currentFrame);
 	}
 
@@ -151,8 +137,4 @@ public abstract class Entity {
 	public boolean canBeAttacked() {
 		return true;
 	}
-
-    public void userInfoBar() {
-        frames.add(Images.ReadImage("images/userInfoBar.png"));
-    }
 }
