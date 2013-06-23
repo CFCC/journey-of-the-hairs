@@ -1,9 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.GameEngine;
 
 public class SuicideStinkBug extends Entity {
 
@@ -34,12 +32,6 @@ public class SuicideStinkBug extends Entity {
     public void loadImages() {
         frames.add(Images.ReadImage("images/stinkbug.png"));
     }
-
-    @Override
-    public void attack(Entity entity) {
-
-    }
-
 
     /**
      * explode within 5 tiles of player.

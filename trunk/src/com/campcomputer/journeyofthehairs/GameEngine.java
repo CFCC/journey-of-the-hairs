@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.*;
-import com.campcomputer.journeyofthehairs.item.Item;
+import com.campcomputer.journeyofthehairs.item.*;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -12,10 +12,13 @@ public class GameEngine {
     private static final float GRAVITY = .2f;
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
-    Item item;
-    Pickup pickup;
-    Entity entity;
-    JourneyOfTheHairs JourneyOfTheHairs;
+
+    private Player player;
+
+    public ArrayList<Item> items = new ArrayList<Item>();
+    public ArrayList<Entity> entities = new ArrayList<Entity>();
+    public ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
+    public ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
 
     private Tile[][] map = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
@@ -77,25 +80,20 @@ public class GameEngine {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
-            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCKNORRIS, Tile.CHUCKNORRIS, Tile.CHUCKNORRIS, Tile.GROUND,},
-            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCKNORRIS, Tile.CHUCKNORRIS, Tile.CHUCKNORRIS, Tile.GROUND,},
-            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCKNORRIS, Tile.CHUCKNORRIS, Tile.CHUCKNORRIS, Tile.GROUND,},
+            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.GROUND,},
+            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.GROUND,},
+            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
     };
 
-    private Player player;
-    private ArrayList<Entity> entities = new ArrayList<Entity>();
-    private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
-    private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-
     public GameEngine() {
 
         player = new Player(this);
-        player.setX(1);
-        player.setY(0);
+        player.setX(0);
+        player.setY(9);
 
-        com.campcomputer.journeyofthehairs.entity.ChuckNorris chuckNorris = new ChuckNorris(this);
+        ChuckNorris chuckNorris = new ChuckNorris(this);
         chuckNorris.setX(map.length - 5);
         chuckNorris.setY(2);
 
@@ -103,20 +101,66 @@ public class GameEngine {
         dragonFly.setX(3);
         dragonFly.setY(3);
 
-        SuicideStinkBug stinkbug = new com.campcomputer.journeyofthehairs.entity.SuicideStinkBug(this);
+        SuicideStinkBug stinkbug = new SuicideStinkBug(this);
         stinkbug.setX(9);
         stinkbug.setY(7);
 
-        com.campcomputer.journeyofthehairs.entity.RocketWorm worm = new com.campcomputer.journeyofthehairs.entity.RocketWorm(this);
+        RocketWorm worm = new RocketWorm(this);
         worm.setX(32);
         worm.setY(9);
 
+        Rifle rifle = new Rifle(this);
+        rifle.setX(1);
+        rifle.setY(7);
+
+        MiniGun minigun = new MiniGun(this);
+        minigun.setX(3);
+        minigun.setY(7);
+
+        Pistol pistol = new Pistol(this);
+        pistol.setX(5);
+        pistol.setY(7);
+
+        Railgun railgun = new Railgun(this);
+        railgun.setX(7);
+        railgun.setY(7);
+
+        Shotgun shotgun = new Shotgun(this);
+        shotgun.setX(9);
+        shotgun.setY(7);
+
+        GrenadeGun grenadeGun = new GrenadeGun(this);
+        grenadeGun.setX(11);
+        grenadeGun.setY(7);
 
         entities.add(player);
-        entities.add(chuckNorris);
-        entities.add(dragonFly);
+//        entities.add(dragonFly);
         entities.add(stinkbug);
         entities.add(worm);
+        entities.add(chuckNorris);
+
+        entities.add(rifle);
+        entities.add(minigun);
+        entities.add(pistol);
+        entities.add(railgun);
+        entities.add(shotgun);
+        entities.add(grenadeGun);
+
+        items.add(rifle);
+        items.add(minigun);
+        items.add(pistol);
+        items.add(railgun);
+        items.add(shotgun);
+        items.add(grenadeGun);
+
+        rifle.setAffectedByGravity(false);
+        minigun.setAffectedByGravity(false);
+        pistol.setAffectedByGravity(false);
+        railgun.setAffectedByGravity(false);
+        shotgun.setAffectedByGravity(false);
+        grenadeGun.setAffectedByGravity(false);
+
+        player.weapon = new Pistol(this);
     }
 
 
@@ -144,15 +188,14 @@ public class GameEngine {
         applyGravity();
         applyMovement();
 
-        if (player.getHealth() <= 0 && player.lives >= 0) {
+        if (player.getHealth() <= 0 && player.lives >= 0)
             player.lives -= 1;
-        }
     }
 
     private void applyGravity() {
         for (Entity entity : entities) {
             if (entity.isAffectedByGravity())
-                entity.setyVel(entity.getyVel() + GRAVITY);
+                entity.setYVel(entity.getYVel() + GRAVITY);
         }
     }
 
@@ -161,8 +204,8 @@ public class GameEngine {
 
             float x = entity.getX();
             float y = entity.getY();
-            float vX = entity.getxVel();
-            float vY = entity.getyVel();
+            float vX = entity.getXVel();
+            float vY = entity.getYVel();
             float height = entity.getHeight();
 
             float newX = x + vX;
@@ -186,7 +229,7 @@ public class GameEngine {
                         }
                         if (newY >= highestLandingPoint - height) {
                             newY = highestLandingPoint - height;
-                            entity.setyVel(0);
+                            entity.setYVel(0);
                         }
                     }
                 }
@@ -234,30 +277,29 @@ public class GameEngine {
     }
 
     public void startMoveForward() {
-        player.setxVel(MOVE_SPEED);
+        player.setXVel(MOVE_SPEED);
     }
 
     public void endMoveForward() {
-        player.setxVel(0);
+        player.setXVel(0);
     }
 
     public void startMoveBackward() {
-        player.setxVel(-MOVE_SPEED);
+        player.setXVel(-MOVE_SPEED);
     }
 
     public void endMoveBackward() {
-        player.setxVel(0);
+        player.setXVel(0);
     }
 
     public void jump() {
         Point firstSolid = findFirstSolid(player.getX(), player.getY(), 0, 1, 0, 0, map.length, map[0].length);
         if (firstSolid != null && firstSolid.y - player.getY() <= 1) {
-            player.setyVel(JUMP_POWER);
+            player.setYVel(JUMP_POWER);
         }
     }
 
     public boolean isPlayerClose(Entity entity) {
-
         return getDistanceBetweenEntityAndPlayer(entity) < 10f;
     }
 
@@ -275,65 +317,17 @@ public class GameEngine {
     public boolean isOnTopOfPlayerChuckNorris() {
         float pX = player.getX();
         float pY = player.getY();
-        if (map[((int) pX)][((int) pY)] == Tile.CHUCKNORRIS)
-            return true;
-        else
-            return false;
+        return (map[((int) pX)][((int) pY)] == Tile.CHUCK_NORRIS);
     }
 
     public boolean isPlayerAbove(Entity entity) {
-        if (player.getY() > entity.getY())
-            return true;
-        else
-            return false;
+        return (player.getY() > entity.getY());
     }
 
     public boolean isPlayerToLeft(Entity entity) {
-        if (player.getX() < entity.getX())
-            return true;
-        else
-            return false;
+        return (player.getX() < entity.getX());
     }
 
-    public void shoot() {
-        float playerX = player.getX();
-        float playerY = player.getY();
-        if (player.isFacingLeft()) {
-            if (item.getAmmo() > 0) {
-                ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-                for (Entity entity : entities) {
-                    if (!(entity instanceof Player)) {
-                        Point2D shootLocation = new Point2D.Float(playerX - 1, playerY);
-                        Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-                        item.subtractAmmo();
-                        if (shootLocation.distance(entityLocation) < 1) {
-                            if (!entity.attacked())
-                                entitiesToRemove.add(entity);
-                        }
-                    }
-                }
-                entities.removeAll(entitiesToRemove);
-            }
-        }
-
-        if (player.isFacingRight()) {
-            if (item.getAmmo() > 0) {
-                ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
-                for (Entity entity : entities) {
-                    if (!(entity instanceof Player)) {
-                        Point2D shootLocation = new Point2D.Float(playerX + 1, playerY);
-                        Point2D entityLocation = new Point2D.Float(entity.getX(), entity.getY());
-                        item.subtractAmmo();
-                        if (shootLocation.distance(entityLocation) < 1) {
-                            if (!entity.attacked())
-                                entitiesToRemove.add(entity);
-                        }
-                    }
-                }
-                entities.removeAll(entitiesToRemove);
-            }
-        }
-    }
 
     public void addEntity(Entity entity) {
         entitiesToAdd.add(entity);

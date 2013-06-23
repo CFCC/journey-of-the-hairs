@@ -1,8 +1,6 @@
 package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
-import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.Images;
 
 import java.awt.image.BufferedImage;
@@ -45,7 +43,7 @@ public class RocketWorm extends Entity {
 					return;
                 }
 			}
-            shootrocket();
+            shootRocket();
         }
 
     }
@@ -59,11 +57,6 @@ public class RocketWorm extends Entity {
         frames = standing;
     }
 
-     @Override
-    public void attack(Entity entity) {
-
-    }
-
     public void emerge() {
         if (frames != wormLeaveGround) {
             frames = wormLeaveGround;
@@ -71,14 +64,11 @@ public class RocketWorm extends Entity {
         }
     }
 
-    public void shootrocket() {
+    public void shootRocket() {
         com.campcomputer.journeyofthehairs.entity.Rocket rocket = new com.campcomputer.journeyofthehairs.entity.Rocket(engine);
         rocket.setX(getX());
         rocket.setY(getY()+1);
 		engine.addEntity(rocket);
-    }
-
-    public void tunneling() {
     }
 
 	public boolean canBeAttacked() {

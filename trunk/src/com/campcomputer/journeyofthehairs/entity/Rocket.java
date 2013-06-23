@@ -1,14 +1,9 @@
 package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.Images;
 
-import java.awt.*;
-import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,16 +29,16 @@ public class Rocket extends Entity {
 
         if (playerX < getX()) {
             frames = rocketLeft;
-            setxVel(-1 * SPEED_MAGNITUDE);
+            setXVel(-1 * SPEED_MAGNITUDE);
         } else {
             frames = rocketRight;
-            setxVel(SPEED_MAGNITUDE);
+            setXVel(SPEED_MAGNITUDE);
         }
 
         if (playerY < getY()) {
-            setyVel(-1 * SPEED_MAGNITUDE);
+            setYVel(-1 * SPEED_MAGNITUDE);
         } else {
-            setyVel(SPEED_MAGNITUDE);
+            setYVel(SPEED_MAGNITUDE);
         }
 
         if (engine.isOnTopOfPlayer(this)) {
@@ -63,11 +58,7 @@ public class Rocket extends Entity {
         frames = rocketRight;
     }
 
-    @Override
-    public void attack(Entity entity) {
-
-    }
-	public boolean isAffectedByHitDetection() {
+    public boolean isAffectedByHitDetection() {
 		return false;
 	}
 }

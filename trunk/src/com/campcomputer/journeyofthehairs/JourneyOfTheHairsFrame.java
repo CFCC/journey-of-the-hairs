@@ -34,7 +34,6 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.startMoveForward();
                         break;
                     case KeyEvent.VK_W:
-						System.out.println("jump");
                         engine.jump();
                         break;
                     case KeyEvent.VK_E:
@@ -44,7 +43,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        engine.shoot();
+                        engine.getPlayer().shoot();
                         break;
                 }
 
@@ -63,15 +62,6 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
             }
         });
-
- //       addMouseListener((new MouseAdapter() {
- //           @Override
- //           public void mouseClicked(MouseEvent mouseEvent) {
- //               float X = mouseEvent.getX() / GamePanel.TILE_SIZE + gamePanel.getxScreenPlace();
- //               float Y = mouseEvent.getY() / GamePanel.TILE_SIZE;
- //               engine.shoot();
- //           }
- //       }));
 
         Timer t = new Timer(1000 / 30, new ActionListener() {
             @Override
