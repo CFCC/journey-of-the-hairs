@@ -190,6 +190,20 @@ public class GameEngine {
 
         if (player.getHealth() <= 0 && player.lives >= 0)
             player.lives -= 1;
+
+        collectWeapon();
+    }
+
+
+    public void collectWeapon() {
+        for (Item item : items) {
+            if (getPlayer().getX() == item.getX() && getPlayer().getY() == item.getY()) {
+                getPlayer().setWeapon(item);
+                entitiesToRemove.add(item);
+                entities.removeAll(entitiesToRemove);
+                entitiesToRemove.clear();
+            }
+        }
     }
 
     private void applyGravity() {

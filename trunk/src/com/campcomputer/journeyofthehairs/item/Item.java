@@ -15,10 +15,6 @@ public abstract class Item extends Entity {
         super(engine);
     }
 
-    public void tick() {
-        collectWeapon();
-    }
-
     public boolean canBeAttacked() {
         return false;
     }
@@ -63,13 +59,4 @@ public abstract class Item extends Entity {
         ammoLeft -= bulletNumber;
     }
 
-    public void collectWeapon() {
-        for (Item item : engine.items) {
-            if (engine.getPlayer().getX() == item.getX() && engine.getPlayer().getY() == item.getY()) {
-                engine.getPlayer().setWeapon(item);
-                engine.entitiesToRemove.add(item);
-                engine.entities.removeAll(engine.entitiesToRemove);
-            }
-        }
-    }
 }
