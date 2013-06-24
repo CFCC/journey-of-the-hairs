@@ -197,11 +197,9 @@ public class GameEngine {
 
     public void collectWeapon() {
         for (Item item : items) {
-            if (getPlayer().getX() == item.getX() && getPlayer().getY() == item.getY()) {
+            if (isOnTopOfPlayer(item)){
                 getPlayer().setWeapon(item);
                 entitiesToRemove.add(item);
-                entities.removeAll(entitiesToRemove);
-                entitiesToRemove.clear();
             }
         }
     }
