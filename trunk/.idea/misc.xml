@@ -16,7 +16,12 @@
         <entry key="$PROJECT_DIR$">
           <value>
             <SvnBranchConfiguration>
-              <option name="trunkUrl" value="" />
+              <option name="branchUrls">
+                <list>
+                  <option value="https://journey-of-the-hairs.googlecode.com/svn/branches" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://journey-of-the-hairs.googlecode.com/svn/trunk" />
             </SvnBranchConfiguration>
           </value>
         </entry>

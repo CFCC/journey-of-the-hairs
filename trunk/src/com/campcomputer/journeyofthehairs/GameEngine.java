@@ -197,7 +197,7 @@ public class GameEngine {
 
     public void collectWeapon() {
         for (Item item : items) {
-            if (isOnTopOfPlayer(item)){
+            if (isOnTopOfPlayer(item)) {
                 getPlayer().setWeapon(item);
                 entitiesToRemove.add(item);
             }
@@ -236,9 +236,8 @@ public class GameEngine {
                             highestLandingPoint = landingPoint1.y;
                             if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
                                 highestLandingPoint = landingPoint2.y;
-                        } else {
+                        } else
                             highestLandingPoint = landingPoint2.y;
-                        }
                         if (newY >= highestLandingPoint - height) {
                             newY = highestLandingPoint - height;
                             entity.setYVel(0);
