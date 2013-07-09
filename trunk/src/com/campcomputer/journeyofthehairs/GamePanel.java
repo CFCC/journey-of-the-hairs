@@ -1,7 +1,6 @@
 package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.item.Rifle;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +11,7 @@ public class GamePanel extends JPanel {
 
     public static final int TILE_SIZE = 64;
     private static final Color BLOOD_COLOR = new Color(185, 0, 0);
+    private static final Color GROUND_COLOR = new Color(150, 100, 50);
     float xScreenPlace = 0f;
     float lastHealth = 0;
     boolean showTiles = false;
@@ -88,7 +88,7 @@ public class GamePanel extends JPanel {
                         color = Color.blue;
                         break;
                     case GROUND:
-                        color = new Color(150, 100, 50);
+                        color = GROUND_COLOR;
                         break;
                     case PIT:
                         color = Color.magenta;
@@ -100,7 +100,6 @@ public class GamePanel extends JPanel {
                 g2.setColor(color);
                 g2.setStroke(tileStroke);
                 g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE) + 1, y * TILE_SIZE + 1, TILE_SIZE - 2, TILE_SIZE - 2);
-                //g2.drawImage(image, null, (int) ((x - xScreenPlace) * TILE_SIZE), y * TILE_SIZE);
 
             }
         }

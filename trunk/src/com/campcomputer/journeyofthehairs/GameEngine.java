@@ -13,7 +13,7 @@ public class GameEngine {
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
 
-    private Player player;
+    public Player player;
 
     public ArrayList<Item> items = new ArrayList<Item>();
     public ArrayList<Entity> entities = new ArrayList<Entity>();
@@ -80,9 +80,9 @@ public class GameEngine {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
-            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.GROUND,},
-            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.GROUND,},
-            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.CHUCK_NORRIS, Tile.GROUND,},
+            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
+            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
+            {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
     };
@@ -136,7 +136,7 @@ public class GameEngine {
         entities.add(player);
 //        entities.add(dragonFly);
         entities.add(stinkbug);
-        entities.add(worm);
+//        entities.add(worm);
         entities.add(chuckNorris);
 
         entities.add(rifle);
@@ -323,12 +323,6 @@ public class GameEngine {
 
     public boolean isOnTopOfPlayer(Entity entity) {
         return getDistanceBetweenEntityAndPlayer(entity) < 2f;
-    }
-
-    public boolean isOnTopOfPlayerChuckNorris() {
-        float pX = player.getX();
-        float pY = player.getY();
-        return (map[((int) pX)][((int) pY)] == Tile.CHUCK_NORRIS);
     }
 
     public boolean isPlayerAbove(Entity entity) {
