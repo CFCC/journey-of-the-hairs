@@ -20,7 +20,7 @@ public abstract class Entity {
 	private boolean facingRight = true;
 
 	protected GameEngine engine;
-	protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
+	public List<BufferedImage> frames = new ArrayList<BufferedImage>();
 	protected int currentFrame = 0;
 
 	public Entity(GameEngine engine) {

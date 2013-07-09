@@ -65,7 +65,7 @@ public class RocketWorm extends Entity {
     }
 
     public void shootRocket() {
-        com.campcomputer.journeyofthehairs.entity.Rocket rocket = new com.campcomputer.journeyofthehairs.entity.Rocket(engine);
+        Rocket rocket = new Rocket(engine);
         rocket.setX(getX());
         rocket.setY(getY()+1);
 		engine.addEntity(rocket);

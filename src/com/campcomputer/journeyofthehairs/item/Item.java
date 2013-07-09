@@ -1,15 +1,16 @@
 package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.entity.Bullet;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 
 public abstract class Item extends Entity {
 
-    int ammoLeft = 100;
-    float bulletSpeed = 1f;
-    int bulletNumber = 1;   // Number of bullets fired.
-    int fireRate = 1;       // How many bullets fired per second.
-    int damage = 1;
+    int ammoLeft;
+    float bulletSpeed;
+    int bulletNumber;   // Number of bullets fired.
+    int fireRate;       // How many bullets fired per second.
+    int damage;
 
     public Item(GameEngine engine) {
         super(engine);
@@ -56,7 +57,24 @@ public abstract class Item extends Entity {
     }
 
     public void subtractAmmo() {
-        ammoLeft -= bulletNumber;
+        ammoLeft -= getBulletNumber();
+    }
+
+    public void shoot() {
+        if (!(engine.getPlayer().getWeapon() instanceof GrenadeGun)) {
+            Bullet bullet = new Bullet(engine);
+
+            if (engine.getPlayer().isFacingLeft())
+                bullet.frames = bullet.bulletLeft;
+            else
+                bullet.frames = bullet.bulletRight;
+
+            bullet.setX(engine.getPlayer().getX());
+            bullet.setY(engine.getPlayer().getY());
+            engine.addEntity(bullet);
+        }   else {
+
+        }
     }
 
 }

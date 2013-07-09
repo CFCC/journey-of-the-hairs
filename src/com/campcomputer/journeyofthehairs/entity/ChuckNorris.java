@@ -3,6 +3,7 @@ package com.campcomputer.journeyofthehairs.entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,11 +17,12 @@ public class ChuckNorris extends Entity {
     private static final int PUNCH_DAMAGE = 1;
     private static final int ROUND_HOUSE_KICK_DAMAGE = Player.MAX_HEALTH;
     private static final int BEARD_PUNCH_DAMAGE = 40;
-    int healed = 0;
 
     private static final int PUNCH_CHANCE = 51;
     private static final int ROUND_HOUSE_CHANCE = 9;
     private static final int BEARD_PUNCH_CHANCE = 40;
+
+    public static final int HEIGHT = 4;
 
     List<BufferedImage> standingFrames;
     List<BufferedImage> punchFrames;
@@ -46,7 +48,7 @@ public class ChuckNorris extends Entity {
     public void tick() {
         super.tick();
 
-        if (engine.isOnTopOfPlayerChuckNorris()) {
+        if (isOnTopOfPlayer()) {
             // It should attack any of the three attacks at random. Use round house kick at the end. ATTACK!
             // ChuckNorris does only one attack at a time
             // The roundhouse should not happen often. 51% of the punch happening. 40% of the laser eyes happening.
@@ -63,11 +65,8 @@ public class ChuckNorris extends Entity {
 
         }
 
-        if (healed < 1) {
-            if (getHealth() <= LOW_HEALTH_THRESHOLD) {
-                healing();
-            }
-        }
+        if (getHealth() <= LOW_HEALTH_THRESHOLD)
+            heal();
     }
 
     public void punch(Entity entity) {
@@ -93,11 +92,39 @@ public class ChuckNorris extends Entity {
 
     @Override
     public int getHeight() {
-        return 4;
+        return HEIGHT;
     }
 
-    public void healing() {
+    public void heal() {
         setHealth(MAX_HEALTH);
-        healed = 1;
+    }
+
+    public boolean isOnTopOfPlayer() {
+        float x1 = getX();
+        float x2 = getX() + 1;
+        float x3 = getX() + 2;
+        float y1 = getY();
+        float y2 = getY() + 1;
+        float y3 = getY() + 2;
+        float y4 = getY() + 3;
+
+        Point2D pP = new Point2D.Float(engine.player.getX(), engine.player.getY());
+
+        Point2D tP1 = new Point2D.Float(x1, y1);
+        Point2D tP2 = new Point2D.Float(x2, y1);
+        Point2D tP3 = new Point2D.Float(x3, y1);
+        Point2D tP4 = new Point2D.Float(x1, y2);
+        Point2D tP5 = new Point2D.Float(x2, y2);
+        Point2D tP6 = new Point2D.Float(x3, y2);
+        Point2D tP7 = new Point2D.Float(x1, y3);
+        Point2D tP8 = new Point2D.Float(x2, y3);
+        Point2D tP9 = new Point2D.Float(x3, y3);
+        Point2D tP10 = new Point2D.Float(x1, y4);
+        Point2D tP11 = new Point2D.Float(x2, y4);
+        Point2D tP12 = new Point2D.Float(x3, y4);
+
+        return pP.distance(tP1) <= 2f || pP.distance(tP2) <= 2f || pP.distance(tP3) <= 2f || pP.distance(tP4) <= 2f
+                || pP.distance(tP5) <= 2f || pP.distance(tP6) <= 2f || pP.distance(tP7) <= 2f || pP.distance(tP8) <= 2f
+                || pP.distance(tP9) <= 2f || pP.distance(tP10) <= 2f || pP.distance(tP11) <= 2f || pP.distance(tP12) <= 2f;
     }
 }

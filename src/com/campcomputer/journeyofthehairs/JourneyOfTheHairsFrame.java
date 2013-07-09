@@ -43,7 +43,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        engine.getPlayer().shoot();
+                        engine.getPlayer().getWeapon().shoot();
                         break;
                 }
 

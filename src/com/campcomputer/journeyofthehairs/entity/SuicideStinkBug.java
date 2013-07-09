@@ -37,7 +37,7 @@ public class SuicideStinkBug extends Entity {
      * explode within 5 tiles of player.
      * explosion has a 10 tile radius.
      * explosion does 3000 damage to itself and the player.
-     * explosion will destroy any solid object in the way; expect ground
+     * explosion will destroy any solid object in the way; except ground
      * if there is a solid wall in the way, the bug can explode; will not affect the player.
      */
     public void blowup() {
