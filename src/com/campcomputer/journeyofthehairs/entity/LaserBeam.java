@@ -5,8 +5,14 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.item.Railgun;
 
 public class LaserBeam extends Railgun {
+    private int ticksLeft;
+
     public LaserBeam(GameEngine engine) {
         super(engine);
+        setAffectedByGravity(false);
+        setX(engine.getPlayer().getX());
+        setY(engine.getPlayer().getY());
+        ticksLeft = 2;
     }
 
     public void loadImages() {
@@ -14,17 +20,24 @@ public class LaserBeam extends Railgun {
     }
 
     public void tick() {
-        if (engine.getPlayer().isFacingLeft())
-            setXVel(getBulletSpeed() * -1);
-        else
-            setXVel(getBulletSpeed());
+        if (ticksLeft > 0) {
+            if (engine.getPlayer().isFacingLeft())
+                setXVel(getBulletSpeed() * -1);
+            else
+                setXVel(getBulletSpeed());
 
-        for (Entity entity : engine.getEntities()) {
-
-        }
-    }
-
-    public boolean isAffectedByGravity() {
-        return false;
+            for (Entity entity : engine.getEntities()) {
+                if (getY() == entity.getY() && !(entity instanceof Player))
+                    entity.takeDamage(entity);
+                if (entity instanceof ChuckNorris) {
+                    for (int height = ChuckNorris.HEIGHT; height > 0; height--) {
+                        if (engine.getChuckNorris().getY() - height == getY())
+                            takeDamage(entity);
+                    }
+                }
+            }
+            ticksLeft--;
+        } else
+            engine.removeEntity(this);
     }
 }
