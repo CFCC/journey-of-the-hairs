@@ -17,7 +17,7 @@ public abstract class Entity {
 	private float yVel = 0;
 
 	private boolean affectedByGravity = true;
-	private boolean facingRight = true;
+	private boolean facingLeft = true;
 
 	protected GameEngine engine;
 	public List<BufferedImage> frames = new ArrayList<BufferedImage>();
@@ -74,13 +74,13 @@ public abstract class Entity {
 		return 1;
 	}
 
-	public boolean isFacingRight() {
-		return facingRight;
+	public boolean isFacingLeft() {
+		return facingLeft;
 	}
 
-	public boolean isFacingLeft() {
-		return !facingRight;
-	}
+    public void switchDirection() {
+        facingLeft = !facingLeft;
+    }
 
 	public boolean isAffectedByGravity() {
 		return affectedByGravity;
@@ -93,11 +93,15 @@ public abstract class Entity {
 	public void moveLeft() {
 		setXVel(-0.1f);
 		setYVel(0);
+        if (!isFacingLeft())
+            switchDirection();
 	}
 
 	public void moveRight() {
 		setXVel(0.1f);
 		setYVel(0);
+        if (isFacingLeft())
+            switchDirection();
 	}
 
 	public void moveUp() {
@@ -127,14 +131,15 @@ public abstract class Entity {
 		return frames.get(currentFrame);
 	}
 
-	public boolean attacked() {
-		setHealth(health -= 10);
-		return health > 0;
-	}
 	public boolean isAffectedByHitDetection() {
 		return true;
 	}
+
 	public boolean canBeAttacked() {
 		return true;
 	}
+
+    public void takeDamage(Entity entity) {
+        entity.setHealth(entity.getHealth() - (engine.getPlayer().getWeapon().getDamage() * engine.getPlayer().getWeapon().getBulletNumber()));
+    }
 }
