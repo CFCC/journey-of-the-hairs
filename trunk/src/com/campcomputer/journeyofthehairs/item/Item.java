@@ -62,6 +62,10 @@ public abstract class Item extends Entity {
         ammoLeft -= getBulletNumber();
     }
 
+    public void addAmmo(int ammo) {
+        ammoLeft += ammo;
+    }
+
     public void shoot() {
         if (getAmmo() > 0) {
             if (!(engine.getPlayer().getWeapon() instanceof GrenadeGun) && !(engine.getPlayer().getWeapon() instanceof Railgun)) {
@@ -83,8 +87,6 @@ public abstract class Item extends Entity {
                 engine.addEntity(grenade);
             } else if (engine.getPlayer().getWeapon() instanceof Railgun) {
                 LaserBeam laserBeam = new LaserBeam(engine);
-
-                laserBeam.setX(engine.getPlayer().getX());
                 laserBeam.setY(engine.getPlayer().getY());
                 engine.addEntity(laserBeam);
             }

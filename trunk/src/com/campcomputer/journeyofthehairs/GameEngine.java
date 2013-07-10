@@ -14,6 +14,7 @@ public class GameEngine {
     private static final float MOVE_SPEED = .3f;
 
     public Player player;
+    public ChuckNorris chuckNorris;
 
     public ArrayList<Item> items = new ArrayList<Item>();
     public ArrayList<Item> itemsToRemove = new ArrayList<Item>();
@@ -94,7 +95,7 @@ public class GameEngine {
         player.setX(0);
         player.setY(9);
 
-        ChuckNorris chuckNorris = new ChuckNorris(this);
+        chuckNorris = new ChuckNorris(this);
         chuckNorris.setX(map.length - 5);
         chuckNorris.setY(2);
 
@@ -140,19 +141,19 @@ public class GameEngine {
 //        entities.add(worm);
         entities.add(chuckNorris);
 
-        entities.add(rifle);
-        entities.add(minigun);
-        entities.add(pistol);
-        entities.add(railgun);
-        entities.add(shotgun);
-        entities.add(grenadeGun);
-
-        items.add(rifle);
-        items.add(minigun);
-        items.add(pistol);
-        items.add(railgun);
-        items.add(shotgun);
-        items.add(grenadeGun);
+//        entities.add(rifle);
+//        entities.add(minigun);
+//        entities.add(pistol);
+//        entities.add(railgun);
+//        entities.add(shotgun);
+//        entities.add(grenadeGun);
+//
+//        items.add(rifle);
+//        items.add(minigun);
+//        items.add(pistol);
+//        items.add(railgun);
+//        items.add(shotgun);
+//        items.add(grenadeGun);
 
         rifle.setAffectedByGravity(false);
         minigun.setAffectedByGravity(false);
@@ -162,8 +163,12 @@ public class GameEngine {
         grenadeGun.setAffectedByGravity(false);
 
         player.weapon = new Pistol(this);
+        player.getWeapon().addAmmo(100);
     }
 
+    public ChuckNorris getChuckNorris() {
+        return chuckNorris;
+    }
 
     public Player getPlayer() {
         return player;

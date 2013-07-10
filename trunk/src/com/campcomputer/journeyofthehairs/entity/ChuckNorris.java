@@ -48,7 +48,7 @@ public class ChuckNorris extends Entity {
     public void tick() {
         super.tick();
 
-        if (isOnTopOfPlayer()) {
+        if (isOnTopOfEntity(engine.getPlayer())) {
             // It should attack any of the three attacks at random. Use round house kick at the end. ATTACK!
             // ChuckNorris does only one attack at a time
             // The roundhouse should not happen often. 51% of the punch happening. 40% of the laser eyes happening.
@@ -99,7 +99,7 @@ public class ChuckNorris extends Entity {
         setHealth(MAX_HEALTH);
     }
 
-    public boolean isOnTopOfPlayer() {
+    public boolean isOnTopOfEntity(Entity entity) {
         float x1 = getX();
         float x2 = getX() + 1;
         float x3 = getX() + 2;
@@ -108,7 +108,7 @@ public class ChuckNorris extends Entity {
         float y3 = getY() + 2;
         float y4 = getY() + 3;
 
-        Point2D pP = new Point2D.Float(engine.player.getX(), engine.player.getY());
+        Point2D eP = new Point2D.Float(entity.getX(), entity.getY());
 
         Point2D tP1 = new Point2D.Float(x1, y1);
         Point2D tP2 = new Point2D.Float(x2, y1);
@@ -123,8 +123,8 @@ public class ChuckNorris extends Entity {
         Point2D tP11 = new Point2D.Float(x2, y4);
         Point2D tP12 = new Point2D.Float(x3, y4);
 
-        return pP.distance(tP1) <= 2f || pP.distance(tP2) <= 2f || pP.distance(tP3) <= 2f || pP.distance(tP4) <= 2f
-                || pP.distance(tP5) <= 2f || pP.distance(tP6) <= 2f || pP.distance(tP7) <= 2f || pP.distance(tP8) <= 2f
-                || pP.distance(tP9) <= 2f || pP.distance(tP10) <= 2f || pP.distance(tP11) <= 2f || pP.distance(tP12) <= 2f;
+        return eP.distance(tP1) <= 2f || eP.distance(tP2) <= 2f || eP.distance(tP3) <= 2f || eP.distance(tP4) <= 2f
+                || eP.distance(tP5) <= 2f || eP.distance(tP6) <= 2f || eP.distance(tP7) <= 2f || eP.distance(tP8) <= 2f
+                || eP.distance(tP9) <= 2f || eP.distance(tP10) <= 2f || eP.distance(tP11) <= 2f || eP.distance(tP12) <= 2f;
     }
 }

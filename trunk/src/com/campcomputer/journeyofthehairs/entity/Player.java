@@ -41,6 +41,10 @@ public class Player extends Entity {
     @Override
     public void tick() {
         super.tick();
+        if (frames == forwardFrames)
+            facingLeft = false;
+        if (frames == backwardFrames)
+            facingLeft = true;
     }
 
     public void setWeapon(Item item) {

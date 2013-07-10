@@ -2,7 +2,9 @@ package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import javafx.geometry.Point2DBuilder;
 
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +19,7 @@ public abstract class Entity {
 	private float yVel = 0;
 
 	private boolean affectedByGravity = true;
-	private boolean facingLeft = true;
+	public boolean facingLeft = true;
 
 	protected GameEngine engine;
 	public List<BufferedImage> frames = new ArrayList<BufferedImage>();

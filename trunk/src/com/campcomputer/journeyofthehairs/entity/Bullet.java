@@ -29,7 +29,7 @@ public class Bullet extends Item {
         for (Entity entity : engine.getEntities()) {
             Point2D bPosition = new Point2D.Float(getX(), getY());
             Point2D ePosition = new Point2D.Float(entity.getX(),  entity.getY());
-            if ((bPosition.distance(ePosition) < 3f) && (entity != engine.getPlayer())) {
+            if ((bPosition.distance(ePosition) < 3f) && !(entity instanceof Player)) {
                 entity.takeDamage(entity);
                 if (entity.getHealth() <= 0)
                     engine.removeEntity(entity);
