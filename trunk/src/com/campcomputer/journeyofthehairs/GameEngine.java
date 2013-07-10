@@ -16,6 +16,7 @@ public class GameEngine {
     public Player player;
 
     public ArrayList<Item> items = new ArrayList<Item>();
+    public ArrayList<Item> itemsToRemove = new ArrayList<Item>();
     public ArrayList<Entity> entities = new ArrayList<Entity>();
     public ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
     public ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
@@ -182,6 +183,9 @@ public class GameEngine {
         entitiesToAdd.clear();
         entitiesToRemove.clear();
 
+        items.removeAll(itemsToRemove);
+        itemsToRemove.clear();
+
         for (Entity entity : entities) {
             entity.tick();
         }
@@ -199,9 +203,14 @@ public class GameEngine {
         for (Item item : items) {
             if (isOnTopOfPlayer(item)) {
                 getPlayer().setWeapon(item);
-                entitiesToRemove.add(item);
+                removeEntity(item);
+                removeItem(item);
             }
         }
+    }
+
+    public void removeItem(Item item) {
+        itemsToRemove.add(item);
     }
 
     private void applyGravity() {
