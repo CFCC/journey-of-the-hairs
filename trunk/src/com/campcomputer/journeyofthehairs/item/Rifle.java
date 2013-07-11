@@ -13,8 +13,8 @@ public class Rifle extends Item {
         super(engine);
 
         setDamage(1);
-        setFireRate(1);
-        setBulletNumber(20);
-        setBulletSpeed(3);
+        setFireRate(5);
+        setBulletNumber(1);
+        setBulletSpeed(2);
     }
 }
