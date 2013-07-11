@@ -1,7 +1,9 @@
-package com.campcomputer.journeyofthehairs.entity;
+package com.campcomputer.journeyofthehairs.ammo;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.entity.Player;
 import com.campcomputer.journeyofthehairs.item.Item;
 
 import java.awt.geom.Point2D;
