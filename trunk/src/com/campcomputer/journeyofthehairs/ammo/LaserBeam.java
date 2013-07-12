@@ -7,7 +7,7 @@ import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.Player;
 import com.campcomputer.journeyofthehairs.item.Railgun;
 
-public class LaserBeam extends Railgun {
+public class LaserBeam extends Ammo {
     private int ticksLeft;
 
     public LaserBeam(GameEngine engine) {
@@ -16,6 +16,18 @@ public class LaserBeam extends Railgun {
         setX(engine.getPlayer().getX());
         setY(engine.getPlayer().getY());
         ticksLeft = 2;
+    }
+
+    public LaserBeam(GameEngine engine, int x, int y) {
+        super(engine);
+        setX(x);
+        setY(y);
+        Ammo ammo = new Ammo(engine) {
+            @Override
+            protected void loadImages() {
+                Images.ReadImage("images/");
+            }
+        };
     }
 
     public void loadImages() {
