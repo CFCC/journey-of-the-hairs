@@ -2,13 +2,12 @@ package com.campcomputer.journeyofthehairs.pickup;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.entity.Entity;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Health extends Entity {
+public class Health extends Pickup {
     public List<BufferedImage> five;
     public List<BufferedImage> ten;
     public List<BufferedImage> fifty;
