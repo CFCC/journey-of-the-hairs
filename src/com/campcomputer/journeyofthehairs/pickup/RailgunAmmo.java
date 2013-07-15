@@ -2,9 +2,8 @@ package com.campcomputer.journeyofthehairs.pickup;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.entity.Entity;
 
-public class RailgunAmmo extends Entity {
+public class RailgunAmmo extends Pickup {
     public RailgunAmmo (GameEngine engine, int amount) {
         super(engine);
     }
