@@ -3,6 +3,7 @@ package com.campcomputer.journeyofthehairs;
 import com.campcomputer.journeyofthehairs.entity.*;
 import com.campcomputer.journeyofthehairs.item.*;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
@@ -357,7 +358,9 @@ public class GameEngine {
     }
 
     public void directions() {
-
+        JourneyOfTheHairsFrame.getTimer().stop();
+        JOptionPane.showMessageDialog(JourneyOfTheHairs.getFrame(), "WAD = Movement, S = Shoot, E = Toggle Tiles");
+        JourneyOfTheHairsFrame.getTimer().start();
     }
 }
 
