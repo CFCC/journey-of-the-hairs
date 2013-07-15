@@ -18,18 +18,6 @@ public class LaserBeam extends Ammo {
         ticksLeft = 2;
     }
 
-    public LaserBeam(GameEngine engine, int x, int y) {
-        super(engine);
-        setX(x);
-        setY(y);
-        Ammo ammo = new Ammo(engine) {
-            @Override
-            protected void loadImages() {
-                Images.ReadImage("images/");
-            }
-        };
-    }
-
     public void loadImages() {
         frames.add(Images.ReadImage("images/laser beam.png"));
     }

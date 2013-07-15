@@ -4,14 +4,13 @@ import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.Player;
-import com.campcomputer.journeyofthehairs.item.Item;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bullet extends Item {
+public class Bullet extends Ammo {
     public List<BufferedImage> bulletLeft;
     public List<BufferedImage> bulletRight;
     private GameEngine engine;
@@ -30,11 +29,11 @@ public class Bullet extends Item {
 
         for (Entity entity : engine.getEntities()) {
             Point2D bPosition = new Point2D.Float(getX(), getY());
-            Point2D ePosition = new Point2D.Float(entity.getX(),  entity.getY());
-            if ((bPosition.distance(ePosition) < 1f) && !(entity instanceof Player)) {
+            Point2D ePosition = new Point2D.Float(entity.getX(), entity.getY());
+            if ((bPosition.distance(ePosition) < 3f) && !(entity instanceof Player)) {
                 entity.takeDamage(entity);
-                if (entity.getHealth() <= 0)
-                    engine.removeEntity(entity);
+//                if (entity.getHealth() <= 0)
+//                    engine.removeEntity(entity);
 //                engine.removeEntity(this);
             }
         }
