@@ -5,9 +5,13 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class JourneyOfTheHairsFrame extends JFrame {
-
+    static Timer t;
     GameEngine engine;
     private final GamePanel gamePanel;
+
+    public static Timer getTimer() {
+        return t;
+    }
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -63,7 +67,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
             }
         });
 
-        Timer t = new Timer(1000 / 30, new ActionListener() {
+        t = new Timer(1000 / 30, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
