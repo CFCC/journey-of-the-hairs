@@ -12,9 +12,5 @@ public class MiniGun extends Item {
     public MiniGun(GameEngine engine) {
         super(engine);
 
-        setDamage(1);
-        setFireRate(5);
-        setBulletNumber(1);
-        setBulletSpeed(1);
     }
 }

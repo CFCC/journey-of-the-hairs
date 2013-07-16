@@ -1,6 +1,7 @@
 package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.ammo.Ammo;
 import com.campcomputer.journeyofthehairs.ammo.Bullet;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.ammo.Grenade;
@@ -9,49 +10,22 @@ import com.campcomputer.journeyofthehairs.ammo.LaserBeam;
 public abstract class Item extends Entity {
 
     int ammoLeft;       // How much ammo is left
-    float bulletSpeed;  // Speed of the bullets
-    int bulletNumber;   // Number of bullets fired.
-    int fireRate;       // How many bullets fired per second.
-    int damage;         // The damage of each bullet
+    Ammo ammoType;
 
     public Item(GameEngine engine) {
         super(engine);
     }
 
+    public Ammo getAmmoType() {
+        return ammoType;
+    }
+
+    public void setAmmoType(Ammo ammo) {
+        ammoType = ammo;
+    }
+
     public boolean canBeAttacked() {
         return false;
-    }
-
-    public int getDamage() {
-        return damage;
-    }
-
-    public int getFireRate() {
-        return fireRate;
-    }
-
-    public int getBulletNumber() {
-        return bulletNumber;
-    }
-
-    public float getBulletSpeed() {
-        return bulletSpeed;
-    }
-
-    public void setBulletSpeed(int bulletSpeed) {
-        this.bulletSpeed = bulletSpeed;
-    }
-
-    public void setBulletNumber(int bulletNumber) {
-        this.bulletNumber = bulletNumber;
-    }
-
-    public void setFireRate(int fireRate) {
-        this.fireRate = fireRate;
-    }
-
-    public void setDamage(int damage) {
-        this.damage = damage;
     }
 
     public int getAmmo() {
@@ -59,7 +33,7 @@ public abstract class Item extends Entity {
     }
 
     public void subtractAmmo() {
-        ammoLeft -= getBulletNumber();
+        ammoLeft -= getAmmoType().getBulletNumber();
     }
 
     public void addAmmo(int ammo) {
