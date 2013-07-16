@@ -5,7 +5,6 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.entity.ChuckNorris;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.Player;
-import com.campcomputer.journeyofthehairs.item.Railgun;
 
 public class LaserBeam extends Ammo {
     private int ticksLeft;
@@ -16,6 +15,11 @@ public class LaserBeam extends Ammo {
         setX(engine.getPlayer().getX());
         setY(engine.getPlayer().getY());
         ticksLeft = 2;
+
+        setDamage(ChuckNorris.MAX_HEALTH);
+        setFireRate(1);
+        setBulletNumber(1);
+        setBulletSpeed(1000);
     }
 
     public void loadImages() {
@@ -32,12 +36,9 @@ public class LaserBeam extends Ammo {
             for (Entity entity : engine.getEntities()) {
                 if (getY() == entity.getY() && !(entity instanceof Player))
                     entity.takeDamage(entity);
-                if (entity instanceof ChuckNorris) {
-                    for (int height = ChuckNorris.HEIGHT; height > 0; height--) {
-                        if (engine.getChuckNorris().getY() - height == getY())
-                            takeDamage(entity);
-                    }
-                }
+                if (entity instanceof ChuckNorris && engine.getChuckNorris().isOnTopOfEntity(this))
+                    takeDamage(entity);
+
             }
             ticksLeft--;
         } else

@@ -9,21 +9,32 @@ import javafx.scene.shape.Circle;
 import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.util.List;
 
 public class Grenade extends Ammo {
     public static final int DAMAGE_TIER_1_RANGE = 1;
     public static final int TIER_1_DAMAGE = 5;
     public static final int DAMAGE_TIER_2_RANGE = 2;
     public static final int TIER_2_DAMAGE = 2;
+
+    public List<BufferedImage> stasisFrames;
+    public List<BufferedImage> explosionFrames;
+
     private int timeLeft = 1000;
 
     public Grenade(GameEngine engine) {
         super(engine);
+        setDamage(1);
+        setFireRate(1);
+        setBulletNumber(1);
+        setBulletSpeed(1);
     }
 
     @Override
     public void loadImages() {
-        frames.add(Images.ReadImage("images/grenade.png"));
+        stasisFrames.add(Images.ReadImage("images/grenade.png"));
+        explosionFrames.add(Images.ReadImage("images/grenade explosion.png"));
     }
 
     public void tick() {

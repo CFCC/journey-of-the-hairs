@@ -11,10 +11,5 @@ public class Pistol extends Item {
 
     public Pistol(GameEngine engine) {
         super(engine);
-
-        setDamage(1);
-        setFireRate(1);
-        setBulletNumber(1);
-        setBulletSpeed(1);
     }
 }

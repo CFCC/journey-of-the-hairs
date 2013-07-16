@@ -12,9 +12,5 @@ public class Rifle extends Item {
     public Rifle(GameEngine engine) {
         super(engine);
 
-        setDamage(1);
-        setFireRate(5);
-        setBulletNumber(1);
-        setBulletSpeed(2);
     }
 }

@@ -2,7 +2,6 @@ package com.campcomputer.journeyofthehairs.ammo;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.item.Shotgun;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -14,6 +13,10 @@ public class ShotgunBullet extends Ammo {
 
     public ShotgunBullet (GameEngine engine) {
         super(engine);
+        setDamage(1);
+        setFireRate(1);
+        setBulletNumber(20);
+        setBulletSpeed(3);
     }
 
     public void loadImages() {

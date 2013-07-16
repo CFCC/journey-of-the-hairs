@@ -10,10 +10,5 @@ public class Shotgun extends Item {
 
     public Shotgun(GameEngine engine) {
         super(engine);
-
-        setDamage(1);
-        setFireRate(1);
-        setBulletNumber(20);
-        setBulletSpeed(3);
     }
 }

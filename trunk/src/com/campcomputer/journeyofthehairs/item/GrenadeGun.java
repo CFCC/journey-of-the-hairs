@@ -2,6 +2,7 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.ammo.Grenade;
 
 public class GrenadeGun extends Item {
 
@@ -11,10 +12,6 @@ public class GrenadeGun extends Item {
 
     public GrenadeGun(GameEngine engine) {
         super(engine);
-
-        setDamage(1);
-        setFireRate(1);
-        setBulletNumber(1);
-        setBulletSpeed(1);
+        setAmmoType(new Grenade(engine));
     }
 }
