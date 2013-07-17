@@ -2,6 +2,7 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.ammo.ShotgunBullet;
 
 public class Shotgun extends Item {
     protected void loadImages() {
@@ -10,5 +11,6 @@ public class Shotgun extends Item {
 
     public Shotgun(GameEngine engine) {
         super(engine);
+        setAmmoType(new ShotgunBullet(engine));
     }
 }

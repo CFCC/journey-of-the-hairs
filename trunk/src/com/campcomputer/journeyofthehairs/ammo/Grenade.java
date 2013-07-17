@@ -52,7 +52,6 @@ public class Grenade extends Ammo {
                 if (!(entity instanceof Player) && tierTwoCircle.contains(entity.getLocation()))
                     entity.setHealth(entity.getHealth() - TIER_2_DAMAGE);
             }
-
             engine.removeEntity(this);
         }
 

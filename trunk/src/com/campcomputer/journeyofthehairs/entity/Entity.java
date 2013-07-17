@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.item.Item;
+import com.campcomputer.journeyofthehairs.ammo.Ammo;
 import javafx.geometry.Point2D;
 
 import java.awt.image.BufferedImage;
@@ -146,7 +146,7 @@ public abstract class Entity {
 	}
 
     public void takeDamage(Entity entity) {
-        Item weapon = engine.getPlayer().getWeapon();
-        entity.setHealth(entity.getHealth() - (weapon.getDamage() * weapon.getBulletNumber()));
+        Ammo ammo = engine.getPlayer().getWeapon().getAmmoType();
+        entity.setHealth(entity.getHealth() - (ammo.getDamage() * ammo.getBulletNumber()));
     }
 }

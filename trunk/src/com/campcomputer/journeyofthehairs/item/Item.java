@@ -1,11 +1,8 @@
 package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
-import com.campcomputer.journeyofthehairs.ammo.Ammo;
-import com.campcomputer.journeyofthehairs.ammo.Bullet;
+import com.campcomputer.journeyofthehairs.ammo.*;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.ammo.Grenade;
-import com.campcomputer.journeyofthehairs.ammo.LaserBeam;
 
 public abstract class Item extends Entity {
 
