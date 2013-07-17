@@ -23,7 +23,7 @@ public class ShotgunBullet extends Ammo {
         bulletsLeft = new ArrayList<BufferedImage>();
         bulletsRight =  new ArrayList<BufferedImage>();
 
-        bulletsLeft.add(Images.ReadImage("images/shotgun bullet left"));
-        bulletsRight.add(Images.ReadImage("images/shotgun bullet right"));
+        bulletsLeft.add(Images.ReadImage("images/shotgun bullet left.png"));
+        bulletsRight.add(Images.ReadImage("images/shotgun bullet right.png"));
     }
 }

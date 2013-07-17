@@ -6,10 +6,8 @@ import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.Player;
 import javafx.scene.shape.Circle;
 
-import javax.swing.Timer;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Grenade extends Ammo {
@@ -33,6 +31,9 @@ public class Grenade extends Ammo {
 
     @Override
     public void loadImages() {
+        stasisFrames = new ArrayList<BufferedImage>();
+        explosionFrames = new ArrayList<BufferedImage>();
+
         stasisFrames.add(Images.ReadImage("images/grenade.png"));
         explosionFrames.add(Images.ReadImage("images/grenade explosion.png"));
     }

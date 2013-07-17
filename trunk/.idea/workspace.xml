@@ -7,15 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Grenade.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Grenade.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/MiniGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/MiniGun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Pistol.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Pistol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Railgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Railgun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Rifle.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Rifle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/RifleShot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/RifleShot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Shotgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Shotgun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/ShotgunBullet.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/ShotgunBullet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
@@ -25,25 +21,25 @@
     <file path="/learn.php" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1360649565075" ignored="false" />
     <file path="/Volumes/Web/localhost/CFCC/Site/site.css" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1360649618027" ignored="false" />
     <file path="/site.css" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1360649617326" ignored="false" />
-    <file path="/Dummy.txt" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373940490775" ignored="false" />
+    <file path="/Dummy.txt" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374024265984" ignored="false" />
     <file path="/Bullet.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373936881876" ignored="false" />
-    <file path="/GameEngine.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373934183249" ignored="false" />
+    <file path="/GameEngine.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374032104307" ignored="false" />
     <file path="/ChuckNorris.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373492017488" ignored="false" />
     <file path="/fragment.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373916593677" ignored="false" />
     <file path="/GamePanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373147841690" ignored="false" />
     <file path="$PROJECT_DIR$/../../Objects/src/Snake.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373148287814" ignored="false" />
     <file path="/Snake.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373148264446" ignored="false" />
     <file path="/SuicideStinkBug.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373161224151" ignored="false" />
-    <file path="/Item.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374024030220" ignored="false" />
+    <file path="/Item.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374089024180" ignored="false" />
     <file path="/Player.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373493541413" ignored="false" />
     <file path="/Entity.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374024104594" ignored="false" />
-    <file path="/JourneyOfTheHairsFrame.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373856858257" ignored="false" />
-    <file path="/Grenade.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373937447995" ignored="false" />
+    <file path="/JourneyOfTheHairsFrame.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374087588120" ignored="false" />
+    <file path="/Grenade.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374091588952" ignored="false" />
     <file path="/LaserBeam.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373937099732" ignored="false" />
     <file path="/GrenadeGun.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373936718408" ignored="false" />
     <file path="/Shotgun.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374024123848" ignored="false" />
     <file path="/ShotgunBullet.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373850070244" ignored="false" />
-    <file path="/Ammo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374018888726" ignored="false" />
+    <file path="/Ammo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374026972490" ignored="false" />
     <file path="/RifleShot.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373945272324" ignored="false" />
     <file path="/ShotgunAmmo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373892922403" ignored="false" />
     <file path="/RifleAmmo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373892936214" ignored="false" />
@@ -122,67 +118,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Ammo.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GamePanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GamePanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="77" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ammo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Ammo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="28" selection-start="944" selection-end="944" vertical-scroll-proportion="0.57575756">
+            <state line="20" column="0" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rifle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Rifle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="41" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shotgun.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Shotgun.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="39" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Railgun.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Railgun.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="41" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pistol.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Pistol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="38" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MiniGun.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/MiniGun.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="29" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GrenadeGun.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/GrenadeGun.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="41" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -190,7 +139,67 @@
       <file leaf-file-name="Item.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="22" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+            <state line="97" column="60" selection-start="3231" selection-end="3231" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JourneyOfTheHairsFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="50" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bullet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Bullet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grenade.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Grenade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="7" selection-start="57" selection-end="57" vertical-scroll-proportion="0.080729164">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LaserBeam.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/LaserBeam.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShotgunBullet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/ShotgunBullet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="74" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RifleShot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/RifleShot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="62" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,22 +217,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/ammo/Ammo.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/GrenadeGun.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Bullet.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/LaserBeam.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/ShotgunBullet.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Grenade.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/RifleShot.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Ammo.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Shotgun.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/MiniGun.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Pistol.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Railgun.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Rifle.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Ammo.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/ShotgunBullet.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Grenade.java" />
       </list>
     </option>
   </component>
@@ -779,7 +788,11 @@
       <created>1373940505113</created>
       <updated>1373940505113</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="sorry 'bout that; there aren't any more errors about ammo properties">
+      <created>1374024295113</created>
+      <updated>1374024295113</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -819,8 +832,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21943812" sideWeight="0.3938356" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2090909" sideWeight="0.67291313" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2657581" sideWeight="0.4968153" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2090909" sideWeight="0.7342419" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657581" sideWeight="0.4968153" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -877,7 +890,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added grenade explosion, rearranges property placement. The ammo fired from the items are now responsible for the properties instead of the item (which they ended up inheriting them to begin with anyway)" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorry 'bout that; there aren't any more errors about ammo properties" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -904,6 +917,7 @@
     <MESSAGE value="added dialog box for instructions" />
     <MESSAGE value="messed around with folder organization" />
     <MESSAGE value="added grenade explosion, rearranges property placement. The ammo fired from the items are now responsible for the properties instead of the item (which they ended up inheriting them to begin with anyway)" />
+    <MESSAGE value="sorry 'bout that; there aren't any more errors about ammo properties" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -913,74 +927,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Rifle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="41" selection-start="441" selection-end="441" vertical-scroll-proportion="0.36363637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="34" selection-start="11832" selection-end="11838" vertical-scroll-proportion="0.0">
+        <state line="202" column="0" selection-start="12635" selection-end="12635" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/DragonFly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="-0.22135417">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/RifleShot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="62" selection-start="460" selection-end="460" vertical-scroll-proportion="0.45454547">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Grenade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="13" selection-start="1913" selection-end="1913" vertical-scroll-proportion="0.93939394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/LaserBeam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.24242425">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/ShotgunBullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="257" selection-end="257" vertical-scroll-proportion="0.21212122">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="20" selection-start="2640" selection-end="2640" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1014,23 +971,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Shotgun.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Bullet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+        <state line="35" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Rifle.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/RifleShot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="41" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="15" column="62" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/LaserBeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Ammo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="28" selection-start="944" selection-end="944" vertical-scroll-proportion="0.57575756">
+        <state line="20" column="0" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/item/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="60" selection-start="3231" selection-end="3231" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="50" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="77" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/ShotgunBullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="74" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/ammo/Grenade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="7" selection-start="57" selection-end="57" vertical-scroll-proportion="0.080729164">
           <folding />
         </state>
       </provider>

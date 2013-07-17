@@ -202,6 +202,7 @@ public class GameEngine {
             player.lives -= 1;
 
         collectWeapon();
+        player.getWeapon().lowerTicksTillFire();
     }
 
 
