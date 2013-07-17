@@ -2,6 +2,7 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.ammo.Bullet;
 
 public class MiniGun extends Item {
 
@@ -11,6 +12,6 @@ public class MiniGun extends Item {
 
     public MiniGun(GameEngine engine) {
         super(engine);
-
+        setAmmoType(new Bullet(engine));
     }
 }

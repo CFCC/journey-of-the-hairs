@@ -2,6 +2,7 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.ammo.RifleShot;
 
 public class Rifle extends Item {
 
@@ -11,6 +12,6 @@ public class Rifle extends Item {
 
     public Rifle(GameEngine engine) {
         super(engine);
-
+        setAmmoType(new RifleShot(engine));
     }
 }
