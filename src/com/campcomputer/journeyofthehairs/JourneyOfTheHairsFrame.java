@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 public class JourneyOfTheHairsFrame extends JFrame {
     static Timer t;
+    public static int timerTick = 1000 / 30;
     GameEngine engine;
     private final GamePanel gamePanel;
 
@@ -47,7 +48,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         engine.directions();
                         break;
                     case KeyEvent.VK_S:
-                        engine.getPlayer().getWeapon().shoot();
+                        engine.getPlayer().getWeapon().toggleShoot();
                         break;
                 }
 
@@ -62,12 +63,14 @@ public class JourneyOfTheHairsFrame extends JFrame {
                     case KeyEvent.VK_D:
                         engine.endMoveForward();
                         break;
+                    case KeyEvent.VK_S:
+                        engine.getPlayer().getWeapon().toggleShoot();
                 }
 
             }
         });
 
-        t = new Timer(1000 / 30, new ActionListener() {
+        t = new Timer(timerTick, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
