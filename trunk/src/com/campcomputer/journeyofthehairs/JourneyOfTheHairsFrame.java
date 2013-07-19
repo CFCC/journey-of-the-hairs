@@ -9,9 +9,14 @@ public class JourneyOfTheHairsFrame extends JFrame {
     public static int timerTick = 1000 / 30;
     GameEngine engine;
     private final GamePanel gamePanel;
+    private final MainMenuPanel mainMenuPanel;
 
     public static Timer getTimer() {
         return t;
+    }
+
+    public JPanel getPanel() {
+        return gamePanel;
     }
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
@@ -22,7 +27,8 @@ public class JourneyOfTheHairsFrame extends JFrame {
         new BoxLayout(this, BoxLayout.X_AXIS);
 
         gamePanel = new GamePanel(engine);
-        add(gamePanel);
+        mainMenuPanel = new MainMenuPanel();
+        setContentPane(mainMenuPanel);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,7 +51,13 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         gamePanel.toggleShowTiles();
                         break;
                     case KeyEvent.VK_Q:
-                        engine.directions();
+                        if (getContentPane() instanceof GamePanel) {
+                            setContentPane(new InstructionPanel());
+                            t.stop();
+                        } else {
+                            setContentPane(gamePanel);
+                            t.start();
+                        }
                         break;
                     case KeyEvent.VK_S:
                         engine.getPlayer().getWeapon().toggleShoot();
@@ -65,6 +77,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         break;
                     case KeyEvent.VK_S:
                         engine.getPlayer().getWeapon().toggleShoot();
+                        break;
                 }
 
             }
@@ -73,10 +86,8 @@ public class JourneyOfTheHairsFrame extends JFrame {
         t = new Timer(timerTick, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 engine.tick();
                 repaint();
-
             }
         });
         t.start();

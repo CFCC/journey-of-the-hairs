@@ -1,4 +1,7 @@
 package com.campcomputer.journeyofthehairs;
+
+import javax.swing.*;
+
 public class JourneyOfTheHairs {
     static JourneyOfTheHairsFrame journeyOfTheHairsFrame;
 
@@ -9,5 +12,9 @@ public class JourneyOfTheHairs {
 
     public static JourneyOfTheHairsFrame getFrame() {
         return journeyOfTheHairsFrame;
+    }
+
+    public static void changePanel (JPanel panel) {
+        getFrame().setContentPane(panel);
     }
 }
