@@ -197,23 +197,6 @@ public class GameEngine {
         }
         applyGravity();
         applyMovement();
-
-        if (player.getHealth() <= 0 && player.lives >= 0)
-            player.lives -= 1;
-
-        collectWeapon();
-        player.getWeapon().lowerTicksTillFire();
-    }
-
-
-    public void collectWeapon() {
-        for (Item item : items) {
-            if (isOnTopOfPlayer(item)) {
-                getPlayer().setWeapon(item);
-                removeEntity(item);
-                removeItem(item);
-            }
-        }
     }
 
     public void removeItem(Item item) {

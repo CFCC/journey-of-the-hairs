@@ -7,17 +7,10 @@ import java.awt.event.*;
 public class JourneyOfTheHairsFrame extends JFrame {
     static Timer t;
     public static int timerTick = 1000 / 30;
-    GameEngine engine;
-    private final GamePanel gamePanel;
-    private final MainMenuPanel mainMenuPanel;
-
-    public static Timer getTimer() {
-        return t;
-    }
-
-    public JPanel getPanel() {
-        return gamePanel;
-    }
+    private GameEngine engine;
+    private final GamePanel gamePanel = new GamePanel(engine);
+    private final MainMenuPanel mainMenuPanel = new MainMenuPanel(engine);
+    private final InstructionPanel instructionPanel = new InstructionPanel();
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -26,14 +19,29 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
         new BoxLayout(this, BoxLayout.X_AXIS);
 
-        gamePanel = new GamePanel(engine);
-        mainMenuPanel = new MainMenuPanel();
+        add(instructionPanel);
+        add(mainMenuPanel);
+        add(gamePanel);
         setContentPane(mainMenuPanel);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
         setSize(1024, 768);
 
+        t = new Timer(timerTick, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (getContentPane() instanceof GamePanel) {
+                    engine.tick();
+                    repaint();
+                } else {
+
+                }
+            }
+        });
+        t.start();
+    }
+
+    private void addKeyListener() {
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -82,14 +90,17 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
             }
         });
+    }
 
-        t = new Timer(timerTick, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                engine.tick();
-                repaint();
-            }
-        });
-        t.start();
+    public static Timer getTimer() {
+        return t;
+    }
+
+    public JPanel getGamePanel() {
+        return gamePanel;
+    }
+
+    public JPanel getMainMenuPanel() {
+        return mainMenuPanel;
     }
 }

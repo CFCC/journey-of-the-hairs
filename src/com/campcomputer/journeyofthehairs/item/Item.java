@@ -55,34 +55,6 @@ public abstract class Item extends Entity {
         ammoLeft += ammo;
     }
 
-//    public void shoot() {
-//        if (getAmmo() > 0 && canFire && isShooting) {
-//            if (!(engine.getPlayer().getWeapon() instanceof GrenadeGun) && !(engine.getPlayer().getWeapon() instanceof Railgun)) {
-//                Bullet bullet = new Bullet(engine);
-//
-//                if (engine.getPlayer().isFacingLeft())
-//                    bullet.frames = bullet.bulletLeft;
-//                else
-//                    bullet.frames = bullet.bulletRight;
-//
-//                bullet.setX(engine.getPlayer().getX());
-//                bullet.setY(engine.getPlayer().getY());
-//                engine.addEntity(bullet);
-//            } else if (engine.getPlayer().getWeapon() instanceof GrenadeGun) {
-//                Grenade grenade = new Grenade(engine);
-//
-//                grenade.setX(engine.getPlayer().getX());
-//                grenade.setY(engine.getPlayer().getY());
-//                engine.addEntity(grenade);
-//            } else if (engine.getPlayer().getWeapon() instanceof Railgun) {
-//                LaserBeam laserBeam = new LaserBeam(engine);
-//                laserBeam.setY(engine.getPlayer().getY());
-//                engine.addEntity(laserBeam);
-//            }
-//            subtractAmmo();
-//        }
-//    }
-
     public void shoot() {
         Item weapon = engine.getPlayer().getWeapon();
         if (isShooting && canFire) {
@@ -111,11 +83,22 @@ public abstract class Item extends Entity {
         }
     }
 
+    public void collectWeapon() {
+        for (Item item : engine.items) {
+            if (engine.isOnTopOfPlayer(item)) {
+                engine.getPlayer().setWeapon(item);
+                engine.removeEntity(item);
+                engine.removeItem(item);
+            }
+        }
+    }
+
     public void toggleShoot() {
         isShooting = !isShooting;
     }
 
     public void tick() {
         shoot();
+        collectWeapon();
     }
 }
