@@ -45,6 +45,9 @@ public class Player extends Entity {
             facingLeft = false;
         if (frames == backwardFrames)
             facingLeft = true;
+        getWeapon().lowerTicksTillFire();
+        if (getHealth() <= 0 && lives >= 0)
+            lives -= 1;
     }
 
     public void setWeapon(Item item) {
