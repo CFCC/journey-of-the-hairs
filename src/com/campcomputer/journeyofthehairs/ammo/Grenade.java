@@ -4,7 +4,6 @@ import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.Player;
-import javafx.scene.shape.Circle;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -39,19 +38,18 @@ public class Grenade extends Ammo {
     }
 
     public void tick() {
-        if (timeLeft > 0)
+        if (timeLeft > 0){
             timeLeft--;
-        else {
-            Circle tierOneCircle = new Circle();
-            Circle tierTwoCircle = new Circle();
-            tierOneCircle.setRadius(DAMAGE_TIER_1_RANGE);
-            tierTwoCircle.setRadius(DAMAGE_TIER_2_RANGE);
+		} else {
 
             for (Entity entity : engine.getEntities()) {
-                if (!(entity instanceof Player) && tierOneCircle.contains(entity.getLocation()))
-                    entity.setHealth(entity.getHealth() - TIER_1_DAMAGE);
-                if (!(entity instanceof Player) && tierTwoCircle.contains(entity.getLocation()))
-                    entity.setHealth(entity.getHealth() - TIER_2_DAMAGE);
+                if (!(entity instanceof Player)){
+					double distance = getLocation().distance(entity.getLocation());
+					if (distance < DAMAGE_TIER_1_RANGE)
+                    	entity.setHealth(entity.getHealth() - TIER_1_DAMAGE);
+					else if (distance < DAMAGE_TIER_2_RANGE)
+                    	entity.setHealth(entity.getHealth() - TIER_2_DAMAGE);
+				}
             }
             engine.removeEntity(this);
         }

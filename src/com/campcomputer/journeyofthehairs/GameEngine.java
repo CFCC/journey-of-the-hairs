@@ -340,11 +340,5 @@ public class GameEngine {
     public void removeEntity(Entity entity) {
         entitiesToRemove.add(entity);
     }
-
-    public void directions() {
-        JourneyOfTheHairsFrame.getTimer().stop();
-        JOptionPane.showMessageDialog(JourneyOfTheHairs.getFrame(), "WAD = Movement, S = Shoot, E = Toggle Tiles");
-        JourneyOfTheHairsFrame.getTimer().start();
-    }
 }
 
