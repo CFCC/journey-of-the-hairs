@@ -8,9 +8,9 @@ public class JourneyOfTheHairsFrame extends JFrame {
     static Timer t;
     public static int timerTick = 1000 / 30;
     private GameEngine engine;
-    private final GamePanel gamePanel = new GamePanel(engine);
-    private final MainMenuPanel mainMenuPanel = new MainMenuPanel(engine);
-    private final InstructionPanel instructionPanel = new InstructionPanel();
+    private final GamePanel gamePanel;
+    private final MainMenuPanel mainMenuPanel;
+    private final InstructionPanel instructionPanel;
 
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
@@ -19,10 +19,17 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
         new BoxLayout(this, BoxLayout.X_AXIS);
 
-        add(instructionPanel);
-        add(mainMenuPanel);
-        add(gamePanel);
-        setContentPane(mainMenuPanel);
+		instructionPanel = new InstructionPanel();
+		mainMenuPanel = new MainMenuPanel(engine);
+		gamePanel = new GamePanel(engine);
+
+		add(instructionPanel);
+		add(mainMenuPanel);
+		add(gamePanel);
+
+		addKeyListener();
+
+        setContentPane(gamePanel);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(1024, 768);
@@ -30,15 +37,11 @@ public class JourneyOfTheHairsFrame extends JFrame {
         t = new Timer(timerTick, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (getContentPane() instanceof GamePanel) {
                     engine.tick();
                     repaint();
-                } else {
-
-                }
             }
         });
-        t.start();
+        showHelp();
     }
 
     private void addKeyListener() {
@@ -70,6 +73,9 @@ public class JourneyOfTheHairsFrame extends JFrame {
                     case KeyEvent.VK_S:
                         engine.getPlayer().getWeapon().toggleShoot();
                         break;
+					case KeyEvent.VK_H:
+						showHelp();
+						break;
                 }
 
             }
@@ -91,16 +97,9 @@ public class JourneyOfTheHairsFrame extends JFrame {
             }
         });
     }
-
-    public static Timer getTimer() {
-        return t;
-    }
-
-    public JPanel getGamePanel() {
-        return gamePanel;
-    }
-
-    public JPanel getMainMenuPanel() {
-        return mainMenuPanel;
-    }
+	private void showHelp() {
+		t.stop();
+		JOptionPane.showMessageDialog(this, "WAD = Movement, S = Shoot, E = Toggle Tiles");
+		t.start();
+	}
 }

@@ -3,8 +3,9 @@ package com.campcomputer.journeyofthehairs.entity;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.ammo.Ammo;
-import javafx.geometry.Point2D;
 
+
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +50,7 @@ public abstract class Entity {
 	}
 
     public Point2D getLocation() {
-        return new Point2D(getX(), getY());
+        return new Point2D.Float(x, y);
     }
 
 	public int getHealth() {
