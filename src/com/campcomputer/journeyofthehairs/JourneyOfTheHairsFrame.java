@@ -1,8 +1,13 @@
 package com.campcomputer.journeyofthehairs;
 
+import com.campcomputer.journeyofthehairs.panel.GamePanel;
+import com.campcomputer.journeyofthehairs.panel.InstructionPanel;
+import com.campcomputer.journeyofthehairs.panel.MainMenuPanel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
 
 public class JourneyOfTheHairsFrame extends JFrame {
     static Timer t;
@@ -19,15 +24,13 @@ public class JourneyOfTheHairsFrame extends JFrame {
 
         new BoxLayout(this, BoxLayout.X_AXIS);
 
-		instructionPanel = new InstructionPanel();
-		mainMenuPanel = new MainMenuPanel(engine);
-		gamePanel = new GamePanel(engine);
+        instructionPanel = new InstructionPanel();
+        mainMenuPanel = new MainMenuPanel();
+        gamePanel = new GamePanel(engine);
 
-		add(instructionPanel);
-		add(mainMenuPanel);
-		add(gamePanel);
-
-		addKeyListener();
+        add(instructionPanel);
+        add(mainMenuPanel);
+        add(gamePanel);
 
         setContentPane(gamePanel);
 
@@ -37,14 +40,22 @@ public class JourneyOfTheHairsFrame extends JFrame {
         t = new Timer(timerTick, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    engine.tick();
-                    repaint();
+                engine.tick();
+                repaint();
+                if (getContentPane() instanceof GamePanel) {
+
+                } else if (getContentPane() instanceof MainMenuPanel) {
+
+                } else if (getContentPane() instanceof InstructionPanel) {
+
+                }
             }
         });
         showHelp();
+        addGamePanelKeyListener();
     }
 
-    private void addKeyListener() {
+    private void addGamePanelKeyListener() {
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -62,20 +73,14 @@ public class JourneyOfTheHairsFrame extends JFrame {
                         gamePanel.toggleShowTiles();
                         break;
                     case KeyEvent.VK_Q:
-                        if (getContentPane() instanceof GamePanel) {
-                            setContentPane(new InstructionPanel());
-                            t.stop();
-                        } else {
-                            setContentPane(gamePanel);
-                            t.start();
-                        }
+                        
                         break;
                     case KeyEvent.VK_S:
                         engine.getPlayer().getWeapon().toggleShoot();
                         break;
-					case KeyEvent.VK_H:
-						showHelp();
-						break;
+                    case KeyEvent.VK_H:
+                        showHelp();
+                        break;
                 }
 
             }
@@ -97,9 +102,10 @@ public class JourneyOfTheHairsFrame extends JFrame {
             }
         });
     }
-	private void showHelp() {
-		t.stop();
-		JOptionPane.showMessageDialog(this, "WAD = Movement, S = Shoot, E = Toggle Tiles");
-		t.start();
-	}
+
+    private void showHelp() {
+        t.stop();
+        JOptionPane.showMessageDialog(this, "WAD = Movement, S = Shoot, E = Toggle Tiles");
+        t.start();
+    }
 }
