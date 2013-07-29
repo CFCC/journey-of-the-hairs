@@ -1,13 +1,13 @@
-package com.campcomputer.journeyofthehairs;
+package com.campcomputer.journeyofthehairs.panel;
 
+import com.campcomputer.journeyofthehairs.*;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 
-public class GamePanel extends JPanel {
+public class GamePanel extends Panel {
 
     public static final int TILE_SIZE = 64;
     private static final Color BLOOD_COLOR = new Color(185, 0, 0);
@@ -29,8 +29,10 @@ public class GamePanel extends JPanel {
     public GamePanel(GameEngine theGameEngine) {
 
         this.ourGameEngine = theGameEngine;
-        mapBackground = Images.ReadImage("images/background improved.png");
-
+//        ourGameEngine.setMap(ourGameEngine.map);
+//        mapBackground = Images.ReadImage("images/background improved.png");
+        mapBackground = Images.ReadImage("images/cheese level.png");
+        ourGameEngine.setMap(ourGameEngine.cheeseMap);
     }
 
     @Override
@@ -107,6 +109,10 @@ public class GamePanel extends JPanel {
 
     public void toggleShowTiles() {
         showTiles = !showTiles;
+    }
+
+    public void setMapBackground (BufferedImage bgImage) {
+        mapBackground = bgImage;
     }
 }
 
