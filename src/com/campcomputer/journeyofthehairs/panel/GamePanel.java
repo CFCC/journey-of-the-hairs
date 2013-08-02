@@ -29,10 +29,7 @@ public class GamePanel extends Panel {
     public GamePanel(GameEngine theGameEngine) {
 
         this.ourGameEngine = theGameEngine;
-//        ourGameEngine.setMap(ourGameEngine.map);
-//        mapBackground = Images.ReadImage("images/background improved.png");
-        mapBackground = Images.ReadImage("images/cheese level.png");
-        ourGameEngine.setMap(ourGameEngine.cheeseMap);
+        setMapBackground(Images.ReadImage("images/background improved.png"));
     }
 
     @Override

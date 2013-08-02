@@ -98,6 +98,8 @@ public abstract class Item extends Entity {
     }
 
     public void tick() {
+        if (getAmmo() <= 0)
+            canFire = false;
         shoot();
         collectWeapon();
     }

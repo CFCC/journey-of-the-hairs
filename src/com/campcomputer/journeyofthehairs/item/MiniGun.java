@@ -13,5 +13,6 @@ public class MiniGun extends Item {
     public MiniGun(GameEngine engine) {
         super(engine);
         setAmmoType(new Bullet(engine));
+        setAffectedByGravity(false);
     }
 }

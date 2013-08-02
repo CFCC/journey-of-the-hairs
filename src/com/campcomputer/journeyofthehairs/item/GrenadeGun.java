@@ -13,5 +13,6 @@ public class GrenadeGun extends Item {
     public GrenadeGun(GameEngine engine) {
         super(engine);
         setAmmoType(new Grenade(engine));
+        setAffectedByGravity(false);
     }
 }
