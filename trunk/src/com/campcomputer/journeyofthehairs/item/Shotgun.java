@@ -12,5 +12,6 @@ public class Shotgun extends Item {
     public Shotgun(GameEngine engine) {
         super(engine);
         setAmmoType(new ShotgunBullet(engine));
+        setAffectedByGravity(false);
     }
 }

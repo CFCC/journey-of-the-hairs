@@ -13,5 +13,6 @@ public class Pistol extends Item {
     public Pistol(GameEngine engine) {
         super(engine);
         setAmmoType(new Bullet(engine));
+        setAffectedByGravity(false);
     }
 }

@@ -14,7 +14,6 @@ public class LaserBeam extends Ammo {
         setAffectedByGravity(false);
         setX(engine.getPlayer().getX());
         setY(engine.getPlayer().getY());
-        ticksLeft = 2;
 
         setDamage(ChuckNorris.MAX_HEALTH);
         setFireRate(1);
@@ -27,7 +26,6 @@ public class LaserBeam extends Ammo {
     }
 
     public void tick() {
-        if (ticksLeft > 0) {
             if (engine.getPlayer().isFacingLeft())
                 setXVel(getBulletSpeed() * -1);
             else
@@ -36,12 +34,7 @@ public class LaserBeam extends Ammo {
             for (Entity entity : engine.getEntities()) {
                 if (getY() == entity.getY() && !(entity instanceof Player))
                     entity.takeDamage(entity);
-                if (entity instanceof ChuckNorris && engine.getChuckNorris().isOnTopOfEntity(this))
-                    takeDamage(entity);
-
             }
-            ticksLeft--;
-        } else
-            engine.removeEntity(this);
+        engine.removeEntity(this);
     }
 }

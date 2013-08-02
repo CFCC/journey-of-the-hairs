@@ -14,5 +14,6 @@ public class Railgun extends Item {
     public Railgun(GameEngine engine) {
         super(engine);
         setAmmoType(new LaserBeam(engine));
+        setAffectedByGravity(false);
     }
 }
