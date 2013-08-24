@@ -7,7 +7,6 @@ import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.Player;
 
 public class LaserBeam extends Ammo {
-    private int ticksLeft;
 
     public LaserBeam(GameEngine engine) {
         super(engine);

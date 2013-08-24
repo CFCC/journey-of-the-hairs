@@ -2,6 +2,8 @@ package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.*;
 import com.campcomputer.journeyofthehairs.item.*;
+import com.campcomputer.journeyofthehairs.map.Map;
+import com.campcomputer.journeyofthehairs.panel.GamePanel;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -12,6 +14,7 @@ public class GameEngine {
     private static final float JUMP_POWER = -1.5f;
     private static final float MOVE_SPEED = .3f;
 
+    public GamePanel gamePanel;
     public Player player;
 
     public ArrayList<Item> items = new ArrayList<Item>();
@@ -42,8 +45,9 @@ public class GameEngine {
         return activeMap;
     }
 
-    public void setMap(Tile[][] map) {
-        activeMap = map;
+    public void setMap(Map map) {
+        gamePanel.setMapBackground(map.image);
+        activeMap = map.map;
     }
 
     public void tick() {
