@@ -3,7 +3,7 @@ package com.campcomputer.journeyofthehairs.map;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.Tile;
-import com.campcomputer.journeyofthehairs.entity.SuicideStinkBug;
+import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
 import com.campcomputer.journeyofthehairs.item.Railgun;
 
 import java.awt.image.BufferedImage;

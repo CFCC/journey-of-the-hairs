@@ -1,6 +1,8 @@
 package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.*;
+import com.campcomputer.journeyofthehairs.entity.creatures.Player;
+import com.campcomputer.journeyofthehairs.entity.pickup.Pickup;
 import com.campcomputer.journeyofthehairs.item.*;
 import com.campcomputer.journeyofthehairs.map.Map;
 import com.campcomputer.journeyofthehairs.panel.GamePanel;
@@ -23,6 +25,8 @@ public class GameEngine {
     public ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
     public ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
     public Tile[][] activeMap;
+    public ArrayList<Pickup> pickupsToRemove = new ArrayList<Pickup>();
+    public ArrayList<Pickup> pickups = new ArrayList<Pickup>();
 
     public GameEngine() {
         player = new Player(this);
@@ -58,6 +62,9 @@ public class GameEngine {
 
         items.removeAll(itemsToRemove);
         itemsToRemove.clear();
+
+        pickups.removeAll(pickupsToRemove);
+        pickupsToRemove.clear();
 
         for (Entity entity : entities) {
             entity.tick();
@@ -211,6 +218,10 @@ public class GameEngine {
 
     public void addItem(Item item) {
         items.add(item);
+    }
+
+    public ArrayList<Pickup> getPickups() {
+        return pickups;
     }
 }
 

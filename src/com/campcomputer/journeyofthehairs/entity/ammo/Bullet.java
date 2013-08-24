@@ -1,9 +1,9 @@
-package com.campcomputer.journeyofthehairs.ammo;
+package com.campcomputer.journeyofthehairs.entity.ammo;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.entity.Player;
+import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 import com.campcomputer.journeyofthehairs.item.MiniGun;
 import com.campcomputer.journeyofthehairs.item.Pistol;
 

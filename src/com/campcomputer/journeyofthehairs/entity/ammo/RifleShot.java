@@ -1,4 +1,4 @@
-package com.campcomputer.journeyofthehairs.ammo;
+package com.campcomputer.journeyofthehairs.entity.ammo;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
