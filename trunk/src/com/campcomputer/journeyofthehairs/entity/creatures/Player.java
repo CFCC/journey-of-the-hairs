@@ -1,6 +1,7 @@
-package com.campcomputer.journeyofthehairs.entity;
+package com.campcomputer.journeyofthehairs.entity.creatures;
 
 import com.campcomputer.journeyofthehairs.*;
+import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.item.Item;
 
 import java.awt.image.BufferedImage;
@@ -14,6 +15,7 @@ public class Player extends Entity {
     List<BufferedImage> backwardFrames;
     public int lives = 3;
     public Item weapon;
+    public ArrayList<Item> inventory;
 
     public Player(GameEngine engine) {
         super(engine);

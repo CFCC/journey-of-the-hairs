@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.ammo.Ammo;
+import com.campcomputer.journeyofthehairs.entity.ammo.Ammo;
 
 
 import java.awt.geom.Point2D;

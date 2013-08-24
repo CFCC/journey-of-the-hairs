@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.ammo.Grenade;
+import com.campcomputer.journeyofthehairs.entity.ammo.Grenade;
 
 public class GrenadeGun extends Item {
 

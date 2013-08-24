@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.ammo.ShotgunBullet;
+import com.campcomputer.journeyofthehairs.entity.ammo.ShotgunBullet;
 
 public class Shotgun extends Item {
     protected void loadImages() {

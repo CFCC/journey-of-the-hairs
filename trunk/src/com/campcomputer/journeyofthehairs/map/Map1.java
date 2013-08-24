@@ -3,7 +3,11 @@ package com.campcomputer.journeyofthehairs.map;
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.Tile;
-import com.campcomputer.journeyofthehairs.entity.*;
+import com.campcomputer.journeyofthehairs.entity.creatures.ChuckNorris;
+import com.campcomputer.journeyofthehairs.entity.creatures.DragonFly;
+import com.campcomputer.journeyofthehairs.entity.creatures.RocketWorm;
+import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
+import com.campcomputer.journeyofthehairs.entity.pickup.Portal;
 import com.campcomputer.journeyofthehairs.item.*;
 
 import java.awt.image.BufferedImage;
@@ -118,6 +122,11 @@ public class Map1 extends Map {
         grenadeGun.setX(11);
         grenadeGun.setY(7);
 
+        Portal portal = new Portal(engine, "cheese map");
+        portal.setX(17);
+        portal.setY(0);
+
+        engine.addEntity(portal);
 //        engine.addEntity(dragonFly);
         engine.addEntity(stinkbug);
         engine.addEntity(worm);

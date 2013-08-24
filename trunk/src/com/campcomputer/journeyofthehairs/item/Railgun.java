@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.ammo.LaserBeam;
+import com.campcomputer.journeyofthehairs.entity.ammo.LaserBeam;
 import com.campcomputer.journeyofthehairs.map.Map1;
 
 public class Railgun extends Item {

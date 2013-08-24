@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.item;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.JourneyOfTheHairsFrame;
-import com.campcomputer.journeyofthehairs.ammo.*;
+import com.campcomputer.journeyofthehairs.entity.ammo.*;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 
 public abstract class Item extends Entity {
@@ -67,6 +67,7 @@ public abstract class Item extends Entity {
                 grenade.setX(engine.getPlayer().getX());
                 grenade.setY(engine.getPlayer().getY());
             } else if (weapon instanceof Railgun) {
+
                 LaserBeam laserBeam = new LaserBeam(engine);
             } else if (weapon instanceof Rifle) {
                 RifleShot rifleShot = new RifleShot(engine);

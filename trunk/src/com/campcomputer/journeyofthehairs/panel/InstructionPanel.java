@@ -16,7 +16,7 @@ public class InstructionPanel extends Panel {
     private ArrayList<BufferedImage> pages = new ArrayList<BufferedImage>();
     private ArrayList<BufferedImage> numbers = new ArrayList<BufferedImage>();
     private int page = 1;
-    private int numPages = pages.size();
+    private int numPages;
     private JourneyOfTheHairsFrame frame;
 
     public InstructionPanel(JourneyOfTheHairsFrame frame) {
@@ -30,6 +30,8 @@ public class InstructionPanel extends Panel {
         pages.add(Images.ReadImage("images/instruction 1.png"));
         pages.add(Images.ReadImage("images/instruction 2.png"));
         pages.add(Images.ReadImage("images/instruction 3.png"));
+
+        numPages = pages.size();
     }
 
     public void goTo(String direction) {

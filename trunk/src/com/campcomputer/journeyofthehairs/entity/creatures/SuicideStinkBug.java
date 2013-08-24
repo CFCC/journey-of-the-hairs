@@ -1,7 +1,8 @@
-package com.campcomputer.journeyofthehairs.entity;
+package com.campcomputer.journeyofthehairs.entity.creatures;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.entity.Entity;
 
 public class SuicideStinkBug extends Entity {
 

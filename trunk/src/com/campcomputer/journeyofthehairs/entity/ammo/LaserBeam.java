@@ -1,10 +1,10 @@
-package com.campcomputer.journeyofthehairs.ammo;
+package com.campcomputer.journeyofthehairs.entity.ammo;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.entity.ChuckNorris;
+import com.campcomputer.journeyofthehairs.entity.creatures.ChuckNorris;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.entity.Player;
+import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 
 public class LaserBeam extends Ammo {
 
