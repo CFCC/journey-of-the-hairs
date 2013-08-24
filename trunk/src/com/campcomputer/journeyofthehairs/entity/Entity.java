@@ -132,6 +132,8 @@ public abstract class Entity {
 		if (currentFrame > frames.size() - 1)
 			currentFrame = 0;
 
+        if (getY() > 12)
+            setHealth(-1);
 	}
 
     public BufferedImage getCurrentFrame() {

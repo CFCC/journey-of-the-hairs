@@ -15,25 +15,18 @@ public class GamePanel extends Panel {
     float xScreenPlace = 0f;
     float lastHealth = 0;
     boolean showTiles = false;
-
-
     private BufferedImage mapBackground;
-
-    GameEngine ourGameEngine;
+    private GameEngine ourGameEngine;
 
     private float[] dashPattern = {1, 1};
-    private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT,
-            BasicStroke.JOIN_MITER, 10,
-            dashPattern, 0);
+    private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10, dashPattern, 0);
 
     public GamePanel(GameEngine theGameEngine) {
-
         this.ourGameEngine = theGameEngine;
-        setMapBackground(Images.ReadImage("images/background improved.png"));
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
@@ -69,8 +62,6 @@ public class GamePanel extends Panel {
 
     private void drawTiles(Graphics2D g2) {
         int xFirst = (int) xScreenPlace;
-
-
         Tile[][] map = ourGameEngine.getMap();
 
         for (int x = xFirst; x < xFirst + 17 && x < map.length; x++) {

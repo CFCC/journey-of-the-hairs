@@ -14,6 +14,12 @@ public class Health extends Pickup {
 
     public Health (GameEngine engine, int amount) {
         super(engine);
+        if (amount == 5)
+            frames = five;
+        else if (amount == 10)
+            frames = ten;
+        else if (amount == 50)
+            frames = fifty;
     }
 
     public void loadImages() {

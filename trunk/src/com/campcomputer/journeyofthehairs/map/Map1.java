@@ -5,10 +5,11 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.*;
 import com.campcomputer.journeyofthehairs.item.*;
-import com.campcomputer.journeyofthehairs.panel.GamePanel;
 
-public class Map1 {
-    public Tile[][] map = {
+import java.awt.image.BufferedImage;
+
+public class Map1 extends Map {
+    public Tile[][] theMap = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
@@ -75,12 +76,14 @@ public class Map1 {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
     };
 
-    public Map1 (GameEngine engine, GamePanel panel) {
-        engine.setMap(map);
-        panel.setMapBackground(Images.ReadImage("images/background improved.png"));
+    public BufferedImage theImage = Images.ReadImage("images/background improved.png");
+
+    public Map1 (GameEngine engine) {
+        map = theMap;
+        image = theImage;
 
         ChuckNorris chuckNorris = new ChuckNorris(engine);
-        chuckNorris.setX(engine.getMap().length - 5);
+        chuckNorris.setX(map.length - 5);
         chuckNorris.setY(2);
 
         DragonFly dragonFly = new DragonFly(engine);
@@ -115,7 +118,7 @@ public class Map1 {
         grenadeGun.setX(11);
         grenadeGun.setY(7);
 
-        engine.addEntity(dragonFly);
+//        engine.addEntity(dragonFly);
         engine.addEntity(stinkbug);
         engine.addEntity(worm);
         engine.addEntity(chuckNorris);

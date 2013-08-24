@@ -5,9 +5,10 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.SuicideStinkBug;
 import com.campcomputer.journeyofthehairs.item.Railgun;
-import com.campcomputer.journeyofthehairs.panel.GamePanel;
 
-public class CheeseMap {
+import java.awt.image.BufferedImage;
+
+public class CheeseMap extends Map {
     public Tile[][] cheeseMap = {
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHEESE,},
             {Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.CHEESE,},
@@ -76,9 +77,11 @@ public class CheeseMap {
 
     };
 
-    public CheeseMap(GameEngine engine, GamePanel panel) {
-        engine.setMap(cheeseMap);
-        panel.setMapBackground(Images.ReadImage("images/cheese level.png"));
+    public BufferedImage theImage = Images.ReadImage("images/cheese level.png");
+
+    public CheeseMap(GameEngine engine) {
+        map = cheeseMap;
+        image = theImage;
 
         SuicideStinkBug suicideStinkBug = new SuicideStinkBug(engine);
         suicideStinkBug.setX(37);
