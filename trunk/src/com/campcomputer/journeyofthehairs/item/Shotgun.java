@@ -13,5 +13,6 @@ public class Shotgun extends Item {
         super(engine);
         setAmmoType(new ShotgunBullet(engine));
         setAffectedByGravity(false);
+        addAmmo(10);
     }
 }

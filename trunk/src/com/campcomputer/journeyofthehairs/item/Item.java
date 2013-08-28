@@ -57,31 +57,49 @@ public abstract class Item extends Entity {
 
     public void shoot() {
         Item weapon = engine.getPlayer().getWeapon();
-        if (isShooting && canFire) {
-            if (weapon instanceof Pistol || weapon instanceof MiniGun) {
-                Bullet bullet = new Bullet(engine);
-                bullet.setX(engine.getPlayer().getX());
-                bullet.setY(engine.getPlayer().getY());
-            } else if (weapon instanceof GrenadeGun) {
-                Grenade grenade = new Grenade(engine);
-                grenade.setX(engine.getPlayer().getX());
-                grenade.setY(engine.getPlayer().getY());
-            } else if (weapon instanceof Railgun) {
-
-                LaserBeam laserBeam = new LaserBeam(engine);
-            } else if (weapon instanceof Rifle) {
-                RifleShot rifleShot = new RifleShot(engine);
-                rifleShot.setX(engine.getPlayer().getX());
-                rifleShot.setY(engine.getPlayer().getY());
-            } else if (weapon instanceof Shotgun) {
-                ShotgunBullet shotgunBullet = new ShotgunBullet(engine);
-                shotgunBullet.setX(engine.getPlayer().getX());
-                shotgunBullet.setY(engine.getPlayer().getY());
+//        if (isShooting && canFire) {
+        if (weapon instanceof Pistol || weapon instanceof MiniGun) {
+            Bullet bullet = new Bullet(engine);
+            bullet.setX(engine.getPlayer().getX());
+            bullet.setY(engine.getPlayer().getY());
+        } else if (weapon instanceof GrenadeGun) {
+            Grenade grenade = new Grenade(engine);
+            grenade.setX(engine.getPlayer().getX());
+            grenade.setY(engine.getPlayer().getY());
+        } else if (weapon instanceof Railgun) {
+            LaserBeam originalBeam = new LaserBeam(engine);
+            try {
+                if (engine.getPlayer().isFacingLeft())
+                    for (int beam = 0; beam < 8; beam++) {
+                        LaserBeam laserBeam = (LaserBeam) originalBeam.clone();
+                        engine.addEntity(laserBeam);
+                        laserBeam.setX(engine.getPlayer().getX() - beam);
+                        laserBeam.setY(engine.getPlayer().getY());
+                    }
+                else
+                    for (int beam = 7; beam > 0; beam--) {
+                        LaserBeam laserBeam = (LaserBeam) originalBeam.clone();
+                        engine.addEntity(laserBeam);
+                        laserBeam.setX(engine.getPlayer().getX() + beam);
+                        laserBeam.setY(engine.getPlayer().getY());
+                    }
+            } catch (CloneNotSupportedException e) {
+                originalBeam.setX(engine.getPlayer().getX());
+                originalBeam.setY(engine.getPlayer().getY());
             }
-            resetTicksTillFire();
-        } else if (isShooting && !canFire) {
-            lowerTicksTillFire();
+        } else if (weapon instanceof Rifle) {
+            RifleShot rifleShot = new RifleShot(engine);
+            rifleShot.setX(engine.getPlayer().getX());
+            rifleShot.setY(engine.getPlayer().getY());
+        } else if (weapon instanceof Shotgun) {
+            ShotgunBullet shotgunBullet = new ShotgunBullet(engine);
+            shotgunBullet.setX(engine.getPlayer().getX());
+            shotgunBullet.setY(engine.getPlayer().getY());
         }
+        resetTicksTillFire();
+//        } else if (isShooting && !canFire) {
+//            lowerTicksTillFire();
+//        }
     }
 
     public void collectWeapon() {

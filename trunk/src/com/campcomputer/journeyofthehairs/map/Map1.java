@@ -132,11 +132,11 @@ public class Map1 extends Map {
         engine.addEntity(worm);
         engine.addEntity(chuckNorris);
 
-        engine.addEntity(rifle);
-        engine.addEntity(minigun);
-        engine.addEntity(pistol);
-        engine.addEntity(shotgun);
-        engine.addEntity(grenadeGun);
+//        engine.addEntity(rifle);
+//        engine.addEntity(minigun);
+//        engine.addEntity(pistol);
+//        engine.addEntity(shotgun);
+//        engine.addEntity(grenadeGun);
 
         engine.addItem(rifle);
         engine.addItem(minigun);
@@ -144,5 +144,6 @@ public class Map1 extends Map {
         engine.addItem(shotgun);
         engine.addItem(grenadeGun);
 
+        engine.addPickup(portal);
     }
 }

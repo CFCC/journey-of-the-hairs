@@ -10,9 +10,16 @@ public abstract class Pickup extends Entity {
 
     public void tick() {
         for (Pickup pickup : engine.getPickups()) {
-            if (engine.isOnTopOfPlayer(pickup))
+            if (engine.isOnTopOfPlayer(pickup)) {
                 pickup.affectGame();
+                engine.removeEntity(pickup);
+                engine.removePickup(pickup);
+            }
         }
+
+        currentFrame++;
+        if (currentFrame > frames.size() - 1)
+            currentFrame = 0;
     }
 
     public abstract void affectGame();

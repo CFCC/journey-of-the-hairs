@@ -17,7 +17,7 @@ public class LaserBeam extends Ammo {
         setDamage(ChuckNorris.MAX_HEALTH);
         setFireRate(1);
         setBulletNumber(1);
-        setBulletSpeed(1000);
+        setBulletSpeed(1);
     }
 
     public void loadImages() {
@@ -31,9 +31,18 @@ public class LaserBeam extends Ammo {
                 setXVel(getBulletSpeed());
 
             for (Entity entity : engine.getEntities()) {
+                if (entity instanceof LaserBeam && (entity.getX() == this.getX() - 1 || entity.getX() == this.getX() + 1))
+                    setXVel(0);
+            }
+
+            if (this.getX() > engine.getPlayer().getX() + 7 || this.getX() > engine.getMap().length ||
+                    this.getX() < engine.getPlayer().getX() - 8 || this.getX() < 0)
+                setXVel(0);
+
+            for (Entity entity : engine.getEntities()) {
                 if (getY() == entity.getY() && !(entity instanceof Player))
                     entity.takeDamage(entity);
             }
-        engine.removeEntity(this);
+        // engine.removeEntity(this);
     }
 }
