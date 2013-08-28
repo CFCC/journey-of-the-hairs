@@ -75,10 +75,9 @@ public class Images {
 		return ImageIO.read(in);
 
 	}
+
 	public static List<BufferedImage> loadFrames(String name) {
 		List<BufferedImage> frames = new ArrayList<BufferedImage>();
-
-
 		CodeSource src = Entity.class.getProtectionDomain().getCodeSource();
 
 		if (src.getLocation().toString().endsWith("jar")) {
@@ -95,7 +94,6 @@ public class Images {
 				System.err.println("Error loading frames from jar: " + name);
 			}
 		} else {
-
 			File frameDir = new File("images/frames/" + name);
 
 			for (File file : frameDir.listFiles()) {

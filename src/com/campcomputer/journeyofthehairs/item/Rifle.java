@@ -14,5 +14,6 @@ public class Rifle extends Item {
         super(engine);
         setAmmoType(new RifleShot(engine));
         setAffectedByGravity(false);
+        addAmmo(10);
     }
 }

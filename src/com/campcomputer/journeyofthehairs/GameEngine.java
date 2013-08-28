@@ -27,13 +27,13 @@ public class GameEngine {
     public Tile[][] activeMap;
     public ArrayList<Pickup> pickupsToRemove = new ArrayList<Pickup>();
     public ArrayList<Pickup> pickups = new ArrayList<Pickup>();
+    private ArrayList<Pickup> pickupsToAdd = new ArrayList<Pickup>();
 
     public GameEngine() {
         player = new Player(this);
         player.setX(0);
         player.setY(9);
-        player.weapon = new Pistol(this);
-        player.getWeapon().addAmmo(100);
+        player.weapon = new Railgun(this);
         addEntity(player);
     }
 
@@ -50,8 +50,21 @@ public class GameEngine {
     }
 
     public void setMap(Map map) {
+        if (entities.size() > 0) {
+            for (Entity entity : entities) {
+                if (!(entity instanceof Player))
+                    removeEntity(entity);
+            } for (Item item : items) {
+                removeItem(item);
+            } for (Pickup pickup : pickups) {
+                removePickup(pickup);
+            }
+        }
+
         gamePanel.setMapBackground(map.image);
         activeMap = map.map;
+        player.setX(0);
+        player.setY(9);
     }
 
     public void tick() {
@@ -63,8 +76,10 @@ public class GameEngine {
         items.removeAll(itemsToRemove);
         itemsToRemove.clear();
 
+        pickups.addAll(pickupsToAdd);
         pickups.removeAll(pickupsToRemove);
         pickupsToRemove.clear();
+        pickupsToAdd.clear();
 
         for (Entity entity : entities) {
             entity.tick();
@@ -222,6 +237,14 @@ public class GameEngine {
 
     public ArrayList<Pickup> getPickups() {
         return pickups;
+    }
+
+    public void removePickup(Pickup pickup) {
+        pickupsToRemove.add(pickup);
+    }
+
+    public void addPickup(Pickup portal) {
+        pickupsToAdd.add(portal);
     }
 }
 
