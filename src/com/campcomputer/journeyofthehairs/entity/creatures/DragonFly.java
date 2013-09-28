@@ -4,17 +4,47 @@ import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 
+/**
+ * This is one of the enemies, the dragonfly. Its origin was the misleading name. The game's creators decided
+ * to take the name literally. If examined closely enough, the dragon fly is literally a dragon the size of
+ * a fly. It is more a nuisance than dangerous, but if ignored, it can cause serious damage to the player.
+ */
 public class DragonFly extends Entity {
+    /**
+     * In theory, the dragonfly cannot fly forever; its wings would get tired. To represent this scenario
+     * is this field. The fly can fly at any time as long as the value is positive. Once it reaches
+     * 0, the fly cant fly and has to wait until it reaches a certain minimum before it can begin flying
+     * again.
+     *
+     * If the fly can't fly, it is merely gliding on the ground (changing x coordinate) and just not going up
+     * and down. Physics apply to this variable. If the fly is going down, the fly spends less energy than going
+     * up since gravity is working against the fly going up and for it going down.
+     */
     private int flyingEnergy = 25;
+
+    /**
+     * This is, by far, the most common attack of the fly. It breaths fire onto the entity, causing a
+     * minuscule 1 damage. This attack happens rather quickly, though, so it can be dangerous.
+     */
     private static final int BREATH_FIRE_DAMAGE = 1;
+
+    /**
+     * Once the fly's prey is weak enough to be eaten (has 10 health), the fly eats its prey, removing it from the map
+     */
     private static final int EATING_DAMAGE = 10;
 
+    /**
+     * Constructor
+     */
     public DragonFly(GameEngine engine) {
         super(engine);
         setAffectedByGravity(false);
         setHealth(5);
     }
 
+    /**
+     * Checks to see how/where the fly should move and if it should attack
+     */
     @Override
     public void tick() {
         super.tick();
@@ -48,9 +78,12 @@ public class DragonFly extends Entity {
         }
     }
 
+    /**
+     * Self explanatory
+     */
     @Override
     protected void loadImages() {
-        frames.add(Images.ReadImage("images/dragonfly.png"));
+        frames.add(Images.ReadImage("entities/creatures/dragonfly"));
     }
 
     /**
@@ -78,6 +111,11 @@ public class DragonFly extends Entity {
         entity.setHealth(entity.getHealth() - BREATH_FIRE_DAMAGE);
     }
 
+    /**
+     * By the looks of it, determines how the fly should chase an entity. Poorly written; needs refactor desperately
+     *
+     * TODO: Change this mess of code into something readable
+     */
     public int chasePlayer1() {
         if (flyingEnergy > 7) {
             // fly towards the player,
@@ -92,14 +130,25 @@ public class DragonFly extends Entity {
             return 2;
     }
 
+    /**
+     * @return the current flying energy
+     */
     public int getFlyingEnergy() {
         return flyingEnergy;
     }
 
+    /**
+     * Flying energy setter
+     *
+     * @param flyingEnergy the new flying energy
+     */
     public void setFlyingEnergy(int flyingEnergy) {
         this.flyingEnergy = flyingEnergy;
     }
 
+    /**
+     * Override method. The fly can fly through obstacles
+     */
     public boolean isAffectedByHitDetection() {
         return false;
     }
