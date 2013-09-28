@@ -9,17 +9,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Health extends Pickup {
-    public List<BufferedImage> twenty;
-    public List<BufferedImage> fifty;
-    public List<BufferedImage> oneHundred;
+    private List<BufferedImage> twenty;
+    private List<BufferedImage> fifty;
+    private List<BufferedImage> oneHundred;
 
     public Health (GameEngine engine, int amount) {
         super(engine);
-        if (amount == 5)
+        if (amount == 20)
             frames = twenty;
-        else if (amount == 10)
-            frames = fifty;
         else if (amount == 50)
+            frames = fifty;
+        else if (amount == 100)
             frames = oneHundred;
     }
 
@@ -28,9 +28,9 @@ public class Health extends Pickup {
         fifty = new ArrayList<BufferedImage>();
         oneHundred = new ArrayList<BufferedImage>();
 
-        twenty.add(Images.ReadImage("images/five health.png"));
-        fifty.add(Images.ReadImage("images/ten health.png"));
-        oneHundred.add(Images.ReadImage("images/fifty health.png"));
+        twenty.add(Images.ReadImage("entities/pickups/health/20"));
+        fifty.add(Images.ReadImage("entities/pickups/health/50"));
+        oneHundred.add(Images.ReadImage("entities/pickups/health/100"));
     }
 
     @Override

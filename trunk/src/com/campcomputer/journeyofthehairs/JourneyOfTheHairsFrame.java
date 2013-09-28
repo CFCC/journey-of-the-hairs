@@ -1,26 +1,64 @@
 package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.map.Map;
-import com.campcomputer.journeyofthehairs.map.Map1;
+import com.campcomputer.journeyofthehairs.map.World1Stage1;
 import com.campcomputer.journeyofthehairs.panel.AboutPanel;
 import com.campcomputer.journeyofthehairs.panel.GamePanel;
-import com.campcomputer.journeyofthehairs.panel.InstructionPanel;
+import com.campcomputer.journeyofthehairs.panel.InstructionsPanel;
 import com.campcomputer.journeyofthehairs.panel.MainMenuPanel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Class Name: JourneyOfTheHairsFrame (or Frame for short)
+ * Purpose: The frame (window in layman's terms) used to contain the game
+ */
+
 public class JourneyOfTheHairsFrame extends JFrame {
-    static Timer t;
+    /**
+     * The time interval, in milliseconds, at which the timer is invoked and its method is called.
+     * The lower the denominator of this variable, the better the motion quality of the game, but the slower it runs
+     */
     public static int timerTick = 1000 / 30;
+
+    /**
+     * The instance of the game engine used throughout the game's code
+     */
     private GameEngine engine;
+
+    /**
+     * The instance of the game panel used throughout the game's code
+     */
     private final GamePanel gamePanel;
+
+    /**
+     * The instance of the main menu used in the code for the beginning of the game
+     */
     private final MainMenuPanel mainMenuPanel;
-    private final InstructionPanel instructionPanel;
+
+    /**
+     * The instance of the instructions menu used in the code for the beginning of the game
+     */
+    private final InstructionsPanel instructionsPanel;
+
+    /**
+     * The instance of the about screen used in the code for the beginning of the game
+     */
     private final AboutPanel aboutPanel;
+
+    /**
+     * The instance of the frame itself for occasional use in the panel/frame code
+     */
     private final JourneyOfTheHairsFrame frame;
 
+    /**
+     * The key adapter that belongs to the game panel. It includes basic movement (WAD) and shooting (S).
+     * Also ends movement upon release of W and D
+     *
+     * TODO: Add hotkey E for inventory, switch tile painting to T
+     */
     private KeyAdapter gamePanelKeyAdapter = new KeyAdapter() {
         @Override
         public void keyPressed(KeyEvent e) {
@@ -52,13 +90,15 @@ public class JourneyOfTheHairsFrame extends JFrame {
                 case KeyEvent.VK_D:
                     engine.endMoveForward();
                     break;
-                case KeyEvent.VK_S:
-                    engine.getPlayer().getWeapon().toggleShoot();
-                    break;
             }
 
         }
     };
+
+    /**
+     * Mouse adapter for the main menu. Includes 4 rectangles (1 for each of the 4 buttons on the menu).
+     * Switches content panes according to which button is pressed. Ends the program by click of the exit button
+     */
     private MouseAdapter mainMenuMouseAdapter = new MouseAdapter() {
         @Override
         public void mouseClicked(MouseEvent mouseEvent) {
@@ -71,7 +111,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
             int y = mouseEvent.getY();
 
             if (startButton.contains(x, y)) {
-                Map map = new Map1(engine);
+                Map map = new World1Stage1(engine);
                 engine.setMap(map);
                 frame.switchContentPane(frame.gamePanel);
                 revalidate();
@@ -79,13 +119,17 @@ public class JourneyOfTheHairsFrame extends JFrame {
                 frame.switchContentPane(frame.aboutPanel);
                 revalidate();
             } else if (instructionsButton.contains(x, y)) {
-                frame.switchContentPane(frame.instructionPanel);
+                frame.switchContentPane(frame.instructionsPanel);
                 revalidate();
             } else if (exitButton.contains(x, y)) {
                 System.exit(0);
             }
         }
     };
+
+    /**
+     * Mouse adapter for the about page. Only rectangle is the back button
+     */
     private MouseAdapter aboutMenuMouseAdapter = new MouseAdapter() {
         @Override
         public void mouseClicked(MouseEvent e) {
@@ -97,24 +141,34 @@ public class JourneyOfTheHairsFrame extends JFrame {
                 switchContentPane(mainMenuPanel);
         }
     };
+
+    /**
+     * Mouse adapter for the instructions menu. Includes 3 rectangles. 1 (back) returns to the main menu; 1 (backward)
+     * regresses the current page of instructions; 1 (forward) advances the page
+     */
     private MouseAdapter instructionMenuMouseAdapter = new MouseAdapter() {
         @Override
         public void mouseClicked(MouseEvent e) {
-            Rectangle backButton = instructionPanel.backButton;
-            Rectangle nextPageButton = instructionPanel.nextPageButton;
-            Rectangle backPageButton = instructionPanel.backPageButton;
+            Rectangle backButton = instructionsPanel.backButton;
+            Rectangle nextPageButton = instructionsPanel.nextPageButton;
+            Rectangle backPageButton = instructionsPanel.backPageButton;
             int x = e.getX();
             int y = e.getY();
 
             if (backButton.contains(x, y))
                 switchContentPane(mainMenuPanel);
             else if (nextPageButton.contains(x, y))
-                instructionPanel.goTo("next");
+                instructionsPanel.goTo("next");
             else if (backPageButton.contains(x, y))
-                instructionPanel.goTo("back");
+                instructionsPanel.goTo("back");
         }
     };
 
+    /**
+     * Class constructor. Makes a new frame for the game and sets it up. Also defines final fields and creates a timer
+     *
+     * @throws HeadlessException
+     */
     public JourneyOfTheHairsFrame() throws HeadlessException {
         super("Journey Of The Hairs");
 
@@ -124,12 +178,12 @@ public class JourneyOfTheHairsFrame extends JFrame {
         new BoxLayout(this, BoxLayout.X_AXIS);
 
         aboutPanel = new AboutPanel();
-        instructionPanel = new InstructionPanel(this);
+        instructionsPanel = new InstructionsPanel(this);
         mainMenuPanel = new MainMenuPanel();
         gamePanel = new GamePanel(engine);
         engine.gamePanel = gamePanel;
 
-        Map1 map = new Map1(engine);
+        World1Stage1 map = new World1Stage1(engine);
         engine.setMap(map);
 
         switchContentPane(mainMenuPanel);
@@ -137,7 +191,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(1024, 768);
 
-        t = new Timer(timerTick, new ActionListener() {
+        Timer t = new Timer(timerTick, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (getContentPane() instanceof GamePanel)
@@ -148,6 +202,12 @@ public class JourneyOfTheHairsFrame extends JFrame {
         t.start();
     }
 
+    /**
+     * Method for switching out content panes. The method is different from setContentPane() in that
+     * it changes mouse/key adapters appropriately and revalidates so the new panel shows up
+     *
+     * @param panel the panel to become the content pane
+     */
     public void switchContentPane(JPanel panel) {
         if (getMouseListeners().length > 0)
             removeMouseListener(getMouseListeners()[0]);
@@ -161,7 +221,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
             addKeyListener(gamePanelKeyAdapter);
         else if (panel instanceof AboutPanel)
             addMouseListener(aboutMenuMouseAdapter);
-        else if (panel instanceof InstructionPanel)
+        else if (panel instanceof InstructionsPanel)
             addMouseListener(instructionMenuMouseAdapter);
 
         revalidate();

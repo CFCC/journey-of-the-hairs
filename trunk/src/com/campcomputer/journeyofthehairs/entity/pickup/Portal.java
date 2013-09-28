@@ -2,29 +2,29 @@ package com.campcomputer.journeyofthehairs.entity.pickup;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.map.CheeseMap;
+import com.campcomputer.journeyofthehairs.map.Cheese;
 
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Portal extends Pickup {
-    public String location;
-    public List<BufferedImage> portalSpin = new ArrayList<BufferedImage>();
+    private String location;
 
     public void loadImages() {
-        portalSpin = Images.loadFrames("portal");
-        frames = portalSpin;
+        frames = Images.loadFrames("portal");
     }
 
-    public Portal(GameEngine engine, String location) {
+    public Portal(GameEngine engine, Point2D location) {
         super(engine);
-        this.location = location;
+        setX((float) location.getX());
+        setY((float) location.getY());
     }
 
     @Override
     public void affectGame() {
-        CheeseMap cheeseMap = new CheeseMap(engine);
-        engine.setMap(cheeseMap);
+        Cheese cheese = new Cheese(engine, engine.getMap());
+        engine.setMap(cheese);
     }
 }
