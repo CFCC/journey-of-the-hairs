@@ -40,7 +40,7 @@ public class Player extends Entity {
 
     /**
      * The weapon that the player currently has equipped. The player may have other weapons in their inventory,
-     * but this is the only active one and is the one that is checked for Ammo Type and statistics such as damage,
+     * but this is the only active one and is the one that is checked for Weapons Type and statistics such as damage,
      * bullet speed, and the amount of ammo left.
      */
     public Weapon weapon;
@@ -53,6 +53,12 @@ public class Player extends Entity {
      * This array can contain anything that extends the Pickup class.
      */
     public ArrayList<Weapon> inventory;
+
+    /**
+     * This is the player's defense. It can only be increased by collecting armor or invincibility on
+     * a map. Any damage to the player is calculated by newHealth = oldHealth - (enemyDamage - defense)
+     */
+    private int defense;
 
     /**
      * Constructor for a new player. For now, fairly simple.
@@ -125,4 +131,19 @@ public class Player extends Entity {
         return weapon;
     }
 
+    /**
+     * Setter for the player's defense
+     *
+     * @param defense the new defense amount
+     */
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
+
+    /**
+     * @return the player's defense
+     */
+    public int getDefense() {
+        return defense;
+    }
 }

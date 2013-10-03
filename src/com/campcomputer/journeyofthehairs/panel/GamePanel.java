@@ -4,6 +4,8 @@ import com.campcomputer.journeyofthehairs.*;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
 
@@ -12,17 +14,68 @@ public class GamePanel extends Panel {
     public static final int TILE_SIZE = 64;
     private static final Color BLOOD_COLOR = new Color(185, 0, 0);
     private static final Color GROUND_COLOR = new Color(150, 100, 50);
-    float xScreenPlace = 0f;
-    float lastHealth = 0;
-    boolean showTiles = false;
+    private float xScreenPlace = 0f;
+    private float lastHealth = 0;
+    private boolean showTiles = false;
     private BufferedImage mapBackground;
     private GameEngine ourGameEngine;
 
     private float[] dashPattern = {1, 1};
     private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10, dashPattern, 0);
 
+    private Rectangle infoBar = new Rectangle(0, 0, 1024, 50);
+
     public GamePanel(GameEngine theGameEngine) {
+        super();
         this.ourGameEngine = theGameEngine;
+    }
+
+    @Override
+    public void addListener() {
+        listener =
+
+        /**
+        * The key adapter that belongs to the game panel. It includes basic movement (WAD) and shooting (S).
+        * Also ends movement upon release of W and D
+        *
+        * TODO: Add hotkey E for inventory, switch tile painting to T
+        * TODO: Fix the weapon bug
+        */
+        new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_A:
+                        ourGameEngine.startMoveBackward();
+                        break;
+                    case KeyEvent.VK_D:
+                        ourGameEngine.startMoveForward();
+                        break;
+                    case KeyEvent.VK_W:
+                        ourGameEngine.jump();
+                        break;
+                    case KeyEvent.VK_E:
+                        toggleShowTiles();
+                        break;
+                    case KeyEvent.VK_S:
+                        ourGameEngine.getPlayer().getWeapon().shoot();
+                        break;
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_A:
+                        ourGameEngine.endMoveBackward();
+                        break;
+                    case KeyEvent.VK_D:
+                        ourGameEngine.endMoveForward();
+                        break;
+                }
+
+            }
+        };
     }
 
     @Override
@@ -90,7 +143,6 @@ public class GamePanel extends Panel {
                 g2.setColor(color);
                 g2.setStroke(tileStroke);
                 g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE) + 1, y * TILE_SIZE + 1, TILE_SIZE - 2, TILE_SIZE - 2);
-
             }
         }
     }

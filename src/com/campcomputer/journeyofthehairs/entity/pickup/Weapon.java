@@ -9,8 +9,8 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Weapon extends Pickup {
-    Weapons type;
+public class Weapon extends Pickup implements Weapons {
+    Weapons.Weapon type;
     private List<BufferedImage> pistolFrame;
     private List<BufferedImage> minigunFrame;
     private List<BufferedImage> railgunFrame;
@@ -18,7 +18,7 @@ public class Weapon extends Pickup {
     private List<BufferedImage> rifleFrame;
     private List<BufferedImage> shotgunFrame;
 
-    public Weapon (Weapons type, GameEngine engine) {
+    public Weapon (Weapons.Weapon type, GameEngine engine) {
         super(engine);
         this.type = type;
 

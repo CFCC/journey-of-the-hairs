@@ -3,7 +3,10 @@ package com.campcomputer.journeyofthehairs.panel;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.JourneyOfTheHairsFrame;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
@@ -20,6 +23,7 @@ public class InstructionsPanel extends Panel {
     private JourneyOfTheHairsFrame frame;
 
     public InstructionsPanel(JourneyOfTheHairsFrame frame) {
+        super();
         this.frame = frame;
         setBackground(Images.ReadImage("menus/instruction"));
 
@@ -45,6 +49,30 @@ public class InstructionsPanel extends Panel {
         }
 
         repaint();
+    }
+
+    @Override
+    public void addListener() {
+        listener =
+
+        /**
+         * Mouse adapter for the instructions menu. Includes 3 rectangles. 1 (back) returns to the main menu; 1 (backward)
+         * regresses the current page of instructions; 1 (forward) advances the page
+         */
+        new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
+
+                if (backButton.contains(x, y))
+                    frame.switchContentPane(frame.mainMenuPanel);
+                else if (nextPageButton.contains(x, y))
+                    goTo("next");
+                else if (backPageButton.contains(x, y))
+                    goTo("back");
+            }
+        };
     }
 
     public void paintComponent(Graphics g) {

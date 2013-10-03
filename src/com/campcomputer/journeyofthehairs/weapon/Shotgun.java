@@ -1,7 +1,5 @@
 package com.campcomputer.journeyofthehairs.weapon;
 
-import com.campcomputer.journeyofthehairs.WeaponShots;
-
 public class Shotgun extends Weapon {
 
     public Shotgun() {
