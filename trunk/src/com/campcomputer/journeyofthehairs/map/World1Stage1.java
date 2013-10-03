@@ -13,7 +13,7 @@ import com.campcomputer.journeyofthehairs.entity.pickup.*;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
-public class World1Stage1 extends Map {
+public class World1Stage1 extends Map implements Weapons {
     /**
      * This is the tile array that represents the map of level 1-1. It was created by a combination of ideas from all
      * original contributors of the project. It has several garden themed obstacles: potatoes, carrots, and tomatoes.
@@ -110,23 +110,23 @@ public class World1Stage1 extends Map {
         worm.setX(32);
         worm.setY(9);
 
-        com.campcomputer.journeyofthehairs.entity.pickup.Weapon rifle = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapons.RIFLE, engine);
+        com.campcomputer.journeyofthehairs.entity.pickup.Weapon rifle = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RIFLE, engine);
         rifle.setX(1);
         rifle.setY(7);
 
-        com.campcomputer.journeyofthehairs.entity.pickup.Weapon minigun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapons.MINIGUN, engine);
+        com.campcomputer.journeyofthehairs.entity.pickup.Weapon minigun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.MINIGUN, engine);
         minigun.setX(3);
         minigun.setY(7);
 
-        com.campcomputer.journeyofthehairs.entity.pickup.Weapon pistol = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapons.PISTOL, engine);
+        com.campcomputer.journeyofthehairs.entity.pickup.Weapon pistol = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.PISTOL, engine);
         pistol.setX(5);
         pistol.setY(7);
 
-        com.campcomputer.journeyofthehairs.entity.pickup.Weapon shotgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapons.SHOTGUN, engine);
+        com.campcomputer.journeyofthehairs.entity.pickup.Weapon shotgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.SHOTGUN, engine);
         shotgun.setX(9);
         shotgun.setY(7);
 
-        com.campcomputer.journeyofthehairs.entity.pickup.Weapon grenadeGun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapons.GRENADE_GUN, engine);
+        com.campcomputer.journeyofthehairs.entity.pickup.Weapon grenadeGun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.GRENADE_GUN, engine);
         grenadeGun.setX(11);
         grenadeGun.setY(7);
 

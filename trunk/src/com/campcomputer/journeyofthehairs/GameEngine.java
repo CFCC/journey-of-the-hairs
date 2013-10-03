@@ -129,7 +129,7 @@ public class GameEngine {
     /**
      * On each tick (as specified in the JourneyOfThHairsFrame class), the engine
      * updates the weapons, pickups, and entities arrays by removing and adding appropriately.
-     * <p/>
+     *
      * It also applies movement and gravity to each of the entities on the map. Additionally, it invokes
      * the tick method in all of the entities on the map
      */
@@ -144,16 +144,14 @@ public class GameEngine {
         pickupsToRemove.clear();
         pickupsToAdd.clear();
 
+        applyGravity();
+
         for (Entity entity : entities) {
             entity.tick();
+            if (entity.isAffectedByHitDetection())
+                applyMovement(entity);
         }
-        applyGravity();
-        applyMovement();
     }
-
-    /*
-    This is a collection of all the engine's getter methods
-     */
 
     /**
      * @return Player 1, or alternatively, the player
@@ -196,10 +194,6 @@ public class GameEngine {
         return playerPosition.distance(entityPosition);
     }
 
-    /*
-    End getter list. Begin collection of removers and adders
-     */
-
     /**
      * @param entity the entity to be added to the map on the next tick
      */
@@ -227,10 +221,6 @@ public class GameEngine {
     public void addPickup(Pickup pickup) {
         pickupsToAdd.add(pickup);
     }
-
-    /*
-    End adder/remover list. Begin collection of boolean testers
-     */
 
     /**
      * Tests for player proximity in relation to a given entity
@@ -278,10 +268,6 @@ public class GameEngine {
         return (player.getX() < entity.getX());
     }
 
-    /*
-    End boolean tester list. Begin physics engine related methods
-     */
-
     /**
      * For all the entities on the map that are affected by gravity, the method weighs them down
      * by adding the force of gravity on to their Y velocity.
@@ -297,62 +283,79 @@ public class GameEngine {
      * This method applies movement by doing 2 things. First, applies the velocity to the location simply by
      * adding it on. Next, it does location checks based on hit detection. It uses the findFirstSolid method to
      * find where there are obstacles to the side and below. If there is an obstacle, the method stops the entity from moving
+     *
+     * TODO: Make sure the player can't jump into obstacles, as that is a known bug
      */
-    private void applyMovement() {
-        for (Entity entity : entities) {
-
+    private void applyMovement(Entity entity) {
             float x = entity.getX();
             float y = entity.getY();
             float vX = entity.getXVel();
             float vY = entity.getYVel();
             // When determining obstacles from below, the method stops movement at the point (x, obstacleY - height)
             float height = entity.getHeight();
-
-            float newX = x + vX;
+            float  newX = x + vX;
             float newY = y + vY;
 
-            if (entity.isAffectedByHitDetection()) {
-                // Do vertical collision detection only if we are falling (allows for jumping up through platforms)
-                if (vY > 0) {
+            newX = calcHorizontalCollision(x, y, newX);
+            newY = calcVerticalCollision(entity, x, y, height, newY, vY);
 
-                    Point landingPoint1 = findFirstSolid(x, y + height, 0, 1, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
-                    Point landingPoint2 = findFirstSolid(x + 1, y + height, 0, 1, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
+            if (getMap()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER)
+                applyWaterMovement(entity, x, y, vX, vY, height);
 
-                    if (landingPoint1 != null || landingPoint2 != null) {
-                        int highestLandingPoint;
-                        if (landingPoint1 != null) {
-                            highestLandingPoint = landingPoint1.y;
-                            if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
-                                highestLandingPoint = landingPoint2.y;
-                        } else
-                            highestLandingPoint = landingPoint2.y;
-                        if (newY >= highestLandingPoint - height) {
-                            newY = highestLandingPoint - height;
-                            entity.setYVel(0);
-                        }
-                    }
-                }
-                // Do horizontal collision detection only if we are standing still or falling
-                if (vY >= GRAVITY) {
-                    Point leftWall = findFirstSolid(x, y, -1, 0, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
-                    Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
-                    if (leftWall != null && newX < leftWall.x + 1)
-                        newX = leftWall.x + 1;
-                    if (rightWall != null && newX > rightWall.x - 1)
-                        newX = rightWall.x - 1;
-                }
-
-                if (newX < 0f) {
-                    newX = 0;
-                }
-                float rightEdge = activeMap.length - 1;
-                if (newX > rightEdge) {
-                    newX = rightEdge;
-                }
+            if (newX < 0f) {
+                newX = 0;
             }
+
+            float rightEdge = activeMap.length - 1;
+            if (newX > rightEdge) {
+                newX = rightEdge;
+            }
+
             entity.setX(newX);
             entity.setY(newY);
+    }
+
+    public void applyWaterMovement(Entity entity, float x, float y, float vX, float vY, float height) {
+        float newX = x + (vX / 3);
+        float newY = y + (vY / 3);
+
+
+    }
+
+    public float calcHorizontalCollision(float x, float y, float newX) {
+            Point leftWall = findFirstSolid(x, y, -1, 0, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
+            Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
+            if (leftWall != null && newX < leftWall.x + 1)
+                newX = leftWall.x + 1;
+            if (rightWall != null && newX > rightWall.x - 1)
+                newX = rightWall.x - 1;
+
+        return newX;
+    }
+
+    public float calcVerticalCollision(Entity entity, float x, float y, float height, float newY, float vY) {
+        // Do vertical collision detection only if we are falling (allows for jumping up through platforms)
+        if (vY > 0) {
+
+            Point landingPoint1 = findFirstSolid(x, y + height, 0, 1, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
+            Point landingPoint2 = findFirstSolid(x + 1, y + height, 0, 1, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
+
+            if (landingPoint1 != null || landingPoint2 != null) {
+                int highestLandingPoint;
+                if (landingPoint1 != null) {
+                    highestLandingPoint = landingPoint1.y;
+                    if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
+                        highestLandingPoint = landingPoint2.y;
+                } else
+                    highestLandingPoint = landingPoint2.y;
+                if (newY >= highestLandingPoint - height) {
+                    newY = highestLandingPoint - height;
+                    entity.setYVel(0);
+                }
+            }
         }
+
+        return newY;
     }
 
     /**

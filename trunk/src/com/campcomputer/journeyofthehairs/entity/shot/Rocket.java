@@ -17,7 +17,6 @@ public class Rocket extends Shot {
 
     public Rocket(GameEngine engine) {
         super(engine);
-        setAffectedByGravity(false);
     }
 
     @Override

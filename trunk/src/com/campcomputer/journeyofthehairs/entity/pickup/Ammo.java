@@ -2,12 +2,12 @@ package com.campcomputer.journeyofthehairs.entity.pickup;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.WeaponShots;
+import com.campcomputer.journeyofthehairs.Weapons;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
-public class Ammo extends Pickup {
+public class Ammo extends Pickup implements Weapons {
     /**
      * This is the type of ammo that the instance will be. There are 5 types of ammo enumerated in the
      * WeaponShots enum, which is also the field type.

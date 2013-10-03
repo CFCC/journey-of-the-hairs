@@ -2,146 +2,49 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="JourneyOfTheHairs:jar" />
+      <artifact name="JourneyOfTheHairs" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="Huge update. Image files organized now. 3D files deleted. Some weapon responsibilities rearranged. Lots of documentation now. WaterEngine class tentative. Most likely to be deleted. Some renaming. Lots of new TODO ideas as well. Only known bug: Weapons won't fire.">
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\Cheese.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\cheese.jpg" afterPath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\cheese.jpg" />
-    </list>
-    <list id="49a7224e-ca5a-4aae-8bac-037b646b6b35" name="Failed commit: Default" comment="Huge update. Image files organized now. 3D files deleted. Some weapon responsibilities rearranged. Lots of documentation now. WaterEngine class tentative. Most likely to be deleted. Some renaming. Lots of new TODO ideas as well. Only known bug: Weapons won't fire.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/levels/1-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/numbers/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/health/100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/numbers/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/health/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/numbers/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/numbers/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/health/50.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/about.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/ammo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/ammo/bullet ammo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/bullet left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/bullet right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/cheese.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/levels/cheese.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/creatures" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/creatures/dragonfly.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/grenade explosion.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/ammo/grenade gun ammo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/weapons/grenade gun.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/grenade stasis.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/creatures/hare back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/creatures/hare forward.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/health" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/pages/instruction 1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/pages/instruction 2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/pages/instruction 3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/instruction.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/levels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/weapons/minigun.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/numbers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/pages" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/weapons/pistol.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/ammo/railgun ammo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/railgun shot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/weapons/railgun.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/ammo/rifle ammo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/rifle shot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/weapons/rifle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/rocket left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/rocket right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/pickups/ammo/shotgun ammo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/shotgun shot left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots/shotgun shot right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/weapons/shotgun.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/shots" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/entities/creatures/stinkbug.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/menus/title.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/levels/water.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/images/weapons" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Ammo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Water.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/WaterEngine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/WeaponShots.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Weapons.java" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\pickup\GrenadeAmmo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\pickup\MinigunAmmo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\pickup\PistolAmmo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\pickup\RailgunAmmo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\pickup\RifleAmmo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\pickup\ShotgunAmmo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\shot\Ammo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\shot\LaserBeam.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\shot\ShotgunBullet.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\weapon\Item.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\Beard Punch.aep" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\Untitled 5.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\backround.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\broc.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\carrot.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\dragonfly.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\fin.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\hare.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\potato.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\potatotest.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\rocket.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\stage.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\stinkbug.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\tomato combined.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\tomato.c4d" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\3d files\worm.c4d" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\ammo\Ammo.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\ammo\Bullet.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\ammo\Grenade.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\ammo\LaserBeam.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\ammo\RifleShot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\ammo\Rocket.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\ammo\ShotgunBullet.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\item\GrenadeGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/GrenadeGun.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\item\Item.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Weapon.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\item\MiniGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/MiniGun.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\item\Pistol.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Pistol.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\item\Railgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Railgun.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\item\Rifle.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Rifle.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\item\Shotgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Shotgun.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\map\CheeseMap.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\map\Map1.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\panel\InstructionPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java" />
+    <list default="true" readonly="true" id="228330a9-6916-4afa-bc2d-33346c00f99e" name="Default" comment="Moved mouse/key adapters to panel classes; they didn't belong in the frame class. Combined all ammo and weapon info into an interface 'Weapons.' Deleted WaterEngine as expected. The regular engine can easily adapt">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Current.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Jordan.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JourneyOfTheHairs.xml" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Java\JOTH\trunk\src\com\campcomputer\journeyofthehairs\Ammo.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Java\JOTH\trunk\src\com\campcomputer\journeyofthehairs\WaterEngine.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Java\JOTH\trunk\src\com\campcomputer\journeyofthehairs\WeaponShots.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Programming\Java\JOTH\trunk\images\images\Cheese.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/levels/water.png" afterPath="$PROJECT_DIR$/images/images/levels/water.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairs.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/GrenadeGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/GrenadeGun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Map.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Map.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/MapConverter.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/MapConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/MiniGun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/MiniGun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/Panel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/Panel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Pistol.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Pistol.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Tile.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Tile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Railgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Railgun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Rifle.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Rifle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Shotgun.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Shotgun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Water.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Water.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Weapon.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Weapon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Weapons.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Weapons.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\entity\ammo" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Programming\Idea\JOTH\trunk\src\com\campcomputer\journeyofthehairs\item" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -150,31 +53,31 @@
     <file path="/learn.php" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1360649565075" ignored="false" />
     <file path="/Volumes/Web/localhost/CFCC/Site/site.css" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1360649618027" ignored="false" />
     <file path="/site.css" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1360649617326" ignored="false" />
-    <file path="/Dummy.txt" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380402636799" ignored="false" />
+    <file path="/Dummy.txt" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380840865553" ignored="false" />
     <file path="/Bullet.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373936881876" ignored="false" />
-    <file path="/GameEngine.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380370606014" ignored="false" />
+    <file path="/GameEngine.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380742680364" ignored="false" />
     <file path="/ChuckNorris.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379079514262" ignored="false" />
-    <file path="/fragment.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379037692912" ignored="false" />
-    <file path="/GamePanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377351078356" ignored="false" />
+    <file path="/fragment.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380481660869" ignored="false" />
+    <file path="/GamePanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380838999329" ignored="false" />
     <file path="$PROJECT_DIR$/../../Objects/src/Snake.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373148287814" ignored="false" />
     <file path="/Snake.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373148264446" ignored="false" />
     <file path="/SuicideStinkBug.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379041367259" ignored="false" />
     <file path="/Item.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379019393072" ignored="false" />
-    <file path="/Player.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379557238528" ignored="false" />
+    <file path="/Player.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380481913821" ignored="false" />
     <file path="/Entity.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380313418810" ignored="false" />
-    <file path="/JourneyOfTheHairsFrame.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379032463739" ignored="false" />
+    <file path="/JourneyOfTheHairsFrame.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380837440445" ignored="false" />
     <file path="/Grenade.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374091588952" ignored="false" />
     <file path="/LaserBeam.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377805891509" ignored="false" />
-    <file path="/GrenadeGun.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379470994674" ignored="false" />
+    <file path="/GrenadeGun.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380753888491" ignored="false" />
     <file path="/Shotgun.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379122306124" ignored="false" />
     <file path="/ShotgunBullet.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373850070244" ignored="false" />
-    <file path="/Ammo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379728924136" ignored="false" />
+    <file path="/Ammo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380753159751" ignored="false" />
     <file path="/RifleShot.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373945272324" ignored="false" />
     <file path="/ShotgunAmmo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377368482647" ignored="false" />
     <file path="/RifleAmmo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377368344362" ignored="false" />
     <file path="/RailgunAmmo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1373892952431" ignored="false" />
     <file path="/PistolAmmo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377368450858" ignored="false" />
-    <file path="/Pickup.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377471961155" ignored="false" />
+    <file path="/Pickup.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380756492694" ignored="false" />
     <file path="/MinigunAmmo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377368420098" ignored="false" />
     <file path="/Health.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1378945310729" ignored="false" />
     <file path="/GrenadeAmmo.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377368387118" ignored="false" />
@@ -188,9 +91,9 @@
     <file path="/Rifle.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379471021899" ignored="false" />
     <file path="/InstructionFrame.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374092322565" ignored="false" />
     <file path="/MainMenuFrame.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374092360486" ignored="false" />
-    <file path="/MainMenuPanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377202583054" ignored="false" />
+    <file path="/MainMenuPanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380838944376" ignored="false" />
     <file path="/InstructionPanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377362451618" ignored="false" />
-    <file path="/Panel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377202687760" ignored="false" />
+    <file path="/Panel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380838762020" ignored="false" />
     <file path="/fes.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1374703004817" ignored="false" />
     <file path="/InstaKill.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1375039603268" ignored="false" />
     <file path="/CheeseMap.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377898548843" ignored="false" />
@@ -201,7 +104,7 @@
     <file path="$PROJECT_DIR$/../../untitled/src/com/google/gdata/client/GoogleService.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1375649053242" ignored="false" />
     <file path="$PROJECT_DIR$/../../untitled/src/com/google/gdata/client/GoogleAuthTokenFactory.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1375649381458" ignored="false" />
     <file path="/Map.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379036354722" ignored="false" />
-    <file path="/AboutPanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377294220233" ignored="false" />
+    <file path="/AboutPanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380839017413" ignored="false" />
     <file path="/Portal.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379036402079" ignored="false" />
     <file path="/Class.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377652868337" ignored="false" />
     <file path="$PROJECT_DIR$/../../Random Java/src/Bicycle.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377653486687" ignored="false" />
@@ -224,18 +127,18 @@
     <file path="$PROJECT_DIR$/../../untitled1/.idea/workspace.xml" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1377899614187" ignored="false" />
     <file path="/Images.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1378611266039" ignored="false" />
     <file path="/Weapons.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379033051453" ignored="false" />
-    <file path="/Weapon.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379471066669" ignored="false" />
+    <file path="/Weapon.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380753876994" ignored="false" />
     <file path="/RailgunShot.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1378779538452" ignored="false" />
-    <file path="/World1Stage1.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379036585940" ignored="false" />
-    <file path="/Cheese.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379081185329" ignored="false" />
+    <file path="/World1Stage1.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380753029021" ignored="false" />
+    <file path="/Cheese.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380756728485" ignored="false" />
     <file path="/WeaponShots.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379038602171" ignored="false" />
-    <file path="/Shot.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379038738783" ignored="false" />
+    <file path="/Shot.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380753242308" ignored="false" />
     <file path="/DragonFly.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379557172567" ignored="false" />
     <file path="/RocketWorm.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379559176245" ignored="false" />
     <file path="$PROJECT_DIR$/../../JOTH Android/.idea/workspace.xml" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379625101897" ignored="false" />
     <file path="$PROJECT_DIR$/../../JOTH Android/src/Hi.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379625080814" ignored="false" />
     <file path="/Hi.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1379625080814" ignored="false" />
-    <file path="/Water.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380397909731" ignored="false" />
+    <file path="/Water.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380502409831" ignored="false" />
     <file path="/WaterEngine.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380314240648" ignored="false" />
     <file path="/Tile.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380397829050" ignored="false" />
     <file path="/Squid.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380399802204" ignored="false" />
@@ -245,7 +148,17 @@
     <file path="/Armor.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380400246903" ignored="false" />
     <file path="/Speed.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380400253429" ignored="false" />
     <file path="/Ink.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380400395440" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380402636258" ignored="false" />
+    <file path="/Current.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380494719370" ignored="false" />
+    <file path="$PROJECT_DIR$/../../untitled1/AndroidManifest.xml" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380506818035" ignored="false" />
+    <file path="$PROJECT_DIR$/../../untitled1/build.xml" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380506818874" ignored="false" />
+    <file path="$PROJECT_DIR$/../../untitled1/src/com/JOTH/JOTH.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380677524665" ignored="false" />
+    <file path="$PROJECT_DIR$/../../untitled1/res/layout/main.xml" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380506818874" ignored="false" />
+    <file path="$PROJECT_DIR$/../../untitled1/gen/com/JOTH/BuildConfig.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380506864524" ignored="false" />
+    <file path="/JOTH.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380674584768" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../TurboKiva-master/src/TurboKiva.iws" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380752343300" ignored="false" />
+    <file path="/MapConverter.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380682737042" ignored="false" />
+    <file path="/SettingsPanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380839036547" ignored="false" />
+    <file path="/InstructionsPanel.java" changelist="228330a9-6916-4afa-bc2d-33346c00f99e" time="1380838960428" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,23 +211,7 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Water.java" line="42" class="com.campcomputer.journeyofthehairs.map.Water" package="com.campcomputer.journeyofthehairs.map">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -324,10 +221,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Urchin.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java">
+      <file leaf-file-name="GameEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+            <state line="356" column="0" selection-start="13170" selection-end="13170" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -335,73 +232,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Speed.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java">
+      <file leaf-file-name="Panel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/Panel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="4" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+            <state line="33" column="41" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JourneyOfTheHairsFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="47" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Weapon.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java">
+      <file leaf-file-name="MainMenuPanel.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="57" selection-start="2063" selection-end="2063" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="875" selection-end="875" vertical-scroll-proportion="0.34623218">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Armor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java">
+      <file leaf-file-name="AboutPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="4" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+            <state line="15" column="16" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Portal.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java">
+      <file leaf-file-name="SettingsPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pickup.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java">
+      <file leaf-file-name="Cheese.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Invincibility.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="30" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ink.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.15454546">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Health.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+            <state line="9" column="63" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -417,22 +298,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/WaterEngine.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Tile.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Water.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Defense.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invinsibility.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Weapon.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/GrenadeGun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Weapons.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/Panel.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java" />
       </list>
     </option>
   </component>
@@ -441,10 +322,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1672" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1696" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -502,6 +383,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="JourneyOfTheHairs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -735,34 +626,6 @@
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -770,14 +633,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="183" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="178" />
     <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="178" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="37" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="185" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="185" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -787,31 +650,31 @@
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="159" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Random Java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="158" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="591" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="157" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="158" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="182" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="617" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="options.lastSelected" value="editor" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="options.lastSelected" value="editor" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="project.structure.side.proportion" value="0.20000005" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="project.structure.side.proportion" value="0.20000005" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
-    <property name="options.searchVisible" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -833,172 +696,16 @@
       <recent name="com.campcomputer.journeyofthehairs" />
       <recent name="com.campcomputer" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images" />
-      <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$/images/images" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.campcomputer.journeyofthehairs" />
       <recent name="com.campcomputer.journeyofthehairs.entity" />
       <recent name="com.campcomputer.journeyofthehairs.item" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\1.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\2.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\3.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\4.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\Cheese.jpg</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\about page.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\background improved map.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\background improved.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\background improved.psd</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\bullet ammo.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\bullet bill left.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\bullet bill right.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\cheese level.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\dragonfly.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\fifty health.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\five health.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\grenade explosion.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\grenade gun ammo.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\grenade.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\grenadeLauncher.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\hare back.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\hare forward.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\instruction 1.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\instruction 2.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\instruction 3.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\instruction menu.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\laser beam.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\minigun.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\pistol.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\railgun ammo.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\railgun.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\rifle ammo.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\rifle shot.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\rifle.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\rocketLeft.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\rocketRight.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\shotgun ammo.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\shotgun bullet left.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\shotgun bullet right.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\shotgun.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\sketch.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\sketchmap.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\stinkbug.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\ten health.png</PATH>
-            <PATH vcs="svn" revision="239">C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images\title page.png</PATH>
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jordan\Programming\Idea\JOTH\trunk\images\images" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/images/images" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.JourneyOfTheHairs">
     <configuration default="false" name="fes" type="Application" factoryName="Application" temporary="true">
@@ -1117,20 +824,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Jordan\Programming\Idea\JOTH\trunk" />
-          <option name="myCopyRoot" value="C:\Users\Jordan\Programming\Idea\JOTH\trunk" />
+          <option name="myVcsRoot" value="C:\Users\Jordan\Programming\Java\JOTH\trunk" />
+          <option name="myCopyRoot" value="C:\Users\Jordan\Programming\Java\JOTH\trunk" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Jordan\Programming\Idea\JOTH\trunk\.idea" />
-          <option name="myCopyRoot" value="C:\Users\Jordan\Programming\Idea\JOTH\trunk\.idea" />
+          <option name="myVcsRoot" value="C:\Users\Jordan\Programming\Java\JOTH\trunk\.idea" />
+          <option name="myCopyRoot" value="C:\Users\Jordan\Programming\Java\JOTH\trunk\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Jordan\Programming\Idea\JOTH\trunk" />
-          <option name="myCopyRoot" value="C:\Users\Jordan\Programming\Idea\JOTH\trunk" />
+          <option name="myVcsRoot" value="C:\Users\Jordan\Programming\Java\JOTH\trunk" />
+          <option name="myCopyRoot" value="C:\Users\Jordan\Programming\Java\JOTH\trunk" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -1285,7 +992,11 @@
       <created>1380402602114</created>
       <updated>1380402602114</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Huge update. Image files organized now. 3D files deleted. Some weapon responsibilities rearranged. Lots of documentation now. WaterEngine class tentative. Most likely to be deleted. Some renaming. Lots of new TODO ideas as well. Only known bug: Weapons won't fire.">
+      <created>1380402743139</created>
+      <updated>1380402743139</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1309,23 +1020,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4322169" sideWeight="0.49840763" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43124312" sideWeight="0.49840763" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38283828" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44657096" sideWeight="0.9937151" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44554454" sideWeight="0.9937151" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22410291" sideWeight="0.49880573" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21943812" sideWeight="0.40239727" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32535884" sideWeight="0.0" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32376397" sideWeight="0.0" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32343236" sideWeight="0.0" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21943812" sideWeight="0.3938356" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17121212" sideWeight="0.5677831" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1383109" sideWeight="0.5687569" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35643566" sideWeight="0.4968153" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="584" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1337,7 +1049,6 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3830955" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1384,7 +1095,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Huge update. Image files organized now. 3D files deleted. Some weapon responsibilities rearranged. Lots of documentation now. WaterEngine class tentative. Most likely to be deleted. Some renaming. Lots of new TODO ideas as well. Only known bug: Weapons won't fire." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved mouse/key adapters to panel classes; they didn't belong in the frame class. Combined all ammo and weapon info into an interface 'Weapons.' Deleted WaterEngine as expected. The regular engine can easily adapt" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1422,6 +1133,7 @@
     <MESSAGE value="put all entities under entity (still trying to figure out what to do with item)" />
     <MESSAGE value="various bug fixes. Made portal an animation. Bug: Railgun won't fire" />
     <MESSAGE value="Huge update. Image files organized now. 3D files deleted. Some weapon responsibilities rearranged. Lots of documentation now. WaterEngine class tentative. Most likely to be deleted. Some renaming. Lots of new TODO ideas as well. Only known bug: Weapons won't fire." />
+    <MESSAGE value="Moved mouse/key adapters to panel classes; they didn't belong in the frame class. Combined all ammo and weapon info into an interface 'Weapons.' Deleted WaterEngine as expected. The regular engine can easily adapt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1431,120 +1143,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/MapConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/images/levels/1-1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Water.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="15" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="34" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
+        <state line="2" column="12" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Weapons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+        <state line="94" column="0" selection-start="2639" selection-end="2639" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.112769485">
+        <state line="9" column="63" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+        <state line="356" column="0" selection-start="13170" selection-end="13170" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+        <state line="51" column="47" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/Panel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="57" selection-start="2063" selection-end="2063" vertical-scroll-proportion="0.0">
+        <state line="33" column="41" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="16" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.3272933">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+        <state line="13" column="10" selection-start="328" selection-end="328" vertical-scroll-proportion="-0.038505096">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+        <state line="15" column="16" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Ammo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="36" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.84577113">
+        <state line="6" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java">
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/Jordan.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.15454546">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/JourneyOfTheHairs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="46" selection-start="281" selection-end="281" vertical-scroll-proportion="0.07701019">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="875" selection-end="875" vertical-scroll-proportion="0.34623218">
           <folding />
         </state>
       </provider>
@@ -1555,11 +1265,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>JourneyOfTheHairs:jar</last-edited>
+          <last-edited>JourneyOfTheHairs</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.20000005" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,14 +1,13 @@
 package com.campcomputer.journeyofthehairs.weapon;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
-import com.campcomputer.journeyofthehairs.WeaponShots;
+import com.campcomputer.journeyofthehairs.Weapons;
 
-public abstract class Weapon {
+public abstract class Weapon implements Weapons {
 
     /**
      * This is the amount of ammo left in the weapon currently active. The term 'ammo' is
      * a bit ambiguous when referring to ammo in this class vs the pickup ammo vs the entity
-     * shots. Ammo as a pickup and ammo here are essentially the same in that they are just
+     * shots. Weapons as a pickup and ammo here are essentially the same in that they are just
      * numbers. Shots are fired entities. Comparable to persons vs people; persons refers
      * to bodies as numbers and people refers to individuals.
      */

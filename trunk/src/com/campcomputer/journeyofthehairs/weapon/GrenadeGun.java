@@ -1,7 +1,5 @@
 package com.campcomputer.journeyofthehairs.weapon;
 
-import com.campcomputer.journeyofthehairs.WeaponShots;
-
 public class GrenadeGun extends Weapon {
 
     public GrenadeGun() {
