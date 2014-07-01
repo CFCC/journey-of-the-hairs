@@ -42,10 +42,10 @@ public class Images {
 			}
 		} else {
 			try {
-                if (path.startsWith("frames"))
-                    path = "/" + path;
-                else
-				    path = "/images/" + path + ".png";
+				if (path.startsWith("frames"))
+					path = "/" + path;
+				else
+					path = "/images/" + path + ".png";
 				URL url = Images.class.getResource(path);
 				if (url == null) {
 					throw new RuntimeException("Couldn't load image: " + path);

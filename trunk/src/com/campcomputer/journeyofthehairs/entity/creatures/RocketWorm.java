@@ -15,44 +15,44 @@ import java.util.List;
  */
 public class RocketWorm extends Entity {
 
-    /**
-     * This is the frame for when the worm is simply standing underground. It is the first frame
-     * of the next list of frames.
-     */
+	/**
+	 * This is the frame for when the worm is simply standing underground. It is the first frame
+	 * of the next list of frames.
+	 */
 	private List<BufferedImage> standing;
 
-    /**
-     * This is the list of frames for when the worm is near the player and emerges from the ground
-     */
+	/**
+	 * This is the list of frames for when the worm is near the player and emerges from the ground
+	 */
 	private List<BufferedImage> wormLeaveGround;
 
-    /**
-     * Once the worm has shot its rocket, it uses these frames to go back underground
-     */
+	/**
+	 * Once the worm has shot its rocket, it uses these frames to go back underground
+	 */
 	private List<BufferedImage> wormEnterGround;
 
-    /**
-     * Constructor
-     */
-    public RocketWorm(GameEngine engine) {
-        super(engine);
+	/**
+	 * Constructor
+	 */
+	public RocketWorm(GameEngine engine) {
+		super(engine);
 		setHealth(2);
-    }
+	}
 
-    /**
-     * Override method. The worm is a bit taller than most entities at 2 tiles.
-     * @return the height, 2
-     */
+	/**
+	 * Override method. The worm is a bit taller than most entities at 2 tiles.
+	 * @return the height, 2
+	 */
 	public int getHeight() {
 		return 2;
 	}
 
-    /**
-     * Checks to see if frames need to be switched, also checks to see if the worm needs to shoot a rocket
-     */
+	/**
+	 * Checks to see if frames need to be switched, also checks to see if the worm needs to shoot a rocket
+	 */
 	@Override
-    public void tick() {
-        super.tick();
+	public void tick() {
+		super.tick();
 		if (frames == wormLeaveGround && currentFrame == wormLeaveGround.size() - 1) {
 			currentFrame = 0;
 			frames = wormEnterGround;
@@ -62,54 +62,54 @@ public class RocketWorm extends Entity {
 			frames = standing;
 		}
 
-        if (engine.isOnTopOfPlayer(this)) {
-            emerge();
-        } else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0 && canBeAttacked()) {
+		if (engine.isOnTopOfPlayer(this)) {
+			emerge();
+		} else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0 && canBeAttacked()) {
 			for (Entity entity  : engine.getEntities()) {
 				if (entity instanceof Rocket) {
 					return;
-                }
+				}
 			}
-            shootRocket();
-        }
+			shootRocket();
+		}
 
-    }
+	}
 
-    /**
-     * self explanatory
-     */
-    @Override
-    public void loadImages() {
-        wormLeaveGround = Images.loadFrames("wormLeaveGround");
-        wormEnterGround = Images.loadFrames("wormEnterGround");
+	/**
+	 * self explanatory
+	 */
+	@Override
+	public void loadImages() {
+		wormLeaveGround = Images.loadFrames("wormLeaveGround");
+		wormEnterGround = Images.loadFrames("wormEnterGround");
 		standing = new ArrayList<BufferedImage>(1);
 		standing.add(wormLeaveGround.get(0));
-        frames = standing;
-    }
+		frames = standing;
+	}
 
-    /**
-     * sets the frames to the worm leaving the ground if it isn't already
-     */
-    public void emerge() {
-        if (frames != wormLeaveGround) {
-            frames = wormLeaveGround;
-            currentFrame = 0;
-        }
-    }
+	/**
+	 * sets the frames to the worm leaving the ground if it isn't already
+	 */
+	public void emerge() {
+		if (frames != wormLeaveGround) {
+			frames = wormLeaveGround;
+			currentFrame = 0;
+		}
+	}
 
-    /**
-     * Creates a new rocket and sets its location right above the worm
-     */
-    public void shootRocket() {
-        Rocket rocket = new Rocket(engine);
-        rocket.setX(getX());
-        rocket.setY(getY()+1);
+	/**
+	 * Creates a new rocket and sets its location right above the worm
+	 */
+	public void shootRocket() {
+		Rocket rocket = new Rocket(engine);
+		rocket.setX(getX());
+		rocket.setY(getY()+1);
 		engine.addEntity(rocket);
-    }
+	}
 
-    /**
-     * The worm can only be attacked above ground. Override method
-     */
+	/**
+	 * The worm can only be attacked above ground. Override method
+	 */
 	public boolean canBeAttacked() {
 		return frames != standing;
 	}
