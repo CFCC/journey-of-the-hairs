@@ -11,42 +11,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bullet extends Shot {
-    public List<BufferedImage> bulletLeft;
-    public List<BufferedImage> bulletRight;
-    private GameEngine engine;
+	public List<BufferedImage> bulletLeft;
+	public List<BufferedImage> bulletRight;
+	private GameEngine engine;
 
-    public Bullet(GameEngine engine) {
-        super(engine);
-        this.engine = engine;
-        setAffectedByGravity(false);
+	public Bullet(GameEngine engine) {
+		super(engine);
+		this.engine = engine;
+		setAffectedByGravity(false);
 
-        setDamage(1);
-        setBulletSpeed(1);
-    }
+		setDamage(1);
+		setBulletSpeed(1);
+	}
 
-    public void tick() {
-        if (frames == bulletLeft)
-            moveLeft();
-        else
-            moveRight();
+	public void tick() {
+		if (frames == bulletLeft)
+			moveLeft();
+		else
+			moveRight();
 
-        for (Entity entity : engine.getEntities()) {
-            Point2D bPosition = new Point2D.Float(getX(), getY());
-            Point2D ePosition = new Point2D.Float(entity.getX(), entity.getY());
-            if ((bPosition.distance(ePosition) < 1f) && !(entity instanceof Player) && !(entity instanceof Bullet)) {
-                entity.takeDamage(entity);
-                if (entity.getHealth() <= 0)
-                    engine.removeEntity(entity);
-                engine.removeEntity(this);
-            }
-        }
-    }
+		for (Entity entity : engine.getEntities()) {
+			Point2D bPosition = new Point2D.Float(getX(), getY());
+			Point2D ePosition = new Point2D.Float(entity.getX(), entity.getY());
+			if ((bPosition.distance(ePosition) < 1f) && !(entity instanceof Player) && !(entity instanceof Bullet)) {
+				entity.takeDamage(entity);
+				if (entity.getHealth() <= 0)
+					engine.removeEntity(entity);
+				engine.removeEntity(this);
+			}
+		}
+	}
 
-    @Override
-    protected void loadImages() {
-        bulletLeft = new ArrayList<BufferedImage>();
-        bulletRight = new ArrayList<BufferedImage>();
-        bulletRight.add(Images.ReadImage("entities/shots/bullet right"));
-        bulletLeft.add(Images.ReadImage("entities/shots/bullet right"));
-    }
+	@Override
+	protected void loadImages() {
+		bulletLeft = new ArrayList<BufferedImage>();
+		bulletRight = new ArrayList<BufferedImage>();
+		bulletRight.add(Images.ReadImage("entities/shots/bullet right"));
+		bulletLeft.add(Images.ReadImage("entities/shots/bullet right"));
+	}
 }

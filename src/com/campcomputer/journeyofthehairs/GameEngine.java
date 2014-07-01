@@ -2,11 +2,9 @@ package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.*;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.entity.pickup.Pickup;
+import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.*;
 import com.campcomputer.journeyofthehairs.map.Map;
-import com.campcomputer.journeyofthehairs.panel.GamePanel;
-
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
@@ -16,423 +14,367 @@ import java.util.ArrayList;
  * Purpose: Acts as a physics engine, but also happens to handle all of the different lists of entities
  */
 
-public class GameEngine {
-    /**
-     * The universal amount of force gravity gives on every entity affected by it. A relatively small amount, but it
-     * keeps entities from floating in the air, so it does the job.
-     */
-    protected static final float GRAVITY = .2f;
+public class GameEngine implements MapListener {
+	/**
+	 * The universal amount of force gravity gives on every entity affected by it. A relatively small amount, but it
+	 * keeps entities from floating in the air, so it does the job.
+	 */
+	protected static final float GRAVITY = .2f;
 
-    /**
-     * The amount of power given to an entity to jump. This upward force is naturally degraded by gravity. The lower
-     * the number, the higher the entity jumps. At its current setting, the entity jumps 4 tiles high.
-     */
-    protected static final float JUMP_POWER = -1.5f;
+	/**
+	 * The amount of power given to an entity to jump. This upward force is naturally degraded by gravity. The lower
+	 * the number, the higher the entity jumps. At its current setting, the entity jumps 4 tiles high.
+	 */
+	protected static final float JUMP_POWER = -1.5f;
 
-    /**
-     * The amount of sideways force applied to entities when they are moving. The higher the number, the faster, and
-     * consequently farther, they will move.
-     */
-    protected static final float MOVE_SPEED = .3f;
+	/**
+	 * The amount of sideways force applied to entities when they are moving. The higher the number, the faster, and
+	 * consequently farther, they will move.
+	 */
+	protected static final float MOVE_SPEED = .3f;
 
-    /**
-     * This variable is used to switch the panel background when switching maps.
-     * TODO: Delete this variable
-     */
-    public GamePanel gamePanel;
+	/**
+	 * The player that the user controls. It is created in the constructor for the engine.
+	 * TODO: Make this variable an array to allow for >1 player
+	 */
+	private Player player;
 
-    /**
-     * The player that the user controls. It is created in the constructor for the engine.
-     * TODO: Make this variable an array to allow for >1 player
-     */
-    private Player player;
+	/**
+	 * This is an array of every entity currently on the map. It is the array that is checked for images to
+	 * paint and for ticks to invoke. In order for something to be removed from the game, it must be removed
+	 * from this array via entitiesToRemove array. Consequently, if, for testing purposes, something needs not
+	 * be added in the game at runtime, the only line that needs commenting out is the addEntity() line.
+	 */
+	private ArrayList<Entity> entities = new ArrayList<Entity>();
 
-    /**
-     * This is an array of every entity currently on the map. It is the array that is checked for images to
-     * paint and for ticks to invoke. In order for something to be removed from the game, it must be removed
-     * from this array via entitiesToRemove array. Consequently, if, for testing purposes, something needs not
-     * be added in the game at runtime, the only line that needs commenting out is the addEntity() line.
-     */
-    private ArrayList<Entity> entities = new ArrayList<Entity>();
+	/**
+	 * List of entities tha need adding to the entities array. This is used instead of entities.add() because
+	 * of an error that is thrown when the console expects an amount of objects in the array that would be higher
+	 * if .add() is used that crashes the program.
+	 */
+	private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
 
-    /**
-     * List of entities tha need adding to the entities array. This is used instead of entities.add() because
-     * of an error that is thrown when the console expects an amount of objects in the array that would be higher
-     * if .add() is used that crashes the program.
-     */
-    private ArrayList<Entity> entitiesToAdd = new ArrayList<Entity>();
+	/**
+	 * List of entities that need to be removed from the game. This is used instead of entities.remove() because
+	 * of an error that is thrown when the console expects an amount of objects in the array that would be lower
+	 * if .remove() is used that crashes the program.
+	 */
+	private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
 
-    /**
-     * List of entities that need to be removed from the game. This is used instead of entities.remove() because
-     * of an error that is thrown when the console expects an amount of objects in the array that would be lower
-     * if .remove() is used that crashes the program.
-     */
-    private ArrayList<Entity> entitiesToRemove = new ArrayList<Entity>();
+	/**
+	 * The active map being used in the game. Maps change from time to time, but this is the only one that
+	 * is checked for drawing tiles and detecting obstacles.
+	 */
+	private Map activeMap;
 
-    /**
-     * Array of pickups that need to be removed from the map. Needs to exist instead of pickups.remove() for
-     * reasons mentioned above in entities and weapons arrays
-     */
-    private ArrayList<Pickup> pickupsToRemove = new ArrayList<Pickup>();
+	/**
+	 * Constructor for the game engine. Creates Player 1.
+	 */
+	public GameEngine() {
+		player = new Player(this);
+		player.setX(0);
+		player.setY(9);
+		player.weapon = new Pistol();
+		addEntity(player);
+	}
 
-    /**
-     * List of pickups currently on the board. This array exists so methods can access a list of pickups directly
-     * instead of weeding through the entities list,
-     */
-    private ArrayList<Pickup> pickups = new ArrayList<Pickup>();
+	/**
+	 * Sets the game to have a new map. The method removes everything in the map (except the player), then changes
+	 * the game panel's background to the map background. Finally, changes the active map to the parameter and puts
+	 * the player at the beginning of the map, (0, 9).
+	 *
+	 * @param map the map to become active.
+	 */
+	public void setMap(Map map) {
+		if (entities.size() > 0) {
+			for (Entity entity : entities) {
+				if (!(entity instanceof Player))
+					removeEntity(entity);
+			}
+		}
+		for (Entity entity : map.getEntities()) {
+			addEntity(entity);
+		}
+		activeMap = map;
+	}
 
-    /**
-     * Array of pickups that need to be added to the map. Needs to exist instead of pickups.add() for
-     * reasons mentioned above in entities array.
-     */
-    private ArrayList<Pickup> pickupsToAdd = new ArrayList<Pickup>();
+	/**
+	 * On each tick (as specified in the JourneyOfThHairsFrame class), the engine
+	 * updates the weapons, pickups, and entities arrays by removing and adding appropriately.
+	 *
+	 * It also applies movement and gravity to each of the entities on the map. Additionally, it invokes
+	 * the tick method in all of the entities on the map
+	 */
+	public void tick() {
+		entities.addAll(entitiesToAdd);
+		entities.removeAll(entitiesToRemove);
+		entitiesToAdd.clear();
+		entitiesToRemove.clear();
 
-    /**
-     * The active map being used in the game. Maps change from time to time, but this is the only one that
-     * is checked for drawing tiles and detecting obstacles.
-     */
-    private Tile[][] activeMap;
+		applyGravity();
 
-    /**
-     * Constructor for the game engine. Creates Player 1.
-     */
-    public GameEngine() {
-        player = new Player(this);
-        player.setX(0);
-        player.setY(9);
-        player.weapon = new Pistol();
-        addEntity(player);
-    }
+		for (Entity entity : entities) {
+			entity.tick();
+			if (entity.isAffectedByHitDetection())
+				applyMovement(entity);
+		}
+	}
 
-    /**
-     * Sets the game to have a new map. The method removes everything in the map (except the player), then changes
-     * the game panel's background to the map background. Finally, changes the active map to the parameter and puts
-     * the player at the beginning of the map, (0, 9).
-     *
-     * @param map the map to become active.
-     */
-    public void setMap(Map map) {
-        if (entities.size() > 0) {
-            for (Entity entity : entities) {
-                if (!(entity instanceof Player))
-                    removeEntity(entity);
-            }
-            for (Pickup pickup : pickups) {
-                removePickup(pickup);
-            }
-        }
+	/**
+	 * @return Player 1, or alternatively, the player
+	 */
+	public Player getPlayer() {
+		return player;
+	}
 
-        gamePanel.setMapBackground(map.image);
-        activeMap = map.map;
-    }
+	/**
+	 * @return the map that is currently active.
+	 */
+	public Map getMap() {
+		return activeMap;
+	}
 
-    /**
-     * On each tick (as specified in the JourneyOfThHairsFrame class), the engine
-     * updates the weapons, pickups, and entities arrays by removing and adding appropriately.
-     *
-     * It also applies movement and gravity to each of the entities on the map. Additionally, it invokes
-     * the tick method in all of the entities on the map
-     */
-    public void tick() {
-        entities.addAll(entitiesToAdd);
-        entities.removeAll(entitiesToRemove);
-        entitiesToAdd.clear();
-        entitiesToRemove.clear();
+	/**
+	 * @return the list of entities currently on the map
+	 */
+	public ArrayList<Entity> getEntities() {
+		return entities;
+	}
 
-        pickups.addAll(pickupsToAdd);
-        pickups.removeAll(pickupsToRemove);
-        pickupsToRemove.clear();
-        pickupsToAdd.clear();
+	/**
+	 * Calculates the distance between the character and a given entity
+	 *
+	 * @param entity the entity to be used for comparison to the player
+	 * @return the distance between the player and an entity in the form of a double
+	 */
+	public double getDistanceBetweenEntityAndPlayer(Entity entity) {
+		Point2D playerPosition = new Point2D.Float(player.getX(), player.getY());
+		Point2D entityPosition = new Point2D.Float(entity.getX(), entity.getY());
 
-        applyGravity();
+		return playerPosition.distance(entityPosition);
+	}
 
-        for (Entity entity : entities) {
-            entity.tick();
-            if (entity.isAffectedByHitDetection())
-                applyMovement(entity);
-        }
-    }
+	/**
+	 * @param entity the entity to be added to the map on the next tick
+	 */
+	public void addEntity(Entity entity) {
+		entitiesToAdd.add(entity);
+	}
 
-    /**
-     * @return Player 1, or alternatively, the player
-     */
-    public Player getPlayer() {
-        return player;
-    }
+	/**
+	 * @param entity the entity to be removed from the map on the next tick
+	 */
+	public void removeEntity(Entity entity) {
+		entitiesToRemove.add(entity);
+	}
 
-    /**
-     * @return the map that is currently active.
-     */
-    public Tile[][] getMap() {
-        return activeMap;
-    }
+	/**
+	 * Tests for player proximity in relation to a given entity
+	 *
+	 * @param entity the entity used for comparison
+	 * @return boolean, true if the two are close, false if not
+	 */
+	public boolean isPlayerClose(Entity entity) {
+		return getDistanceBetweenEntityAndPlayer(entity) < 10f;
+	}
 
-    /**
-     * @return the list of entities currently on the map
-     */
-    public ArrayList<Entity> getEntities() {
-        return entities;
-    }
+	/**
+	 * Determines if a given entity's position is the same as that of the player. This method was created
+	 * because if the positions are compared directly, the only instance of the result being "true" is if
+	 * both entities' positions were on the exact same pixel, which not only doesn't seem like a visible
+	 * difference to the naked human eye, but also doesn't serve a good purpose for the game. Short distances
+	 * on the map are tested instead to prevent this problem
+	 *
+	 * @param entity the entity to test
+	 * @return true if both positions are the same, false if not
+	 */
+	public boolean isOnTopOfPlayer(Entity entity) {
+		return getDistanceBetweenEntityAndPlayer(entity) < 2f;
+	}
 
-    /**
-     * @return the list of pickups currently on the map
-     */
-    public ArrayList<Pickup> getPickups() {
-        return pickups;
-    }
+	/**
+	 * Determines if a given entity's position is above or below the player by testing both
+	 * entities' y coordinate
+	 *
+	 * @param entity the entity to test
+	 * @return true if the entity is above the player, false if below
+	 */
+	public boolean isPlayerAbove(Entity entity) {
+		return (player.getY() > entity.getY());
+	}
 
-    /**
-     * Calculates the distance between the character and a given entity
-     *
-     * @param entity the entity to be used for comparison to the player
-     * @return the distance between the player and an entity in the form of a double
-     */
-    public double getDistanceBetweenEntityAndPlayer(Entity entity) {
-        Point2D playerPosition = new Point2D.Float(player.getX(), player.getY());
-        Point2D entityPosition = new Point2D.Float(entity.getX(), entity.getY());
+	/**
+	 * Determines if a given entity's position is to the left or right of the player by testing
+	 * both entities' x coordinate
+	 *
+	 * @param entity the entity to test
+	 * @return true if the player is to the left of the entity, false if right
+	 */
+	public boolean isPlayerToLeft(Entity entity) {
+		return (player.getX() < entity.getX());
+	}
 
-        return playerPosition.distance(entityPosition);
-    }
+	/**
+	 * For all the entities on the map that are affected by gravity, the method weighs them down
+	 * by adding the force of gravity on to their Y velocity.
+	 */
+	private void applyGravity() {
+		for (Entity entity : entities) {
+			if (entity.isAffectedByGravity())
+				entity.setYVel(entity.getYVel() + GRAVITY);
+		}
+	}
 
-    /**
-     * @param entity the entity to be added to the map on the next tick
-     */
-    public void addEntity(Entity entity) {
-        entitiesToAdd.add(entity);
-    }
+	/**
+	 * This method applies movement by doing 2 things. First, applies the velocity to the location simply by
+	 * adding it on. Next, it does location checks based on hit detection. It uses the findFirstSolid method to
+	 * find where there are obstacles to the side and below. If there is an obstacle, the method stops the entity from moving
+	 *
+	 * TODO: Make sure the player can't jump into obstacles, as that is a known bug
+	 */
+	private void applyMovement(Entity entity) {
+			float x = entity.getX();
+			float y = entity.getY();
+			float vY = entity.getYVel();
+			// When determining obstacles from below, the method stops movement at the point (x, obstacleY - height)
+			float height = entity.getHeight();
 
-    /**
-     * @param entity the entity to be removed from the map on the next tick
-     */
-    public void removeEntity(Entity entity) {
-        entitiesToRemove.add(entity);
-    }
+			float newX = calcHorizontalCollision(x, y);
+			float newY = calcVerticalCollision(x, y, height, vY);
 
-    /**
-     * @param pickup the pickup to be removed from the map on the next tick
-     */
-    public void removePickup(Pickup pickup) {
-        pickupsToRemove.add(pickup);
-    }
+			// Block for calculations if the player is under water. They won't move as quickly
+			if (getMap().getMap()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER) {
+				newX = calcHorizontalCollision(x, y); // x + (vX / 3);
+				newY = calcVerticalCollision(x, y, height, vY / 3);
+			}
 
-    /**
-     * @param pickup the pickup to be added onto the map on the next tick
-     */
-    public void addPickup(Pickup pickup) {
-        pickupsToAdd.add(pickup);
-    }
+			if (newX < 0f) {
+				newX = 0;
+			}
 
-    /**
-     * Tests for player proximity in relation to a given entity
-     *
-     * @param entity the entity used for comparison
-     * @return boolean, true if the two are close, false if not
-     */
-    public boolean isPlayerClose(Entity entity) {
-        return getDistanceBetweenEntityAndPlayer(entity) < 10f;
-    }
+			float rightEdge = activeMap.getMap().length - 1;
+			if (newX > rightEdge) {
+				newX = rightEdge;
+			}
 
-    /**
-     * Determines if a given entity's position is the same as that of the player. This method was created
-     * because if the positions are compared directly, the only instance of the result being "true" is if
-     * both entities' positions were on the exact same pixel, which not only doesn't seem like a visible
-     * difference to the naked human eye, but also doesn't serve a good purpose for the game. Short distances
-     * on the map are tested instead to prevent this problem
-     *
-     * @param entity the entity to test
-     * @return true if both positions are the same, false if not
-     */
-    public boolean isOnTopOfPlayer(Entity entity) {
-        return getDistanceBetweenEntityAndPlayer(entity) < 2f;
-    }
+			if (newY < 0) {
+				newY = 0;
+			}
 
-    /**
-     * Determines if a given entity's position is above or below the player by testing both
-     * entities' y coordinate
-     *
-     * @param entity the entity to test
-     * @return true if the entity is above the player, false if below
-     */
-    public boolean isPlayerAbove(Entity entity) {
-        return (player.getY() > entity.getY());
-    }
+			entity.setX(newX);
+			entity.setY(newY);
+	}
 
-    /**
-     * Determines if a given entity's position is to the left or right of the player by testing
-     * both entities' x coordinate
-     *
-     * @param entity the entity to test
-     * @return true if the player is to the left of the entity, false if right
-     */
-    public boolean isPlayerToLeft(Entity entity) {
-        return (player.getX() < entity.getX());
-    }
+	public float calcHorizontalCollision(float x, float y) {
+		float newX = 0;
+		Point leftWall = findFirstSolid(x, y, -1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
+		Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
+		if (leftWall != null && newX < leftWall.x + 1)
+			newX = leftWall.x + 1;
+		if (rightWall != null && newX > rightWall.x - 1)
+			newX = rightWall.x - 1;
 
-    /**
-     * For all the entities on the map that are affected by gravity, the method weighs them down
-     * by adding the force of gravity on to their Y velocity.
-     */
-    private void applyGravity() {
-        for (Entity entity : entities) {
-            if (entity.isAffectedByGravity())
-                entity.setYVel(entity.getYVel() + GRAVITY);
-        }
-    }
+		return newX;
+	}
 
-    /**
-     * This method applies movement by doing 2 things. First, applies the velocity to the location simply by
-     * adding it on. Next, it does location checks based on hit detection. It uses the findFirstSolid method to
-     * find where there are obstacles to the side and below. If there is an obstacle, the method stops the entity from moving
-     *
-     * TODO: Make sure the player can't jump into obstacles, as that is a known bug
-     */
-    private void applyMovement(Entity entity) {
-            float x = entity.getX();
-            float y = entity.getY();
-            float vX = entity.getXVel();
-            float vY = entity.getYVel();
-            // When determining obstacles from below, the method stops movement at the point (x, obstacleY - height)
-            float height = entity.getHeight();
-            float  newX = x + vX;
-            float newY = y + vY;
+	public float calcVerticalCollision(float x, float y, float height, float vY) {
+		float newY = 0;
+		// Do vertical collision detection only if we are falling (allows for jumping up through platforms)
+		if (vY > 0) {
 
-            newX = calcHorizontalCollision(x, y, newX);
-            newY = calcVerticalCollision(entity, x, y, height, newY, vY);
+			Point landingPoint1 = findFirstSolid(x, y + height, 0, 1, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
+			Point landingPoint2 = findFirstSolid(x + 1, y + height, 0, 1, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
 
-            if (getMap()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER)
-                applyWaterMovement(entity, x, y, vX, vY, height);
+			if (landingPoint1 != null || landingPoint2 != null) {
+				int highestLandingPoint;
+				if (landingPoint1 != null) {
+					highestLandingPoint = landingPoint1.y;
+					if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
+						highestLandingPoint = landingPoint2.y;
+				} else
+					highestLandingPoint = landingPoint2.y;
+				if (newY >= highestLandingPoint - height) {
+					newY = highestLandingPoint - height;
+				}
+			}
+		}
+		return newY;
+	}
 
-            if (newX < 0f) {
-                newX = 0;
-            }
+	/**
+	 * This method takes a position, a range to test for solids, and a slope which is used to test for solids.
+	 * Basically, for a domain of [minX, maxX], given startX is between the 2, test for solids on the line y = dY/dX * x + startY
+	 *
+	 * @param startX the x at which testing starts
+	 * @param startY the y at which testing starts
+	 * @param dX	 the amount which x is incremented at each test. Can be negative
+	 * @param dY	 the amount at which y is incremented at each test. Can be negative
+	 * @param minX   the X at which testing is stopped, but only applies if dX is negative
+	 * @param minY   the y at which testing is stopped, but only applies if dY is negative
+	 * @param maxX   the x at which testing is stopped, but only applies if dX is positive
+	 * @param maxY   the y at which testing is stopped, but only applies if dY is positive
+	 * @return the first tile that isn't air found on the test line
+	 */
+	private Point findFirstSolid(float startX, float startY, int dX, int dY, int minX, int minY, int maxX, int maxY) {
+		int x = (int) startX;
+		int y = (int) startY;
+		while (x <= maxX && y <= maxY && x >= minX && y >= minY) {
 
-            float rightEdge = activeMap.length - 1;
-            if (newX > rightEdge) {
-                newX = rightEdge;
-            }
+			switch (activeMap.getMap()[x][y]) {
 
-            entity.setX(newX);
-            entity.setY(newY);
-    }
+				case PLANT:
+				case LETTUCE:
+				case CARROT:
+				case GROUND:
+				case CHEESE:
+					return new Point(x, y);
+			}
 
-    public void applyWaterMovement(Entity entity, float x, float y, float vX, float vY, float height) {
-        float newX = x + (vX / 3);
-        float newY = y + (vY / 3);
+			x += dX;
+			y += dY;
+		}
+		return null;
+	}
 
+	/**
+	 * Adds the constant for moving speed to the player's x velocity
+	 */
+	public void startMoveForward() {
+		player.setXVel(MOVE_SPEED);
+	}
 
-    }
+	/**
+	 * Sets the x velocity of the player to 0. Created so when the user releases D (that's what she said),
+	 * the user stops moving.
+	 */
+	public void endMoveForward() {
+		player.setXVel(0);
+	}
 
-    public float calcHorizontalCollision(float x, float y, float newX) {
-            Point leftWall = findFirstSolid(x, y, -1, 0, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
-            Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
-            if (leftWall != null && newX < leftWall.x + 1)
-                newX = leftWall.x + 1;
-            if (rightWall != null && newX > rightWall.x - 1)
-                newX = rightWall.x - 1;
+	/**
+	 * Adds the opposite of the moving constant to the x velocity so the player moves backwards instead of forwards
+	 */
+	public void startMoveBackward() {
+		player.setXVel(-MOVE_SPEED);
+	}
 
-        return newX;
-    }
+	/**
+	 * Sets x velocity of the player to 0. Created so the player stops moving when user releases A.
+	 */
+	public void endMoveBackward() {
+		player.setXVel(0);
+	}
 
-    public float calcVerticalCollision(Entity entity, float x, float y, float height, float newY, float vY) {
-        // Do vertical collision detection only if we are falling (allows for jumping up through platforms)
-        if (vY > 0) {
-
-            Point landingPoint1 = findFirstSolid(x, y + height, 0, 1, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
-            Point landingPoint2 = findFirstSolid(x + 1, y + height, 0, 1, 0, 0, activeMap.length - 1, activeMap[0].length - 1);
-
-            if (landingPoint1 != null || landingPoint2 != null) {
-                int highestLandingPoint;
-                if (landingPoint1 != null) {
-                    highestLandingPoint = landingPoint1.y;
-                    if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
-                        highestLandingPoint = landingPoint2.y;
-                } else
-                    highestLandingPoint = landingPoint2.y;
-                if (newY >= highestLandingPoint - height) {
-                    newY = highestLandingPoint - height;
-                    entity.setYVel(0);
-                }
-            }
-        }
-
-        return newY;
-    }
-
-    /**
-     * This method takes a position, a range to test for solids, and a slope which is used to test for solids.
-     * Basically, for a domain of [minX, maxX], given startX is between the 2, test for solids on the line y = dY/dX * x + startY
-     *
-     * @param startX the x at which testing starts
-     * @param startY the y at which testing starts
-     * @param dX     the amount which x is incremented at each test. Can be negative
-     * @param dY     the amount at which y is incremented at each test. Can be negative
-     * @param minX   the X at which testing is stopped, but only applies if dX is negative
-     * @param minY   the y at which testing is stopped, but only applies if dY is negative
-     * @param maxX   the x at which testing is stopped, but only applies if dX is positive
-     * @param maxY   the y at which testing is stopped, but only applies if dY is positive
-     * @return the first tile that isn't air found on the test line
-     */
-    private Point findFirstSolid(float startX, float startY, int dX, int dY, int minX, int minY, int maxX, int maxY) {
-        int x = (int) startX;
-        int y = (int) startY;
-        while (x <= maxX && y <= maxY && x >= minX && y >= minY) {
-
-            switch (activeMap[x][y]) {
-
-                case PLANT:
-                case LETTUCE:
-                case CARROT:
-                case GROUND:
-                case CHEESE:
-                    return new Point(x, y);
-            }
-
-            x += dX;
-            y += dY;
-        }
-        return null;
-    }
-
-    /**
-     * Adds the constant for moving speed to the player's x velocity
-     */
-    public void startMoveForward() {
-        player.setXVel(MOVE_SPEED);
-    }
-
-    /**
-     * Sets the x velocity of the player to 0. Created so when the user releases D (that's what she said),
-     * the user stops moving.
-     */
-    public void endMoveForward() {
-        player.setXVel(0);
-    }
-
-    /**
-     * Adds the opposite of the moving constant to the x velocity so the player moves backwards instead of forwards
-     */
-    public void startMoveBackward() {
-        player.setXVel(-MOVE_SPEED);
-    }
-
-    /**
-     * Sets x velocity of the player to 0. Created so the player stops moving when user releases A.
-     */
-    public void endMoveBackward() {
-        player.setXVel(0);
-    }
-
-    /**
-     * Tests to see if the player is standing on something, and not in the air (to prevent double+ jumping). If
-     * this is true, the constant for jumping power is made the player's y velocity
-     * <p/>
-     * TODO: Add width variable to let the player jump from the left edge of a ledge
-     */
-    public void jump() {
-        Point firstSolid = findFirstSolid(player.getX(), player.getY(), 0, 1, 0, 0, activeMap.length, activeMap[0].length);
-        if (firstSolid != null && firstSolid.y - player.getY() <= 1) {
-            player.setYVel(JUMP_POWER);
-        }
-    }
+	/**
+	 * Tests to see if the player is standing on something, and not in the air (to prevent double+ jumping). If
+	 * this is true, the constant for jumping power is made the player's y velocity
+	 * <p/>
+	 * TODO: Add width variable to let the player jump from the left edge of a ledge
+	 */
+	public void jump() {
+		Point firstSolid = findFirstSolid(player.getX(), player.getY(), 0, 1, 0, 0, activeMap.getMap().length, activeMap.getMap()[0].length);
+		if (firstSolid != null && firstSolid.y - player.getY() <= 1) {
+			player.setYVel(JUMP_POWER);
+		}
+	}
 }
-

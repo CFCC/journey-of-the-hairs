@@ -1,6 +1,6 @@
 package com.campcomputer.journeyofthehairs.panel;
 
-import com.campcomputer.journeyofthehairs.JourneyOfTheHairsFrame;
+import com.campcomputer.journeyofthehairs.GameEngine;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,35 +15,41 @@ import java.util.EventListener;
  * a folder/superclass came up. Shamwow, a panel class.
  */
 public abstract class Panel extends JPanel {
-    /**
-     * This is the background image field for panels. It is the background image painted on the screen
-     * each tick. A few basic panels only use this field because they have little function to the user
-     */
-    public BufferedImage backgroundImage;
+	/**
+	 * This is the background image field for panels. It is the background image painted on the screen
+	 * each tick. A few basic panels only use this field because they have little function to the user
+	 */
+	public BufferedImage backgroundImage;
 
-    /**
-     * This is the field for the action listener associated with the panel. Upon creation, a listener is assigned,
-     * and when the frame calls for panel switching, the listener is added/removed to the frame appropriately.
-     */
-    public EventListener listener;
+	/**
+	 * This is the field for the action listener associated with the panel. Upon creation, a listener is assigned,
+	 * and when the frame calls for panel switching, the listener is added/removed to the frame appropriately.
+	 */
+	public EventListener listener;
 
-    public JourneyOfTheHairsFrame frame;
+	public GameEngine engine;
 
-    public Panel () {
-        addListener();
-        frame = (JourneyOfTheHairsFrame) SwingUtilities.getWindowAncestor(this);
-    }
+	private MenuListener menuListener;
 
-    public void setBackground(BufferedImage bg) {
-        backgroundImage = bg;
-    }
+	public Panel(MenuListener listener) {
+		this.menuListener = listener;
+		addListener();
+	}
 
-    public abstract void addListener();
+	public MenuListener getMenuListener() {
+		return menuListener;
+	}
 
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        Graphics2D g2 = (Graphics2D) g;
+	public void setBackground(BufferedImage bg) {
+		backgroundImage = bg;
+	}
 
-        g2.drawImage(backgroundImage, null, 0, 0);
-    }
+	public abstract void addListener();
+
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		Graphics2D g2 = (Graphics2D) g;
+
+		g2.drawImage(backgroundImage, null, 0, 0);
+	}
 }
