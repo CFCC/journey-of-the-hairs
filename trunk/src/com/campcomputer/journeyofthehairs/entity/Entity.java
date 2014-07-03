@@ -8,6 +8,7 @@ import com.campcomputer.journeyofthehairs.weapon.Weapon;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,14 +84,15 @@ public abstract class Entity {
 	/**
 	 * Constructor for an entity. If it has no image assigned to the list frames, its image becomes cheese.png
 	 */
-	public Entity(GameEngine engine) {
+	public Entity(GameEngine engine, MapListener mapListener) {
+		this.listener = mapListener;
 		this.engine = engine;
 		loadImages();
 		if (frames.size() == 0)
 			frames.add(Images.ReadImage("cheese"));
 	}
 
-	public MapListener getListener() {
+	public MapListener getMapListener() {
 		return listener;
 	}
 

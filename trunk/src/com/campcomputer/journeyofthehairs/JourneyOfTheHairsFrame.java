@@ -50,6 +50,8 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 	
 	public final MenuListener menuListener;
 
+	public final MapListener mapListener;
+
 	/**
 	 * Class constructor. Makes a new frame for the game and sets it up. Also defines final fields and creates a timer
 	 *
@@ -57,7 +59,13 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 	 */
 	public JourneyOfTheHairsFrame() throws HeadlessException {
 		super("Journey Of The Hairs");
-		engine = new GameEngine();
+		mapListener = new MapListener() {
+			@Override
+			public void setMap(Map map) {
+				changeMap(map);
+			}
+		};
+		engine = new GameEngine(mapListener);
 
 		new BoxLayout(this, BoxLayout.X_AXIS);
 
@@ -78,13 +86,7 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 		gamePanel = new GamePanel(engine, menuListener);
 		settingsPanel = new SettingsPanel(menuListener);
 
-		new MapListener() {
-			@Override
-			public void setMap(Map map) {
-				engine.setMap(map);
-				gamePanel.setMap(map);
-			}
-		}.setMap(new World1Stage1(engine));
+		mapListener.setMap(new World1Stage1(engine, mapListener));
 		switchContentPane(mainMenuPanel);
 
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -150,5 +152,10 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 	@Override
 	public Panel getCurrentPanel() {
 		return (Panel) getContentPane();
+	}
+
+	public void changeMap(Map map) {
+		gamePanel.setBackground(map.getImage());
+		engine.setMap(map);
 	}
 }

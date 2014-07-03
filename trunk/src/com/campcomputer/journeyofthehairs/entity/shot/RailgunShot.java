@@ -4,11 +4,12 @@ import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
+import com.campcomputer.journeyofthehairs.map.MapListener;
 
 public class RailgunShot extends Shot {
 
-	public RailgunShot(GameEngine engine) {
-		super(engine);
+	public RailgunShot(GameEngine engine, MapListener mapListener) {
+		super(engine, mapListener);
 		setAffectedByGravity(false);
 		setX(engine.getPlayer().getX());
 		setY(engine.getPlayer().getY());

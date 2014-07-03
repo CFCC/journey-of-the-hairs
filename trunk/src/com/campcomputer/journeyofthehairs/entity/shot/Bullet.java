@@ -4,6 +4,7 @@ import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
+import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
@@ -15,8 +16,8 @@ public class Bullet extends Shot {
 	public List<BufferedImage> bulletRight;
 	private GameEngine engine;
 
-	public Bullet(GameEngine engine) {
-		super(engine);
+	public Bullet(GameEngine engine, MapListener mapListener) {
+		super(engine, mapListener);
 		this.engine = engine;
 		setAffectedByGravity(false);
 

@@ -2,6 +2,7 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -11,8 +12,8 @@ public class ShotgunShot extends Shot {
 	public List<BufferedImage> bulletsLeft;
 	public List<BufferedImage> bulletsRight;
 
-	public ShotgunShot(GameEngine engine) {
-		super(engine);
+	public ShotgunShot(GameEngine engine, MapListener mapListener) {
+		super(engine, mapListener);
 		setDamage(1);
 		setBulletSpeed(3);
 	}

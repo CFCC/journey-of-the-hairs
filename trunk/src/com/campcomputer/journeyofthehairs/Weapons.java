@@ -46,9 +46,22 @@ public interface Weapons {
 				return RailgunShotSpeed;
 			}
 		}, GRENADE {
+			/**
+			 * Pseudo code.
+			 *
+			 * TODO: Getters need to be overridden in the case of grenades
+			 */
 			@Override
 			public int getDamage() {
+				return 0;
+			}
+
+			public int getTier1Damage() {
 				return GrenadeTier1Damage;
+			}
+
+			public int getTier2Damage() {
+				return GrenadeTier2Damage;
 			}
 
 			@Override
@@ -78,6 +91,8 @@ public interface Weapons {
 
 	public int GrenadeTier1Damage = 5;
 	public int GrenadeTier2Damage = 2;
+	public int GrenadeTier1Range = 1;
+	public int GrenadeTier2Range = 2;
 	public int GrenadeSpeed = 1;
 
 	public int BulletDamage = 1;
