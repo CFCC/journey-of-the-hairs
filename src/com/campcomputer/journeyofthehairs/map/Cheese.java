@@ -94,26 +94,26 @@ public class Cheese extends Map implements Weapons {
 	/**
 	 * The constructor for the level
 	 */
-	public Cheese(final GameEngine engine, final Map currentMap) {
+	public Cheese(final GameEngine engine, final Map currentMap, MapListener mapListener) {
 		Map.saveMap(currentMap);
 
 		map = cheeseMap;
 		image = theImage;
 
-		SuicideStinkBug suicideStinkBug = new SuicideStinkBug(engine);
+		SuicideStinkBug suicideStinkBug = new SuicideStinkBug(engine, mapListener);
 		suicideStinkBug.setX(37);
 		suicideStinkBug.setY(10);
 		engine.addEntity(suicideStinkBug);
 
-		SuicideStinkBug suicideStinkBug1 = new SuicideStinkBug(engine);
+		SuicideStinkBug suicideStinkBug1 = new SuicideStinkBug(engine, mapListener);
 		suicideStinkBug1.setX(38);
 		suicideStinkBug1.setY(10);
 		engine.addEntity(suicideStinkBug1);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon railgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RAILGUN, engine) {
+		com.campcomputer.journeyofthehairs.entity.pickup.Weapon railgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RAILGUN, engine, mapListener) {
 			@Override
 			public void affectGame() {
-				Map.loadMap(0);
+				Map.getMap(0);
 				for (Entity entity : engine.getEntities()) {
 					if (entity instanceof Portal)
 						engine.removeEntity(entity);
@@ -124,7 +124,7 @@ public class Cheese extends Map implements Weapons {
 		railgun.setY(8);
 		engine.addEntity(railgun);
 
-		Health health = new Health(engine, 50);
+		Health health = new Health(engine, 50,  mapListener);
 		health.setX(37);
 		health.setY(5);
 

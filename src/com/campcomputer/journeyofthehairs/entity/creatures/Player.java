@@ -2,6 +2,7 @@ package com.campcomputer.journeyofthehairs.entity.creatures;
 
 import com.campcomputer.journeyofthehairs.*;
 import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.Weapon;
 
 import java.awt.image.BufferedImage;
@@ -66,8 +67,8 @@ public class Player extends Entity {
 	 *
 	 * @param engine is the super class for the player class
 	 */
-	public Player(GameEngine engine) {
-		super(engine);
+	public Player(GameEngine engine, MapListener mapListener) {
+		super(engine, mapListener);
 		setHealth(MAX_HEALTH);
 	}
 

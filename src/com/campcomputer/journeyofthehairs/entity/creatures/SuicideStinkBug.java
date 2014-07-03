@@ -22,8 +22,8 @@ public class SuicideStinkBug extends Entity {
 	/**
 	 * Constructor for the bug
 	 */
-	public SuicideStinkBug(GameEngine engine) {
-		super(engine);
+	public SuicideStinkBug(GameEngine engine, MapListener mapListener) {
+		super(engine, mapListener);
 		setHealth(3);
 	}
 

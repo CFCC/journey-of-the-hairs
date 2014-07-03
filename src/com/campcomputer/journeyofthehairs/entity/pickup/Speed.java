@@ -1,10 +1,11 @@
 package com.campcomputer.journeyofthehairs.entity.pickup;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.map.MapListener;
 
 public class Speed extends Pickup {
-	public Speed(GameEngine engine) {
-		super(engine);
+	public Speed(GameEngine engine, MapListener mapListener) {
+		super(engine, mapListener);
 	}
 
 	@Override

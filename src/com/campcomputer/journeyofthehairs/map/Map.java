@@ -1,11 +1,10 @@
 package com.campcomputer.journeyofthehairs.map;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.entity.pickup.Pickup;
 
 import java.awt.image.BufferedImage;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Map {
@@ -31,6 +30,8 @@ public class Map {
 	 */
 	private static ArrayList<Map> maps = new ArrayList<Map>();
 
+	private static final String fileName = "saved%20maps.ser";
+
 	public Tile[][] getMap() {
 		return map;
 	}
@@ -47,7 +48,28 @@ public class Map {
 		maps.add(map);
 	}
 
-	public static Map loadMap(int index) {
+	public static void saveMap(Map map, int index) {
+		maps.set(index, map);
+	}
+
+	public static Map getMap(int index) {
 		return maps.get(index);
+	}
+
+	public static ArrayList<Map> LoadMaps() throws IOException, ClassNotFoundException {
+		FileInputStream fin = new FileInputStream(fileName);
+		ObjectInputStream ois = new ObjectInputStream(fin);
+		ArrayList<Map> maps = (ArrayList<Map>) ois.readObject();
+		ois.close();
+		return maps;
+	}
+
+	private static void SaveMaps(ArrayList<Map> maps) throws IOException {
+		if (new File(fileName).exists())
+			System.out.println("Any previous maps not loaded have been deleted.");
+
+		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName));
+		out.writeObject(maps);
+		out.close();
 	}
 }

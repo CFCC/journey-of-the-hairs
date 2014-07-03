@@ -2,13 +2,14 @@ package com.campcomputer.journeyofthehairs.entity.pickup;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.util.ArrayList;
 
 public abstract class Pickup extends Entity {
 
-	public Pickup(GameEngine engine) {
-		super(engine);
+	public Pickup(GameEngine engine, MapListener listener) {
+		super(engine, listener);
 	}
 
 	public void tick() {

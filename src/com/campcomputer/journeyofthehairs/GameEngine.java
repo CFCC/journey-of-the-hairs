@@ -44,6 +44,8 @@ public class GameEngine implements MapListener {
 	 * paint and for ticks to invoke. In order for something to be removed from the game, it must be removed
 	 * from this array via entitiesToRemove array. Consequently, if, for testing purposes, something needs not
 	 * be added in the game at runtime, the only line that needs commenting out is the addEntity() line.
+	 *
+	 * TODO: Get rid of this variable to use the entities collection in Map
 	 */
 	private ArrayList<Entity> entities = new ArrayList<Entity>();
 
@@ -67,15 +69,22 @@ public class GameEngine implements MapListener {
 	 */
 	private Map activeMap;
 
+	private MapListener mapListener;
+
 	/**
 	 * Constructor for the game engine. Creates Player 1.
 	 */
-	public GameEngine() {
-		player = new Player(this);
+	public GameEngine(MapListener mapListener) {
+		this.mapListener = mapListener;
+		player = new Player(this, mapListener);
 		player.setX(0);
 		player.setY(9);
 		player.weapon = new Pistol();
 		addEntity(player);
+	}
+
+	public MapListener getMapListener() {
+		return mapListener;
 	}
 
 	/**

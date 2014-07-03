@@ -9,8 +9,8 @@ public abstract class Shot extends Entity implements Weapons {
 	float bulletSpeed;  // Speed of the bullets
 	int damage;		 // The damage of each bullet
 
-	public Shot(GameEngine engine) {
-		super(engine);
+	public Shot(GameEngine engine, MapListener mapListener) {
+		super(engine, mapListener);
 		setAffectedByGravity(false);
 	}
 
