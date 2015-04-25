@@ -1,0 +1,2 @@
+# Introduction #
+Journey Of The Hairs is a java game created by Spencer Smith, Richard Pryor, Jordan Pitlor, Milo Maletic, and Brandon Watts with help from Charlie Hayes and Keith Lea. The game involves a bald man named Hair, who rides a hare to get through the gigantic garden with lots of bugs to fight and defeat Chuck Norris.
