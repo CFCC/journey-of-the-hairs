@@ -20,7 +20,7 @@ public class ShotgunShot extends Shot {
 
 	public void loadImages() {
 		bulletsLeft = new ArrayList<BufferedImage>();
-		bulletsRight =  new ArrayList<BufferedImage>();
+		bulletsRight = new ArrayList<BufferedImage>();
 
 		bulletsLeft.add(Images.ReadImage("entities/shots/shotgun shot left"));
 		bulletsRight.add(Images.ReadImage("entities/shots/shotgun shot right"));

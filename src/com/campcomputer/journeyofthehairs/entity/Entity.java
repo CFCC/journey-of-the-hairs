@@ -5,80 +5,68 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.Weapon;
 
-
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Entity {
 	/**
-	 * This is an entity's health - that is, how much damage they must receive before they
-	 * are removed from the entity list and the game
-	 */
-	private int health = 1;
-
-	/**
-	 * This is an entity's x coordinate (where they are horizontally on the map)
-	 */
-	private float x = 0;
-
-	/**
-	 * This is an entity's y coordinate (where they are vertically on the map)
-	 */
-	private float y = 0;
-
-	/**
-	 * This is an entity's x velocity. It is how quickly they are going horizontally. This amount, more
-	 * specifically, is how far left or right they go each tick. The higher the absolute value of this number
-	 * is, the faster the entity travels.
-	 *
-	 * A positive number signifies an entity traveling forwards on the map while a negative one
-	 * signifies an entity traveling backwards. In either case, 0 signifies no movement
-	 */
-	private float xVel = 0;
-
-	/**
-	 * This is an entity's y velocity. It is how quickly they travel vertically. This number, more specifically,
-	 * is how far they go up or down each tick. The higher the absolute value of this number, the faster the entity
-	 * travels.
-	 *
-	 * A positive number signifies an entity traveling down (because in computers, the origin is in the upper left
-	 * of the screen), or falling, while a negative number signifies an entity traveling upwards, or jumping/flying
-	 */
-	private float yVel = 0;
-
-	/**
-	 * This is the variable used in testing to see if an entity is affected by gravity. It is only overridden
-	 * in rare cases, such as weapon shots and flying creatures.
-	 */
-	private boolean affectedByGravity = true;
-
-	/**
 	 * This is a variable used in determining which direction an entity is facing. It is useful in a few
 	 * situations; usually, it decides which frame to paint on the map.
 	 */
 	public boolean facingLeft = true;
-
-	/**
-	 * This is the game engine instance. It is used as the super class for all entities since the two are
-	 * (relatively) closely related with physics related methods and properties.
-	 */
-	protected GameEngine engine;
-
 	/**
 	 * This is the list inherited by every entity. It contains any image painted on the map that represents
 	 * the particular entity. Any other image is ignored; this list is the only place checked for images
 	 */
 	public List<BufferedImage> frames = new ArrayList<BufferedImage>();
-
+	/**
+	 * This is the game engine instance. It is used as the super class for all entities since the two are
+	 * (relatively) closely related with physics related methods and properties.
+	 */
+	protected GameEngine engine;
 	/**
 	 * This is the current frame in the list of frames. It is only really used for entities using frames,
 	 * but nonetheless, it is still needed.
 	 */
 	protected int currentFrame = 0;
-
+	/**
+	 * This is an entity's health - that is, how much damage they must receive before they
+	 * are removed from the entity list and the game
+	 */
+	private int health = 1;
+	/**
+	 * This is an entity's x coordinate (where they are horizontally on the map)
+	 */
+	private float x = 0;
+	/**
+	 * This is an entity's y coordinate (where they are vertically on the map)
+	 */
+	private float y = 0;
+	/**
+	 * This is an entity's x velocity. It is how quickly they are going horizontally. This amount, more
+	 * specifically, is how far left or right they go each tick. The higher the absolute value of this number
+	 * is, the faster the entity travels.
+	 * <p/>
+	 * A positive number signifies an entity traveling forwards on the map while a negative one
+	 * signifies an entity traveling backwards. In either case, 0 signifies no movement
+	 */
+	private float xVel = 0;
+	/**
+	 * This is an entity's y velocity. It is how quickly they travel vertically. This number, more specifically,
+	 * is how far they go up or down each tick. The higher the absolute value of this number, the faster the entity
+	 * travels.
+	 * <p/>
+	 * A positive number signifies an entity traveling down (because in computers, the origin is in the upper left
+	 * of the screen), or falling, while a negative number signifies an entity traveling upwards, or jumping/flying
+	 */
+	private float yVel = 0;
+	/**
+	 * This is the variable used in testing to see if an entity is affected by gravity. It is only overridden
+	 * in rare cases, such as weapon shots and flying creatures.
+	 */
+	private boolean affectedByGravity = true;
 	private MapListener listener;
 
 	/**
@@ -88,8 +76,9 @@ public abstract class Entity {
 		this.listener = mapListener;
 		this.engine = engine;
 		loadImages();
-		if (frames.size() == 0)
+		if (frames.size() == 0) {
 			frames.add(Images.ReadImage("cheese"));
+		}
 	}
 
 	public MapListener getMapListener() {
@@ -154,8 +143,8 @@ public abstract class Entity {
 
 	/**
 	 * @param xVel new x velocity for the entity
-	 *
-	 * TODO: Fix left vs right frame issue to eliminate override
+	 *             <p/>
+	 *             TODO: Fix left vs right frame issue to eliminate override
 	 */
 	public void setXVel(float xVel) {
 		this.xVel = xVel;
@@ -193,7 +182,7 @@ public abstract class Entity {
 	 * Simply inverts the facingLeft variable, effectively switching the console's impression of the entity's direction
 	 */
 	public void switchDirection() {
-		facingLeft = !facingLeft;
+		facingLeft = ! facingLeft;
 	}
 
 	/**
@@ -219,8 +208,9 @@ public abstract class Entity {
 	public void moveLeft() {
 		setXVel(getXVel() - 0.1f);
 		setYVel(0);
-		if (!isFacingLeft())
+		if (! isFacingLeft()) {
 			switchDirection();
+		}
 	}
 
 	/**
@@ -230,8 +220,9 @@ public abstract class Entity {
 	public void moveRight() {
 		setXVel(getXVel() + 0.1f);
 		setYVel(0);
-		if (isFacingLeft())
+		if (isFacingLeft()) {
 			switchDirection();
+		}
 	}
 
 	/**
@@ -267,16 +258,18 @@ public abstract class Entity {
 	/**
 	 * On each tick, advances the frames in the list by one, or if the current frame is the last one, it goes back
 	 * to the beginning. Also sets an entity's health to -1 (killing it) if it goes below the map.
-	 *
+	 * <p/>
 	 * TODO: Get rid of OOB band-aid
 	 */
 	public void tick() {
 		currentFrame++;
-		if (currentFrame > frames.size() - 1)
+		if (currentFrame > frames.size() - 1) {
 			currentFrame = 0;
+		}
 
-		if (getY() > 12)
-			setHealth(-1);
+		if (getY() > 12) {
+			setHealth(- 1);
+		}
 	}
 
 	/**

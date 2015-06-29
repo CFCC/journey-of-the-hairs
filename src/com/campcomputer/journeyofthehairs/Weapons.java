@@ -1,20 +1,34 @@
 package com.campcomputer.journeyofthehairs;
 
 public interface Weapons {
+	int GrenadeTier1Damage = 5;
+	int GrenadeTier2Damage = 2;
+	int GrenadeTier1Range = 1;
+	int GrenadeTier2Range = 2;
+	int GrenadeSpeed = 1;
+	int BulletDamage = 1;
+	int BulletSpeed = 1;
+	int RailgunShotDamage = 9000;
+	int RailgunShotSpeed = 0;
+	int RifleShotDamage = 1;
+	int RifleShotSpeed = 2;
+	int ShotgunShotDamage = 1;
+	int ShotgunShotSpeed = 3;
+
 	/**
 	 * This is the interface with data of the different ammunition. It is implemented to have a link between fields in
 	 * the classes extending shot and the enumeration for the shot types (since an enum can't extend shot)
-	 *
+	 * <p/>
 	 * There are 2 fields pertaining to the shots; the rest belong to the weapon.
-	 *
+	 * <p/>
 	 * Damage is the amount of health subtracted from the entity affected when it is hit.
 	 * Speed is how fast the shot travels.
-	 *
+	 * <p/>
 	 * Even though there are 6 weapons, there are only 5 shot types; the pistol and minigun both fire bullets. The
 	 * difference is that a minigun fires them much faster.
 	 */
 
-	public enum WeaponShots {
+	enum WeaponShots {
 		SHOTGUN_SHOT {
 			@Override
 			public int getDamage() {
@@ -84,26 +98,8 @@ public interface Weapons {
 
 		public abstract int getBulletSpeed();
 	}
-	
-	public enum Weapon {
+
+	enum Weapon {
 		PISTOL, SHOTGUN, RIFLE, MINIGUN, RAILGUN, GRENADE_GUN
 	}
-
-	public int GrenadeTier1Damage = 5;
-	public int GrenadeTier2Damage = 2;
-	public int GrenadeTier1Range = 1;
-	public int GrenadeTier2Range = 2;
-	public int GrenadeSpeed = 1;
-
-	public int BulletDamage = 1;
-	public int BulletSpeed = 1;
-
-	public int RailgunShotDamage = 9000;
-	public int RailgunShotSpeed = 0;
-
-	public int RifleShotDamage = 1;
-	public int RifleShotSpeed = 2;
-
-	public int ShotgunShotDamage = 1;
-	public int ShotgunShotSpeed = 3;
 }

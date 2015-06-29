@@ -2,8 +2,8 @@ package com.campcomputer.journeyofthehairs.entity.creatures;
 
 import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
-import com.campcomputer.journeyofthehairs.entity.shot.Rocket;
 import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.entity.shot.Rocket;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.image.BufferedImage;
@@ -42,6 +42,7 @@ public class RocketWorm extends Entity {
 
 	/**
 	 * Override method. The worm is a bit taller than most entities at 2 tiles.
+	 *
 	 * @return the height, 2
 	 */
 	public int getHeight() {
@@ -66,7 +67,7 @@ public class RocketWorm extends Entity {
 		if (engine.isOnTopOfPlayer(this)) {
 			emerge();
 		} else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0 && canBeAttacked()) {
-			for (Entity entity  : engine.getEntities()) {
+			for (Entity entity : engine.getEntities()) {
 				if (entity instanceof Rocket) {
 					return;
 				}
@@ -104,7 +105,7 @@ public class RocketWorm extends Entity {
 	public void shootRocket() {
 		Rocket rocket = new Rocket(engine, getMapListener());
 		rocket.setX(getX());
-		rocket.setY(getY()+1);
+		rocket.setY(getY() + 1);
 		engine.addEntity(rocket);
 	}
 

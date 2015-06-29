@@ -3,9 +3,8 @@ package com.campcomputer.journeyofthehairs;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import java.awt.GraphicsEnvironment;
-import java.awt.Image;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -29,11 +28,13 @@ public class Images {
 		CodeSource src = Entity.class.getProtectionDomain().getCodeSource();
 
 		if (src.getLocation().toString().endsWith("jar")) {
-			if (jaredFiles == null)
+			if (jaredFiles == null) {
 				loadJarFiles(src);
+			}
 			byte[] bytes = jaredFiles.get("images/" + path);
-			if (bytes == null)
+			if (bytes == null) {
 				System.err.println(path);
+			}
 			try {
 				bufferedImage = ReadImage(bytes);
 				System.out.println("loaded image from jar: " + path);
@@ -42,18 +43,20 @@ public class Images {
 			}
 		} else {
 			try {
-				if (path.startsWith("frames"))
+				if (path.startsWith("frames")) {
 					path = "/" + path;
-				else
+				} else {
 					path = "/images/" + path + ".png";
+				}
 				URL url = Images.class.getResource(path);
 				if (url == null) {
 					throw new RuntimeException("Couldn't load image: " + path);
 				}
 
 				Image image = new ImageIcon(url).getImage();
-				if (image == null)
+				if (image == null) {
 					return null;
+				}
 
 				bufferedImage = getBufferedImage(image);
 			} catch (Exception ex) {
@@ -63,12 +66,13 @@ public class Images {
 		}
 		return bufferedImage;
 	}
+
 	private static BufferedImage getBufferedImage(Image image) {
 		BufferedImage bufferedImage;
 		bufferedImage = GraphicsEnvironment.getLocalGraphicsEnvironment()
-				.getDefaultScreenDevice().
-						getDefaultConfiguration().
-						createCompatibleImage(image.getWidth(null), image.getHeight(null), BufferedImage.TRANSLUCENT);
+		                                   .getDefaultScreenDevice().
+				                                   getDefaultConfiguration().
+				                                   createCompatibleImage(image.getWidth(null), image.getHeight(null), BufferedImage.TRANSLUCENT);
 		bufferedImage.getGraphics().drawImage(image, 0, 0, null);
 		return bufferedImage;
 	}
@@ -84,13 +88,15 @@ public class Images {
 		CodeSource src = Entity.class.getProtectionDomain().getCodeSource();
 
 		if (src.getLocation().toString().endsWith("jar")) {
-			if (jaredFiles == null)
+			if (jaredFiles == null) {
 				loadJarFiles(src);
+			}
 
 			try {
 				for (String s : jaredFiles.keySet()) {
-					if (s.startsWith("images/frames/" + name))
+					if (s.startsWith("images/frames/" + name)) {
 						frames.add(ReadImage(jaredFiles.get(s)));
+					}
 				}
 				System.out.println("Loaded " + frames.size() + " frames from jar: " + name);
 			} catch (Exception e) {
@@ -100,12 +106,14 @@ public class Images {
 			File frameDir = new File("images/frames/" + name);
 
 			for (File file : frameDir.listFiles()) {
-				if (file.isFile())
+				if (file.isFile()) {
 					frames.add(ReadImage("frames/" + name + "/" + file.getName()));
+				}
 			}
 		}
 		return frames;
 	}
+
 	private static void loadJarFiles(CodeSource src) {
 		jaredFiles = new HashMap<String, byte[]>();
 
@@ -135,15 +143,15 @@ public class Images {
 				}
 				int size = (int) ze.getSize();
 				// -1 means unknown size.
-				if (size == -1) {
+				if (size == - 1) {
 					size = sizes.get(ze.getName());
 				}
-				byte[] b = new byte[(int) size];
+				byte[] b = new byte[size];
 				int rb = 0;
 				int chunk = 0;
 				while ((size - rb) > 0) {
-					chunk = zis.read(b, rb, (int) size - rb);
-					if (chunk == -1) {
+					chunk = zis.read(b, rb, size - rb);
+					if (chunk == - 1) {
 						break;
 					}
 					rb += chunk;

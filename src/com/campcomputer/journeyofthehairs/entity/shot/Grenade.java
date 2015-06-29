@@ -32,17 +32,18 @@ public class Grenade extends Shot {
 	}
 
 	public void tick() {
-		if (timeLeft > 0){
+		if (timeLeft > 0) {
 			timeLeft--;
 		} else {
 
 			for (Entity entity : engine.getEntities()) {
-				if (!(entity instanceof Player)){
+				if (! (entity instanceof Player)) {
 					double distance = getLocation().distance(entity.getLocation());
-					if (distance < Weapons.GrenadeTier1Range)
+					if (distance < Weapons.GrenadeTier1Range) {
 						entity.setHealth(entity.getHealth() - Weapons.GrenadeTier1Damage);
-					else if (distance < Weapons.GrenadeTier2Range)
+					} else if (distance < Weapons.GrenadeTier2Range) {
 						entity.setHealth(entity.getHealth() - Weapons.GrenadeTier2Damage);
+					}
 				}
 			}
 			engine.removeEntity(this);

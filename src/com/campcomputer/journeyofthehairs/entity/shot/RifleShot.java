@@ -5,7 +5,7 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
 public class RifleShot extends Shot {
-	public RifleShot (GameEngine engine, MapListener mapListener) {
+	public RifleShot(GameEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 		setDamage(1);
 		setBulletSpeed(2);

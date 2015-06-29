@@ -111,12 +111,13 @@ public class ChuckNorris extends Entity {
 
 			int randomChance = new Random().nextInt(100);
 
-			if (randomChance < 33)
+			if (randomChance < 33) {
 				punch(engine.getPlayer());
-			else if (randomChance >= 33 && randomChance < 66)
+			} else if (randomChance >= 33 && randomChance < 66) {
 				beardPunch(engine.getPlayer());
-			else
+			} else {
 				roundHouseKick(engine.getPlayer());
+			}
 
 		}
 
@@ -165,7 +166,7 @@ public class ChuckNorris extends Entity {
 	 * Chuck Norris is a huge entity, taking up a whopping 12 tiles. Because he isn't simply one tile, he needs
 	 * his own isOnTopOfEntity method. It takes in an entity and gets its position, then compares it to each of
 	 * the 12 locations corresponding to Chuck.
-	 *
+	 * <p/>
 	 * eP stands for Entity Position, and tP, while also standing for toilet paper, stands for this position
 	 *
 	 * @param entity the entity to be compared to Chuck Norris in location
@@ -196,7 +197,7 @@ public class ChuckNorris extends Entity {
 		Point2D tP12 = new Point2D.Float(x3, y4);
 
 		return eP.distance(tP1) <= 2f || eP.distance(tP2) <= 2f || eP.distance(tP3) <= 2f || eP.distance(tP4) <= 2f
-				|| eP.distance(tP5) <= 2f || eP.distance(tP6) <= 2f || eP.distance(tP7) <= 2f || eP.distance(tP8) <= 2f
-				|| eP.distance(tP9) <= 2f || eP.distance(tP10) <= 2f || eP.distance(tP11) <= 2f || eP.distance(tP12) <= 2f;
+		       || eP.distance(tP5) <= 2f || eP.distance(tP6) <= 2f || eP.distance(tP7) <= 2f || eP.distance(tP8) <= 2f
+		       || eP.distance(tP9) <= 2f || eP.distance(tP10) <= 2f || eP.distance(tP11) <= 2f || eP.distance(tP12) <= 2f;
 	}
 }

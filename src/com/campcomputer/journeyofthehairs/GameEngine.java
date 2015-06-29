@@ -1,10 +1,11 @@
 package com.campcomputer.journeyofthehairs;
 
-import com.campcomputer.journeyofthehairs.entity.*;
+import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.map.MapListener;
-import com.campcomputer.journeyofthehairs.weapon.*;
 import com.campcomputer.journeyofthehairs.map.Map;
+import com.campcomputer.journeyofthehairs.map.MapListener;
+import com.campcomputer.journeyofthehairs.weapon.Pistol;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class GameEngine implements MapListener {
 	 * The amount of power given to an entity to jump. This upward force is naturally degraded by gravity. The lower
 	 * the number, the higher the entity jumps. At its current setting, the entity jumps 4 tiles high.
 	 */
-	protected static final float JUMP_POWER = -1.5f;
+	protected static final float JUMP_POWER = - 1.5f;
 
 	/**
 	 * The amount of sideways force applied to entities when they are moving. The higher the number, the faster, and
@@ -44,7 +45,7 @@ public class GameEngine implements MapListener {
 	 * paint and for ticks to invoke. In order for something to be removed from the game, it must be removed
 	 * from this array via entitiesToRemove array. Consequently, if, for testing purposes, something needs not
 	 * be added in the game at runtime, the only line that needs commenting out is the addEntity() line.
-	 *
+	 * <p/>
 	 * TODO: Get rid of this variable to use the entities collection in Map
 	 */
 	private ArrayList<Entity> entities = new ArrayList<Entity>();
@@ -78,7 +79,7 @@ public class GameEngine implements MapListener {
 		this.mapListener = mapListener;
 		player = new Player(this, mapListener);
 		player.setX(0);
-		player.setY(9);
+		player.setY(7);
 		player.weapon = new Pistol();
 		addEntity(player);
 	}
@@ -88,29 +89,9 @@ public class GameEngine implements MapListener {
 	}
 
 	/**
-	 * Sets the game to have a new map. The method removes everything in the map (except the player), then changes
-	 * the game panel's background to the map background. Finally, changes the active map to the parameter and puts
-	 * the player at the beginning of the map, (0, 9).
-	 *
-	 * @param map the map to become active.
-	 */
-	public void setMap(Map map) {
-		if (entities.size() > 0) {
-			for (Entity entity : entities) {
-				if (!(entity instanceof Player))
-					removeEntity(entity);
-			}
-		}
-		for (Entity entity : map.getEntities()) {
-			addEntity(entity);
-		}
-		activeMap = map;
-	}
-
-	/**
 	 * On each tick (as specified in the JourneyOfThHairsFrame class), the engine
 	 * updates the weapons, pickups, and entities arrays by removing and adding appropriately.
-	 *
+	 * <p/>
 	 * It also applies movement and gravity to each of the entities on the map. Additionally, it invokes
 	 * the tick method in all of the entities on the map
 	 */
@@ -124,8 +105,9 @@ public class GameEngine implements MapListener {
 
 		for (Entity entity : entities) {
 			entity.tick();
-			if (entity.isAffectedByHitDetection())
+			if (entity.isAffectedByHitDetection()) {
 				applyMovement(entity);
+			}
 		}
 	}
 
@@ -141,6 +123,27 @@ public class GameEngine implements MapListener {
 	 */
 	public Map getMap() {
 		return activeMap;
+	}
+
+	/**
+	 * Sets the game to have a new map. The method removes everything in the map (except the player), then changes
+	 * the game panel's background to the map background. Finally, changes the active map to the parameter and puts
+	 * the player at the beginning of the map, (0, 9).
+	 *
+	 * @param map the map to become active.
+	 */
+	public void setMap(Map map) {
+		if (entities.size() > 0) {
+			for (Entity entity : entities) {
+				if (! (entity instanceof Player)) {
+					removeEntity(entity);
+				}
+			}
+		}
+		for (Entity entity : map.getEntities()) {
+			addEntity(entity);
+		}
+		activeMap = map;
 	}
 
 	/**
@@ -229,8 +232,9 @@ public class GameEngine implements MapListener {
 	 */
 	private void applyGravity() {
 		for (Entity entity : entities) {
-			if (entity.isAffectedByGravity())
+			if (entity.isAffectedByGravity()) {
 				entity.setYVel(entity.getYVel() + GRAVITY);
+			}
 		}
 	}
 
@@ -238,50 +242,52 @@ public class GameEngine implements MapListener {
 	 * This method applies movement by doing 2 things. First, applies the velocity to the location simply by
 	 * adding it on. Next, it does location checks based on hit detection. It uses the findFirstSolid method to
 	 * find where there are obstacles to the side and below. If there is an obstacle, the method stops the entity from moving
-	 *
+	 * <p/>
 	 * TODO: Make sure the player can't jump into obstacles, as that is a known bug
 	 */
 	private void applyMovement(Entity entity) {
-			float x = entity.getX();
-			float y = entity.getY();
-			float vY = entity.getYVel();
-			// When determining obstacles from below, the method stops movement at the point (x, obstacleY - height)
-			float height = entity.getHeight();
+		float x = entity.getX();
+		float y = entity.getY();
+		float vY = entity.getYVel();
+		// When determining obstacles from below, the method stops movement at the point (x, obstacleY - height)
+		float height = entity.getHeight();
 
-			float newX = calcHorizontalCollision(x, y);
-			float newY = calcVerticalCollision(x, y, height, vY);
+		float newX = calcHorizontalCollision(x, y);
+		float newY = calcVerticalCollision(x, y, height, vY);
 
-			// Block for calculations if the player is under water. They won't move as quickly
-			if (getMap().getMap()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER) {
-				newX = calcHorizontalCollision(x, y); // x + (vX / 3);
-				newY = calcVerticalCollision(x, y, height, vY / 3);
-			}
+		// Block for calculations if the player is under water. They won't move as quickly
+		if (getMap().getMap()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER) {
+			newX = calcHorizontalCollision(x, y); // x + (vX / 3);
+			newY = calcVerticalCollision(x, y, height, vY / 3);
+		}
 
-			if (newX < 0f) {
-				newX = 0;
-			}
+		if (newX < 0f) {
+			newX = 0;
+		}
 
-			float rightEdge = activeMap.getMap().length - 1;
-			if (newX > rightEdge) {
-				newX = rightEdge;
-			}
+		float rightEdge = activeMap.getMap().length - 1;
+		if (newX > rightEdge) {
+			newX = rightEdge;
+		}
 
-			if (newY < 0) {
-				newY = 0;
-			}
+		if (newY < 0) {
+			newY = 0;
+		}
 
-			entity.setX(newX);
-			entity.setY(newY);
+		entity.setX(newX);
+		entity.setY(newY);
 	}
 
 	public float calcHorizontalCollision(float x, float y) {
 		float newX = 0;
-		Point leftWall = findFirstSolid(x, y, -1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
+		Point leftWall = findFirstSolid(x, y, - 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
 		Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
-		if (leftWall != null && newX < leftWall.x + 1)
+		if (leftWall != null && newX < leftWall.x + 1) {
 			newX = leftWall.x + 1;
-		if (rightWall != null && newX > rightWall.x - 1)
+		}
+		if (rightWall != null && newX > rightWall.x - 1) {
 			newX = rightWall.x - 1;
+		}
 
 		return newX;
 	}
@@ -298,12 +304,16 @@ public class GameEngine implements MapListener {
 				int highestLandingPoint;
 				if (landingPoint1 != null) {
 					highestLandingPoint = landingPoint1.y;
-					if (landingPoint2 != null && landingPoint2.y < highestLandingPoint)
+					if (landingPoint2 != null && landingPoint2.y < highestLandingPoint) {
 						highestLandingPoint = landingPoint2.y;
-				} else
+					}
+				} else {
 					highestLandingPoint = landingPoint2.y;
+				}
 				if (newY >= highestLandingPoint - height) {
 					newY = highestLandingPoint - height;
+				} else {
+					newY = highestLandingPoint;
 				}
 			}
 		}
@@ -316,8 +326,8 @@ public class GameEngine implements MapListener {
 	 *
 	 * @param startX the x at which testing starts
 	 * @param startY the y at which testing starts
-	 * @param dX	 the amount which x is incremented at each test. Can be negative
-	 * @param dY	 the amount at which y is incremented at each test. Can be negative
+	 * @param dX     the amount which x is incremented at each test. Can be negative
+	 * @param dY     the amount at which y is incremented at each test. Can be negative
 	 * @param minX   the X at which testing is stopped, but only applies if dX is negative
 	 * @param minY   the y at which testing is stopped, but only applies if dY is negative
 	 * @param maxX   the x at which testing is stopped, but only applies if dX is positive
@@ -364,7 +374,7 @@ public class GameEngine implements MapListener {
 	 * Adds the opposite of the moving constant to the x velocity so the player moves backwards instead of forwards
 	 */
 	public void startMoveBackward() {
-		player.setXVel(-MOVE_SPEED);
+		player.setXVel(- MOVE_SPEED);
 	}
 
 	/**

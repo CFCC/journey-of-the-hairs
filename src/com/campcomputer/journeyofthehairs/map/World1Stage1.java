@@ -8,7 +8,7 @@ import com.campcomputer.journeyofthehairs.entity.creatures.ChuckNorris;
 import com.campcomputer.journeyofthehairs.entity.creatures.DragonFly;
 import com.campcomputer.journeyofthehairs.entity.creatures.RocketWorm;
 import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
-import com.campcomputer.journeyofthehairs.entity.pickup.*;
+import com.campcomputer.journeyofthehairs.entity.pickup.Portal;
 
 import java.awt.image.BufferedImage;
 

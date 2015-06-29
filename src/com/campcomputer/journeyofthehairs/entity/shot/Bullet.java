@@ -26,18 +26,20 @@ public class Bullet extends Shot {
 	}
 
 	public void tick() {
-		if (frames == bulletLeft)
+		if (frames == bulletLeft) {
 			moveLeft();
-		else
+		} else {
 			moveRight();
+		}
 
 		for (Entity entity : engine.getEntities()) {
 			Point2D bPosition = new Point2D.Float(getX(), getY());
 			Point2D ePosition = new Point2D.Float(entity.getX(), entity.getY());
-			if ((bPosition.distance(ePosition) < 1f) && !(entity instanceof Player) && !(entity instanceof Bullet)) {
+			if ((bPosition.distance(ePosition) < 1f) && ! (entity instanceof Player) && ! (entity instanceof Bullet)) {
 				entity.takeDamage(entity);
-				if (entity.getHealth() <= 0)
+				if (entity.getHealth() <= 0) {
 					engine.removeEntity(entity);
+				}
 				engine.removeEntity(this);
 			}
 		}

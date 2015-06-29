@@ -26,10 +26,10 @@ public class Ammo extends Pickup implements Weapons {
 	/**
 	 * Constructor
 	 *
-	 * @param type the type of ammo to generate
+	 * @param type   the type of ammo to generate
 	 * @param amount the amount of ammo to add
 	 */
-	public Ammo (GameEngine engine, WeaponShots type, int amount, MapListener mapListener) {
+	public Ammo(GameEngine engine, WeaponShots type, int amount, MapListener mapListener) {
 		super(engine, mapListener);
 		this.type = type;
 		this.amount = amount;

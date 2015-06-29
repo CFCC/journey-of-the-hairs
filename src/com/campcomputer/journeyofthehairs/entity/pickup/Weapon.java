@@ -19,11 +19,11 @@ public class Weapon extends Pickup implements Weapons {
 	private List<BufferedImage> rifleFrame;
 	private List<BufferedImage> shotgunFrame;
 
-	public Weapon (Weapons.Weapon type, GameEngine engine, MapListener mapListener) {
+	public Weapon(Weapons.Weapon type, GameEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 		this.type = type;
 
-		switch(type) {
+		switch (type) {
 			case GRENADE_GUN:
 				frames = grenadeGunFrame;
 				break;
@@ -47,7 +47,7 @@ public class Weapon extends Pickup implements Weapons {
 
 	@Override
 	public void affectGame() {
-		switch(type) {
+		switch (type) {
 			case GRENADE_GUN:
 				engine.getPlayer().setWeapon(new GrenadeGun());
 				break;

@@ -14,14 +14,15 @@ public class Health extends Pickup {
 	private List<BufferedImage> fifty;
 	private List<BufferedImage> oneHundred;
 
-	public Health (GameEngine engine, int amount, MapListener mapListener) {
+	public Health(GameEngine engine, int amount, MapListener mapListener) {
 		super(engine, mapListener);
-		if (amount == 20)
+		if (amount == 20) {
 			frames = twenty;
-		else if (amount == 50)
+		} else if (amount == 50) {
 			frames = fifty;
-		else if (amount == 100)
+		} else if (amount == 100) {
 			frames = oneHundred;
+		}
 	}
 
 	public void loadImages() {
@@ -37,14 +38,16 @@ public class Health extends Pickup {
 	@Override
 	public void affectGame() {
 		Player player = engine.getPlayer();
-		if (frames == twenty)
+		if (frames == twenty) {
 			player.setHealth(player.getHealth() + 20);
-		else if (frames == fifty)
+		} else if (frames == fifty) {
 			player.setHealth(player.getHealth() + 50);
-		else if (frames == oneHundred)
+		} else if (frames == oneHundred) {
 			player.setHealth(player.getHealth() + 100);
+		}
 
-		if (player.getHealth() > Player.MAX_HEALTH)
+		if (player.getHealth() > Player.MAX_HEALTH) {
 			player.setHealth(Player.MAX_HEALTH);
+		}
 	}
 }

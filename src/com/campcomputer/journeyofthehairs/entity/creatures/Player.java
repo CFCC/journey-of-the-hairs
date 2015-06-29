@@ -1,6 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.creatures;
 
-import com.campcomputer.journeyofthehairs.*;
+import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.Weapon;
@@ -19,42 +20,36 @@ public class Player extends Entity {
 	 * this variable.
 	 */
 	public static final int MAX_HEALTH = 100;
-
-	/**
-	 * The buffered image for when the player is going forward.
-	 */
-	List<BufferedImage> forwardFrames;
-
-	/**
-	 * The buffered image for when the player is going backwards.
-	 */
-	List<BufferedImage> backwardFrames;
-
 	/**
 	 * The amount of lives (left) the player has.
-	 *
+	 * <p/>
 	 * TODO: When the player's health goes down to zero, they will lose a life and the level will restart.
 	 * Once their lives go down to zero, they will go to a "sorry, you lost" screen and be redirected back
 	 * to the main menu.
 	 */
 	public int lives = 3;
-
 	/**
 	 * The weapon that the player currently has equipped. The player may have other weapons in their inventory,
 	 * but this is the only active one and is the one that is checked for Weapons Type and statistics such as damage,
 	 * bullet speed, and the amount of ammo left.
 	 */
 	public Weapon weapon;
-
 	/**
 	 * An array of the items the player has acquired through pickups. The player may choose to have every item be used
 	 * upon pickup in a settings menu, but by default, each weapon is added to the inventory. The inventory can be
 	 * accessed in-game by a hot key 'E', a la Minecraft.
-	 *
+	 * <p/>
 	 * This array can contain anything that extends the Pickup class.
 	 */
 	public ArrayList<Weapon> inventory;
-
+	/**
+	 * The buffered image for when the player is going forward.
+	 */
+	List<BufferedImage> forwardFrames;
+	/**
+	 * The buffered image for when the player is going backwards.
+	 */
+	List<BufferedImage> backwardFrames;
 	/**
 	 * This is the player's defense. It can only be increased by collecting armor or invincibility on
 	 * a map. Any damage to the player is calculated by newHealth = oldHealth - (enemyDamage - defense)
@@ -91,28 +86,40 @@ public class Player extends Entity {
 	@Override
 	public void setXVel(float xVel) {
 		super.setXVel(xVel);
-		if (xVel < 0)
+		if (xVel < 0) {
 			frames = backwardFrames;
-		if (xVel > 0)
+		}
+		if (xVel > 0) {
 			frames = forwardFrames;
+		}
 	}
 
 	/**
 	 * Changes a variable, which describes which way the player is facing, appropriately. Also routinely lowers the
 	 * ticks until the player's weapon can be fired again (in accordance with its cool down rate).
-	 *
+	 * <p/>
 	 * Also checks to see if the life variable needs to be lowered.
 	 */
 	@Override
 	public void tick() {
 		super.tick();
-		if (frames == forwardFrames)
+		if (frames == forwardFrames) {
 			facingLeft = false;
-		if (frames == backwardFrames)
+		}
+		if (frames == backwardFrames) {
 			facingLeft = true;
+		}
 		getWeapon().lowerTicksTillFire();
-		if (getHealth() <= 0 && lives >= 0)
+		if (getHealth() <= 0 && lives >= 0) {
 			lives -= 1;
+		}
+	}
+
+	/**
+	 * @return the player's current active weapon.
+	 */
+	public Weapon getWeapon() {
+		return weapon;
 	}
 
 	/**
@@ -126,10 +133,10 @@ public class Player extends Entity {
 	}
 
 	/**
-	 * @return the player's current active weapon.
+	 * @return the player's defense
 	 */
-	public Weapon getWeapon() {
-		return weapon;
+	public int getDefense() {
+		return defense;
 	}
 
 	/**
@@ -139,12 +146,5 @@ public class Player extends Entity {
 	 */
 	public void setDefense(int defense) {
 		this.defense = defense;
-	}
-
-	/**
-	 * @return the player's defense
-	 */
-	public int getDefense() {
-		return defense;
 	}
 }

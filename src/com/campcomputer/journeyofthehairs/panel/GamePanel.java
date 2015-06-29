@@ -1,6 +1,7 @@
 package com.campcomputer.journeyofthehairs.panel;
 
-import com.campcomputer.journeyofthehairs.*;
+import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.map.Map;
 import com.campcomputer.journeyofthehairs.map.MapListener;
@@ -34,48 +35,48 @@ public class GamePanel extends Panel implements MapListener {
 	public void addListener() {
 		listener =
 
-		/**
-		* The key adapter that belongs to the game panel. It includes basic movement (WAD) and shooting (S).
-		* Also ends movement upon release of W and D
-		*
-		* TODO: Add hotkey E for inventory, switch tile painting to T
-		* TODO: Fix the weapon bug
-		*/
-		new KeyAdapter() {
-			@Override
-			public void keyPressed(KeyEvent e) {
-				switch (e.getKeyCode()) {
-					case KeyEvent.VK_A:
-						engine.startMoveBackward();
-						break;
-					case KeyEvent.VK_D:
-						engine.startMoveForward();
-						break;
-					case KeyEvent.VK_W:
-						engine.jump();
-						break;
-					case KeyEvent.VK_E:
-						toggleShowTiles();
-						break;
-					case KeyEvent.VK_S:
-						engine.getPlayer().getWeapon().shoot();
-						break;
-				}
-			}
+				/**
+				 * The key adapter that belongs to the game panel. It includes basic movement (WAD) and shooting (S).
+				 * Also ends movement upon release of W and D
+				 *
+				 * TODO: Add hotkey E for inventory, switch tile painting to T
+				 * TODO: Fix the weapon bug
+				 */
+				new KeyAdapter() {
+					@Override
+					public void keyPressed(KeyEvent e) {
+						switch (e.getKeyCode()) {
+							case KeyEvent.VK_A:
+								engine.startMoveBackward();
+								break;
+							case KeyEvent.VK_D:
+								engine.startMoveForward();
+								break;
+							case KeyEvent.VK_W:
+								engine.jump();
+								break;
+							case KeyEvent.VK_E:
+								toggleShowTiles();
+								break;
+							case KeyEvent.VK_S:
+								engine.getPlayer().getWeapon().shoot();
+								break;
+						}
+					}
 
-			@Override
-			public void keyReleased(KeyEvent e) {
-				switch (e.getKeyCode()) {
-					case KeyEvent.VK_A:
-						engine.endMoveBackward();
-						break;
-					case KeyEvent.VK_D:
-						engine.endMoveForward();
-						break;
-				}
+					@Override
+					public void keyReleased(KeyEvent e) {
+						switch (e.getKeyCode()) {
+							case KeyEvent.VK_A:
+								engine.endMoveBackward();
+								break;
+							case KeyEvent.VK_D:
+								engine.endMoveForward();
+								break;
+						}
 
-			}
-		};
+					}
+				};
 	}
 
 	@Override
@@ -101,7 +102,7 @@ public class GamePanel extends Panel implements MapListener {
 		}
 
 
-		g2.drawImage(mapBackground, null, (int) (-xScreenPlace * TILE_SIZE), 0);
+		g2.drawImage(mapBackground, null, (int) (- xScreenPlace * TILE_SIZE), 0);
 
 		for (Entity entity : engine.getEntities()) {
 			if (entity.getFrames().size() > 0) {
@@ -109,8 +110,9 @@ public class GamePanel extends Panel implements MapListener {
 			}
 		}
 
-		if (showTiles)
+		if (showTiles) {
 			drawTiles(g2);
+		}
 
 		g2.draw(infoBar);
 	}
@@ -150,10 +152,10 @@ public class GamePanel extends Panel implements MapListener {
 	}
 
 	public void toggleShowTiles() {
-		showTiles = !showTiles;
+		showTiles = ! showTiles;
 	}
 
-	public void setMapBackground (BufferedImage bgImage) {
+	public void setMapBackground(BufferedImage bgImage) {
 		mapBackground = bgImage;
 	}
 

@@ -41,10 +41,11 @@ public class SuicideStinkBug extends Entity {
 			blowup();
 		}
 
-		if (engine.getPlayer().getX() < getX() && getX() - engine.getPlayer().getX() <= 5)
+		if (engine.getPlayer().getX() < getX() && getX() - engine.getPlayer().getX() <= 5) {
 			moveLeft();
-		else if (engine.getPlayer().getX() > getX() && engine.getPlayer().getX() - getX() <= 5)
+		} else if (engine.getPlayer().getX() > getX() && engine.getPlayer().getX() - getX() <= 5) {
 			moveRight();
+		}
 	}
 
 	/**

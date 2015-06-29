@@ -12,27 +12,25 @@ import com.campcomputer.journeyofthehairs.map.MapListener;
  */
 public class DragonFly extends Entity {
 	/**
+	 * This is, by far, the most common attack of the fly. It breaths fire onto the entity, causing a
+	 * minuscule 1 damage. This attack happens rather quickly, though, so it can be dangerous.
+	 */
+	private static final int BREATH_FIRE_DAMAGE = 1;
+	/**
+	 * Once the fly's prey is weak enough to be eaten (has 10 health), the fly eats its prey, removing it from the map
+	 */
+	private static final int EATING_DAMAGE = 10;
+	/**
 	 * In theory, the dragonfly cannot fly forever; its wings would get tired. To represent this scenario
 	 * is this field. The fly can fly at any time as long as the value is positive. Once it reaches
 	 * 0, the fly cant fly and has to wait until it reaches a certain minimum before it can begin flying
 	 * again.
-	 *
+	 * <p/>
 	 * If the fly can't fly, it is merely gliding on the ground (changing x coordinate) and just not going up
 	 * and down. Physics apply to this variable. If the fly is going down, the fly spends less energy than going
 	 * up since gravity is working against the fly going up and for it going down.
 	 */
 	private int flyingEnergy = 25;
-
-	/**
-	 * This is, by far, the most common attack of the fly. It breaths fire onto the entity, causing a
-	 * minuscule 1 damage. This attack happens rather quickly, though, so it can be dangerous.
-	 */
-	private static final int BREATH_FIRE_DAMAGE = 1;
-
-	/**
-	 * Once the fly's prey is weak enough to be eaten (has 10 health), the fly eats its prey, removing it from the map
-	 */
-	private static final int EATING_DAMAGE = 10;
 
 	/**
 	 * Constructor
@@ -50,7 +48,7 @@ public class DragonFly extends Entity {
 	public void tick() {
 		super.tick();
 		if (chasePlayer1() != 1) {
-			if (!engine.isPlayerAbove(this)) {
+			if (! engine.isPlayerAbove(this)) {
 				moveUp();
 				flyingEnergy -= 2;
 			} else if (engine.isPlayerAbove(this)) {
@@ -62,7 +60,7 @@ public class DragonFly extends Entity {
 		if (engine.isPlayerToLeft(this)) {
 			moveLeft();
 			flyingEnergy += 1;
-		} else if (!engine.isPlayerToLeft(this)) {
+		} else if (! engine.isPlayerToLeft(this)) {
 			moveRight();
 			flyingEnergy += 1;
 		} else {
@@ -72,10 +70,11 @@ public class DragonFly extends Entity {
 
 		Player player = engine.getPlayer();
 		if (engine.isOnTopOfPlayer(this)) {
-			if (player.getHealth() <= EATING_DAMAGE)
+			if (player.getHealth() <= EATING_DAMAGE) {
 				eats(player);
-			else if (engine.isPlayerClose(this))
+			} else if (engine.isPlayerClose(this)) {
 				breathFire(player);
+			}
 		}
 	}
 
@@ -114,7 +113,7 @@ public class DragonFly extends Entity {
 
 	/**
 	 * By the looks of it, determines how the fly should chase an entity. Poorly written; needs refactor desperately
-	 *
+	 * <p/>
 	 * TODO: Change this mess of code into something readable
 	 */
 	public int chasePlayer1() {
@@ -123,12 +122,14 @@ public class DragonFly extends Entity {
 			// solid object in the way
 			return 0;
 		}
-		if (flyingEnergy <= 0)
+		if (flyingEnergy <= 0) {
 			return 1;
-			//walk towards the player,
-			// can also jump.
-		else
+		}
+		//walk towards the player,
+		// can also jump.
+		else {
 			return 2;
+		}
 	}
 
 	/**

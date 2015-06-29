@@ -115,8 +115,9 @@ public class Cheese extends Map implements Weapons {
 			public void affectGame() {
 				Map.getMap(0);
 				for (Entity entity : engine.getEntities()) {
-					if (entity instanceof Portal)
+					if (entity instanceof Portal) {
 						engine.removeEntity(entity);
+					}
 				}
 			}
 		};
@@ -124,7 +125,7 @@ public class Cheese extends Map implements Weapons {
 		railgun.setY(8);
 		engine.addEntity(railgun);
 
-		Health health = new Health(engine, 50,  mapListener);
+		Health health = new Health(engine, 50, mapListener);
 		health.setX(37);
 		health.setY(5);
 

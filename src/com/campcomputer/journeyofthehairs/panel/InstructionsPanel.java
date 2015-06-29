@@ -1,6 +1,7 @@
 package com.campcomputer.journeyofthehairs.panel;
 
 import com.campcomputer.journeyofthehairs.Images;
+
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -8,11 +9,11 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class InstructionsPanel extends Panel {
+	private static final Point PAGE_NUMBER_LOCATION = new Point(463, 466);
+	private static final Point INSTRUCTION_IMAGE_LOCATION = new Point(196, 63);
 	public Rectangle backButton = new Rectangle(367, 594, 318, 77);
 	public Rectangle nextPageButton = new Rectangle(603, 406, 219, 105);
 	public Rectangle backPageButton = new Rectangle(204, 407, 219, 104);
-	private static final Point PAGE_NUMBER_LOCATION = new Point(463, 466);
-	private static final Point INSTRUCTION_IMAGE_LOCATION = new Point(196, 63);
 	private ArrayList<BufferedImage> pages = new ArrayList<BufferedImage>();
 	private ArrayList<BufferedImage> numbers = new ArrayList<BufferedImage>();
 	private int page = 1;
@@ -35,12 +36,14 @@ public class InstructionsPanel extends Panel {
 
 	public void goTo(String direction) {
 		if (direction.equals("next")) {
-				page++;
-			if (page > numPages)
+			page++;
+			if (page > numPages) {
 				page--;
+			}
 		} else if (direction.equals("back")) {
-			if (page != 1)
+			if (page != 1) {
 				page--;
+			}
 		}
 
 		repaint();
@@ -50,24 +53,25 @@ public class InstructionsPanel extends Panel {
 	public void addListener() {
 		listener =
 
-		/**
-		 * Mouse adapter for the instructions menu. Includes 3 rectangles. 1 (back) returns to the main menu; 1 (backward)
-		 * regresses the current page of instructions; 1 (forward) advances the page
-		 */
-		new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				int x = e.getX();
-				int y = e.getY();
+				/**
+				 * Mouse adapter for the instructions menu. Includes 3 rectangles. 1 (back) returns to the main menu; 1 (backward)
+				 * regresses the current page of instructions; 1 (forward) advances the page
+				 */
+				new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						int x = e.getX();
+						int y = e.getY();
 
-				if (backButton.contains(x, y))
-					getMenuListener().switchTo(MenuListener.Panels.MAIN_MENU);
-				else if (nextPageButton.contains(x, y))
-					goTo("next");
-				else if (backPageButton.contains(x, y))
-					goTo("back");
-			}
-		};
+						if (backButton.contains(x, y)) {
+							getMenuListener().switchTo(MenuListener.Panels.MAIN_MENU);
+						} else if (nextPageButton.contains(x, y)) {
+							goTo("next");
+						} else if (backPageButton.contains(x, y)) {
+							goTo("back");
+						}
+					}
+				};
 	}
 
 	public void paintComponent(Graphics g) {

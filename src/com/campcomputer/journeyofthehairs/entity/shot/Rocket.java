@@ -29,14 +29,14 @@ public class Rocket extends Shot {
 
 		if (playerX < getX()) {
 			frames = rocketLeft;
-			setXVel(-1 * SPEED_MAGNITUDE);
+			setXVel(- 1 * SPEED_MAGNITUDE);
 		} else {
 			frames = rocketRight;
 			setXVel(SPEED_MAGNITUDE);
 		}
 
 		if (playerY < getY()) {
-			setYVel(-1 * SPEED_MAGNITUDE);
+			setYVel(- 1 * SPEED_MAGNITUDE);
 		} else {
 			setYVel(SPEED_MAGNITUDE);
 		}

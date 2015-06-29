@@ -15,8 +15,9 @@ public abstract class Pickup extends Entity {
 	public void tick() {
 		ArrayList<Pickup> pickups = new ArrayList<Pickup>();
 		for (Entity entity : engine.getEntities()) {
-			if (entity instanceof Pickup)
+			if (entity instanceof Pickup) {
 				pickups.add((Pickup) entity);
+			}
 		}
 		for (Pickup pickup : pickups) {
 			if (engine.isOnTopOfPlayer(pickup)) {
@@ -26,8 +27,9 @@ public abstract class Pickup extends Entity {
 		}
 
 		currentFrame++;
-		if (currentFrame > frames.size() - 1)
+		if (currentFrame > frames.size() - 1) {
 			currentFrame = 0;
+		}
 	}
 
 	public abstract void affectGame();

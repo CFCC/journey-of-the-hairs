@@ -6,12 +6,12 @@ import com.campcomputer.journeyofthehairs.map.Cheese;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
 public class Portal extends Pickup {
-	public void loadImages() {
-		frames = Images.loadFrames("portal");
-	}
-
 	public Portal(GameEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
+	}
+
+	public void loadImages() {
+		frames = Images.loadFrames("portal");
 	}
 
 	@Override
