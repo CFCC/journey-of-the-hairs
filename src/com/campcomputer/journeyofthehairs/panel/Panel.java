@@ -1,6 +1,6 @@
 package com.campcomputer.journeyofthehairs.panel;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,7 +27,7 @@ public abstract class Panel extends JPanel {
 	 */
 	public EventListener listener;
 
-	public GameEngine engine;
+	public PhysicsEngine engine;
 
 	private MenuListener menuListener;
 

@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.pickup;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Weapons;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
@@ -29,7 +29,7 @@ public class Ammo extends Pickup implements Weapons {
 	 * @param type   the type of ammo to generate
 	 * @param amount the amount of ammo to add
 	 */
-	public Ammo(GameEngine engine, WeaponShots type, int amount, MapListener mapListener) {
+	public Ammo(PhysicsEngine engine, WeaponShots type, int amount, MapListener mapListener) {
 		super(engine, mapListener);
 		this.type = type;
 		this.amount = amount;

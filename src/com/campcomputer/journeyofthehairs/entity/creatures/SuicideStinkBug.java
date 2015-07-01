@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.creatures;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
@@ -22,7 +22,7 @@ public class SuicideStinkBug extends Entity {
 	/**
 	 * Constructor for the bug
 	 */
-	public SuicideStinkBug(GameEngine engine, MapListener mapListener) {
+	public SuicideStinkBug(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 		setHealth(3);
 	}

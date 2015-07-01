@@ -10,6 +10,7 @@ public abstract class Weapon implements Weapons {
 	 * so this field is linked with ticksTillFire
 	 */
 	boolean canFire;
+
 	/**
 	 * This is the amount of ammo left in the weapon currently active. The term 'ammo' is
 	 * a bit ambiguous when referring to ammo in this class vs the pickup ammo vs the entity
@@ -18,12 +19,14 @@ public abstract class Weapon implements Weapons {
 	 * to bodies as numbers and people refers to individuals.
 	 */
 	private int ammoLeft;
+
 	/**
 	 * This is the shot type fired by the active weapon. It is a value of the enum WeaponShots (again,
 	 * shots vs ammo can be a bit confusing, but this uses shots since it refers to what is fired, not
 	 * what is loaded into the weapon) that determines which type of shot to add to the map.
 	 */
 	private WeaponShots shotType;
+
 	/**
 	 * This field only applies to a weapon if it was just fired since every weapon has a cooldown rate. It is
 	 * determined by dividing the fire rate by 1000 (the amount of milliseconds in a second)

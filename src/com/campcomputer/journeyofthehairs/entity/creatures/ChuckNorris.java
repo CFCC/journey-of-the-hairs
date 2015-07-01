@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.creatures;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
@@ -19,7 +19,6 @@ import java.util.Random;
  * super powerful super powers. They are exorbitant and lethal. Good luck. You'll need it.
  */
 public class ChuckNorris extends Entity {
-
 	/**
 	 * This is the maximum health that Chuck Norris can have at one time. Although it is very high,
 	 * it exists. It should also be known that the Railgun Shot's damage is equal to Chuck Norris's
@@ -78,11 +77,14 @@ public class ChuckNorris extends Entity {
 	 * is only one frame, the beginning of the smack frames.
 	 */
 	List<BufferedImage> standingFrames;
+
 	List<BufferedImage> punchFrames;
+
 	List<BufferedImage> roundhouseKickFrames;
+
 	List<BufferedImage> smackFrames;
 
-	public ChuckNorris(GameEngine engine, MapListener mapListener) {
+	public ChuckNorris(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 		setHealth(MAX_HEALTH);
 	}

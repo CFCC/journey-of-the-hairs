@@ -17,6 +17,7 @@ public class MapConverter {
 	                                                         "red:PLANT", "white:null/*w*/", "yellow:null/*y*/", "brown:GROUND"};
 
 	public static final Color[] CONSTANT_COLORS = new Color[COLOR_NAMES.length];
+
 	public static final String[] COLOR_CONSTANTS = new String[COLOR_NAMES.length];
 
 	static {

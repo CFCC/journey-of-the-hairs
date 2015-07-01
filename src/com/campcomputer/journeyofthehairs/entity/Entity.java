@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.Weapon;
 
@@ -15,35 +15,42 @@ public abstract class Entity {
 	 * This is a variable used in determining which direction an entity is facing. It is useful in a few
 	 * situations; usually, it decides which frame to paint on the map.
 	 */
-	public boolean facingLeft = true;
+	public boolean isFacingLeft = true;
+
 	/**
 	 * This is the list inherited by every entity. It contains any image painted on the map that represents
 	 * the particular entity. Any other image is ignored; this list is the only place checked for images
 	 */
 	public List<BufferedImage> frames = new ArrayList<BufferedImage>();
+
 	/**
 	 * This is the game engine instance. It is used as the super class for all entities since the two are
 	 * (relatively) closely related with physics related methods and properties.
 	 */
-	protected GameEngine engine;
+	protected PhysicsEngine engine;
+
 	/**
 	 * This is the current frame in the list of frames. It is only really used for entities using frames,
 	 * but nonetheless, it is still needed.
 	 */
 	protected int currentFrame = 0;
+
 	/**
 	 * This is an entity's health - that is, how much damage they must receive before they
 	 * are removed from the entity list and the game
 	 */
 	private int health = 1;
+
 	/**
 	 * This is an entity's x coordinate (where they are horizontally on the map)
 	 */
 	private float x = 0;
+
 	/**
 	 * This is an entity's y coordinate (where they are vertically on the map)
 	 */
 	private float y = 0;
+
 	/**
 	 * This is an entity's x velocity. It is how quickly they are going horizontally. This amount, more
 	 * specifically, is how far left or right they go each tick. The higher the absolute value of this number
@@ -52,7 +59,8 @@ public abstract class Entity {
 	 * A positive number signifies an entity traveling forwards on the map while a negative one
 	 * signifies an entity traveling backwards. In either case, 0 signifies no movement
 	 */
-	private float xVel = 0;
+	private float xVelocity = 0;
+
 	/**
 	 * This is an entity's y velocity. It is how quickly they travel vertically. This number, more specifically,
 	 * is how far they go up or down each tick. The higher the absolute value of this number, the faster the entity
@@ -61,18 +69,20 @@ public abstract class Entity {
 	 * A positive number signifies an entity traveling down (because in computers, the origin is in the upper left
 	 * of the screen), or falling, while a negative number signifies an entity traveling upwards, or jumping/flying
 	 */
-	private float yVel = 0;
+	private float yVelocity = 0;
+
 	/**
 	 * This is the variable used in testing to see if an entity is affected by gravity. It is only overridden
 	 * in rare cases, such as weapon shots and flying creatures.
 	 */
-	private boolean affectedByGravity = true;
+	private boolean isAffectedByGravity = true;
+
 	private MapListener listener;
 
 	/**
 	 * Constructor for an entity. If it has no image assigned to the list frames, its image becomes cheese.png
 	 */
-	public Entity(GameEngine engine, MapListener mapListener) {
+	public Entity(PhysicsEngine engine, MapListener mapListener) {
 		this.listener = mapListener;
 		this.engine = engine;
 		loadImages();
@@ -137,8 +147,8 @@ public abstract class Entity {
 	/**
 	 * @return the entity's current x velocity
 	 */
-	public float getXVel() {
-		return xVel;
+	public float getXVelocity() {
+		return xVelocity;
 	}
 
 	/**
@@ -146,22 +156,22 @@ public abstract class Entity {
 	 *             <p/>
 	 *             TODO: Fix left vs right frame issue to eliminate override
 	 */
-	public void setXVel(float xVel) {
-		this.xVel = xVel;
+	public void setXVelocity(float xVel) {
+		this.xVelocity = xVel;
 	}
 
 	/**
 	 * @return the entity's current y velocity
 	 */
-	public float getYVel() {
-		return yVel;
+	public float getYVelocity() {
+		return yVelocity;
 	}
 
 	/**
 	 * @param yVel new y velocity for the entity
 	 */
-	public void setYVel(float yVel) {
-		this.yVel = yVel;
+	public void setYVelocity(float yVel) {
+		this.yVelocity = yVel;
 	}
 
 	/**
@@ -175,14 +185,14 @@ public abstract class Entity {
 	 * @return true if the entity is facing left, false if right
 	 */
 	public boolean isFacingLeft() {
-		return facingLeft;
+		return isFacingLeft;
 	}
 
 	/**
-	 * Simply inverts the facingLeft variable, effectively switching the console's impression of the entity's direction
+	 * Simply inverts the isFacingLeft variable, effectively switching the console's impression of the entity's direction
 	 */
 	public void switchDirection() {
-		facingLeft = ! facingLeft;
+		isFacingLeft = ! isFacingLeft;
 	}
 
 	/**
@@ -190,55 +200,55 @@ public abstract class Entity {
 	 * (except for the dragonfly) are, and all pickups and shots (except for grenades) aren't
 	 */
 	public boolean isAffectedByGravity() {
-		return affectedByGravity;
+		return isAffectedByGravity;
 	}
 
 	/**
-	 * Sets the variable affectedByGravity as mentioned above to true or false. Usually used to set to false so
+	 * Sets the variable isAffectedByGravity as mentioned above to true or false. Usually used to set to false so
 	 * no override is necessary
 	 */
 	public void setAffectedByGravity(boolean affectedByGravity) {
-		this.affectedByGravity = affectedByGravity;
+		this.isAffectedByGravity = affectedByGravity;
 	}
 
 	/**
-	 * Moves the entity left by taking away .1 from its xVel, setting its yVel to 0, and switching its direction
+	 * Moves the entity left by taking away .1 from its xVelocity, setting its yVelocity to 0, and switching its direction
 	 * if need be.
 	 */
 	public void moveLeft() {
-		setXVel(getXVel() - 0.1f);
-		setYVel(0);
+		setXVelocity(getXVelocity() - 0.1f);
+		setYVelocity(0);
 		if (! isFacingLeft()) {
 			switchDirection();
 		}
 	}
 
 	/**
-	 * Moves the entity right by adding .1 to its xVel, setting its yVel to 0, and switching its direction
+	 * Moves the entity right by adding .1 to its xVelocity, setting its yVelocity to 0, and switching its direction
 	 * if need be.
 	 */
 	public void moveRight() {
-		setXVel(getXVel() + 0.1f);
-		setYVel(0);
+		setXVelocity(getXVelocity() + 0.1f);
+		setYVelocity(0);
 		if (isFacingLeft()) {
 			switchDirection();
 		}
 	}
 
 	/**
-	 * Moves the entity up by setting its xVel to 0, and subtracting .3 from its yVel
+	 * Moves the entity up by setting its xVelocity to 0, and subtracting .3 from its yVelocity
 	 */
 	public void moveUp() {
-		setYVel(getYVel() - 0.3f);
-		setY(getY() - getYVel());
+		setYVelocity(getYVelocity() - 0.3f);
+		setY(getY() - getYVelocity());
 	}
 
 	/**
-	 * Moves the entity down by setting its xVel to 0, and adding .3 to its yVel
+	 * Moves the entity down by setting its xVelocity to 0, and adding .3 to its yVelocity
 	 */
 	public void moveDown() {
-		setYVel(getYVel() + 0.3f);
-		setY(getY() + getYVel());
+		setYVelocity(getYVelocity() + 0.3f);
+		setY(getY() + getYVelocity());
 	}
 
 	/**

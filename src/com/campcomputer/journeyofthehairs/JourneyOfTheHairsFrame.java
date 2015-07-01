@@ -20,29 +20,37 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 	 * The lower the denominator of this variable, the better the motion quality of the game, but the slower it runs
 	 */
 	private final static int TIMER_TICK = 1000 / 30;
+
 	public final MenuListener menuListener;
+
 	public final MapListener mapListener;
+
 	/**
 	 * The instance of the game panel used throughout the game's code
 	 */
 	private final GamePanel gamePanel;
+
 	/**
 	 * The instance of the main menu used in the code for the beginning of the game
 	 */
 	private final MainMenuPanel mainMenuPanel;
+
 	/**
 	 * The instance of the instructions menu used in the code for the beginning of the game
 	 */
 	private final InstructionsPanel instructionsPanel;
+
 	/**
 	 * The instance of the about screen used in the code for the beginning of the game
 	 */
 	private final AboutPanel aboutPanel;
+
 	private final SettingsPanel settingsPanel;
+
 	/**
 	 * The instance of the game engine used throughout the game's code
 	 */
-	private GameEngine engine;
+	private PhysicsEngine engine;
 
 	/**
 	 * Class constructor. Makes a new frame for the game and sets it up. Also defines final fields and creates a timer
@@ -57,7 +65,7 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 				changeMap(map);
 			}
 		};
-		engine = new GameEngine(mapListener);
+		engine = new PhysicsEngine(mapListener);
 
 		new BoxLayout(this, BoxLayout.X_AXIS);
 

@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.map;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.Weapons;
 import com.campcomputer.journeyofthehairs.entity.creatures.ChuckNorris;
@@ -89,7 +89,7 @@ public class World1Stage1 extends Map implements Weapons {
 
 	private static final BufferedImage theImage = Images.ReadImage("levels/1-1");
 
-	public World1Stage1(GameEngine engine, MapListener mapListener) {
+	public World1Stage1(PhysicsEngine engine, MapListener mapListener) {
 		map = theMap;
 		image = theImage;
 
@@ -133,18 +133,18 @@ public class World1Stage1 extends Map implements Weapons {
 		portal.setX(17);
 		portal.setY(5);
 
-		entities.add(portal);
+//		entities.add(portal);
 //		entities.add(dragonFly);
-		entities.add(stinkbug);
-		entities.add(worm);
-		entities.add(chuckNorris);
-
-		entities.add(rifle);
-		entities.add(minigun);
-		entities.add(pistol);
-		entities.add(shotgun);
-		entities.add(grenadeGun);
-
-		entities.add(portal);
+//		entities.add(stinkbug);
+//		entities.add(worm);
+//		entities.add(chuckNorris);
+//
+//		entities.add(rifle);
+//		entities.add(minigun);
+//		entities.add(pistol);
+//		entities.add(shotgun);
+//		entities.add(grenadeGun);
+//
+//		entities.add(portal);
 	}
 }

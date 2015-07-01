@@ -1,10 +1,10 @@
 package com.campcomputer.journeyofthehairs.entity.pickup;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
 public class Invincibility extends Pickup {
-	public Invincibility(GameEngine engine, MapListener mapListener) {
+	public Invincibility(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 	}
 

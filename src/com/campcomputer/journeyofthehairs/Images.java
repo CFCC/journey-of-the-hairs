@@ -64,15 +64,16 @@ public class Images {
 				ex.printStackTrace();
 			}
 		}
+
 		return bufferedImage;
 	}
 
 	private static BufferedImage getBufferedImage(Image image) {
 		BufferedImage bufferedImage;
 		bufferedImage = GraphicsEnvironment.getLocalGraphicsEnvironment()
-		                                   .getDefaultScreenDevice().
-				                                   getDefaultConfiguration().
-				                                   createCompatibleImage(image.getWidth(null), image.getHeight(null), BufferedImage.TRANSLUCENT);
+		                                   .getDefaultScreenDevice()
+		                                   .getDefaultConfiguration()
+		                                   .createCompatibleImage(image.getWidth(null), image.getHeight(null), BufferedImage.TRANSLUCENT);
 		bufferedImage.getGraphics().drawImage(image, 0, 0, null);
 		return bufferedImage;
 	}
@@ -80,7 +81,6 @@ public class Images {
 	private static BufferedImage ReadImage(byte[] bytes) throws Exception {
 		InputStream in = new ByteArrayInputStream(bytes);
 		return ImageIO.read(in);
-
 	}
 
 	public static List<BufferedImage> loadFrames(String name) {
@@ -111,6 +111,7 @@ public class Images {
 				}
 			}
 		}
+
 		return frames;
 	}
 
@@ -118,12 +119,10 @@ public class Images {
 		jaredFiles = new HashMap<String, byte[]>();
 
 		try {
-
 			ZipFile zf = new ZipFile(src.getLocation().getFile());
-
-
 			HashMap<String, Integer> sizes = new HashMap<String, Integer>();
 			Enumeration e = zf.entries();
+
 			while (e.hasMoreElements()) {
 				ZipEntry ze = (ZipEntry) e.nextElement();
 				sizes.put(ze.getName(), (int) ze.getSize());
@@ -131,10 +130,7 @@ public class Images {
 			zf.close();
 
 			URL jar = src.getLocation();
-			ZipInputStream zis;
-
-			zis = new ZipInputStream(jar.openStream());
-
+			ZipInputStream zis = new ZipInputStream(jar.openStream());
 			ZipEntry ze = null;
 
 			while ((ze = zis.getNextEntry()) != null) {

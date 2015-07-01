@@ -10,13 +10,21 @@ import java.util.ArrayList;
 
 public class InstructionsPanel extends Panel {
 	private static final Point PAGE_NUMBER_LOCATION = new Point(463, 466);
+
 	private static final Point INSTRUCTION_IMAGE_LOCATION = new Point(196, 63);
+
 	public Rectangle backButton = new Rectangle(367, 594, 318, 77);
+
 	public Rectangle nextPageButton = new Rectangle(603, 406, 219, 105);
+
 	public Rectangle backPageButton = new Rectangle(204, 407, 219, 104);
+
 	private ArrayList<BufferedImage> pages = new ArrayList<BufferedImage>();
+
 	private ArrayList<BufferedImage> numbers = new ArrayList<BufferedImage>();
+
 	private int page = 1;
+
 	private int numPages;
 
 	public InstructionsPanel(MenuListener menuListener) {

@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.map;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
 
 import java.awt.image.BufferedImage;
@@ -79,7 +79,7 @@ public class Water extends Map {
 
 	private static final BufferedImage leImage = Images.ReadImage("levels/water");
 
-	public Water(GameEngine engine) {
+	public Water(PhysicsEngine engine) {
 		super();
 		map = leMap;
 		image = leImage;

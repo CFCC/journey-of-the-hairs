@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.map;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.Weapons;
 import com.campcomputer.journeyofthehairs.entity.Entity;
@@ -94,7 +94,7 @@ public class Cheese extends Map implements Weapons {
 	/**
 	 * The constructor for the level
 	 */
-	public Cheese(final GameEngine engine, final Map currentMap, MapListener mapListener) {
+	public Cheese(final PhysicsEngine engine, final Map currentMap, MapListener mapListener) {
 		Map.saveMap(currentMap);
 
 		map = cheeseMap;

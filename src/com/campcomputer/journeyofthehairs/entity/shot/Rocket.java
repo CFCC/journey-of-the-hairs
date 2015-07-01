@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.shot;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.image.BufferedImage;
@@ -11,12 +11,14 @@ import java.util.List;
 public class Rocket extends Shot {
 
 	private static final int ROCKET_DAMAGE = 50;
+
 	private static final float SPEED_MAGNITUDE = 0.1f;
 
 	List<BufferedImage> rocketLeft;
+
 	List<BufferedImage> rocketRight;
 
-	public Rocket(GameEngine engine, MapListener mapListener) {
+	public Rocket(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 	}
 
@@ -29,16 +31,16 @@ public class Rocket extends Shot {
 
 		if (playerX < getX()) {
 			frames = rocketLeft;
-			setXVel(- 1 * SPEED_MAGNITUDE);
+			setXVelocity(- 1 * SPEED_MAGNITUDE);
 		} else {
 			frames = rocketRight;
-			setXVel(SPEED_MAGNITUDE);
+			setXVelocity(SPEED_MAGNITUDE);
 		}
 
 		if (playerY < getY()) {
-			setYVel(- 1 * SPEED_MAGNITUDE);
+			setYVelocity(- 1 * SPEED_MAGNITUDE);
 		} else {
-			setYVel(SPEED_MAGNITUDE);
+			setYVelocity(SPEED_MAGNITUDE);
 		}
 
 		if (engine.isOnTopOfPlayer(this)) {

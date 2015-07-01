@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.shot;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 import com.campcomputer.journeyofthehairs.map.MapListener;
@@ -13,10 +13,12 @@ import java.util.List;
 
 public class Bullet extends Shot {
 	public List<BufferedImage> bulletLeft;
-	public List<BufferedImage> bulletRight;
-	private GameEngine engine;
 
-	public Bullet(GameEngine engine, MapListener mapListener) {
+	public List<BufferedImage> bulletRight;
+
+	private PhysicsEngine engine;
+
+	public Bullet(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 		this.engine = engine;
 		setAffectedByGravity(false);

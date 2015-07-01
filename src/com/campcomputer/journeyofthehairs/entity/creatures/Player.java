@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.creatures;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.Weapon;
@@ -20,6 +20,7 @@ public class Player extends Entity {
 	 * this variable.
 	 */
 	public static final int MAX_HEALTH = 100;
+
 	/**
 	 * The amount of lives (left) the player has.
 	 * <p/>
@@ -28,12 +29,14 @@ public class Player extends Entity {
 	 * to the main menu.
 	 */
 	public int lives = 3;
+
 	/**
 	 * The weapon that the player currently has equipped. The player may have other weapons in their inventory,
 	 * but this is the only active one and is the one that is checked for Weapons Type and statistics such as damage,
 	 * bullet speed, and the amount of ammo left.
 	 */
 	public Weapon weapon;
+
 	/**
 	 * An array of the items the player has acquired through pickups. The player may choose to have every item be used
 	 * upon pickup in a settings menu, but by default, each weapon is added to the inventory. The inventory can be
@@ -42,14 +45,17 @@ public class Player extends Entity {
 	 * This array can contain anything that extends the Pickup class.
 	 */
 	public ArrayList<Weapon> inventory;
+
 	/**
 	 * The buffered image for when the player is going forward.
 	 */
 	List<BufferedImage> forwardFrames;
+
 	/**
 	 * The buffered image for when the player is going backwards.
 	 */
 	List<BufferedImage> backwardFrames;
+
 	/**
 	 * This is the player's defense. It can only be increased by collecting armor or invincibility on
 	 * a map. Any damage to the player is calculated by newHealth = oldHealth - (enemyDamage - defense)
@@ -62,7 +68,7 @@ public class Player extends Entity {
 	 *
 	 * @param engine is the super class for the player class
 	 */
-	public Player(GameEngine engine, MapListener mapListener) {
+	public Player(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 		setHealth(MAX_HEALTH);
 	}
@@ -84,8 +90,8 @@ public class Player extends Entity {
 	 * TODO: Make more efficient by editing Entity class
 	 */
 	@Override
-	public void setXVel(float xVel) {
-		super.setXVel(xVel);
+	public void setXVelocity(float xVel) {
+		super.setXVelocity(xVel);
 		if (xVel < 0) {
 			frames = backwardFrames;
 		}
@@ -104,10 +110,10 @@ public class Player extends Entity {
 	public void tick() {
 		super.tick();
 		if (frames == forwardFrames) {
-			facingLeft = false;
+			isFacingLeft = false;
 		}
 		if (frames == backwardFrames) {
-			facingLeft = true;
+			isFacingLeft = true;
 		}
 		getWeapon().lowerTicksTillFire();
 		if (getHealth() <= 0 && lives >= 0) {

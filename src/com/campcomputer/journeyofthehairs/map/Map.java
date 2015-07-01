@@ -9,20 +9,24 @@ import java.util.ArrayList;
 
 public class Map {
 	private static final String fileName = "saved%20maps.ser";
+
 	/**
 	 * Database of all saved maps.
 	 * <p/>
 	 * Index 0 is reserved for temp maps (portals). 1-3 are game saves
 	 */
 	private static ArrayList<Map> maps = new ArrayList<Map>();
+
 	/**
 	 * The map to be used as the tile array in the engine variable
 	 */
 	protected Tile[][] map;
+
 	/**
 	 * The buffered image used as a background in the game panel
 	 */
 	protected BufferedImage image;
+
 	/**
 	 * List of entities in the map
 	 */

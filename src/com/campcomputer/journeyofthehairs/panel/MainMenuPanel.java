@@ -9,9 +9,13 @@ import java.awt.image.BufferedImage;
 
 public class MainMenuPanel extends Panel implements MenuListener {
 	public Rectangle startButton = new Rectangle(154, 527, 471 - 154, 603 - 527);
+
 	public Rectangle aboutButton = new Rectangle(537, 528, 324, 81);
+
 	public Rectangle exitButton = new Rectangle(542, 654, 313, 74);
+
 	public Rectangle instructionsButton = new Rectangle(156, 640, 313, 74);
+
 	BufferedImage bgImage = Images.ReadImage("menus/title");
 
 	public MainMenuPanel(MenuListener listener) {

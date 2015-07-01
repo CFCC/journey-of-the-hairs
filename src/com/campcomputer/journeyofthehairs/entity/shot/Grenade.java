@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.shot;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Weapons;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
@@ -13,11 +13,12 @@ import java.util.List;
 
 public class Grenade extends Shot {
 	public List<BufferedImage> stasisFrames;
+
 	public List<BufferedImage> explosionFrames;
 
 	private int timeLeft = 1000;
 
-	public Grenade(GameEngine engine, MapListener mapListener) {
+	public Grenade(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 		setBulletSpeed(1);
 	}

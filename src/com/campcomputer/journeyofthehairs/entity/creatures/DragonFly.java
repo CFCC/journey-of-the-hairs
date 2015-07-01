@@ -1,7 +1,7 @@
 package com.campcomputer.journeyofthehairs.entity.creatures;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
@@ -16,10 +16,12 @@ public class DragonFly extends Entity {
 	 * minuscule 1 damage. This attack happens rather quickly, though, so it can be dangerous.
 	 */
 	private static final int BREATH_FIRE_DAMAGE = 1;
+
 	/**
 	 * Once the fly's prey is weak enough to be eaten (has 10 health), the fly eats its prey, removing it from the map
 	 */
 	private static final int EATING_DAMAGE = 10;
+
 	/**
 	 * In theory, the dragonfly cannot fly forever; its wings would get tired. To represent this scenario
 	 * is this field. The fly can fly at any time as long as the value is positive. Once it reaches
@@ -35,7 +37,7 @@ public class DragonFly extends Entity {
 	/**
 	 * Constructor
 	 */
-	public DragonFly(GameEngine engine, MapListener mapListener) {
+	public DragonFly(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);
 		setAffectedByGravity(false);
 		setHealth(5);
@@ -64,7 +66,7 @@ public class DragonFly extends Entity {
 			moveRight();
 			flyingEnergy += 1;
 		} else {
-			setXVel(0);
+			setXVelocity(0);
 			setX(getX());
 		}
 

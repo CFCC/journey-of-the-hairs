@@ -1,6 +1,6 @@
 package com.campcomputer.journeyofthehairs.panel;
 
-import com.campcomputer.journeyofthehairs.GameEngine;
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.map.Map;
@@ -14,21 +14,28 @@ import java.awt.image.BufferedImage;
 public class GamePanel extends Panel implements MapListener {
 
 	public static final int TILE_SIZE = 64;
+
 	private static final Color BLOOD_COLOR = new Color(185, 0, 0);
+
 	private static final Color GROUND_COLOR = new Color(150, 100, 50);
+
 	private float xScreenPlace = 0f;
+
 	private float lastHealth = 0;
+
 	private boolean showTiles = false;
+
 	private BufferedImage mapBackground;
 
 	private float[] dashPattern = {1, 1};
+
 	private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10, dashPattern, 0);
 
 	private Rectangle infoBar = new Rectangle(0, 0, 1024, 50);
 
-	public GamePanel(GameEngine theGameEngine, MenuListener menuListener) {
+	public GamePanel(PhysicsEngine thePhysicsEngine, MenuListener menuListener) {
 		super(menuListener);
-		engine = theGameEngine;
+		engine = thePhysicsEngine;
 	}
 
 	@Override
