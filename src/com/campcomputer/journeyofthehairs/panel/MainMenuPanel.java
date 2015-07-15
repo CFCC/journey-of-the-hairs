@@ -8,7 +8,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 public class MainMenuPanel extends Panel implements MenuListener {
-	public Rectangle startButton = new Rectangle(154, 527, 471 - 154, 603 - 527);
+	public Rectangle startButton = new Rectangle(0, 0, 200, 200);
 
 	public Rectangle aboutButton = new Rectangle(537, 528, 324, 81);
 
@@ -54,6 +54,8 @@ public class MainMenuPanel extends Panel implements MenuListener {
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
+		Graphics2D g2 = (Graphics2D) g;
+		g2.drawImage(backgroundImage, null, 0, 0);
 	}
 
 	@Override

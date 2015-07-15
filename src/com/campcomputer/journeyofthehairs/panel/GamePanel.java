@@ -108,7 +108,6 @@ public class GamePanel extends Panel implements MapListener {
 			xScreenPlace = engine.getMap().getMap().length - 16;
 		}
 
-
 		g2.drawImage(mapBackground, null, (int) (- xScreenPlace * TILE_SIZE), 0);
 
 		for (Entity entity : engine.getEntities()) {
@@ -162,13 +161,9 @@ public class GamePanel extends Panel implements MapListener {
 		showTiles = ! showTiles;
 	}
 
-	public void setMapBackground(BufferedImage bgImage) {
-		mapBackground = bgImage;
-	}
-
 	@Override
 	public void setMap(Map map) {
-		setMapBackground(map.getImage());
+		mapBackground = map.getImage();
 	}
 }
 

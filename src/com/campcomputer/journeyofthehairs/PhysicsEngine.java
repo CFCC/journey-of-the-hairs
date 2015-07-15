@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Any method related to movement, collision detecting, entity adding/destroying, etc
  * is contained within this class.
  */
-public class PhysicsEngine implements MapListener {
+public class PhysicsEngine {
 	/**
 	 * The universal amount of force gravity gives on every entity affected by it.
 	 */
@@ -265,15 +265,16 @@ public class PhysicsEngine implements MapListener {
 		float oldX = entity.getX();
 		float oldY = entity.getY();
 		float yVelocity = entity.getYVelocity();
+		float xVelocity = entity.getXVelocity();
 		// When determining obstacles from below, the method stops movement at the point (oldX, obstacleY - height)
 		float height = entity.getHeight();
 
-		float newX = calculateHorizontalCollision(oldX, oldY);
+		float newX = calculateHorizontalCollision(oldX, oldY, xVelocity);
 		float newY = calculateVerticalCollision(oldX, oldY, height, yVelocity);
 
 		// Block for calculations if the player is under water. They won't move as quickly
 		if (activeMap.getMap()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER) {
-			newX = calculateHorizontalCollision(oldX, oldY); // oldX + (vX / 3);
+			newX = calculateHorizontalCollision(oldX, oldY, xVelocity); // oldX + (vX / 3);
 			newY = calculateVerticalCollision(oldX, oldY, height, yVelocity / 2);
 		}
 
@@ -294,15 +295,19 @@ public class PhysicsEngine implements MapListener {
 		entity.setY(newY);
 	}
 
-	private float calculateHorizontalCollision(float x, float y) {
-		float newX = 0;
-		Point leftWall = findFirstSolid(x, y, - 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
-		Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
-		if (leftWall != null && newX < leftWall.x + 1) {
-			newX = leftWall.x + 1;
-		}
-		if (rightWall != null && newX > rightWall.x - 1) {
-			newX = rightWall.x - 1;
+	private float calculateHorizontalCollision(float x, float y, float xVelocity) {
+		float newX = x + xVelocity;
+
+		if (xVelocity > 0) {
+			Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
+			if (rightWall.x < newX + 1) {
+				newX = rightWall.x - 1;
+			}
+		} else {
+			Point leftWall = findFirstSolid(x, y, - 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
+			if (leftWall.x + 1 > newX) {
+				newX = leftWall.x + 1;
+			}
 		}
 
 		return newX;
@@ -317,14 +322,12 @@ public class PhysicsEngine implements MapListener {
 			Point nextPlatformOnLeftCorner = findFirstSolid(x, y + height, 0, 1, 0, 0, map.length - 1, map[0].length - 1);
 			Point nextPlatformOnRightCorner = findFirstSolid(x + 1, y + height, 0, 1, 0, 0, map.length - 1, map[0].length - 1);
 
-			int highestLandingPoint = nextPlatformOnLeftCorner.y;
-			if (nextPlatformOnRightCorner.y < highestLandingPoint) {
-				highestLandingPoint = nextPlatformOnRightCorner.y;
+			int highestLandingPoint = (int) (nextPlatformOnLeftCorner.y - height);
+			if (nextPlatformOnRightCorner.y - height < highestLandingPoint) {
+				highestLandingPoint = (int) (nextPlatformOnRightCorner.y - height);
 			}
 
-			if (newY >= highestLandingPoint - height) {
-				newY = highestLandingPoint - height;
-			} else {
+			if (newY >= highestLandingPoint) {
 				newY = highestLandingPoint;
 			}
 		}
@@ -399,8 +402,9 @@ public class PhysicsEngine implements MapListener {
 	 * TODO: Add width variable to let the player jump from the left edge of a ledge
 	 */
 	public void jump() {
-		Point firstSolid = findFirstSolid(player.getX(), player.getY(), 0, 1, 0, 0, activeMap.getMap().length, activeMap.getMap()[0].length);
-		if (firstSolid.y - player.getY() <= player.getHeight()) {
+		boolean airLeft = getMap().getMap()[((int) player.getX())][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
+		boolean airRight = getMap().getMap()[((int) player.getX() + 1)][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
+		if (! (airLeft && airRight)) {
 			player.setYVelocity(JUMP_POWER);
 		}
 	}

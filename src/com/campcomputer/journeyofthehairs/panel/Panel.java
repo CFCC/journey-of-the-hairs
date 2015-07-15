@@ -50,6 +50,6 @@ public abstract class Panel extends JPanel {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 
-		g2.drawImage(backgroundImage, null, 0, 0);
+		//g2.drawImage(backgroundImage, null, 0, 0);
 	}
 }

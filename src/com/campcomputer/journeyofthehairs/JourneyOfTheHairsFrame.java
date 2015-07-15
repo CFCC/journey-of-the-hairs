@@ -159,7 +159,7 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 	}
 
 	public void changeMap(Map map) {
-		gamePanel.setBackground(map.getImage());
+		gamePanel.setMap(map);
 		engine.setMap(map);
 	}
 }
