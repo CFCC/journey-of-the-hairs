@@ -269,16 +269,18 @@ public class PhysicsEngine {
 		// When determining obstacles from below, the method stops movement at the point (oldX, obstacleY - height)
 		float height = entity.getHeight();
 
-		float newX = calculateHorizontalCollision(oldX, oldY, xVelocity);
-		float newY = calculateVerticalCollision(oldX, oldY, height, yVelocity);
+		float newX, newY;
 
 		// Block for calculations if the player is under water. They won't move as quickly
 		if (activeMap.getMap()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER) {
-			newX = calculateHorizontalCollision(oldX, oldY, xVelocity); // oldX + (vX / 3);
-			newY = calculateVerticalCollision(oldX, oldY, height, yVelocity / 2);
+			newX = calculateHorizontalCollision(oldX, oldY, xVelocity / 3);
+			newY = calculateVerticalCollision(oldX, oldY, height, yVelocity / 3);
+		} else {
+			newX = calculateHorizontalCollision(oldX, oldY, xVelocity);
+			newY = calculateVerticalCollision(oldX, oldY, height, yVelocity);
 		}
 
-		if (newX < 0f) {
+		if (newX < 0) {
 			newX = 0;
 		}
 
@@ -295,6 +297,13 @@ public class PhysicsEngine {
 		entity.setY(newY);
 	}
 
+	/**
+	 * @param x         The x coordinate of the entity
+	 * @param y         The y coordinate of the entity
+	 * @param xVelocity The current horizontal velocity of the entity
+	 * @return The new x coordinate of the entity. This coordinate is either however far the entity
+	 * can go with their current velocity or as far as they could go without crashing into a wall
+	 */
 	private float calculateHorizontalCollision(float x, float y, float xVelocity) {
 		float newX = x + xVelocity;
 
@@ -313,6 +322,15 @@ public class PhysicsEngine {
 		return newX;
 	}
 
+	/**
+	 * @param x         The x coordinate of the entity
+	 * @param y         The y coordinate of the entity
+	 * @param yVelocity The current vertical velocity of the entity
+	 * @return The new y coordinate of the entity. This coordinate is either however far the entity
+	 * can go with their current velocity or as far as they could go without crashing into a wall.
+	 * Note that hit detection is only calculated when the entity is going downward to allow for jumping through
+	 * objects going up.
+	 */
 	private float calculateVerticalCollision(float x, float y, float height, float yVelocity) {
 		float newY = y + yVelocity;
 		Tile[][] map = activeMap.getMap();

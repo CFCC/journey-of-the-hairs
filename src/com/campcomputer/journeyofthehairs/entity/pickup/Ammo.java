@@ -8,6 +8,11 @@ import com.campcomputer.journeyofthehairs.map.MapListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+/**
+ * The user will need ammo to use their weapon. They can get more by random drops. The drops are weapon specific,
+ * so the user will need the ammo that goes with their weapon to use it. However, they will tend to see more
+ * drops of the weapon they are currently carrying.
+ */
 public class Ammo extends Pickup implements Weapons {
 	/**
 	 * This is the type of ammo that the instance will be. There are 5 types of ammo enumerated in the

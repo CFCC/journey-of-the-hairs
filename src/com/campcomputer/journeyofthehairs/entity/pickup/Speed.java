@@ -3,6 +3,9 @@ package com.campcomputer.journeyofthehairs.entity.pickup;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
+/**
+ * Speed is a random drop that temporarily increases the user's speed by a set amount
+ */
 public class Speed extends Pickup {
 	public Speed(PhysicsEngine engine, MapListener mapListener) {
 		super(engine, mapListener);

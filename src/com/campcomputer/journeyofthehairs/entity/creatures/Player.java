@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * This is the player; it is one of the most important classes in the game. It is also the only controllable
- * entity. The player is used in almost every single class because without the player, there is no game.
+ * entity.
  */
 public class Player extends Entity {
 	/**
@@ -87,7 +87,6 @@ public class Player extends Entity {
 
 	/**
 	 * Does same as superclass, but changes frames appropriately.
-	 * TODO: Make more efficient by editing Entity class
 	 */
 	@Override
 	public void setXVelocity(float xVel) {

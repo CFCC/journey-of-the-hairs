@@ -189,17 +189,15 @@ public class ChuckNorris extends Entity {
 		Point2D tP2 = new Point2D.Float(x2, y1);
 		Point2D tP3 = new Point2D.Float(x3, y1);
 		Point2D tP4 = new Point2D.Float(x1, y2);
-		Point2D tP5 = new Point2D.Float(x2, y2);
 		Point2D tP6 = new Point2D.Float(x3, y2);
 		Point2D tP7 = new Point2D.Float(x1, y3);
-		Point2D tP8 = new Point2D.Float(x2, y3);
 		Point2D tP9 = new Point2D.Float(x3, y3);
 		Point2D tP10 = new Point2D.Float(x1, y4);
 		Point2D tP11 = new Point2D.Float(x2, y4);
 		Point2D tP12 = new Point2D.Float(x3, y4);
 
 		return eP.distance(tP1) <= 2f || eP.distance(tP2) <= 2f || eP.distance(tP3) <= 2f || eP.distance(tP4) <= 2f
-		       || eP.distance(tP5) <= 2f || eP.distance(tP6) <= 2f || eP.distance(tP7) <= 2f || eP.distance(tP8) <= 2f
-		       || eP.distance(tP9) <= 2f || eP.distance(tP10) <= 2f || eP.distance(tP11) <= 2f || eP.distance(tP12) <= 2f;
+		       || eP.distance(tP6) <= 2f || eP.distance(tP7) <= 2f || eP.distance(tP9) <= 2f || eP.distance(tP10) <= 2f
+		       || eP.distance(tP11) <= 2f || eP.distance(tP12) <= 2f;
 	}
 }

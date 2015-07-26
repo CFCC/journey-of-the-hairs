@@ -9,6 +9,10 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * If the user is low on health, they can pick up this random drop to replenish it. There are 3 versions -
+ * one that replenishes 20 health, 50 health, and one that completely heals the user at 100.
+ */
 public class Health extends Pickup {
 	private List<BufferedImage> twenty;
 	private List<BufferedImage> fifty;

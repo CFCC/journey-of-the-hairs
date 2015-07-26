@@ -4,6 +4,10 @@ import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
+/**
+ * The urchin exists only in the ocean. It floats around randomly, and if it happens to run into the user, it
+ * causes minor damage and disappears
+ */
 public class Urchin extends Entity {
 	/**
 	 * Constructor

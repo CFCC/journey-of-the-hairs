@@ -175,7 +175,7 @@ public abstract class Entity {
 	}
 
 	/**
-	 * @return an entity's height. This method's only reason for existence is for overrides in tests
+	 * @return an entity's height.
 	 */
 	public int getHeight() {
 		return 1;
