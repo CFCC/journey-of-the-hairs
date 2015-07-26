@@ -80,8 +80,8 @@ public class Player extends Entity {
 	protected void loadImages() {
 		forwardFrames = new ArrayList<BufferedImage>();
 		backwardFrames = new ArrayList<BufferedImage>();
-		forwardFrames.add(Images.ReadImage("entities/creatures/hare forward"));
-		backwardFrames.add(Images.ReadImage("entities/creatures/hare back"));
+		forwardFrames.add(Images.ReadImage("/images/entities/creatures/hare forward.png"));
+		backwardFrames.add(Images.ReadImage("/images/entities/creatures/hare back.png"));
 		frames = forwardFrames;
 	}
 
@@ -115,8 +115,13 @@ public class Player extends Entity {
 			isFacingLeft = true;
 		}
 		getWeapon().lowerTicksTillFire();
-		if (getHealth() <= 0 && lives >= 0) {
+		if (getHealth() <= 0 && lives > 0) {
 			lives -= 1;
+			setHealth(MAX_HEALTH);
+		}
+
+		if (getHealth() <= 0 && lives <= 0) {
+
 		}
 	}
 
@@ -151,5 +156,9 @@ public class Player extends Entity {
 	 */
 	public void setDefense(int defense) {
 		this.defense = defense;
+	}
+
+	public int getLives() {
+		return lives;
 	}
 }

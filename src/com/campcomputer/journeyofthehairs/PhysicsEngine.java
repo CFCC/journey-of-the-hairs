@@ -272,7 +272,7 @@ public class PhysicsEngine {
 		float newX, newY;
 
 		// Block for calculations if the player is under water. They won't move as quickly
-		if (activeMap.getMap()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER) {
+		if (activeMap.getTiles()[(int) entity.getX()][(int) entity.getY()] == Tile.WATER) {
 			newX = calculateHorizontalCollision(oldX, oldY, xVelocity / 3);
 			newY = calculateVerticalCollision(oldX, oldY, height, yVelocity / 3);
 		} else {
@@ -284,7 +284,7 @@ public class PhysicsEngine {
 			newX = 0;
 		}
 
-		float rightEdgeOfMap = activeMap.getMap().length - 1;
+		float rightEdgeOfMap = activeMap.getTiles().length - 1;
 		if (newX > rightEdgeOfMap) {
 			newX = rightEdgeOfMap;
 		}
@@ -308,12 +308,12 @@ public class PhysicsEngine {
 		float newX = x + xVelocity;
 
 		if (xVelocity > 0) {
-			Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
+			Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, getMap().getTiles().length - 1, getMap().getTiles()[0].length - 1);
 			if (rightWall.x < newX + 1) {
 				newX = rightWall.x - 1;
 			}
 		} else {
-			Point leftWall = findFirstSolid(x, y, - 1, 0, 0, 0, activeMap.getMap().length - 1, activeMap.getMap()[0].length - 1);
+			Point leftWall = findFirstSolid(x, y, - 1, 0, 0, 0, getMap().getTiles().length - 1, getMap().getTiles()[0].length - 1);
 			if (leftWall.x + 1 > newX) {
 				newX = leftWall.x + 1;
 			}
@@ -333,7 +333,7 @@ public class PhysicsEngine {
 	 */
 	private float calculateVerticalCollision(float x, float y, float height, float yVelocity) {
 		float newY = y + yVelocity;
-		Tile[][] map = activeMap.getMap();
+		Tile[][] map = activeMap.getTiles();
 
 		// Do vertical collision detection only if we are falling (allows for jumping up through platforms)
 		if (yVelocity > 0) {
@@ -369,10 +369,13 @@ public class PhysicsEngine {
 	 */
 	private Point findFirstSolid(float startX, float startY, int dX, int dY, int minX, int minY, int maxX, int maxY) {
 		if (startX >= maxX || startX <= minX || startY >= maxY || startY <= minY) {
-			return new Point((int) startX, (int) startY);
+			int x = startX <= minX ? minX : maxX;
+			int y = startY <= minY ? minY : maxY;
+
+			return new Point(x, y);
 		}
 
-		switch (activeMap.getMap()[(int) startX][(int) startY]) {
+		switch (activeMap.getTiles()[(int) startX][(int) startY]) {
 			case PLANT:
 			case LETTUCE:
 			case CARROT:
@@ -420,8 +423,8 @@ public class PhysicsEngine {
 	 * TODO: Add width variable to let the player jump from the left edge of a ledge
 	 */
 	public void jump() {
-		boolean airLeft = getMap().getMap()[((int) player.getX())][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
-		boolean airRight = getMap().getMap()[((int) player.getX() + 1)][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
+		boolean airLeft = getMap().getTiles()[((int) player.getX())][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
+		boolean airRight = getMap().getTiles()[((int) player.getX() + 1)][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
 		if (! (airLeft && airRight)) {
 			player.setYVelocity(JUMP_POWER);
 		}

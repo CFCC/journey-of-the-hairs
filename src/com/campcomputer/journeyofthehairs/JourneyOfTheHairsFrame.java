@@ -8,7 +8,8 @@ import com.campcomputer.journeyofthehairs.panel.Panel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Class Name: JourneyOfTheHairsFrame (or Frame for short)
@@ -59,6 +60,7 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 	 */
 	public JourneyOfTheHairsFrame() throws HeadlessException {
 		super("Journey Of The Hairs");
+		setIconImage(Images.ReadImage("/images/entities/creatures/hare forward.png"));
 		mapListener = new MapListener() {
 			@Override
 			public void setMap(Map map) {
@@ -87,7 +89,7 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 		settingsPanel = new SettingsPanel(menuListener);
 
 		mapListener.setMap(new World1Stage1(engine, mapListener));
-		switchContentPane(mainMenuPanel);
+		switchContentPane(Panels.MAIN_MENU);
 
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setSize(1024, 768);
@@ -107,44 +109,21 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 	private void switchContentPane(Panels panel) {
 		switch (panel) {
 			case ABOUT:
-				switchContentPane(aboutPanel);
+				setContentPane(aboutPanel);
 				break;
 			case GAME:
-				switchContentPane(gamePanel);
+				setContentPane(gamePanel);
+				gamePanel.requestFocusInWindow();
 				break;
 			case INSTRUCTIONS:
-				switchContentPane(instructionsPanel);
+				setContentPane(instructionsPanel);
 				break;
 			case MAIN_MENU:
-				switchContentPane(mainMenuPanel);
+				setContentPane(mainMenuPanel);
 				break;
 			case SETTINGS:
-				switchContentPane(settingsPanel);
+				setContentPane(settingsPanel);
 		}
-	}
-
-	/**
-	 * Method for switching out content panes. The method is different from setContentPane() in that
-	 * it changes mouse/key adapters appropriately and revalidates so the new panel shows up
-	 *
-	 * @param panel the panel to become the content pane
-	 */
-	public void switchContentPane(com.campcomputer.journeyofthehairs.panel.Panel panel) {
-		if (getKeyListeners().length > 0) {
-			removeKeyListener(getKeyListeners()[0]);
-		}
-		if (getMouseListeners().length > 0) {
-			removeMouseListener(getMouseListeners()[0]);
-		}
-
-		setContentPane(panel);
-
-		if (panel.listener instanceof KeyAdapter) {
-			addKeyListener((KeyListener) panel.listener);
-		} else if (panel.listener instanceof MouseAdapter) {
-			addMouseListener((MouseListener) panel.listener);
-		}
-
 		revalidate();
 	}
 

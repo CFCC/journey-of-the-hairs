@@ -12,6 +12,6 @@ public class RifleShot extends Shot {
 	}
 
 	public void loadImages() {
-		frames.add(Images.ReadImage("entities/shots/rifle shot"));
+		frames.add(Images.ReadImage("/images/entities/shots/rifle shot.png"));
 	}
 }

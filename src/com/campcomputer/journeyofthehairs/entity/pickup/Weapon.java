@@ -78,11 +78,11 @@ public class Weapon extends Pickup implements Weapons {
 		rifleFrame = new ArrayList<BufferedImage>();
 		shotgunFrame = new ArrayList<BufferedImage>();
 
-		pistolFrame.add(Images.ReadImage("weapons/pistol"));
-		minigunFrame.add(Images.ReadImage("weapons/minigun"));
-		railgunFrame.add(Images.ReadImage("weapons/railgun"));
-		grenadeGunFrame.add(Images.ReadImage("weapons/grenade gun"));
-		rifleFrame.add(Images.ReadImage("weapons/rifle"));
-		shotgunFrame.add(Images.ReadImage("weapons/shotgun"));
+		pistolFrame.add(Images.ReadImage("/images/weapons/pistol.png"));
+		minigunFrame.add(Images.ReadImage("/images/weapons/minigun.png"));
+		railgunFrame.add(Images.ReadImage("/images/weapons/railgun.png"));
+		grenadeGunFrame.add(Images.ReadImage("/images/weapons/grenade gun.png"));
+		rifleFrame.add(Images.ReadImage("/images/weapons/rifle.png"));
+		shotgunFrame.add(Images.ReadImage("/images/weapons/shotgun.png"));
 	}
 }

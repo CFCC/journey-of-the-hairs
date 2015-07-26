@@ -2,69 +2,75 @@ package com.campcomputer.journeyofthehairs.panel;
 
 import com.campcomputer.journeyofthehairs.Images;
 
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 
-public class MainMenuPanel extends Panel implements MenuListener {
-	public Rectangle startButton = new Rectangle(0, 0, 200, 200);
-
-	public Rectangle aboutButton = new Rectangle(537, 528, 324, 81);
-
-	public Rectangle exitButton = new Rectangle(542, 654, 313, 74);
-
-	public Rectangle instructionsButton = new Rectangle(156, 640, 313, 74);
-
-	BufferedImage bgImage = Images.ReadImage("menus/title");
+public class MainMenuPanel extends Panel {
+	BufferedImage bgImage = Images.ReadImage("/images/menus/title.png");
 
 	public MainMenuPanel(MenuListener listener) {
 		super(listener);
 		setBackground(bgImage);
-	}
+		((FlowLayout) getLayout()).setHgap(75);
+		((FlowLayout) getLayout()).setVgap(25);
 
-	@Override
-	public void addListener() {
-		listener =
-				/**
-				 * Mouse adapter for the main menu. Includes 4 rectangles (1 for each of the 4 buttons on the menu).
-				 * Switches content panes according to which button is pressed. Ends the program by click of the exit button
-				 */
-				new MouseAdapter() {
-					@Override
-					public void mouseClicked(MouseEvent mouseEvent) {
-						int x = mouseEvent.getX();
-						int y = mouseEvent.getY();
 
-						if (startButton.contains(x, y)) {
-							getMenuListener().switchTo(Panels.GAME);
-							revalidate();
-						} else if (aboutButton.contains(x, y)) {
-							getMenuListener().switchTo(Panels.ABOUT);
-							revalidate();
-						} else if (instructionsButton.contains(x, y)) {
-							getMenuListener().switchTo(Panels.INSTRUCTIONS);
-							revalidate();
-						} else if (exitButton.contains(x, y)) {
-							System.exit(0);
-						}
-					}
-				};
+		JPanel placeholder = new JPanel();
+		placeholder.setOpaque(false);
+		placeholder.setPreferredSize(new Dimension(10000, 475));
+		add(placeholder);
+
+		JButton startGame = new JButton("Start Game");
+		startGame.setPreferredSize(new Dimension(320, 80));
+		startGame.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				getMenuListener().switchTo(MenuListener.Panels.GAME);
+			}
+		});
+		startGame.setFont(new Font(getFont().getName(), getFont().getStyle(), 35));
+		add(startGame);
+
+		JButton about = new JButton("About");
+		about.setPreferredSize(new Dimension(320, 80));
+		about.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				getMenuListener().switchTo(MenuListener.Panels.ABOUT);
+			}
+		});
+		about.setFont(new Font(getFont().getName(), getFont().getStyle(), 35));
+		add(about);
+
+		JButton exit = new JButton("Exit");
+		exit.setPreferredSize(new Dimension(320, 80));
+		exit.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		exit.setFont(new Font(getFont().getName(), getFont().getStyle(), 35));
+		add(exit);
+
+		JButton instructions = new JButton("Instructions");
+		instructions.setPreferredSize(new Dimension(320, 80));
+		instructions.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				getMenuListener().switchTo(MenuListener.Panels.INSTRUCTIONS);
+			}
+		});
+		instructions.setFont(new Font(getFont().getName(), getFont().getStyle(), 35));
+		add(instructions);
 	}
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.drawImage(backgroundImage, null, 0, 0);
-	}
-
-	@Override
-	public void switchTo(Panels panel) {
-
-	}
-
-	@Override
-	public Panel getCurrentPanel() {
-		return null;
 	}
 }

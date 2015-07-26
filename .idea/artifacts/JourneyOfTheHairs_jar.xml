@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="JourneyOfTheHairs:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JourneyOfTheHairs_jar</output-path>
+    <root id="archive" name="JourneyOfTheHairs.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="JourneyOfTheHairs" />
+      <element id="directory" name="images">
+        <element id="dir-copy" path="$PROJECT_DIR$/images" />
+      </element>
+    </root>
+  </artifact>
+</component>

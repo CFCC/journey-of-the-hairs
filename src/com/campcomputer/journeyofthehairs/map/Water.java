@@ -77,7 +77,7 @@ public class Water extends Map {
 			{Tile.AIR, Tile.GROUND, Tile.WATER, Tile.WATER, Tile.WATER, Tile.WATER, Tile.WATER, Tile.WATER, Tile.WATER, Tile.WATER, Tile.WATER, Tile.GROUND},
 	};
 
-	private static final BufferedImage leImage = Images.ReadImage("levels/water");
+	private static final BufferedImage leImage = Images.ReadImage("/images/levels/water.png");
 
 	public Water(PhysicsEngine engine) {
 		super();

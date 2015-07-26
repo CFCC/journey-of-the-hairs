@@ -34,9 +34,9 @@ public class Health extends Pickup {
 		fifty = new ArrayList<BufferedImage>();
 		oneHundred = new ArrayList<BufferedImage>();
 
-		twenty.add(Images.ReadImage("entities/pickups/health/20"));
-		fifty.add(Images.ReadImage("entities/pickups/health/50"));
-		oneHundred.add(Images.ReadImage("entities/pickups/health/100"));
+		twenty.add(Images.ReadImage("/images/entities/pickups/health/20.png"));
+		fifty.add(Images.ReadImage("/images/entities/pickups/health/50.png"));
+		oneHundred.add(Images.ReadImage("/images/entities/pickups/health/100.png"));
 	}
 
 	@Override

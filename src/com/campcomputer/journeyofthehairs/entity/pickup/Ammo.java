@@ -56,23 +56,23 @@ public class Ammo extends Pickup implements Weapons {
 		switch (type) {
 			case GRENADE:
 				frames = new ArrayList<BufferedImage>(1);
-				frames.add(Images.ReadImage("entities/pickups/ammo/grenade gun ammo"));
+				frames.add(Images.ReadImage("/images/entities/pickups/ammo/grenade gun ammo.png"));
 				break;
 			case BULLET:
 				frames = new ArrayList<BufferedImage>(1);
-				frames.add(Images.ReadImage("entities/pickups/ammo/bullet ammo"));
+				frames.add(Images.ReadImage("/images/entities/pickups/ammo/bullet ammo.png"));
 				break;
 			case RAILGUN_SHOT:
 				frames = new ArrayList<BufferedImage>(1);
-				frames.add(Images.ReadImage("entities/pickups/ammo/railgun ammo"));
+				frames.add(Images.ReadImage("/images/entities/pickups/ammo/railgun ammo.png"));
 				break;
 			case RIFLE_SHOT:
 				frames = new ArrayList<BufferedImage>(1);
-				frames.add(Images.ReadImage("entities/pickups/ammo/rifle ammo"));
+				frames.add(Images.ReadImage("/images/entities/pickups/ammo/rifle ammo.png"));
 				break;
 			case SHOTGUN_SHOT:
 				frames = new ArrayList<BufferedImage>(1);
-				frames.add(Images.ReadImage("entities/pickups/ammo/shotgun ammo"));
+				frames.add(Images.ReadImage("/images/entities/pickups/ammo/shotgun ammo.png"));
 				break;
 		}
 	}

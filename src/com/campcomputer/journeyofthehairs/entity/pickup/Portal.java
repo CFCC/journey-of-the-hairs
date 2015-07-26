@@ -15,7 +15,7 @@ public class Portal extends Pickup {
 	}
 
 	public void loadImages() {
-		frames = Images.loadFrames("portal");
+		frames = Images.ReadFrames("portal");
 	}
 
 	@Override

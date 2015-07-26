@@ -19,7 +19,7 @@ public class RailgunShot extends Shot {
 	}
 
 	public void loadImages() {
-		frames.add(Images.ReadImage("entities/shots/railgun shot"));
+		frames.add(Images.ReadImage("/images/entities/shots/railgun shot.png"));
 	}
 
 	public void tick() {
@@ -38,7 +38,7 @@ public class RailgunShot extends Shot {
 			}
 		}
 
-		if (this.getX() > engine.getPlayer().getX() + 7 || this.getX() > engine.getMap().getMap().length ||
+		if (this.getX() > engine.getPlayer().getX() + 7 || this.getX() > engine.getMap().getTiles().length ||
 		    this.getX() < engine.getPlayer().getX() - 8 || this.getX() < 0) {
 			setXVelocity(0);
 		}

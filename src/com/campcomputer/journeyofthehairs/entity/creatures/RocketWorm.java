@@ -82,8 +82,8 @@ public class RocketWorm extends Entity {
 	 */
 	@Override
 	public void loadImages() {
-		wormLeaveGround = Images.loadFrames("wormLeaveGround");
-		wormEnterGround = Images.loadFrames("wormEnterGround");
+		wormLeaveGround = Images.ReadFrames("wormLeaveGround");
+		wormEnterGround = Images.ReadFrames("wormEnterGround");
 		standing = new ArrayList<BufferedImage>(1);
 		standing.add(wormLeaveGround.get(0));
 		frames = standing;

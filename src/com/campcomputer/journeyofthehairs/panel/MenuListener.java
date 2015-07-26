@@ -1,11 +1,11 @@
 package com.campcomputer.journeyofthehairs.panel;
 
 public interface MenuListener {
-	public void switchTo(Panels panel);
+	void switchTo(Panels panel);
 
-	public Panel getCurrentPanel();
+	Panel getCurrentPanel();
 
-	public enum Panels {
+	enum Panels {
 		ABOUT, GAME, INSTRUCTIONS, MAIN_MENU, SETTINGS
 	}
 }

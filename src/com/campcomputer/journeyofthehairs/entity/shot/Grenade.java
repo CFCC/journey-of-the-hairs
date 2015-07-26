@@ -28,8 +28,8 @@ public class Grenade extends Shot {
 		stasisFrames = new ArrayList<BufferedImage>();
 		explosionFrames = new ArrayList<BufferedImage>();
 
-		stasisFrames.add(Images.ReadImage("entities/shots/grenade stasis"));
-		explosionFrames.add(Images.ReadImage("entities/shots/grenade explosion"));
+		stasisFrames.add(Images.ReadImage("/images/entities/shots/grenade stasis.png"));
+		explosionFrames.add(Images.ReadImage("/images/entities/shots/grenade explosion.png"));
 	}
 
 	public void tick() {

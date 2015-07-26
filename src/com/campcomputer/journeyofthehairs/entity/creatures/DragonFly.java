@@ -85,7 +85,7 @@ public class DragonFly extends Entity {
 	 */
 	@Override
 	protected void loadImages() {
-		frames.add(Images.ReadImage("entities/creatures/dragonfly"));
+		frames.add(Images.ReadImage("/images/entities/creatures/dragonfly.png"));
 	}
 
 	/**

@@ -54,8 +54,8 @@ public class Rocket extends Shot {
 		rocketLeft = new ArrayList<BufferedImage>(1);
 		rocketRight = new ArrayList<BufferedImage>(1);
 
-		rocketLeft.add(Images.ReadImage("entities/shots/rocket left"));
-		rocketRight.add(Images.ReadImage("entities/shots/rocket right"));
+		rocketLeft.add(Images.ReadImage("/images/entities/shots/rocket left.png"));
+		rocketRight.add(Images.ReadImage("/images/entities/shots/rocket right.png"));
 
 		frames = rocketRight;
 	}

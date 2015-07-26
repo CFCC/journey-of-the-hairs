@@ -87,7 +87,7 @@ public abstract class Entity {
 		this.engine = engine;
 		loadImages();
 		if (frames.size() == 0) {
-			frames.add(Images.ReadImage("cheese"));
+			frames.add(Images.ReadImage("/images/cheese.png"));
 		}
 	}
 

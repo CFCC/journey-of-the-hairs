@@ -62,7 +62,7 @@ public class Map {
 		out.close();
 	}
 
-	public Tile[][] getMap() {
+	public Tile[][] getTiles() {
 		return map;
 	}
 

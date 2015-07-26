@@ -89,7 +89,7 @@ public class Cheese extends Map implements Weapons {
 
 	};
 
-	private static final BufferedImage theImage = Images.ReadImage("levels/cheese");
+	private static final BufferedImage theImage = Images.ReadImage("/images/levels/cheese.png");
 
 	/**
 	 * The constructor for the level

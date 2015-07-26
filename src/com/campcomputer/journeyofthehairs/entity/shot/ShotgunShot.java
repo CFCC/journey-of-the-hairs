@@ -23,7 +23,7 @@ public class ShotgunShot extends Shot {
 		bulletsLeft = new ArrayList<BufferedImage>();
 		bulletsRight = new ArrayList<BufferedImage>();
 
-		bulletsLeft.add(Images.ReadImage("entities/shots/shotgun shot left"));
-		bulletsRight.add(Images.ReadImage("entities/shots/shotgun shot right"));
+		bulletsLeft.add(Images.ReadImage("/images/entities/shots/shotgun shot left.png"));
+		bulletsRight.add(Images.ReadImage("/images/entities/shots/shotgun shot right.png"));
 	}
 }

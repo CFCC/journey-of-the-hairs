@@ -3,15 +3,16 @@ package com.campcomputer.journeyofthehairs.panel;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 import com.campcomputer.journeyofthehairs.map.Map;
 import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.*;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
-public class GamePanel extends Panel implements MapListener {
+public class GamePanel extends Panel implements MapListener, KeyListener {
 
 	public static final int TILE_SIZE = 64;
 
@@ -31,59 +32,49 @@ public class GamePanel extends Panel implements MapListener {
 
 	private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10, dashPattern, 0);
 
-	private Rectangle infoBar = new Rectangle(0, 0, 1024, 50);
-
 	public GamePanel(PhysicsEngine thePhysicsEngine, MenuListener menuListener) {
 		super(menuListener);
 		engine = thePhysicsEngine;
+
+		addKeyListener(this);
+		setFocusable(true);
 	}
 
 	@Override
-	public void addListener() {
-		listener =
+	public void keyTyped(KeyEvent e) {
+	}
 
-				/**
-				 * The key adapter that belongs to the game panel. It includes basic movement (WAD) and shooting (S).
-				 * Also ends movement upon release of W and D
-				 *
-				 * TODO: Add hotkey E for inventory, switch tile painting to T
-				 * TODO: Fix the weapon bug
-				 */
-				new KeyAdapter() {
-					@Override
-					public void keyPressed(KeyEvent e) {
-						switch (e.getKeyCode()) {
-							case KeyEvent.VK_A:
-								engine.startMoveBackward();
-								break;
-							case KeyEvent.VK_D:
-								engine.startMoveForward();
-								break;
-							case KeyEvent.VK_W:
-								engine.jump();
-								break;
-							case KeyEvent.VK_E:
-								toggleShowTiles();
-								break;
-							case KeyEvent.VK_S:
-								engine.getPlayer().getWeapon().shoot();
-								break;
-						}
-					}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		switch (e.getKeyCode()) {
+			case KeyEvent.VK_A:
+				engine.startMoveBackward();
+				break;
+			case KeyEvent.VK_D:
+				engine.startMoveForward();
+				break;
+			case KeyEvent.VK_W:
+				engine.jump();
+				break;
+			case KeyEvent.VK_E:
+				toggleShowTiles();
+				break;
+			case KeyEvent.VK_S:
+				engine.getPlayer().getWeapon().shoot();
+				break;
+		}
+	}
 
-					@Override
-					public void keyReleased(KeyEvent e) {
-						switch (e.getKeyCode()) {
-							case KeyEvent.VK_A:
-								engine.endMoveBackward();
-								break;
-							case KeyEvent.VK_D:
-								engine.endMoveForward();
-								break;
-						}
-
-					}
-				};
+	@Override
+	public void keyReleased(KeyEvent e) {
+		switch (e.getKeyCode()) {
+			case KeyEvent.VK_A:
+				engine.endMoveBackward();
+				break;
+			case KeyEvent.VK_D:
+				engine.endMoveForward();
+				break;
+		}
 	}
 
 	@Override
@@ -91,41 +82,50 @@ public class GamePanel extends Panel implements MapListener {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 
-		if (engine.getPlayer().getHealth() < lastHealth) {
-			g2.setColor(BLOOD_COLOR);
-			g2.fillRect(0, 0, getWidth(), getHeight());
-			lastHealth = 0;
-			return;
+		drawBackground(g2);
+		drawEntities(g2);
+		drawInfoBar(g2);
+		if (showTiles) {
+			drawTiles(g2);
 		}
-		lastHealth = engine.getPlayer().getHealth();
+	}
 
+	private void drawInfoBar(Graphics2D g2) {
+		g2.setColor(new Color(255, 255, 255));
+		g2.fillRect(0, 0, getWidth(), 50);
 
-		xScreenPlace = 0;
-		if (engine.getPlayer().getX() >= 8) {
-			xScreenPlace = engine.getPlayer().getX() - 8;
-		}
-		if (engine.getPlayer().getX() >= engine.getMap().getMap().length - 8) {
-			xScreenPlace = engine.getMap().getMap().length - 16;
-		}
+		g2.setColor(new Color(0, 0, 0));
+		g2.setFont(new Font(getFont().getName(), getFont().getStyle(), 18));
+		Player p = engine.getPlayer();
 
-		g2.drawImage(mapBackground, null, (int) (- xScreenPlace * TILE_SIZE), 0);
+		String status = "Health: " + p.getHealth() + "     Lives: " + p.getLives() +
+		                "     Weapon: " + p.getWeapon() + "     Ammo: " + p.getWeapon().getAmmo();
+		g2.drawString(status, 15, 30);
+	}
 
+	private void drawEntities(Graphics2D g2) {
 		for (Entity entity : engine.getEntities()) {
 			if (entity.getFrames().size() > 0) {
 				g2.drawImage(entity.getCurrentFrame(), null, (int) ((entity.getX() - xScreenPlace) * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
 			}
 		}
+	}
 
-		if (showTiles) {
-			drawTiles(g2);
+	private void drawBackground(Graphics2D g2) {
+		xScreenPlace = 0;
+		if (engine.getPlayer().getX() >= 8) {
+			xScreenPlace = engine.getPlayer().getX() - 8;
+		}
+		if (engine.getPlayer().getX() >= engine.getMap().getTiles().length - 8) {
+			xScreenPlace = engine.getMap().getTiles().length - 16;
 		}
 
-		g2.draw(infoBar);
+		g2.drawImage(mapBackground, null, (int) (- xScreenPlace * TILE_SIZE), 0);
 	}
 
 	private void drawTiles(Graphics2D g2) {
 		int xFirst = (int) xScreenPlace;
-		Tile[][] map = engine.getMap().getMap();
+		Tile[][] map = engine.getMap().getTiles();
 
 		for (int x = xFirst; x < xFirst + 17 && x < map.length; x++) {
 			for (int y = 0; y < 12; y++) {

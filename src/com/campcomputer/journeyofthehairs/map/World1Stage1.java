@@ -87,7 +87,7 @@ public class World1Stage1 extends Map implements Weapons {
 			{Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.AIR, Tile.GROUND,},
 	};
 
-	private static final BufferedImage theImage = Images.ReadImage("levels/1-1");
+	private static final BufferedImage theImage = Images.ReadImage("/images/levels/1-1.png");
 
 	public World1Stage1(PhysicsEngine engine, MapListener mapListener) {
 		map = theMap;
@@ -134,10 +134,10 @@ public class World1Stage1 extends Map implements Weapons {
 		portal.setY(5);
 
 //		entities.add(portal);
-//		entities.add(dragonFly);
-//		entities.add(stinkbug);
-//		entities.add(worm);
-//		entities.add(chuckNorris);
+		entities.add(dragonFly);
+		entities.add(stinkbug);
+		entities.add(worm);
+		entities.add(chuckNorris);
 //
 //		entities.add(rifle);
 //		entities.add(minigun);

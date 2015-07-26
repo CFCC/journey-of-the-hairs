@@ -146,4 +146,21 @@ public abstract class Weapon implements Weapons {
 	 * Abstract method for the weapon to shoot since they all might have different ways of shooting
 	 */
 	public abstract void shoot();
+
+	@Override
+	public String toString() {
+		if (this instanceof GrenadeGun) {
+			return "Grenade Gun";
+		} else if (this instanceof MiniGun) {
+			return "Mini Gun";
+		} else if (this instanceof Pistol) {
+			return "Pistol";
+		} else if (this instanceof Railgun) {
+			return "Railgun";
+		} else if (this instanceof Rifle) {
+			return "Rifle";
+		} else { // if (this instanceof Shotgun)
+			return "Shotgun";
+		}
+	}
 }

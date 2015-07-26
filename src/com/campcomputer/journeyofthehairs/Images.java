@@ -43,11 +43,6 @@ public class Images {
 			}
 		} else {
 			try {
-				if (path.startsWith("frames")) {
-					path = "/" + path;
-				} else {
-					path = "/images/" + path + ".png";
-				}
 				URL url = Images.class.getResource(path);
 				if (url == null) {
 					throw new RuntimeException("Couldn't load image: " + path);
@@ -68,22 +63,7 @@ public class Images {
 		return bufferedImage;
 	}
 
-	private static BufferedImage getBufferedImage(Image image) {
-		BufferedImage bufferedImage;
-		bufferedImage = GraphicsEnvironment.getLocalGraphicsEnvironment()
-		                                   .getDefaultScreenDevice()
-		                                   .getDefaultConfiguration()
-		                                   .createCompatibleImage(image.getWidth(null), image.getHeight(null), BufferedImage.TRANSLUCENT);
-		bufferedImage.getGraphics().drawImage(image, 0, 0, null);
-		return bufferedImage;
-	}
-
-	private static BufferedImage ReadImage(byte[] bytes) throws Exception {
-		InputStream in = new ByteArrayInputStream(bytes);
-		return ImageIO.read(in);
-	}
-
-	public static List<BufferedImage> loadFrames(String name) {
+	public static List<BufferedImage> ReadFrames(String name) {
 		List<BufferedImage> frames = new ArrayList<BufferedImage>();
 		CodeSource src = Entity.class.getProtectionDomain().getCodeSource();
 
@@ -107,12 +87,27 @@ public class Images {
 
 			for (File file : frameDir.listFiles()) {
 				if (file.isFile()) {
-					frames.add(ReadImage("frames/" + name + "/" + file.getName()));
+					frames.add(ReadImage("/frames/" + name + "/" + file.getName()));
 				}
 			}
 		}
 
 		return frames;
+	}
+
+	private static BufferedImage getBufferedImage(Image image) {
+		BufferedImage bufferedImage;
+		bufferedImage = GraphicsEnvironment.getLocalGraphicsEnvironment()
+		                                   .getDefaultScreenDevice()
+		                                   .getDefaultConfiguration()
+		                                   .createCompatibleImage(image.getWidth(null), image.getHeight(null), BufferedImage.TRANSLUCENT);
+		bufferedImage.getGraphics().drawImage(image, 0, 0, null);
+		return bufferedImage;
+	}
+
+	private static BufferedImage ReadImage(byte[] bytes) throws Exception {
+		InputStream in = new ByteArrayInputStream(bytes);
+		return ImageIO.read(in);
 	}
 
 	private static void loadJarFiles(CodeSource src) {
