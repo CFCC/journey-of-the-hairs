@@ -1,7 +1,6 @@
 package com.campcomputer.journeyofthehairs.entity.pickup;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 /**
  * Armor helps protect the player. It is a random drop. When equipped by the user, it decreases the amount of
@@ -10,8 +9,8 @@ import com.campcomputer.journeyofthehairs.map.MapListener;
  * The 3 tiers are 25%, 50%, and 75%
  */
 public class Armor extends Pickup {
-	public Armor(PhysicsEngine engine, MapListener mapListener) {
-		super(engine, mapListener);
+	public Armor(PhysicsEngine engine) {
+		super(engine);
 	}
 
 	@Override

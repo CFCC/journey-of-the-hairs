@@ -3,7 +3,6 @@ package com.campcomputer.journeyofthehairs.entity.creatures;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
@@ -84,8 +83,8 @@ public class ChuckNorris extends Entity {
 
 	List<BufferedImage> smackFrames;
 
-	public ChuckNorris(PhysicsEngine engine, MapListener mapListener) {
-		super(engine, mapListener);
+	public ChuckNorris(PhysicsEngine engine) {
+		super(engine);
 		setHealth(MAX_HEALTH);
 	}
 

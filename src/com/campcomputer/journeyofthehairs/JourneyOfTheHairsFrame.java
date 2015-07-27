@@ -1,10 +1,7 @@
 package com.campcomputer.journeyofthehairs;
 
-import com.campcomputer.journeyofthehairs.map.Map;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.map.World1Stage1;
 import com.campcomputer.journeyofthehairs.panel.*;
-import com.campcomputer.journeyofthehairs.panel.Panel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,16 +12,12 @@ import java.awt.event.ActionListener;
  * Class Name: JourneyOfTheHairsFrame (or Frame for short)
  * Purpose: The frame (window in layman's terms) used to contain the game
  */
-public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
+public class JourneyOfTheHairsFrame extends JFrame {
 	/**
 	 * The time interval, in milliseconds, at which the timer is invoked and its method is called.
 	 * The lower the denominator of this variable, the better the motion quality of the game, but the slower it runs
 	 */
 	private final static int TIMER_TICK = 1000 / 30;
-
-	public final MenuListener menuListener;
-
-	public final MapListener mapListener;
 
 	/**
 	 * The instance of the game panel used throughout the game's code
@@ -61,34 +54,16 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 	public JourneyOfTheHairsFrame() throws HeadlessException {
 		super("Journey Of The Hairs");
 		setIconImage(Images.ReadImage("/images/entities/creatures/hare forward.png"));
-		mapListener = new MapListener() {
-			@Override
-			public void setMap(Map map) {
-				changeMap(map);
-			}
-		};
-		engine = new PhysicsEngine(mapListener);
+		engine = new PhysicsEngine();
 
 		new BoxLayout(this, BoxLayout.X_AXIS);
 
-		menuListener = new MenuListener() {
-			@Override
-			public void switchTo(Panels panel) {
-				switchContentPane(panel);
-			}
-
-			@Override
-			public Panel getCurrentPanel() {
-				return (Panel) getContentPane();
-			}
-		};
-		aboutPanel = new AboutPanel(menuListener);
+		aboutPanel = new AboutPanel(this);
 		instructionsPanel = new InstructionsPanel(this);
-		mainMenuPanel = new MainMenuPanel(menuListener);
-		gamePanel = new GamePanel(engine, menuListener);
-		settingsPanel = new SettingsPanel(menuListener);
+		mainMenuPanel = new MainMenuPanel(this);
+		gamePanel = new GamePanel(engine);
+		settingsPanel = new SettingsPanel(this);
 
-		mapListener.setMap(new World1Stage1(engine, mapListener));
 		switchContentPane(Panels.MAIN_MENU);
 
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -114,6 +89,7 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 			case GAME:
 				setContentPane(gamePanel);
 				gamePanel.requestFocusInWindow();
+				engine.setMap(new World1Stage1(engine));
 				break;
 			case INSTRUCTIONS:
 				setContentPane(instructionsPanel);
@@ -127,18 +103,11 @@ public class JourneyOfTheHairsFrame extends JFrame implements MenuListener {
 		revalidate();
 	}
 
-	@Override
 	public void switchTo(Panels panel) {
 		switchContentPane(panel);
 	}
 
-	@Override
-	public Panel getCurrentPanel() {
-		return (Panel) getContentPane();
-	}
-
-	public void changeMap(Map map) {
-		gamePanel.setMap(map);
-		engine.setMap(map);
+	public enum Panels {
+		ABOUT, GAME, INSTRUCTIONS, MAIN_MENU, SETTINGS
 	}
 }

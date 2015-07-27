@@ -3,7 +3,6 @@ package com.campcomputer.journeyofthehairs.entity.creatures;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.pickup.Pickup;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 /**
  * The clam is an entity that generates objects for the user. Its behavior is as follows:
@@ -19,8 +18,8 @@ public class Clam extends Entity {
 	/**
 	 * Constructor
 	 */
-	public Clam(PhysicsEngine engine, Pickup pickup, MapListener mapListener) {
-		super(engine, mapListener);
+	public Clam(PhysicsEngine engine, Pickup pickup) {
+		super(engine);
 	}
 
 	@Override

@@ -3,15 +3,14 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Weapons;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 public abstract class Shot extends Entity implements Weapons {
 	float bulletSpeed;  // Speed of the bullets
 
 	int damage;         // The damage of each bullet
 
-	public Shot(PhysicsEngine engine, MapListener mapListener) {
-		super(engine, mapListener);
+	public Shot(PhysicsEngine engine) {
+		super(engine);
 		setAffectedByGravity(false);
 	}
 

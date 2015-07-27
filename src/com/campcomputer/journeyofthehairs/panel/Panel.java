@@ -21,16 +21,6 @@ public abstract class Panel extends JPanel {
 
 	public PhysicsEngine engine;
 
-	private MenuListener menuListener;
-
-	public Panel(MenuListener listener) {
-		this.menuListener = listener;
-	}
-
-	public MenuListener getMenuListener() {
-		return menuListener;
-	}
-
 	public void setBackground(BufferedImage bg) {
 		backgroundImage = bg;
 	}

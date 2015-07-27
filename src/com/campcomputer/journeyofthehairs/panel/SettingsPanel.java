@@ -1,7 +1,9 @@
 package com.campcomputer.journeyofthehairs.panel;
 
+import com.campcomputer.journeyofthehairs.JourneyOfTheHairsFrame;
+
 public class SettingsPanel extends Panel {
-	public SettingsPanel(MenuListener menuListener) {
-		super(menuListener);
+	public SettingsPanel(JourneyOfTheHairsFrame frame) {
+		super();
 	}
 }

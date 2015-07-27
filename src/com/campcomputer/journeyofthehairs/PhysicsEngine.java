@@ -3,7 +3,6 @@ package com.campcomputer.journeyofthehairs;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 import com.campcomputer.journeyofthehairs.map.Map;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.Pistol;
 
 import java.awt.*;
@@ -70,27 +69,15 @@ public class PhysicsEngine {
 	 */
 	private Map activeMap;
 
-	private MapListener mapListener;
-
 	/**
 	 * Constructor for the game engine. Creates Player 1 and adds a default weapon.
 	 */
-	public PhysicsEngine(MapListener mapListener) {
-		this.mapListener = mapListener;
-		player = new Player(this, mapListener);
+	public PhysicsEngine() {
+		player = new Player(this);
 		player.setX(0);
 		player.setY(7);
 		player.weapon = new Pistol();
 		addEntity(player);
-	}
-
-	/**
-	 * Simple getter for the map listener
-	 *
-	 * @return the map listener for the physics engine
-	 */
-	public MapListener getMapListener() {
-		return mapListener;
 	}
 
 	/**

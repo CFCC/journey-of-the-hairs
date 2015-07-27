@@ -3,7 +3,6 @@ package com.campcomputer.journeyofthehairs.entity.creatures;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 /**
  * This is one of the enemies, the dragonfly. Its origin was the misleading name. The game's creators decided
@@ -37,8 +36,8 @@ public class DragonFly extends Entity {
 	/**
 	 * Constructor
 	 */
-	public DragonFly(PhysicsEngine engine, MapListener mapListener) {
-		super(engine, mapListener);
+	public DragonFly(PhysicsEngine engine) {
+		super(engine);
 		setAffectedByGravity(false);
 		setHealth(5);
 	}

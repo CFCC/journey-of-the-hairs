@@ -9,6 +9,6 @@ public class Shotgun extends Weapon {
 
 	@Override
 	public void shoot() {
-
+		//ShotgunShot shot = new ShotgunShot()
 	}
 }

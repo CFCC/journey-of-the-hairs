@@ -2,7 +2,6 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -18,8 +17,8 @@ public class Rocket extends Shot {
 
 	List<BufferedImage> rocketRight;
 
-	public Rocket(PhysicsEngine engine, MapListener mapListener) {
-		super(engine, mapListener);
+	public Rocket(PhysicsEngine engine) {
+		super(engine);
 	}
 
 	@Override

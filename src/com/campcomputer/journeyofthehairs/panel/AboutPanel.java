@@ -1,6 +1,7 @@
 package com.campcomputer.journeyofthehairs.panel;
 
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.JourneyOfTheHairsFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,8 +10,8 @@ import java.awt.event.ActionListener;
 
 public class AboutPanel extends Panel {
 
-	public AboutPanel(MenuListener menuListener) {
-		super(menuListener);
+	public AboutPanel(final JourneyOfTheHairsFrame frame) {
+		super();
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		setBackground(Images.ReadImage("/images/menus/about.png"));
 
@@ -46,7 +47,7 @@ public class AboutPanel extends Panel {
 		back.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getMenuListener().switchTo(MenuListener.Panels.MAIN_MENU);
+				frame.switchTo(JourneyOfTheHairsFrame.Panels.MAIN_MENU);
 			}
 		});
 		back.setAlignmentX(Component.CENTER_ALIGNMENT);

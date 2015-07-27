@@ -89,47 +89,47 @@ public class World1Stage1 extends Map implements Weapons {
 
 	private static final BufferedImage theImage = Images.ReadImage("/images/levels/1-1.png");
 
-	public World1Stage1(PhysicsEngine engine, MapListener mapListener) {
+	public World1Stage1(PhysicsEngine engine) {
 		map = theMap;
 		image = theImage;
 
-		ChuckNorris chuckNorris = new ChuckNorris(engine, mapListener);
+		ChuckNorris chuckNorris = new ChuckNorris(engine);
 		chuckNorris.setX(map.length - 5);
 		chuckNorris.setY(2);
 
-		DragonFly dragonFly = new DragonFly(engine, mapListener);
+		DragonFly dragonFly = new DragonFly(engine);
 		dragonFly.setX(3);
 		dragonFly.setY(3);
 
-		SuicideStinkBug stinkbug = new SuicideStinkBug(engine, mapListener);
+		SuicideStinkBug stinkbug = new SuicideStinkBug(engine);
 		stinkbug.setX(9);
 		stinkbug.setY(7);
 
-		RocketWorm worm = new RocketWorm(engine, mapListener);
+		RocketWorm worm = new RocketWorm(engine);
 		worm.setX(32);
 		worm.setY(9);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon rifle = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RIFLE, engine, mapListener);
+		com.campcomputer.journeyofthehairs.entity.pickup.Weapon rifle = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RIFLE, engine);
 		rifle.setX(1);
 		rifle.setY(7);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon minigun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.MINIGUN, engine, mapListener);
+		com.campcomputer.journeyofthehairs.entity.pickup.Weapon minigun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.MINIGUN, engine);
 		minigun.setX(3);
 		minigun.setY(7);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon pistol = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.PISTOL, engine, mapListener);
+		com.campcomputer.journeyofthehairs.entity.pickup.Weapon pistol = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.PISTOL, engine);
 		pistol.setX(5);
 		pistol.setY(7);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon shotgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.SHOTGUN, engine, mapListener);
+		com.campcomputer.journeyofthehairs.entity.pickup.Weapon shotgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.SHOTGUN, engine);
 		shotgun.setX(9);
 		shotgun.setY(7);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon grenadeGun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.GRENADE_GUN, engine, mapListener);
+		com.campcomputer.journeyofthehairs.entity.pickup.Weapon grenadeGun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.GRENADE_GUN, engine);
 		grenadeGun.setX(11);
 		grenadeGun.setY(7);
 
-		Portal portal = new Portal(engine, mapListener);
+		Portal portal = new Portal(engine);
 		portal.setX(17);
 		portal.setY(5);
 

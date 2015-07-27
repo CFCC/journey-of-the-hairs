@@ -4,36 +4,27 @@ import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.map.Map;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.image.BufferedImage;
 
-public class GamePanel extends Panel implements MapListener, KeyListener {
+public class GamePanel extends Panel implements KeyListener {
 
 	public static final int TILE_SIZE = 64;
-
-	private static final Color BLOOD_COLOR = new Color(185, 0, 0);
 
 	private static final Color GROUND_COLOR = new Color(150, 100, 50);
 
 	private float xScreenPlace = 0f;
 
-	private float lastHealth = 0;
-
 	private boolean showTiles = false;
-
-	private BufferedImage mapBackground;
 
 	private float[] dashPattern = {1, 1};
 
 	private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10, dashPattern, 0);
 
-	public GamePanel(PhysicsEngine thePhysicsEngine, MenuListener menuListener) {
-		super(menuListener);
+	public GamePanel(PhysicsEngine thePhysicsEngine) {
+		super();
 		engine = thePhysicsEngine;
 
 		addKeyListener(this);
@@ -120,7 +111,7 @@ public class GamePanel extends Panel implements MapListener, KeyListener {
 			xScreenPlace = engine.getMap().getTiles().length - 16;
 		}
 
-		g2.drawImage(mapBackground, null, (int) (- xScreenPlace * TILE_SIZE), 0);
+		g2.drawImage(engine.getMap().getImage(), null, (int) (- xScreenPlace * TILE_SIZE), 0);
 	}
 
 	private void drawTiles(Graphics2D g2) {
@@ -159,11 +150,6 @@ public class GamePanel extends Panel implements MapListener, KeyListener {
 
 	public void toggleShowTiles() {
 		showTiles = ! showTiles;
-	}
-
-	@Override
-	public void setMap(Map map) {
-		mapBackground = map.getImage();
 	}
 }
 

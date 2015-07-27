@@ -1,15 +1,14 @@
 package com.campcomputer.journeyofthehairs.entity.pickup;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 /**
  * A rare random drop, the user will not take any damage and kill enemies on contact if they pick
  * up invincibility
  */
 public class Invincibility extends Pickup {
-	public Invincibility(PhysicsEngine engine, MapListener mapListener) {
-		super(engine, mapListener);
+	public Invincibility(PhysicsEngine engine) {
+		super(engine);
 	}
 
 	@Override

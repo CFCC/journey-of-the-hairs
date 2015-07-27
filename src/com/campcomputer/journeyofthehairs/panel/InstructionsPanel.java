@@ -1,6 +1,7 @@
 package com.campcomputer.journeyofthehairs.panel;
 
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.JourneyOfTheHairsFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,8 +17,8 @@ public class InstructionsPanel extends Panel {
 
 	private int numPages;
 
-	public InstructionsPanel(MenuListener menuListener) {
-		super(menuListener);
+	public InstructionsPanel(final JourneyOfTheHairsFrame frame) {
+		super();
 		setBackground(Images.ReadImage("/images/menus/instruction.png"));
 
 		JButton back = new JButton("Back");
@@ -26,7 +27,7 @@ public class InstructionsPanel extends Panel {
 		back.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getMenuListener().switchTo(MenuListener.Panels.MAIN_MENU);
+				frame.switchTo(JourneyOfTheHairsFrame.Panels.MAIN_MENU);
 			}
 		});
 		add(back);

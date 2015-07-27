@@ -2,7 +2,6 @@ package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.Weapon;
 
 import java.awt.geom.Point2D;
@@ -77,22 +76,15 @@ public abstract class Entity {
 	 */
 	private boolean isAffectedByGravity = true;
 
-	private MapListener listener;
-
 	/**
 	 * Constructor for an entity. If it has no image assigned to the list frames, its image becomes cheese.png
 	 */
-	public Entity(PhysicsEngine engine, MapListener mapListener) {
-		this.listener = mapListener;
+	public Entity(PhysicsEngine engine) {
 		this.engine = engine;
 		loadImages();
 		if (frames.size() == 0) {
 			frames.add(Images.ReadImage("/images/cheese.png"));
 		}
-	}
-
-	public MapListener getMapListener() {
-		return listener;
 	}
 
 	/**

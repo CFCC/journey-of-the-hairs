@@ -94,23 +94,23 @@ public class Cheese extends Map implements Weapons {
 	/**
 	 * The constructor for the level
 	 */
-	public Cheese(final PhysicsEngine engine, final Map currentMap, MapListener mapListener) {
+	public Cheese(final PhysicsEngine engine, final Map currentMap) {
 		Map.saveMap(currentMap);
 
 		map = cheeseMap;
 		image = theImage;
 
-		SuicideStinkBug suicideStinkBug = new SuicideStinkBug(engine, mapListener);
+		SuicideStinkBug suicideStinkBug = new SuicideStinkBug(engine);
 		suicideStinkBug.setX(37);
 		suicideStinkBug.setY(10);
 		engine.addEntity(suicideStinkBug);
 
-		SuicideStinkBug suicideStinkBug1 = new SuicideStinkBug(engine, mapListener);
+		SuicideStinkBug suicideStinkBug1 = new SuicideStinkBug(engine);
 		suicideStinkBug1.setX(38);
 		suicideStinkBug1.setY(10);
 		engine.addEntity(suicideStinkBug1);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon railgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RAILGUN, engine, mapListener) {
+		com.campcomputer.journeyofthehairs.entity.pickup.Weapon railgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RAILGUN, engine) {
 			@Override
 			public void affectGame() {
 				Map.getMap(0);
@@ -125,7 +125,7 @@ public class Cheese extends Map implements Weapons {
 		railgun.setY(8);
 		engine.addEntity(railgun);
 
-		Health health = new Health(engine, 50, mapListener);
+		Health health = new Health(engine, 50);
 		health.setX(37);
 		health.setY(5);
 

@@ -3,7 +3,6 @@ package com.campcomputer.journeyofthehairs.entity.pickup;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -18,8 +17,8 @@ public class Health extends Pickup {
 	private List<BufferedImage> fifty;
 	private List<BufferedImage> oneHundred;
 
-	public Health(PhysicsEngine engine, int amount, MapListener mapListener) {
-		super(engine, mapListener);
+	public Health(PhysicsEngine engine, int amount) {
+		super(engine);
 		if (amount == 20) {
 			frames = twenty;
 		} else if (amount == 50) {

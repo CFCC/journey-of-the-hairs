@@ -4,7 +4,6 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.shot.Rocket;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -35,8 +34,8 @@ public class RocketWorm extends Entity {
 	/**
 	 * Constructor
 	 */
-	public RocketWorm(PhysicsEngine engine, MapListener mapListener) {
-		super(engine, mapListener);
+	public RocketWorm(PhysicsEngine engine) {
+		super(engine);
 		setHealth(2);
 	}
 
@@ -103,7 +102,7 @@ public class RocketWorm extends Entity {
 	 * Creates a new rocket and sets its location right above the worm
 	 */
 	public void shootRocket() {
-		Rocket rocket = new Rocket(engine, getMapListener());
+		Rocket rocket = new Rocket(engine);
 		rocket.setX(getX());
 		rocket.setY(getY() + 1);
 		engine.addEntity(rocket);

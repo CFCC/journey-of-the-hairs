@@ -1,6 +1,7 @@
 package com.campcomputer.journeyofthehairs.panel;
 
 import com.campcomputer.journeyofthehairs.Images;
+import com.campcomputer.journeyofthehairs.JourneyOfTheHairsFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,8 +12,8 @@ import java.awt.image.BufferedImage;
 public class MainMenuPanel extends Panel {
 	BufferedImage bgImage = Images.ReadImage("/images/menus/title.png");
 
-	public MainMenuPanel(MenuListener listener) {
-		super(listener);
+	public MainMenuPanel(final JourneyOfTheHairsFrame frame) {
+		super();
 		setBackground(bgImage);
 		((FlowLayout) getLayout()).setHgap(75);
 		((FlowLayout) getLayout()).setVgap(25);
@@ -28,7 +29,7 @@ public class MainMenuPanel extends Panel {
 		startGame.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getMenuListener().switchTo(MenuListener.Panels.GAME);
+				frame.switchTo(JourneyOfTheHairsFrame.Panels.GAME);
 			}
 		});
 		startGame.setFont(new Font(getFont().getName(), getFont().getStyle(), 35));
@@ -39,7 +40,7 @@ public class MainMenuPanel extends Panel {
 		about.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getMenuListener().switchTo(MenuListener.Panels.ABOUT);
+				frame.switchTo(JourneyOfTheHairsFrame.Panels.ABOUT);
 			}
 		});
 		about.setFont(new Font(getFont().getName(), getFont().getStyle(), 35));
@@ -61,7 +62,7 @@ public class MainMenuPanel extends Panel {
 		instructions.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getMenuListener().switchTo(MenuListener.Panels.INSTRUCTIONS);
+				frame.switchTo(JourneyOfTheHairsFrame.Panels.INSTRUCTIONS);
 			}
 		});
 		instructions.setFont(new Font(getFont().getName(), getFont().getStyle(), 35));

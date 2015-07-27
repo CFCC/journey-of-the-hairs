@@ -3,7 +3,6 @@ package com.campcomputer.journeyofthehairs.entity.pickup;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Weapons;
-import com.campcomputer.journeyofthehairs.map.MapListener;
 import com.campcomputer.journeyofthehairs.weapon.*;
 
 import java.awt.image.BufferedImage;
@@ -19,8 +18,8 @@ public class Weapon extends Pickup implements Weapons {
 	private List<BufferedImage> rifleFrame;
 	private List<BufferedImage> shotgunFrame;
 
-	public Weapon(Weapons.Weapon type, PhysicsEngine engine, MapListener mapListener) {
-		super(engine, mapListener);
+	public Weapon(Weapons.Weapon type, PhysicsEngine engine) {
+		super(engine);
 		this.type = type;
 
 		switch (type) {
