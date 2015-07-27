@@ -89,7 +89,7 @@ public class ChuckNorris extends Entity {
 	}
 
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 		standingFrames = new ArrayList<BufferedImage>();
 		standingFrames.add(Images.ReadImage("/frames/chucknorrissmack/1.png"));
 		punchFrames = Images.ReadFrames("chucknorrispunch");
@@ -103,13 +103,10 @@ public class ChuckNorris extends Entity {
 		super.tick();
 
 		if (isOnTopOfEntity(engine.getPlayer())) {
-			/*
-			It should attack any of the three attacks at random. Use round house kick at the end. ATTACK!
+			/* It should attack any of the three attacks at random. Use round house kick at the end. ATTACK!
 			ChuckNorris does only one attack at a time
 			The roundhouse should not happen often. 51% of the punch happening. 40% of the laser eyes happening.
-			While 9% of the roundhouse happening.
-			*/
-
+			While 9% of the roundhouse happening. */
 			int randomChance = new Random().nextInt(100);
 
 			if (randomChance < 33) {

@@ -6,16 +6,32 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08aa8530-87a7-4039-a70b-e1582d84b384" name="Default" comment="eliminated the need for those weird listener interfaces - completely gone! strange bug with hit detection persists, however. to be fixed soon">
-      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\images\images\menus\instruction.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\images\images\menus\title.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\panel\Panel.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\images\images\menus\about.png" afterPath="$PROJECT_DIR$/images/images/menu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" />
+    <list default="true" id="08aa8530-87a7-4039-a70b-e1582d84b384" name="Default" comment="renamed a couple methods to be more readable. fixed the dragonfly">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Current.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Current.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
@@ -40,46 +56,165 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SettingsPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java">
+      <file leaf-file-name="PhysicsEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11819235">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;field#GRAVITY#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;field#JUMP_POWER#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;field#MOVE_SPEED#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;field#player#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;field#entities#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;field#entitiesToAdd#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;field#entitiesToRemove#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;field#activeMap#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#PhysicsEngine#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#PhysicsEngine#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#tick#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#tick#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#getPlayer#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#getMap#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#setMap#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#setMap#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#getEntities#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#getDistanceBetweenEntityAndPlayer#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#getDistanceBetweenEntityAndPlayer#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#addEntity#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#removeEntity#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#isPlayerClose#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#isOnTopOfPlayer#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#playerIsAbove#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="e#6899#6900#0" expanded="true" />
+                <element signature="e#6942#6943#0" expanded="true" />
+                <element signature="docComment;method#playerIsToLeftOf#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="e#7288#7289#0" expanded="true" />
+                <element signature="docComment;method#applyGravity#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#applyGravity#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#applyMovement#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#applyMovement#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#calculateHorizontalCollision#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#calculateHorizontalCollision#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#calculateVerticalCollision#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#calculateVerticalCollision#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#findFirstSolid#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#findFirstSolid#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#startMoveForward#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#endMoveForward#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#startMoveBackward#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#endMoveBackward#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="docComment;method#jump#0;class#PhysicsEngine#0" expanded="false" />
+                <element signature="method#jump#0;class#PhysicsEngine#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AboutPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java">
+      <file leaf-file-name="DragonFly.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenuPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2452#2453#0" expanded="true" />
+                <element signature="e#2516#2517#0" expanded="true" />
+                <element signature="e#2568#2569#0" expanded="true" />
+                <element signature="e#2587#2588#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstructionsPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3625219">
+              <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+              <folding>
+                <element signature="docComment;class#Player#0" expanded="false" />
+                <element signature="docComment;field#MAX_HEALTH#0;class#Player#0" expanded="false" />
+                <element signature="docComment;field#lives#0;class#Player#0" expanded="false" />
+                <element signature="docComment;field#weapon#0;class#Player#0" expanded="false" />
+                <element signature="docComment;field#inventory#0;class#Player#0" expanded="false" />
+                <element signature="docComment;field#forwardFrames#0;class#Player#0" expanded="false" />
+                <element signature="docComment;field#backwardFrames#0;class#Player#0" expanded="false" />
+                <element signature="docComment;field#defense#0;class#Player#0" expanded="false" />
+                <element signature="docComment;method#Player#0;class#Player#0" expanded="false" />
+                <element signature="method#Player#0;class#Player#0" expanded="false" />
+                <element signature="docComment;method#addImagesOfEntityToFrames#0;class#Player#0" expanded="false" />
+                <element signature="method#addImagesOfEntityToFrames#0;class#Player#0" expanded="false" />
+                <element signature="docComment;method#setXVelocity#0;class#Player#0" expanded="false" />
+                <element signature="docComment;method#tick#0;class#Player#0" expanded="false" />
+                <element signature="docComment;method#getWeapon#0;class#Player#0" expanded="false" />
+                <element signature="docComment;method#setWeapon#0;class#Player#0" expanded="false" />
+                <element signature="docComment;method#getDefense#0;class#Player#0" expanded="false" />
+                <element signature="docComment;method#setDefense#0;class#Player#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-              <folding />
+              <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;field#isFacingLeft#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#frames#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#engine#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#currentFrame#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#health#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#x#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#y#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#xVelocity#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#yVelocity#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;field#isAffectedByGravity#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#Entity#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#getX#0;class#Entity#0" expanded="false" />
+                <element signature="e#3250#3251#0" expanded="true" />
+                <element signature="e#3265#3266#0" expanded="true" />
+                <element signature="docComment;method#setX#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#getY#0;class#Entity#0" expanded="false" />
+                <element signature="e#3426#3427#0" expanded="true" />
+                <element signature="e#3441#3442#0" expanded="true" />
+                <element signature="docComment;method#setY#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#getLocation#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#getHealth#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#setHealth#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#getXVelocity#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#setXVelocity#0;class#Entity#0" expanded="false" />
+                <element signature="e#4260#4261#0" expanded="true" />
+                <element signature="e#4288#4289#0" expanded="true" />
+                <element signature="docComment;method#getYVelocity#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#setYVelocity#0;class#Entity#0" expanded="false" />
+                <element signature="e#4494#4495#0" expanded="true" />
+                <element signature="e#4522#4523#0" expanded="true" />
+                <element signature="docComment;method#getHeight#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#isFacingLeft#0;class#Entity#0" expanded="false" />
+                <element signature="e#4712#4713#0" expanded="true" />
+                <element signature="e#4738#4739#0" expanded="true" />
+                <element signature="docComment;method#switchDirection#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#isAffectedByGravity#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#setAffectedByGravity#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#moveLeft#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#moveRight#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#moveUp#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#moveDown#0;class#Entity#0" expanded="false" />
+                <element signature="e#6257#6258#0" expanded="true" />
+                <element signature="e#6282#6283#0" expanded="true" />
+                <element signature="docComment;method#addImagesOfEntityToFrames#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#getFrames#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#tick#0;class#Entity#0" expanded="false" />
+                <element signature="method#tick#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#getCurrentFrame#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#isAffectedByHitDetection#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;method#takeDamage#0;class#Entity#0" expanded="false" />
+                <element signature="method#takeDamage#0;class#Entity#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +223,12 @@
         <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="76" selection-end-column="39" />
-              <folding />
+              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#3840#3841#0" expanded="false" />
+                <element signature="e#3870#3871#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,6 +239,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#JourneyOfTheHairsFrame#0" expanded="false" />
                 <element signature="docComment;field#TIMER_TICK#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
                 <element signature="docComment;field#gamePanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
@@ -110,6 +250,8 @@
                 <element signature="docComment;method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
                 <element signature="method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
                 <element signature="method#switchContentPane#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+                <element signature="e#2920#2921#0" expanded="false" />
+                <element signature="e#2951#2952#0" expanded="false" />
                 <element signature="class#Panels#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
               </folding>
             </state>
@@ -147,7 +289,6 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanelKeyAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Weapon.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java" />
@@ -162,11 +303,8 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Current.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" />
@@ -178,12 +316,16 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/Panel.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" />
       </list>
     </option>
   </component>
@@ -247,6 +389,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -463,41 +606,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="journey-of-the-hairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="journey-of-the-hairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -933,7 +1043,8 @@
       <workItem from="1437073536814" duration="49000" />
       <workItem from="1437311308400" duration="1190000" />
       <workItem from="1437861768475" duration="22459000" />
-      <workItem from="1437961141048" duration="3827000" />
+      <workItem from="1437961141048" duration="5138000" />
+      <workItem from="1438022522462" duration="957000" />
     </task>
     <task id="LOCAL-00001" summary="it finally works! physics engine updated, and now the player moves around as expected, with correct hit detection">
       <created>1436990851066</created>
@@ -959,19 +1070,25 @@
       <option name="project" value="LOCAL" />
       <updated>1437961519372</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="got rid of Panel superclass. it wasn't doing anything anyway">
+      <created>1438020992860</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1438020992860</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66879000" />
+    <option name="totallyTimeSpent" value="69147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32772166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32772166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -979,9 +1096,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57239056" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20476191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20476191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -991,6 +1107,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1036,66 +1153,39 @@
     <MESSAGE value="documentation, documentation, documentation..." />
     <MESSAGE value="overhaul of the panels classes - no more weird rectangles and mouselisteners. they all use swing buttons and labels. fewer lines of code, fewer pictures, more fun (all except the instructions - thats a TODO)" />
     <MESSAGE value="eliminated the need for those weird listener interfaces - completely gone! strange bug with hit detection persists, however. to be fixed soon" />
-    <option name="LAST_COMMIT_MESSAGE" value="eliminated the need for those weird listener interfaces - completely gone! strange bug with hit detection persists, however. to be fixed soon" />
+    <MESSAGE value="got rid of Panel superclass. it wasn't doing anything anyway" />
+    <MESSAGE value="renamed a couple methods to be more readable. fixed the dragonfly" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed a couple methods to be more readable. fixed the dragonfly" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
           <folding>
-            <element signature="docComment;field#isFacingLeft#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#frames#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#engine#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#currentFrame#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#health#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#x#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#y#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#xVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#yVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#isAffectedByGravity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#Entity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getX#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#setX#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getY#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#setY#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getLocation#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getHealth#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#setHealth#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getXVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#setXVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getYVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#setYVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getHeight#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#isFacingLeft#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#switchDirection#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#isAffectedByGravity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#setAffectedByGravity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#moveLeft#0;class#Entity#0" expanded="false" />
-            <element signature="method#moveLeft#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#moveRight#0;class#Entity#0" expanded="false" />
-            <element signature="method#moveRight#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#moveUp#0;class#Entity#0" expanded="false" />
-            <element signature="method#moveUp#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#moveDown#0;class#Entity#0" expanded="false" />
-            <element signature="method#moveDown#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#loadImages#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getFrames#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#tick#0;class#Entity#0" expanded="false" />
-            <element signature="method#tick#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#getCurrentFrame#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#isAffectedByHitDetection#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#takeDamage#0;class#Entity#0" expanded="false" />
-            <element signature="method#takeDamage#0;class#Entity#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#TIMER_TICK#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#gamePanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#mainMenuPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#instructionsPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#aboutPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#engine#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="method#switchContentPane#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="e#2920#2921#0" expanded="false" />
+            <element signature="e#2951#2952#0" expanded="false" />
+            <element signature="class#Panels#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1129,8 +1219,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
           <folding>
-            <element signature="e#329#330#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
+            <element signature="e#344#345#0" expanded="false" />
+            <element signature="e#420#421#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,8 +1230,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding>
-            <element signature="e#563#564#0" expanded="false" />
-            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#578#579#0" expanded="false" />
+            <element signature="e#656#657#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1186,14 +1276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1207,44 +1289,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
-          <folding>
-            <element signature="docComment;class#Player#0" expanded="false" />
-            <element signature="docComment;field#MAX_HEALTH#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#lives#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#weapon#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#inventory#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#forwardFrames#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#backwardFrames#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#defense#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#Player#0;class#Player#0" expanded="false" />
-            <element signature="method#Player#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#loadImages#0;class#Player#0" expanded="false" />
-            <element signature="method#loadImages#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#setXVelocity#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#tick#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#getWeapon#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#setWeapon#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#getDefense#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#setDefense#0;class#Player#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <folding>
-            <element signature="e#2655#2656#0" expanded="false" />
-            <element signature="e#2734#2735#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1269,8 +1313,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
           <folding>
-            <element signature="e#1479#1480#0" expanded="false" />
-            <element signature="e#1557#1558#0" expanded="false" />
+            <element signature="e#1494#1495#0" expanded="false" />
+            <element signature="e#1572#1573#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1341,7 +1385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="79" column="91" selection-start-line="79" selection-start-column="91" selection-end-line="79" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,7 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="161" column="48" selection-start-line="161" selection-start-column="48" selection-end-line="161" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1413,7 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1421,7 +1462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1429,10 +1469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-          <folding>
-            <element signature="e#2121#2122#0" expanded="true" />
-            <element signature="e#2150#2151#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1455,12 +1491,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019698726">
+          <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/images/menu.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#TIMER_TICK#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#gamePanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#mainMenuPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#instructionsPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#aboutPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#engine#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="method#switchContentPane#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="e#2920#2921#0" expanded="false" />
+            <element signature="e#2951#2952#0" expanded="false" />
+            <element signature="class#Panels#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13789108">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5318656">
+          <caret line="111" column="36" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3840#3841#0" expanded="false" />
+            <element signature="e#3870#3871#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="141" column="24" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
+          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;field#GRAVITY#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;field#JUMP_POWER#0;class#PhysicsEngine#0" expanded="false" />
@@ -1471,10 +1597,13 @@
             <element signature="docComment;field#entitiesToRemove#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;field#activeMap#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#PhysicsEngine#0;class#PhysicsEngine#0" expanded="false" />
+            <element signature="method#PhysicsEngine#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#tick#0;class#PhysicsEngine#0" expanded="false" />
+            <element signature="method#tick#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#getPlayer#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#getMap#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#setMap#0;class#PhysicsEngine#0" expanded="false" />
+            <element signature="method#setMap#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#getEntities#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#getDistanceBetweenEntityAndPlayer#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="method#getDistanceBetweenEntityAndPlayer#0;class#PhysicsEngine#0" expanded="false" />
@@ -1482,8 +1611,11 @@
             <element signature="docComment;method#removeEntity#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#isPlayerClose#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#isOnTopOfPlayer#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#isPlayerAbove#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#isPlayerToLeft#0;class#PhysicsEngine#0" expanded="false" />
+            <element signature="docComment;method#playerIsAbove#0;class#PhysicsEngine#0" expanded="false" />
+            <element signature="e#6899#6900#0" expanded="true" />
+            <element signature="e#6942#6943#0" expanded="true" />
+            <element signature="docComment;method#playerIsToLeftOf#0;class#PhysicsEngine#0" expanded="false" />
+            <element signature="e#7288#7289#0" expanded="true" />
             <element signature="docComment;method#applyGravity#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="method#applyGravity#0;class#PhysicsEngine#0" expanded="false" />
             <element signature="docComment;method#applyMovement#0;class#PhysicsEngine#0" expanded="false" />
@@ -1504,87 +1636,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019698726">
-          <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/images/menu.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairs.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#TIMER_TICK#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#gamePanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#mainMenuPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#instructionsPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#aboutPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#engine#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="method#switchContentPane#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="class#Panels#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
+            <element signature="docComment;field#isFacingLeft#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#frames#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#engine#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#currentFrame#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#health#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#x#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#y#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#xVelocity#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#yVelocity#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;field#isAffectedByGravity#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#Entity#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#getX#0;class#Entity#0" expanded="false" />
+            <element signature="e#3250#3251#0" expanded="true" />
+            <element signature="e#3265#3266#0" expanded="true" />
+            <element signature="docComment;method#setX#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#getY#0;class#Entity#0" expanded="false" />
+            <element signature="e#3426#3427#0" expanded="true" />
+            <element signature="e#3441#3442#0" expanded="true" />
+            <element signature="docComment;method#setY#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#getLocation#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#getHealth#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#setHealth#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#getXVelocity#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#setXVelocity#0;class#Entity#0" expanded="false" />
+            <element signature="e#4260#4261#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="docComment;method#getYVelocity#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#setYVelocity#0;class#Entity#0" expanded="false" />
+            <element signature="e#4494#4495#0" expanded="true" />
+            <element signature="e#4522#4523#0" expanded="true" />
+            <element signature="docComment;method#getHeight#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#isFacingLeft#0;class#Entity#0" expanded="false" />
+            <element signature="e#4712#4713#0" expanded="true" />
+            <element signature="e#4738#4739#0" expanded="true" />
+            <element signature="docComment;method#switchDirection#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#isAffectedByGravity#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#setAffectedByGravity#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#moveLeft#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#moveRight#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#moveUp#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#moveDown#0;class#Entity#0" expanded="false" />
+            <element signature="e#6257#6258#0" expanded="true" />
+            <element signature="e#6282#6283#0" expanded="true" />
+            <element signature="docComment;method#addImagesOfEntityToFrames#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#getFrames#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#tick#0;class#Entity#0" expanded="false" />
+            <element signature="method#tick#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#getCurrentFrame#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#isAffectedByHitDetection#0;class#Entity#0" expanded="false" />
+            <element signature="docComment;method#takeDamage#0;class#Entity#0" expanded="false" />
+            <element signature="method#takeDamage#0;class#Entity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="76" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MainMenuPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2452#2453#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2568#2569#0" expanded="true" />
+            <element signature="e#2587#2588#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11819235">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.3625219">
+          <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Player#0" expanded="false" />
+            <element signature="docComment;field#MAX_HEALTH#0;class#Player#0" expanded="false" />
+            <element signature="docComment;field#lives#0;class#Player#0" expanded="false" />
+            <element signature="docComment;field#weapon#0;class#Player#0" expanded="false" />
+            <element signature="docComment;field#inventory#0;class#Player#0" expanded="false" />
+            <element signature="docComment;field#forwardFrames#0;class#Player#0" expanded="false" />
+            <element signature="docComment;field#backwardFrames#0;class#Player#0" expanded="false" />
+            <element signature="docComment;field#defense#0;class#Player#0" expanded="false" />
+            <element signature="docComment;method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="docComment;method#addImagesOfEntityToFrames#0;class#Player#0" expanded="false" />
+            <element signature="method#addImagesOfEntityToFrames#0;class#Player#0" expanded="false" />
+            <element signature="docComment;method#setXVelocity#0;class#Player#0" expanded="false" />
+            <element signature="docComment;method#tick#0;class#Player#0" expanded="false" />
+            <element signature="docComment;method#getWeapon#0;class#Player#0" expanded="false" />
+            <element signature="docComment;method#setWeapon#0;class#Player#0" expanded="false" />
+            <element signature="docComment;method#getDefense#0;class#Player#0" expanded="false" />
+            <element signature="docComment;method#setDefense#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>

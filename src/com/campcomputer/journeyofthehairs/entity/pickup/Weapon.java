@@ -69,7 +69,7 @@ public class Weapon extends Pickup implements Weapons {
 	}
 
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 		pistolFrame = new ArrayList<BufferedImage>();
 		minigunFrame = new ArrayList<BufferedImage>();
 		railgunFrame = new ArrayList<BufferedImage>();

@@ -22,24 +22,12 @@ public class DragonFly extends Entity {
 	private static final int EATING_DAMAGE = 10;
 
 	/**
-	 * In theory, the dragonfly cannot fly forever; its wings would get tired. To represent this scenario
-	 * is this field. The fly can fly at any time as long as the value is positive. Once it reaches
-	 * 0, the fly cant fly and has to wait until it reaches a certain minimum before it can begin flying
-	 * again.
-	 * <p/>
-	 * If the fly can't fly, it is merely gliding on the ground (changing x coordinate) and just not going up
-	 * and down. Physics apply to this variable. If the fly is going down, the fly spends less energy than going
-	 * up since gravity is working against the fly going up and for it going down.
-	 */
-	private int flyingEnergy = 25;
-
-	/**
 	 * Constructor
 	 */
 	public DragonFly(PhysicsEngine engine) {
 		super(engine);
 		setAffectedByGravity(false);
-		setHealth(5);
+		setHealth(25);
 	}
 
 	/**
@@ -48,31 +36,22 @@ public class DragonFly extends Entity {
 	@Override
 	public void tick() {
 		super.tick();
-		if (chasePlayer1() != 1) {
-			if (! engine.isPlayerAbove(this)) {
-				moveUp();
-				flyingEnergy -= 2;
-			} else if (engine.isPlayerAbove(this)) {
-				moveDown();
-				flyingEnergy -= 1;
-			}
+		if (! engine.playerIsAbove(this)) {
+			moveUp();
+		} else { //if (engine.playerIsAbove(this))
+			moveDown();
 		}
 
-		if (engine.isPlayerToLeft(this)) {
+		if (engine.playerIsToLeftOf(this)) {
 			moveLeft();
-			flyingEnergy += 1;
-		} else if (! engine.isPlayerToLeft(this)) {
+		} else { //if (! engine.playerIsToLeftOf(this))
 			moveRight();
-			flyingEnergy += 1;
-		} else {
-			setXVelocity(0);
-			setX(getX());
 		}
 
 		Player player = engine.getPlayer();
 		if (engine.isOnTopOfPlayer(this)) {
 			if (player.getHealth() <= EATING_DAMAGE) {
-				eats(player);
+				eat(player);
 			} else if (engine.isPlayerClose(this)) {
 				breathFire(player);
 			}
@@ -83,7 +62,7 @@ public class DragonFly extends Entity {
 	 * Self explanatory
 	 */
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 		frames.add(Images.ReadImage("/images/entities/creatures/dragonfly.png"));
 	}
 
@@ -93,14 +72,9 @@ public class DragonFly extends Entity {
 	 *
 	 * @param entity the thing to eat
 	 */
-	public void eats(Entity entity) {
+	public void eat(Entity entity) {
 		// make the enemy lose health
 		entity.setHealth(entity.getHealth() - EATING_DAMAGE);
-
-		if (entity.getHealth() <= 0) {
-			// makes the dragonfly gain health
-			setHealth(getHealth() + EATING_DAMAGE / 2);
-		}
 	}
 
 	/**
@@ -112,47 +86,8 @@ public class DragonFly extends Entity {
 		entity.setHealth(entity.getHealth() - BREATH_FIRE_DAMAGE);
 	}
 
-	/**
-	 * By the looks of it, determines how the fly should chase an entity. Poorly written; needs refactor desperately
-	 * <p/>
-	 * TODO: Change this mess of code into something readable
-	 */
-	public int chasePlayer1() {
-		if (flyingEnergy > 7) {
-			// fly towards the player,
-			// solid object in the way
-			return 0;
-		}
-		if (flyingEnergy <= 0) {
-			return 1;
-		}
-		//walk towards the player,
-		// can also jump.
-		else {
-			return 2;
-		}
-	}
-
-	/**
-	 * @return the current flying energy
-	 */
-	public int getFlyingEnergy() {
-		return flyingEnergy;
-	}
-
-	/**
-	 * Flying energy setter
-	 *
-	 * @param flyingEnergy the new flying energy
-	 */
-	public void setFlyingEnergy(int flyingEnergy) {
-		this.flyingEnergy = flyingEnergy;
-	}
-
-	/**
-	 * Override method. The fly can fly through obstacles
-	 */
-	public boolean isAffectedByHitDetection() {
+	@Override
+	public boolean isAffectedByGravity() {
 		return false;
 	}
 }

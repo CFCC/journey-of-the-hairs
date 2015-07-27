@@ -51,7 +51,7 @@ public class SuicideStinkBug extends Entity {
 	 * Self explanatory
 	 */
 	@Override
-	public void loadImages() {
+	public void addImagesOfEntityToFrames() {
 		frames.add(Images.ReadImage("/images/entities/creatures/stinkbug.png"));
 	}
 

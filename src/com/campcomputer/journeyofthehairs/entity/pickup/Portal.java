@@ -13,7 +13,7 @@ public class Portal extends Pickup {
 		super(engine);
 	}
 
-	public void loadImages() {
+	public void addImagesOfEntityToFrames() {
 		frames = Images.ReadFrames("portal");
 	}
 

@@ -47,7 +47,7 @@ public class Bullet extends Shot {
 	}
 
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 		bulletLeft = new ArrayList<BufferedImage>();
 		bulletRight = new ArrayList<BufferedImage>();
 		bulletRight.add(Images.ReadImage("/images/entities/shots/bullet right.png"));

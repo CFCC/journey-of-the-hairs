@@ -49,7 +49,7 @@ public class Rocket extends Shot {
 	}
 
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 		rocketLeft = new ArrayList<BufferedImage>(1);
 		rocketRight = new ArrayList<BufferedImage>(1);
 

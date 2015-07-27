@@ -8,7 +8,7 @@ public class Ink extends Shot {
 	}
 
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 
 	}
 }

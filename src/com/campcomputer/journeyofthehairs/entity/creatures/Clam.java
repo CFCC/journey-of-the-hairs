@@ -23,7 +23,7 @@ public class Clam extends Entity {
 	}
 
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 
 	}
 }

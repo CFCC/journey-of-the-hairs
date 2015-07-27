@@ -16,7 +16,7 @@ public class Squid extends Entity {
 	}
 
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 
 	}
 }

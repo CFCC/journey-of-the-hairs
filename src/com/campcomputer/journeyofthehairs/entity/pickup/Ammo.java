@@ -51,7 +51,7 @@ public class Ammo extends Pickup implements Weapons {
 	 * Self explanatory. Loads images based on what type the instance is
 	 */
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 		switch (type) {
 			case GRENADE:
 				frames = new ArrayList<BufferedImage>(1);

@@ -10,7 +10,7 @@ public class RifleShot extends Shot {
 		setBulletSpeed(2);
 	}
 
-	public void loadImages() {
+	public void addImagesOfEntityToFrames() {
 		frames.add(Images.ReadImage("/images/entities/shots/rifle shot.png"));
 	}
 }

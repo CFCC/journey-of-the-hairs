@@ -19,7 +19,7 @@ public class Armor extends Pickup {
 	}
 
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 		//To change body of implemented methods use File | Settings | File Templates.
 	}
 }

@@ -18,7 +18,7 @@ public class ShotgunShot extends Shot {
 		setBulletSpeed(3);
 	}
 
-	public void loadImages() {
+	public void addImagesOfEntityToFrames() {
 		bulletsLeft = new ArrayList<BufferedImage>();
 		bulletsRight = new ArrayList<BufferedImage>();
 

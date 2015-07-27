@@ -81,7 +81,7 @@ public abstract class Entity {
 	 */
 	public Entity(PhysicsEngine engine) {
 		this.engine = engine;
-		loadImages();
+		addImagesOfEntityToFrames();
 		if (frames.size() == 0) {
 			frames.add(Images.ReadImage("/images/cheese.png"));
 		}
@@ -208,8 +208,7 @@ public abstract class Entity {
 	 * if need be.
 	 */
 	public void moveLeft() {
-		setXVelocity(getXVelocity() - 0.1f);
-		setYVelocity(0);
+		setXVelocity(- 0.2f);
 		if (! isFacingLeft()) {
 			switchDirection();
 		}
@@ -220,8 +219,7 @@ public abstract class Entity {
 	 * if need be.
 	 */
 	public void moveRight() {
-		setXVelocity(getXVelocity() + 0.1f);
-		setYVelocity(0);
+		setXVelocity(0.2f);
 		if (isFacingLeft()) {
 			switchDirection();
 		}
@@ -231,22 +229,20 @@ public abstract class Entity {
 	 * Moves the entity up by setting its xVelocity to 0, and subtracting .3 from its yVelocity
 	 */
 	public void moveUp() {
-		setYVelocity(getYVelocity() - 0.3f);
-		setY(getY() - getYVelocity());
+		setYVelocity(- 0.2f);
 	}
 
 	/**
 	 * Moves the entity down by setting its xVelocity to 0, and adding .3 to its yVelocity
 	 */
 	public void moveDown() {
-		setYVelocity(getYVelocity() + 0.3f);
-		setY(getY() + getYVelocity());
+		setYVelocity(0.2f);
 	}
 
 	/**
 	 * Not as fancy as it sounds. Abstract method called in entity constructor. Meant to assign images to frame field.
 	 */
-	abstract protected void loadImages();
+	abstract protected void addImagesOfEntityToFrames();
 
 	/**
 	 * Getter for an entity's frame(s)

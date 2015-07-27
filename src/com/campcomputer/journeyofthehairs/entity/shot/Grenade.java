@@ -23,7 +23,7 @@ public class Grenade extends Shot {
 	}
 
 	@Override
-	public void loadImages() {
+	public void addImagesOfEntityToFrames() {
 		stasisFrames = new ArrayList<BufferedImage>();
 		explosionFrames = new ArrayList<BufferedImage>();
 

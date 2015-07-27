@@ -76,7 +76,7 @@ public class Player extends Entity {
 	 * Self explanatory.
 	 */
 	@Override
-	protected void loadImages() {
+	protected void addImagesOfEntityToFrames() {
 		forwardFrames = new ArrayList<BufferedImage>();
 		backwardFrames = new ArrayList<BufferedImage>();
 		forwardFrames.add(Images.ReadImage("/images/entities/creatures/hare forward.png"));
@@ -120,7 +120,7 @@ public class Player extends Entity {
 		}
 
 		if (getHealth() <= 0 && lives <= 0) {
-
+			System.exit(0);
 		}
 	}
 

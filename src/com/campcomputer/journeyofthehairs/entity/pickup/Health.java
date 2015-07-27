@@ -28,7 +28,7 @@ public class Health extends Pickup {
 		}
 	}
 
-	public void loadImages() {
+	public void addImagesOfEntityToFrames() {
 		twenty = new ArrayList<BufferedImage>();
 		fifty = new ArrayList<BufferedImage>();
 		oneHundred = new ArrayList<BufferedImage>();

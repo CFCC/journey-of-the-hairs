@@ -214,7 +214,7 @@ public class PhysicsEngine {
 	 * @param entity the entity to test
 	 * @return true if the entity is above the player, false if below
 	 */
-	public boolean isPlayerAbove(Entity entity) {
+	public boolean playerIsAbove(Entity entity) {
 		return player.getY() > entity.getY();
 	}
 
@@ -225,7 +225,7 @@ public class PhysicsEngine {
 	 * @param entity the entity to test
 	 * @return true if the player is to the left of the entity, false if right
 	 */
-	public boolean isPlayerToLeft(Entity entity) {
+	public boolean playerIsToLeftOf(Entity entity) {
 		return player.getX() < entity.getX();
 	}
 

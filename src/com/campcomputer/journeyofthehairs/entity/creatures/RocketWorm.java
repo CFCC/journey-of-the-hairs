@@ -80,7 +80,7 @@ public class RocketWorm extends Entity {
 	 * self explanatory
 	 */
 	@Override
-	public void loadImages() {
+	public void addImagesOfEntityToFrames() {
 		wormLeaveGround = Images.ReadFrames("wormLeaveGround");
 		wormEnterGround = Images.ReadFrames("wormEnterGround");
 		standing = new ArrayList<BufferedImage>(1);

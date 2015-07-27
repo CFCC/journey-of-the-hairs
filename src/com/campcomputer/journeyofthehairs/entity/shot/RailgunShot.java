@@ -17,7 +17,7 @@ public class RailgunShot extends Shot {
 		setBulletSpeed(0);
 	}
 
-	public void loadImages() {
+	public void addImagesOfEntityToFrames() {
 		frames.add(Images.ReadImage("/images/entities/shots/railgun shot.png"));
 	}
 
