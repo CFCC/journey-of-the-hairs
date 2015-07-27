@@ -7,14 +7,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 
-public class AboutPanel extends Panel {
+public class AboutPanel extends JPanel {
+	private final BufferedImage backgroundImage = Images.ReadImage("/images/menu.png");
 
 	public AboutPanel(final JourneyOfTheHairsFrame frame) {
 		super();
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		setBackground(Images.ReadImage("/images/menus/about.png"));
-
 		add(Box.createRigidArea(new Dimension(0, 125)));
 
 		JLabel title = new JLabel();
@@ -54,6 +54,7 @@ public class AboutPanel extends Panel {
 		add(back);
 	}
 
+	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;

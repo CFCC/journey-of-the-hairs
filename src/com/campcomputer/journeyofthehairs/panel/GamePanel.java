@@ -5,15 +5,18 @@ import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class GamePanel extends Panel implements KeyListener {
+public class GamePanel extends JPanel implements KeyListener {
 
 	public static final int TILE_SIZE = 64;
 
 	private static final Color GROUND_COLOR = new Color(150, 100, 50);
+
+	private final PhysicsEngine engine;
 
 	private float xScreenPlace = 0f;
 

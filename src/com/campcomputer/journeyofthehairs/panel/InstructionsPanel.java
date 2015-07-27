@@ -7,11 +7,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 
-public class InstructionsPanel extends Panel {
+public class InstructionsPanel extends JPanel {
 	private static final Point PAGE_NUMBER_LOCATION = new Point(463, 466);
 
 	private static final Point INSTRUCTION_IMAGE_LOCATION = new Point(196, 63);
+
+	private final BufferedImage backgroundImage = Images.ReadImage("/images/menu.png");
 
 	private int page = 1;
 
@@ -19,7 +22,6 @@ public class InstructionsPanel extends Panel {
 
 	public InstructionsPanel(final JourneyOfTheHairsFrame frame) {
 		super();
-		setBackground(Images.ReadImage("/images/menus/instruction.png"));
 
 		JButton back = new JButton("Back");
 		back.setPreferredSize(new Dimension(320, 80));
@@ -56,5 +58,12 @@ public class InstructionsPanel extends Panel {
 		}
 
 		repaint();
+	}
+
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		Graphics2D g2 = (Graphics2D) g;
+		g2.drawImage(backgroundImage, null, 0, 0);
 	}
 }

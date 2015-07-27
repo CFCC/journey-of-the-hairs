@@ -2,7 +2,9 @@ package com.campcomputer.journeyofthehairs.panel;
 
 import com.campcomputer.journeyofthehairs.JourneyOfTheHairsFrame;
 
-public class SettingsPanel extends Panel {
+import javax.swing.*;
+
+public class SettingsPanel extends JPanel {
 	public SettingsPanel(JourneyOfTheHairsFrame frame) {
 		super();
 	}
