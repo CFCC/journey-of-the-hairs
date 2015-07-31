@@ -20,7 +20,5 @@ public class MiniGun extends Weapon {
 		PhysicsEngine engine = getEngine();
 		Bullet bullet = new Bullet(engine, engine.getPlayer().isFacingLeft());
 		engine.addEntity(bullet);
-
-		subtractAmmo();
 	}
 }

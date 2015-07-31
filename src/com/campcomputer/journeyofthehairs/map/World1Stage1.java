@@ -9,7 +9,7 @@ import com.campcomputer.journeyofthehairs.entity.creatures.RocketWorm;
 import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
 import com.campcomputer.journeyofthehairs.entity.pickup.Portal;
 import com.campcomputer.journeyofthehairs.entity.pickup.WeaponPickup;
-import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
+import com.campcomputer.journeyofthehairs.entity.weapon.Weapons;
 
 import java.awt.image.BufferedImage;
 
@@ -110,23 +110,23 @@ public class World1Stage1 extends Map {
 		worm.setX(32);
 		worm.setY(9);
 
-		WeaponPickup rifle = new WeaponPickup(Weapon.Weapons.RIFLE, engine);
+		WeaponPickup rifle = new WeaponPickup(Weapons.RIFLE, engine);
 		rifle.setX(1);
 		rifle.setY(7);
 
-		WeaponPickup minigun = new WeaponPickup(Weapon.Weapons.MINIGUN, engine);
+		WeaponPickup minigun = new WeaponPickup(Weapons.MINIGUN, engine);
 		minigun.setX(3);
 		minigun.setY(7);
 
-		WeaponPickup pistol = new WeaponPickup(Weapon.Weapons.PISTOL, engine);
+		WeaponPickup pistol = new WeaponPickup(Weapons.PISTOL, engine);
 		pistol.setX(5);
 		pistol.setY(7);
 
-		WeaponPickup shotgun = new WeaponPickup(Weapon.Weapons.SHOTGUN, engine);
+		WeaponPickup shotgun = new WeaponPickup(Weapons.SHOTGUN, engine);
 		shotgun.setX(9);
 		shotgun.setY(7);
 
-		WeaponPickup grenadeGun = new WeaponPickup(Weapon.Weapons.GRENADE_GUN, engine);
+		WeaponPickup grenadeGun = new WeaponPickup(Weapons.GRENADE_GUN, engine);
 		grenadeGun.setX(11);
 		grenadeGun.setY(7);
 
@@ -135,15 +135,15 @@ public class World1Stage1 extends Map {
 		portal.setY(5);
 
 //		entities.add(portal);
-		entities.add(dragonFly);
-		entities.add(stinkbug);
-		entities.add(worm);
-		entities.add(chuckNorris);
-
-		entities.add(rifle);
-		entities.add(minigun);
-		entities.add(pistol);
-		entities.add(shotgun);
-		entities.add(grenadeGun);
+//		entities.add(dragonFly);
+//		entities.add(stinkbug);
+//		entities.add(worm);
+//		entities.add(chuckNorris);
+//
+//		entities.add(rifle);
+//		entities.add(minigun);
+//		entities.add(pistol);
+//		entities.add(shotgun);
+//		entities.add(grenadeGun);
 	}
 }

@@ -21,7 +21,5 @@ public class Pistol extends Weapon {
 
 		Bullet bullet = new Bullet(engine, engine.getPlayer().isFacingLeft());
 		engine.addEntity(bullet);
-
-		subtractAmmo();
 	}
 }

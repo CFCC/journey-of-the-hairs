@@ -4,7 +4,7 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
+import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class Grenade extends Shot {
 	private int timeLeft = 1000;
 
 	public Grenade(PhysicsEngine engine, boolean startsLeft) {
-		super(engine, startsLeft, 1, Weapon.WeaponShots.GRENADE.getDamage());
+		super(engine, startsLeft, WeaponShots.GRENADE);
 	}
 
 	@Override
@@ -43,10 +43,10 @@ public class Grenade extends Shot {
 			for (Entity entity : getEngine().getEntities()) {
 				if (! (entity instanceof Player)) {
 					double distance = getLocation().distance(entity.getLocation());
-					if (distance < Weapon.GRENADE_TIER_1_RANGE) {
-						entity.setHealth(entity.getHealth() - Weapon.GRENADE_TIER_1_DAMAGE);
-					} else if (distance < Weapon.GRENADE_TIER_2_RANGE) {
-						entity.setHealth(entity.getHealth() - Weapon.GRENADE_TIER_2_DAMAGE);
+					if (distance < WeaponShots.GRENADE_TIER_1_RANGE) {
+						entity.setHealth(entity.getHealth() - WeaponShots.GRENADE_TIER_1_DAMAGE);
+					} else if (distance < WeaponShots.GRENADE_TIER_2_RANGE) {
+						entity.setHealth(entity.getHealth() - WeaponShots.GRENADE_TIER_2_DAMAGE);
 					}
 				}
 			}

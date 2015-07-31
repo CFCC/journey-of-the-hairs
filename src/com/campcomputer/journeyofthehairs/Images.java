@@ -112,40 +112,40 @@ public class Images {
 		jaredFiles = new HashMap<String, byte[]>();
 
 		try {
-			ZipFile zf = new ZipFile(src.getLocation().getFile());
+			ZipFile zipFile = new ZipFile(src.getLocation().getFile());
 			HashMap<String, Integer> sizes = new HashMap<String, Integer>();
-			Enumeration e = zf.entries();
+			Enumeration enumeration = zipFile.entries();
 
-			while (e.hasMoreElements()) {
-				ZipEntry ze = (ZipEntry) e.nextElement();
-				sizes.put(ze.getName(), (int) ze.getSize());
+			while (enumeration.hasMoreElements()) {
+				ZipEntry zipEntry = (ZipEntry) enumeration.nextElement();
+				sizes.put(zipEntry.getName(), (int) zipEntry.getSize());
 			}
-			zf.close();
+			zipFile.close();
 
 			URL jar = src.getLocation();
-			ZipInputStream zis = new ZipInputStream(jar.openStream());
-			ZipEntry ze = null;
+			ZipInputStream zipInputSteam = new ZipInputStream(jar.openStream());
+			ZipEntry zipEntry;
 
-			while ((ze = zis.getNextEntry()) != null) {
-				if (ze.isDirectory()) {
+			while ((zipEntry = zipInputSteam.getNextEntry()) != null) {
+				if (zipEntry.isDirectory()) {
 					continue;
 				}
-				int size = (int) ze.getSize();
+				int size = (int) zipEntry.getSize();
 				// -1 means unknown size.
 				if (size == - 1) {
-					size = sizes.get(ze.getName());
+					size = sizes.get(zipEntry.getName());
 				}
-				byte[] b = new byte[size];
-				int rb = 0;
-				int chunk = 0;
-				while ((size - rb) > 0) {
-					chunk = zis.read(b, rb, size - rb);
+				byte[] bite = new byte[size];
+				int readBytes = 0;
+				int chunk;
+				while ((size - readBytes) > 0) {
+					chunk = zipInputSteam.read(bite, readBytes, size - readBytes);
 					if (chunk == - 1) {
 						break;
 					}
-					rb += chunk;
+					readBytes += chunk;
 				}
-				jaredFiles.put(ze.getName(), b);
+				jaredFiles.put(zipEntry.getName(), bite);
 			}
 
 		} catch (IOException e) {

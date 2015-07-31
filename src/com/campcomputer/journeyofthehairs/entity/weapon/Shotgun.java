@@ -20,7 +20,5 @@ public class Shotgun extends Weapon {
 		PhysicsEngine engine = getEngine();
 		ShotgunShot shot = new ShotgunShot(engine, engine.getPlayer().isFacingLeft());
 		engine.addEntity(shot);
-
-		subtractAmmo();
 	}
 }

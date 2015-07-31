@@ -20,7 +20,5 @@ public class Rifle extends Weapon {
 		PhysicsEngine engine = getEngine();
 		RifleShot rifleShot = new RifleShot(engine, engine.getPlayer().isFacingLeft());
 		engine.addEntity(rifleShot);
-
-		subtractAmmo();
 	}
 }

@@ -4,6 +4,7 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
+import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
@@ -18,7 +19,7 @@ public class Bullet extends Shot {
 	private PhysicsEngine engine;
 
 	public Bullet(PhysicsEngine engine, boolean startsLeft) {
-		super(engine, startsLeft, 1, 1);
+		super(engine, startsLeft, WeaponShots.BULLET);
 		this.engine = engine;
 
 		frames = startsLeft ? bulletLeft : bulletRight;

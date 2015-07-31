@@ -1,17 +1,19 @@
 package com.campcomputer.journeyofthehairs.entity.shot;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
+import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
 
 public abstract class Shot extends Entity {
 	final private float bulletSpeed;  // Speed of the bullets
 
 	final private int damage;         // The damage of each bullet
 
-	public Shot(PhysicsEngine engine, boolean startsLeft, float speed, int damage) {
+	public Shot(PhysicsEngine engine, boolean startsLeft, WeaponShots type) {
 		super(engine);
-		this.bulletSpeed = speed;
-		this.damage = damage;
+		this.bulletSpeed = type.getBulletSpeed();
+		this.damage = type.getDamage();
 
 		setX(engine.getPlayer().getX());
 		setY(engine.getPlayer().getY());
@@ -25,6 +27,9 @@ public abstract class Shot extends Entity {
 				entity.setHealth(entity.getHealth() - getDamage());
 				getEngine().removeEntity(this);
 			}
+		}
+		if (getEngine().getMap().getTiles()[getXVelocity() < 0 ? (int) getX() - 1 : (int) getX() + 1][(int) getY()] != Tile.AIR) {
+			getEngine().removeEntity(this);
 		}
 	}
 

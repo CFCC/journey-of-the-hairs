@@ -20,7 +20,5 @@ public class Railgun extends Weapon {
 		PhysicsEngine engine = getEngine();
 		RailgunShot railgunShot = new RailgunShot(engine, engine.getPlayer().isFacingLeft());
 		engine.addEntity(railgunShot);
-
-		subtractAmmo();
 	}
 }

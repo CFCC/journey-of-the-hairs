@@ -8,7 +8,7 @@ import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
 import com.campcomputer.journeyofthehairs.entity.pickup.Health;
 import com.campcomputer.journeyofthehairs.entity.pickup.Portal;
 import com.campcomputer.journeyofthehairs.entity.pickup.WeaponPickup;
-import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
+import com.campcomputer.journeyofthehairs.entity.weapon.Weapons;
 
 import java.awt.image.BufferedImage;
 
@@ -111,7 +111,7 @@ public class Cheese extends Map {
 		suicideStinkBug1.setY(10);
 		engine.addEntity(suicideStinkBug1);
 
-		WeaponPickup railgun = new WeaponPickup(Weapon.Weapons.RAILGUN, engine) {
+		WeaponPickup railgun = new WeaponPickup(Weapons.RAILGUN, engine) {
 			@Override
 			public void affectGame() {
 				Map.getMap(0);

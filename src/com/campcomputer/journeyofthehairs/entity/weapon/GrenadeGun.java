@@ -20,7 +20,5 @@ public class GrenadeGun extends Weapon {
 		PhysicsEngine engine = getEngine();
 		Grenade grenade = new Grenade(engine, engine.getPlayer().isFacingLeft());
 		engine.addEntity(grenade);
-
-		subtractAmmo();
 	}
 }

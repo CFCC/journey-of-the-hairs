@@ -2,6 +2,7 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
+import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class ShotgunShot extends Shot {
 	public List<BufferedImage> bulletsRight;
 
 	public ShotgunShot(PhysicsEngine engine, boolean startsLeft) {
-		super(engine, startsLeft, 3, 1);
+		super(engine, startsLeft, WeaponShots.SHOTGUN_SHOT);
 	}
 
 	public void addImagesOfEntityToFrames() {

@@ -2,6 +2,7 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
+import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -18,7 +19,8 @@ public class Rocket extends Shot {
 	List<BufferedImage> rocketRight;
 
 	public Rocket(PhysicsEngine engine) {
-		super(engine, true, SPEED_MAGNITUDE, ROCKET_DAMAGE);
+		//TODO
+		super(engine, true, WeaponShots.BULLET);
 	}
 
 	@Override

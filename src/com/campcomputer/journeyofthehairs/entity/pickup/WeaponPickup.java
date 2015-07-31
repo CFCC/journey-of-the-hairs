@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WeaponPickup extends Pickup {
-	com.campcomputer.journeyofthehairs.entity.weapon.Weapon.Weapons type;
+	Weapons type;
 	private List<BufferedImage> pistolFrame;
 	private List<BufferedImage> minigunFrame;
 	private List<BufferedImage> railgunFrame;
@@ -17,7 +17,7 @@ public class WeaponPickup extends Pickup {
 	private List<BufferedImage> rifleFrame;
 	private List<BufferedImage> shotgunFrame;
 
-	public WeaponPickup(com.campcomputer.journeyofthehairs.entity.weapon.Weapon.Weapons type, PhysicsEngine engine) {
+	public WeaponPickup(Weapons type, PhysicsEngine engine) {
 		super(engine);
 		this.type = type;
 

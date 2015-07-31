@@ -4,11 +4,12 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
+import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
 
 public class RailgunShot extends Shot {
 
 	public RailgunShot(PhysicsEngine engine, boolean startsLeft) {
-		super(engine, startsLeft, 0, 9000);
+		super(engine, startsLeft, WeaponShots.RAILGUN_SHOT);
 		setX(getEngine().getPlayer().getX());
 		setY(getEngine().getPlayer().getY());
 	}
