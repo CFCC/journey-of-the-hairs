@@ -2,8 +2,8 @@ package com.campcomputer.journeyofthehairs;
 
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
+import com.campcomputer.journeyofthehairs.entity.weapon.Pistol;
 import com.campcomputer.journeyofthehairs.map.Map;
-import com.campcomputer.journeyofthehairs.weapon.Pistol;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
@@ -76,7 +76,7 @@ public class PhysicsEngine {
 		player = new Player(this);
 		player.setX(0);
 		player.setY(7);
-		player.weapon = new Pistol();
+		player.setWeapon(new Pistol(this));
 		addEntity(player);
 	}
 

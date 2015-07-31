@@ -26,7 +26,6 @@ public class DragonFly extends Entity {
 	 */
 	public DragonFly(PhysicsEngine engine) {
 		super(engine);
-		setAffectedByGravity(false);
 		setHealth(25);
 	}
 
@@ -36,23 +35,23 @@ public class DragonFly extends Entity {
 	@Override
 	public void tick() {
 		super.tick();
-		if (! engine.playerIsAbove(this)) {
+		if (! getEngine().playerIsAbove(this)) {
 			moveUp();
-		} else { //if (engine.playerIsAbove(this))
+		} else { //if (getEngine().playerIsAbove(this))
 			moveDown();
 		}
 
-		if (engine.playerIsToLeftOf(this)) {
+		if (getEngine().playerIsToLeftOf(this)) {
 			moveLeft();
-		} else { //if (! engine.playerIsToLeftOf(this))
+		} else { //if (! getEngine().playerIsToLeftOf(this))
 			moveRight();
 		}
 
-		Player player = engine.getPlayer();
-		if (engine.isOnTopOfPlayer(this)) {
+		Player player = getEngine().getPlayer();
+		if (getEngine().isOnTopOfPlayer(this)) {
 			if (player.getHealth() <= EATING_DAMAGE) {
 				eat(player);
-			} else if (engine.isPlayerClose(this)) {
+			} else if (getEngine().isPlayerClose(this)) {
 				breathFire(player);
 			}
 		}

@@ -19,7 +19,6 @@ public class Portal extends Pickup {
 
 	@Override
 	public void affectGame() {
-		Cheese cheese = new Cheese(engine, engine.getMap());
-		
+		Cheese cheese = new Cheese(getEngine(), getEngine().getMap());
 	}
 }

@@ -40,7 +40,7 @@ public class Health extends Pickup {
 
 	@Override
 	public void affectGame() {
-		Player player = engine.getPlayer();
+		Player player = getEngine().getPlayer();
 		if (frames == twenty) {
 			player.setHealth(player.getHealth() + 20);
 		} else if (frames == fifty) {

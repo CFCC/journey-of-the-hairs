@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.weapon.Weapon;
+import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
@@ -11,28 +11,28 @@ import java.util.List;
 
 public abstract class Entity {
 	/**
-	 * This is a variable used in determining which direction an entity is facing. It is useful in a few
-	 * situations; usually, it decides which frame to paint on the map.
-	 */
-	public boolean isFacingLeft = true;
-
-	/**
 	 * This is the list inherited by every entity. It contains any image painted on the map that represents
 	 * the particular entity. Any other image is ignored; this list is the only place checked for images
 	 */
-	public List<BufferedImage> frames = new ArrayList<BufferedImage>();
-
-	/**
-	 * This is the game engine instance. It is used as the super class for all entities since the two are
-	 * (relatively) closely related with physics related methods and properties.
-	 */
-	protected PhysicsEngine engine;
+	protected List<BufferedImage> frames = new ArrayList<BufferedImage>();
 
 	/**
 	 * This is the current frame in the list of frames. It is only really used for entities using frames,
 	 * but nonetheless, it is still needed.
 	 */
 	protected int currentFrame = 0;
+
+	/**
+	 * This is a variable used in determining which direction an entity is facing. It is useful in a few
+	 * situations; usually, it decides which frame to paint on the map.
+	 */
+	private boolean isFacingLeft = true;
+
+	/**
+	 * This is the game engine instance. It is used as the super class for all entities since the two are
+	 * (relatively) closely related with physics related methods and properties.
+	 */
+	private PhysicsEngine engine;
 
 	/**
 	 * This is an entity's health - that is, how much damage they must receive before they
@@ -71,12 +71,6 @@ public abstract class Entity {
 	private float yVelocity = 0;
 
 	/**
-	 * This is the variable used in testing to see if an entity is affected by gravity. It is only overridden
-	 * in rare cases, such as weapon shots and flying creatures.
-	 */
-	private boolean isAffectedByGravity = true;
-
-	/**
 	 * Constructor for an entity. If it has no image assigned to the list frames, its image becomes cheese.png
 	 */
 	public Entity(PhysicsEngine engine) {
@@ -85,6 +79,10 @@ public abstract class Entity {
 		if (frames.size() == 0) {
 			frames.add(Images.ReadImage("/images/cheese.png"));
 		}
+	}
+
+	public PhysicsEngine getEngine() {
+		return engine;
 	}
 
 	/**
@@ -192,15 +190,18 @@ public abstract class Entity {
 	 * (except for the dragonfly) are, and all pickups and shots (except for grenades) aren't
 	 */
 	public boolean isAffectedByGravity() {
-		return isAffectedByGravity;
+		/*
+	  This is the variable used in testing to see if an entity is affected by gravity. It is only overridden
+	  in rare cases, such as weapon shots and flying creatures.
+	 */
+		return true;
 	}
 
-	/**
-	 * Sets the variable isAffectedByGravity as mentioned above to true or false. Usually used to set to false so
-	 * no override is necessary
-	 */
-	public void setAffectedByGravity(boolean affectedByGravity) {
-		this.isAffectedByGravity = affectedByGravity;
+	public boolean isOn(Entity entity) {
+		Point2D.Float myPosition = new Point2D.Float(getX(), getY());
+		Point2D.Float theirPosition = new Point2D.Float(entity.getX(), entity.getY());
+
+		return myPosition.distance(theirPosition) < 2f;
 	}
 
 	/**

@@ -1,33 +1,43 @@
 package com.campcomputer.journeyofthehairs.entity.shot;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.Weapons;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 
-public abstract class Shot extends Entity implements Weapons {
-	float bulletSpeed;  // Speed of the bullets
+public abstract class Shot extends Entity {
+	final private float bulletSpeed;  // Speed of the bullets
 
-	int damage;         // The damage of each bullet
+	final private int damage;         // The damage of each bullet
 
-	public Shot(PhysicsEngine engine) {
+	public Shot(PhysicsEngine engine, boolean startsLeft, float speed, int damage) {
 		super(engine);
-		setAffectedByGravity(false);
+		this.bulletSpeed = speed;
+		this.damage = damage;
+
+		setX(engine.getPlayer().getX());
+		setY(engine.getPlayer().getY());
+
+		setXVelocity(startsLeft ? - getBulletSpeed() : getBulletSpeed());
+	}
+
+	public void tick() {
+		for (Entity entity : getEngine().getEntities()) {
+			if (this.isOn(entity)) {
+				entity.setHealth(entity.getHealth() - getDamage());
+				getEngine().removeEntity(this);
+			}
+		}
 	}
 
 	public int getDamage() {
 		return damage;
 	}
 
-	public void setDamage(int damage) {
-		this.damage = damage;
-	}
-
 	public float getBulletSpeed() {
 		return bulletSpeed;
 	}
 
-	public void setBulletSpeed(int bulletSpeed) {
-		this.bulletSpeed = bulletSpeed;
+	@Override
+	public boolean isAffectedByGravity() {
+		return false;
 	}
-
 }

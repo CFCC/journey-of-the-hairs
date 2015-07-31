@@ -63,10 +63,10 @@ public class RocketWorm extends Entity {
 			frames = standing;
 		}
 
-		if (engine.isOnTopOfPlayer(this)) {
+		if (getEngine().isOnTopOfPlayer(this)) {
 			emerge();
-		} else if (engine.getDistanceBetweenEntityAndPlayer(this) < 5.0 && canBeAttacked()) {
-			for (Entity entity : engine.getEntities()) {
+		} else if (getEngine().getDistanceBetweenEntityAndPlayer(this) < 5.0 && canBeAttacked()) {
+			for (Entity entity : getEngine().getEntities()) {
 				if (entity instanceof Rocket) {
 					return;
 				}
@@ -102,10 +102,10 @@ public class RocketWorm extends Entity {
 	 * Creates a new rocket and sets its location right above the worm
 	 */
 	public void shootRocket() {
-		Rocket rocket = new Rocket(engine);
+		Rocket rocket = new Rocket(getEngine());
 		rocket.setX(getX());
 		rocket.setY(getY() + 1);
-		engine.addEntity(rocket);
+		getEngine().addEntity(rocket);
 	}
 
 	/**

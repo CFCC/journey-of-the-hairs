@@ -7,14 +7,10 @@ import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 
 public class RailgunShot extends Shot {
 
-	public RailgunShot(PhysicsEngine engine) {
-		super(engine);
-		setAffectedByGravity(false);
-		setX(engine.getPlayer().getX());
-		setY(engine.getPlayer().getY());
-
-		setDamage(9000);
-		setBulletSpeed(0);
+	public RailgunShot(PhysicsEngine engine, boolean startsLeft) {
+		super(engine, startsLeft, 0, 9000);
+		setX(getEngine().getPlayer().getX());
+		setY(getEngine().getPlayer().getY());
 	}
 
 	public void addImagesOfEntityToFrames() {
@@ -22,13 +18,13 @@ public class RailgunShot extends Shot {
 	}
 
 	public void tick() {
-		if (engine.getPlayer().isFacingLeft() && getXVelocity() > 0) {
+		if (getEngine().getPlayer().isFacingLeft() && getXVelocity() > 0) {
 			setXVelocity(getBulletSpeed() * - 1);
-		} else if (! (engine.getPlayer().isFacingLeft()) && getXVelocity() > 0) {
+		} else if (! (getEngine().getPlayer().isFacingLeft()) && getXVelocity() > 0) {
 			setXVelocity(getBulletSpeed());
 		}
 
-		for (Entity entity : engine.getEntities()) {
+		for (Entity entity : getEngine().getEntities()) {
 			if (entity instanceof RailgunShot && (entity.getX() == this.getX() - 1 || entity.getX() == this.getX() + 1)) {
 				setXVelocity(0);
 			}
@@ -37,10 +33,10 @@ public class RailgunShot extends Shot {
 			}
 		}
 
-		if (this.getX() > engine.getPlayer().getX() + 7 || this.getX() > engine.getMap().getTiles().length ||
-		    this.getX() < engine.getPlayer().getX() - 8 || this.getX() < 0) {
+		if (this.getX() > getEngine().getPlayer().getX() + 7 || this.getX() > getEngine().getMap().getTiles().length ||
+		    this.getX() < getEngine().getPlayer().getX() - 8 || this.getX() < 0) {
 			setXVelocity(0);
 		}
-		// engine.removeEntity(this);
+		// getEngine().removeEntity(this);
 	}
 }

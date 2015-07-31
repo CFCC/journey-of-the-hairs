@@ -17,13 +17,11 @@ public class Bullet extends Shot {
 
 	private PhysicsEngine engine;
 
-	public Bullet(PhysicsEngine engine) {
-		super(engine);
+	public Bullet(PhysicsEngine engine, boolean startsLeft) {
+		super(engine, startsLeft, 1, 1);
 		this.engine = engine;
-		setAffectedByGravity(false);
 
-		setDamage(1);
-		setBulletSpeed(1);
+		frames = startsLeft ? bulletLeft : bulletRight;
 	}
 
 	public void tick() {
@@ -51,6 +49,6 @@ public class Bullet extends Shot {
 		bulletLeft = new ArrayList<BufferedImage>();
 		bulletRight = new ArrayList<BufferedImage>();
 		bulletRight.add(Images.ReadImage("/images/entities/shots/bullet right.png"));
-		bulletLeft.add(Images.ReadImage("/images/entities/shots/bullet right.png"));
+		bulletLeft.add(Images.ReadImage("/images/entities/shots/bullet left.png"));
 	}
 }

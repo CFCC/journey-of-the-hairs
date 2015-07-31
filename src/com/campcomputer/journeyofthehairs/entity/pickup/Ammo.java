@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.entity.pickup;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.Weapons;
+import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -12,12 +12,12 @@ import java.util.ArrayList;
  * so the user will need the ammo that goes with their weapon to use it. However, they will tend to see more
  * drops of the weapon they are currently carrying.
  */
-public class Ammo extends Pickup implements Weapons {
+public class Ammo extends Pickup {
 	/**
 	 * This is the type of ammo that the instance will be. There are 5 types of ammo enumerated in the
 	 * WeaponShots enum, which is also the field type.
 	 */
-	private WeaponShots type;
+	private Weapon.WeaponShots type;
 
 	/**
 	 * This is the amount of ammo to be added to the player's inventory. There is no set amount of
@@ -33,7 +33,7 @@ public class Ammo extends Pickup implements Weapons {
 	 * @param type   the type of ammo to generate
 	 * @param amount the amount of ammo to add
 	 */
-	public Ammo(PhysicsEngine engine, WeaponShots type, int amount) {
+	public Ammo(PhysicsEngine engine, Weapon.WeaponShots type, int amount) {
 		super(engine);
 		this.type = type;
 		this.amount = amount;
@@ -44,7 +44,7 @@ public class Ammo extends Pickup implements Weapons {
 	 */
 	@Override
 	public void affectGame() {
-		engine.getPlayer().getWeapon().addAmmo(amount);
+		getEngine().getPlayer().getWeapon().addAmmo(amount);
 	}
 
 	/**

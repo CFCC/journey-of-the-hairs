@@ -7,31 +7,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08aa8530-87a7-4039-a70b-e1582d84b384" name="Default" comment="renamed a couple methods to be more readable. fixed the dragonfly">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/GrenadeGun.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/MiniGun.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Pistol.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Railgun.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Rifle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Shotgun.java" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\Weapons.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\weapon\GrenadeGun.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\weapon\MiniGun.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\weapon\Pistol.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\weapon\Railgun.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\weapon\Rifle.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\weapon\Shotgun.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\entity\pickup\Weapon.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/WeaponPickup.java" />
+      <change type="MOVED" beforePath="C:\Users\Jordan\Code\IdeaProjects\JOTH\journey-of-the-hairs\src\com\campcomputer\journeyofthehairs\weapon\Weapon.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Weapon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Current.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Current.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java" afterPath="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JourneyOfTheHairs.iws" />
@@ -56,204 +68,127 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PhysicsEngine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java">
+      <file leaf-file-name="Shot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-              <folding>
-                <element signature="docComment;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;field#GRAVITY#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;field#JUMP_POWER#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;field#MOVE_SPEED#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;field#player#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;field#entities#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;field#entitiesToAdd#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;field#entitiesToRemove#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;field#activeMap#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#PhysicsEngine#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#PhysicsEngine#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#tick#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#tick#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#getPlayer#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#getMap#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#setMap#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#setMap#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#getEntities#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#getDistanceBetweenEntityAndPlayer#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#getDistanceBetweenEntityAndPlayer#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#addEntity#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#removeEntity#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#isPlayerClose#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#isOnTopOfPlayer#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#playerIsAbove#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="e#6899#6900#0" expanded="true" />
-                <element signature="e#6942#6943#0" expanded="true" />
-                <element signature="docComment;method#playerIsToLeftOf#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="e#7288#7289#0" expanded="true" />
-                <element signature="docComment;method#applyGravity#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#applyGravity#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#applyMovement#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#applyMovement#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#calculateHorizontalCollision#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#calculateHorizontalCollision#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#calculateVerticalCollision#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#calculateVerticalCollision#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#findFirstSolid#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#findFirstSolid#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#startMoveForward#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#endMoveForward#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#startMoveBackward#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#endMoveBackward#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="docComment;method#jump#0;class#PhysicsEngine#0" expanded="false" />
-                <element signature="method#jump#0;class#PhysicsEngine#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DragonFly.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2452#2453#0" expanded="true" />
-                <element signature="e#2516#2517#0" expanded="true" />
-                <element signature="e#2568#2569#0" expanded="true" />
-                <element signature="e#2587#2588#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java">
+      <file leaf-file-name="Images.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3625219">
-              <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
-              <folding>
-                <element signature="docComment;class#Player#0" expanded="false" />
-                <element signature="docComment;field#MAX_HEALTH#0;class#Player#0" expanded="false" />
-                <element signature="docComment;field#lives#0;class#Player#0" expanded="false" />
-                <element signature="docComment;field#weapon#0;class#Player#0" expanded="false" />
-                <element signature="docComment;field#inventory#0;class#Player#0" expanded="false" />
-                <element signature="docComment;field#forwardFrames#0;class#Player#0" expanded="false" />
-                <element signature="docComment;field#backwardFrames#0;class#Player#0" expanded="false" />
-                <element signature="docComment;field#defense#0;class#Player#0" expanded="false" />
-                <element signature="docComment;method#Player#0;class#Player#0" expanded="false" />
-                <element signature="method#Player#0;class#Player#0" expanded="false" />
-                <element signature="docComment;method#addImagesOfEntityToFrames#0;class#Player#0" expanded="false" />
-                <element signature="method#addImagesOfEntityToFrames#0;class#Player#0" expanded="false" />
-                <element signature="docComment;method#setXVelocity#0;class#Player#0" expanded="false" />
-                <element signature="docComment;method#tick#0;class#Player#0" expanded="false" />
-                <element signature="docComment;method#getWeapon#0;class#Player#0" expanded="false" />
-                <element signature="docComment;method#setWeapon#0;class#Player#0" expanded="false" />
-                <element signature="docComment;method#getDefense#0;class#Player#0" expanded="false" />
-                <element signature="docComment;method#setDefense#0;class#Player#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.5863268">
+              <caret line="120" column="60" selection-start-line="120" selection-start-column="60" selection-end-line="120" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Entity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java">
+      <file leaf-file-name="ShotgunShot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rocket.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RailgunShot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ink.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grenade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="90" selection-start-line="48" selection-start-column="90" selection-end-line="48" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Weapon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Weapon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="329" column="0" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
               <folding>
-                <element signature="docComment;field#isFacingLeft#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#frames#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#engine#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#currentFrame#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#health#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#x#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#y#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#xVelocity#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#yVelocity#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;field#isAffectedByGravity#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#Entity#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#getX#0;class#Entity#0" expanded="false" />
-                <element signature="e#3250#3251#0" expanded="true" />
-                <element signature="e#3265#3266#0" expanded="true" />
-                <element signature="docComment;method#setX#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#getY#0;class#Entity#0" expanded="false" />
-                <element signature="e#3426#3427#0" expanded="true" />
-                <element signature="e#3441#3442#0" expanded="true" />
-                <element signature="docComment;method#setY#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#getLocation#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#getHealth#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#setHealth#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#getXVelocity#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#setXVelocity#0;class#Entity#0" expanded="false" />
-                <element signature="e#4260#4261#0" expanded="true" />
-                <element signature="e#4288#4289#0" expanded="true" />
-                <element signature="docComment;method#getYVelocity#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#setYVelocity#0;class#Entity#0" expanded="false" />
-                <element signature="e#4494#4495#0" expanded="true" />
-                <element signature="e#4522#4523#0" expanded="true" />
-                <element signature="docComment;method#getHeight#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#isFacingLeft#0;class#Entity#0" expanded="false" />
-                <element signature="e#4712#4713#0" expanded="true" />
-                <element signature="e#4738#4739#0" expanded="true" />
-                <element signature="docComment;method#switchDirection#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#isAffectedByGravity#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#setAffectedByGravity#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#moveLeft#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#moveRight#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#moveUp#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#moveDown#0;class#Entity#0" expanded="false" />
-                <element signature="e#6257#6258#0" expanded="true" />
-                <element signature="e#6282#6283#0" expanded="true" />
-                <element signature="docComment;method#addImagesOfEntityToFrames#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#getFrames#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#tick#0;class#Entity#0" expanded="false" />
-                <element signature="method#tick#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#getCurrentFrame#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#isAffectedByHitDetection#0;class#Entity#0" expanded="false" />
-                <element signature="docComment;method#takeDamage#0;class#Entity#0" expanded="false" />
-                <element signature="method#takeDamage#0;class#Entity#0" expanded="false" />
+                <element signature="docComment;class#Weapon#0" expanded="false" />
+                <element signature="docComment;field#ammoLeft#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;field#shotType#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;field#bulletNumber#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;field#fireRate#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#getFireRate#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#getBulletNumber#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#getTicksTillFire#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#resetTicksTillFire#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#lowerTicksTillFire#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#getShotType#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#getAmmo#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#subtractAmmo#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#addAmmo#0;class#Weapon#0" expanded="false" />
+                <element signature="docComment;method#shoot#0;class#Weapon#0" expanded="false" />
+                <element signature="method#shoot#0;class#Weapon#0" expanded="false" />
+                <element signature="method#toString#0;class#Weapon#0" expanded="false" />
+                <element signature="class#5862:6028" expanded="false" />
+                <element signature="class#6038:6432" expanded="false" />
+                <element signature="class#6441:6595" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GamePanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java">
+      <file leaf-file-name="RifleShot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3840#3841#0" expanded="false" />
-                <element signature="e#3870#3871#0" expanded="false" />
-              </folding>
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JourneyOfTheHairsFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
+      <file leaf-file-name="Bullet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="docComment;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="docComment;field#TIMER_TICK#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="docComment;field#gamePanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="docComment;field#mainMenuPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="docComment;field#instructionsPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="docComment;field#aboutPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="docComment;field#engine#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="docComment;method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="method#switchContentPane#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-                <element signature="e#2920#2921#0" expanded="false" />
-                <element signature="e#2951#2952#0" expanded="false" />
-                <element signature="class#Panels#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-              </folding>
+              <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -278,43 +213,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/MapListener.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairs.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/MapConverter.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Weapons.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Map.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Water.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanelKeyAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Weapon.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Speed.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Invincibility.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Armor.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Clam.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Current.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Squid.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Urchin.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/MenuListener.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Shotgun.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/Panel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java" />
@@ -322,10 +226,44 @@
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/InstructionsPanel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/AboutPanel.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/SettingsPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
-        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" />
         <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/GrenadeGun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/MiniGun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Pistol.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Railgun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Rifle.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Shotgun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Weapon.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Weapons.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Shotgun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Rifle.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Railgun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Pistol.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/MiniGun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/GrenadeGun.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Weapon.java" />
+        <option value="$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java" />
       </list>
     </option>
   </component>
@@ -388,8 +326,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -437,28 +374,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="journeyofthehairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JourneyOfTheHairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="journey-of-the-hairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="journeyofthehairs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weapon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,6 +465,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="weapon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="journey-of-the-hairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="journeyofthehairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="shot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -606,9 +547,116 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="journey-of-the-hairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="journey-of-the-hairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shots" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="journey-of-the-hairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="journey-of-the-hairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="creatures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JourneyOfTheHairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="journey-of-the-hairs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -616,7 +664,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="settings.editor.selected.configurable" value="gradle.experimental" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Smarty" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
@@ -1045,6 +1093,12 @@
       <workItem from="1437861768475" duration="22459000" />
       <workItem from="1437961141048" duration="5138000" />
       <workItem from="1438022522462" duration="957000" />
+      <workItem from="1438023711234" duration="3431000" />
+      <workItem from="1438088511220" duration="577000" />
+      <workItem from="1438227030430" duration="593000" />
+      <workItem from="1438300925971" duration="5496000" />
+      <workItem from="1438313430504" duration="2344000" />
+      <workItem from="1438345122494" duration="1401000" />
     </task>
     <task id="LOCAL-00001" summary="it finally works! physics engine updated, and now the player moves around as expected, with correct hit detection">
       <created>1436990851066</created>
@@ -1080,7 +1134,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69147000" />
+    <option name="totallyTimeSpent" value="82989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1088,7 +1142,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32772166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32772166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1096,7 +1150,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57239056" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20476191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2029762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1162,93 +1216,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="63" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/JourneyOfTheHairsFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#TIMER_TICK#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#gamePanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#mainMenuPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#instructionsPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#aboutPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#engine#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="method#switchContentPane#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="e#2920#2921#0" expanded="false" />
-            <element signature="e#2951#2952#0" expanded="false" />
-            <element signature="class#Panels#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <element signature="e#344#345#0" expanded="false" />
-            <element signature="e#420#421#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <element signature="e#578#579#0" expanded="false" />
-            <element signature="e#656#657#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,23 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Weapon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1280,7 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,15 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1304,18 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding>
-            <element signature="e#1494#1495#0" expanded="false" />
-            <element signature="e#1572#1573#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1323,15 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,18 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding>
-            <element signature="e#453#454#0" expanded="false" />
-            <element signature="e#473#474#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1358,15 +1282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="45" selection-start-line="127" selection-start-column="45" selection-end-line="127" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1374,10 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-          <folding>
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1385,69 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="79" column="91" selection-start-line="79" selection-start-column="91" selection-end-line="79" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/GrenadeGun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/MiniGun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Pistol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Railgun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Rifle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Shotgun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/weapon/Weapon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="48" selection-start-line="161" selection-start-column="48" selection-end-line="161" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1462,40 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Weapons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11819235">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding>
-            <element signature="e#287#288#0" expanded="false" />
-            <element signature="e#307#308#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31517962">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019698726">
-          <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1515,22 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#TIMER_TICK#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#gamePanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#mainMenuPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#instructionsPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#aboutPanel#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;field#engine#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="docComment;method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="method#JourneyOfTheHairsFrame#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="method#switchContentPane#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-            <element signature="e#2920#2921#0" expanded="false" />
-            <element signature="e#2951#2952#0" expanded="false" />
-            <element signature="class#Panels#0;class#JourneyOfTheHairsFrame#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1562,128 +1360,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5318656">
-          <caret line="111" column="36" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/panel/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3840#3841#0" expanded="false" />
-            <element signature="e#3870#3871#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/PhysicsEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;field#GRAVITY#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;field#JUMP_POWER#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;field#MOVE_SPEED#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;field#player#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;field#entities#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;field#entitiesToAdd#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;field#entitiesToRemove#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;field#activeMap#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#PhysicsEngine#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#PhysicsEngine#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#tick#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#tick#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#getPlayer#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#getMap#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#setMap#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#setMap#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#getEntities#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#getDistanceBetweenEntityAndPlayer#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#getDistanceBetweenEntityAndPlayer#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#addEntity#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#removeEntity#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#isPlayerClose#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#isOnTopOfPlayer#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#playerIsAbove#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="e#6899#6900#0" expanded="true" />
-            <element signature="e#6942#6943#0" expanded="true" />
-            <element signature="docComment;method#playerIsToLeftOf#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="e#7288#7289#0" expanded="true" />
-            <element signature="docComment;method#applyGravity#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#applyGravity#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#applyMovement#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#applyMovement#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#calculateHorizontalCollision#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#calculateHorizontalCollision#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#calculateVerticalCollision#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#calculateVerticalCollision#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#findFirstSolid#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#findFirstSolid#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#startMoveForward#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#endMoveForward#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#startMoveBackward#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#endMoveBackward#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="docComment;method#jump#0;class#PhysicsEngine#0" expanded="false" />
-            <element signature="method#jump#0;class#PhysicsEngine#0" expanded="false" />
-          </folding>
+          <caret line="193" column="5" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+          <caret line="200" column="23" selection-start-line="200" selection-start-column="23" selection-end-line="200" selection-end-column="23" />
           <folding>
             <element signature="docComment;field#isFacingLeft#0;class#Entity#0" expanded="false" />
             <element signature="docComment;field#frames#0;class#Entity#0" expanded="false" />
             <element signature="docComment;field#engine#0;class#Entity#0" expanded="false" />
+            <element signature="e#1160#1161#0" expanded="false" />
+            <element signature="e#1180#1181#0" expanded="false" />
             <element signature="docComment;field#currentFrame#0;class#Entity#0" expanded="false" />
             <element signature="docComment;field#health#0;class#Entity#0" expanded="false" />
             <element signature="docComment;field#x#0;class#Entity#0" expanded="false" />
             <element signature="docComment;field#y#0;class#Entity#0" expanded="false" />
             <element signature="docComment;field#xVelocity#0;class#Entity#0" expanded="false" />
             <element signature="docComment;field#yVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;field#isAffectedByGravity#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#Entity#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#getX#0;class#Entity#0" expanded="false" />
-            <element signature="e#3250#3251#0" expanded="true" />
-            <element signature="e#3265#3266#0" expanded="true" />
+            <element signature="e#3110#3111#0" expanded="false" />
+            <element signature="e#3125#3126#0" expanded="false" />
             <element signature="docComment;method#setX#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#getY#0;class#Entity#0" expanded="false" />
-            <element signature="e#3426#3427#0" expanded="true" />
-            <element signature="e#3441#3442#0" expanded="true" />
             <element signature="docComment;method#setY#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#getLocation#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#getHealth#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#setHealth#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#getXVelocity#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#setXVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="e#4260#4261#0" expanded="true" />
-            <element signature="e#4288#4289#0" expanded="true" />
             <element signature="docComment;method#getYVelocity#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#setYVelocity#0;class#Entity#0" expanded="false" />
-            <element signature="e#4494#4495#0" expanded="true" />
-            <element signature="e#4522#4523#0" expanded="true" />
             <element signature="docComment;method#getHeight#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#isFacingLeft#0;class#Entity#0" expanded="false" />
-            <element signature="e#4712#4713#0" expanded="true" />
-            <element signature="e#4738#4739#0" expanded="true" />
             <element signature="docComment;method#switchDirection#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#isAffectedByGravity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#setAffectedByGravity#0;class#Entity#0" expanded="false" />
-            <element signature="docComment;method#moveLeft#0;class#Entity#0" expanded="false" />
+            <element signature="method#moveLeft#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#moveRight#0;class#Entity#0" expanded="false" />
+            <element signature="method#moveRight#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#moveUp#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#moveDown#0;class#Entity#0" expanded="false" />
-            <element signature="e#6257#6258#0" expanded="true" />
-            <element signature="e#6282#6283#0" expanded="true" />
             <element signature="docComment;method#addImagesOfEntityToFrames#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#getFrames#0;class#Entity#0" expanded="false" />
             <element signature="docComment;method#tick#0;class#Entity#0" expanded="false" />
@@ -1696,44 +1432,228 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Shotgun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Rifle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Railgun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Pistol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/MiniGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/GrenadeGun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Ammo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Pickup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Portal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/Health.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/DragonFly.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/RocketWorm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/ChuckNorris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/SuicideStinkBug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/pickup/WeaponPickup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/Cheese.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="113" column="64" selection-start-line="113" selection-start-column="64" selection-end-line="113" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/map/World1Stage1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="63" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RifleShot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Grenade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="90" selection-start-line="48" selection-start-column="90" selection-end-line="48" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/ShotgunShot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/RailgunShot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Rocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Ink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/weapon/Weapon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="329" column="0" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2452#2453#0" expanded="true" />
-            <element signature="e#2516#2517#0" expanded="true" />
-            <element signature="e#2568#2569#0" expanded="true" />
-            <element signature="e#2587#2588#0" expanded="true" />
+            <element signature="docComment;class#Weapon#0" expanded="false" />
+            <element signature="docComment;field#ammoLeft#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;field#shotType#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;field#bulletNumber#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;field#fireRate#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#getFireRate#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#getBulletNumber#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#getTicksTillFire#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#resetTicksTillFire#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#lowerTicksTillFire#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#getShotType#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#getAmmo#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#subtractAmmo#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#addAmmo#0;class#Weapon#0" expanded="false" />
+            <element signature="docComment;method#shoot#0;class#Weapon#0" expanded="false" />
+            <element signature="method#shoot#0;class#Weapon#0" expanded="false" />
+            <element signature="method#toString#0;class#Weapon#0" expanded="false" />
+            <element signature="class#5862:6028" expanded="false" />
+            <element signature="class#6038:6432" expanded="false" />
+            <element signature="class#6441:6595" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/creatures/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Bullet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3625219">
-          <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/entity/shot/Shot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#Player#0" expanded="false" />
-            <element signature="docComment;field#MAX_HEALTH#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#lives#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#weapon#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#inventory#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#forwardFrames#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#backwardFrames#0;class#Player#0" expanded="false" />
-            <element signature="docComment;field#defense#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#Player#0;class#Player#0" expanded="false" />
-            <element signature="method#Player#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#addImagesOfEntityToFrames#0;class#Player#0" expanded="false" />
-            <element signature="method#addImagesOfEntityToFrames#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#setXVelocity#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#tick#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#getWeapon#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#setWeapon#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#getDefense#0;class#Player#0" expanded="false" />
-            <element signature="docComment;method#setDefense#0;class#Player#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/campcomputer/journeyofthehairs/Images.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5863268">
+          <caret line="120" column="60" selection-start-line="120" selection-start-column="60" selection-end-line="120" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1744,10 +1664,10 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="javaee-facet-resources" />
-              <type id="artifact" />
               <type id="library" />
+              <type id="artifact" />
               <type id="jpa-descriptors" />
+              <type id="javaee-facet-resources" />
             </show-content>
           </artifact-editor>
           <last-edited>JourneyOfTheHairs:jar</last-edited>

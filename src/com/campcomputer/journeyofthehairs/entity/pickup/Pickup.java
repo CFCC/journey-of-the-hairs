@@ -13,15 +13,15 @@ public abstract class Pickup extends Entity {
 
 	public void tick() {
 		ArrayList<Pickup> pickups = new ArrayList<Pickup>();
-		for (Entity entity : engine.getEntities()) {
+		for (Entity entity : getEngine().getEntities()) {
 			if (entity instanceof Pickup) {
 				pickups.add((Pickup) entity);
 			}
 		}
 		for (Pickup pickup : pickups) {
-			if (engine.isOnTopOfPlayer(pickup)) {
+			if (getEngine().isOnTopOfPlayer(pickup)) {
 				pickup.affectGame();
-				engine.removeEntity(pickup);
+				getEngine().removeEntity(pickup);
 			}
 		}
 

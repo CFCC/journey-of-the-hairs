@@ -4,10 +4,8 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 
 public class RifleShot extends Shot {
-	public RifleShot(PhysicsEngine engine) {
-		super(engine);
-		setDamage(1);
-		setBulletSpeed(2);
+	public RifleShot(PhysicsEngine engine, boolean startsLeft) {
+		super(engine, startsLeft, 2, 1);
 	}
 
 	public void addImagesOfEntityToFrames() {

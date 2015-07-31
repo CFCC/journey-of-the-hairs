@@ -36,13 +36,13 @@ public class SuicideStinkBug extends Entity {
 	public void tick() {
 		super.tick();
 
-		if (engine.getDistanceBetweenEntityAndPlayer(this) < EXPLODE_RANGE) {
+		if (getEngine().getDistanceBetweenEntityAndPlayer(this) < EXPLODE_RANGE) {
 			blowup();
 		}
 
-		if (engine.getPlayer().getX() < getX() && getX() - engine.getPlayer().getX() <= 5) {
+		if (getEngine().getPlayer().getX() < getX() && getX() - getEngine().getPlayer().getX() <= 5) {
 			moveLeft();
-		} else if (engine.getPlayer().getX() > getX() && engine.getPlayer().getX() - getX() <= 5) {
+		} else if (getEngine().getPlayer().getX() > getX() && getEngine().getPlayer().getX() - getX() <= 5) {
 			moveRight();
 		}
 	}
@@ -61,8 +61,8 @@ public class SuicideStinkBug extends Entity {
 	 * The damage dealt is 10
 	 */
 	public void blowup() {
-		engine.getPlayer().setHealth(engine.getPlayer().getHealth() - EXPLODE_DAMAGE);
-		engine.removeEntity(this);
+		getEngine().getPlayer().setHealth(getEngine().getPlayer().getHealth() - EXPLODE_DAMAGE);
+		getEngine().removeEntity(this);
 	}
 
 }

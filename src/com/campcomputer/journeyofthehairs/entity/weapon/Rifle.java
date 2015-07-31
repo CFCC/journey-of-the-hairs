@@ -1,0 +1,26 @@
+package com.campcomputer.journeyofthehairs.entity.weapon;
+
+import com.campcomputer.journeyofthehairs.PhysicsEngine;
+import com.campcomputer.journeyofthehairs.entity.shot.RifleShot;
+
+public class Rifle extends Weapon {
+
+	public Rifle(PhysicsEngine engine) {
+		super(engine, 10);
+	}
+
+	@Override
+	protected void addImagesOfEntityToFrames() {
+
+	}
+
+	@Override
+	public void shoot() {
+		super.shoot();
+		PhysicsEngine engine = getEngine();
+		RifleShot rifleShot = new RifleShot(engine, engine.getPlayer().isFacingLeft());
+		engine.addEntity(rifleShot);
+
+		subtractAmmo();
+	}
+}

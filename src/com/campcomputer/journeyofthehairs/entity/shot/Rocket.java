@@ -18,15 +18,15 @@ public class Rocket extends Shot {
 	List<BufferedImage> rocketRight;
 
 	public Rocket(PhysicsEngine engine) {
-		super(engine);
+		super(engine, true, SPEED_MAGNITUDE, ROCKET_DAMAGE);
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
 
-		float playerX = engine.getPlayer().getX();
-		float playerY = engine.getPlayer().getY();
+		float playerX = getEngine().getPlayer().getX();
+		float playerY = getEngine().getPlayer().getY();
 
 		if (playerX < getX()) {
 			frames = rocketLeft;
@@ -42,9 +42,9 @@ public class Rocket extends Shot {
 			setYVelocity(SPEED_MAGNITUDE);
 		}
 
-		if (engine.isOnTopOfPlayer(this)) {
-			engine.getPlayer().setHealth(engine.getPlayer().getHealth() - ROCKET_DAMAGE);
-			engine.removeEntity(this);
+		if (getEngine().isOnTopOfPlayer(this)) {
+			getEngine().getPlayer().setHealth(getEngine().getPlayer().getHealth() - ROCKET_DAMAGE);
+			getEngine().removeEntity(this);
 		}
 	}
 
@@ -57,9 +57,5 @@ public class Rocket extends Shot {
 		rocketRight.add(Images.ReadImage("/images/entities/shots/rocket right.png"));
 
 		frames = rocketRight;
-	}
-
-	public boolean isAffectedByHitDetection() {
-		return false;
 	}
 }

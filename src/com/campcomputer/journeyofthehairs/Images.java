@@ -28,19 +28,17 @@ public class Images {
 		CodeSource src = Entity.class.getProtectionDomain().getCodeSource();
 
 		if (src.getLocation().toString().endsWith("jar")) {
-			if (jaredFiles == null) {
-				loadJarFiles(src);
+			URL url = Images.class.getClassLoader().getResource("images" + path);
+			if (url == null) {
+				throw new RuntimeException("Couldn't load image: " + path);
 			}
-			byte[] bytes = jaredFiles.get("images/" + path);
-			if (bytes == null) {
-				System.err.println(path);
+
+			Image image = new ImageIcon(url).getImage();
+			if (image == null) {
+				return null;
 			}
-			try {
-				bufferedImage = ReadImage(bytes);
-				System.out.println("loaded image from jar: " + path);
-			} catch (Exception e) {
-				System.err.println("Error loading jar image: " + path + bytes.length);
-			}
+
+			bufferedImage = getBufferedImage(image);
 		} else {
 			try {
 				URL url = Images.class.getResource(path);

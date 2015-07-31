@@ -3,16 +3,17 @@ package com.campcomputer.journeyofthehairs.map;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
-import com.campcomputer.journeyofthehairs.Weapons;
 import com.campcomputer.journeyofthehairs.entity.creatures.ChuckNorris;
 import com.campcomputer.journeyofthehairs.entity.creatures.DragonFly;
 import com.campcomputer.journeyofthehairs.entity.creatures.RocketWorm;
 import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
 import com.campcomputer.journeyofthehairs.entity.pickup.Portal;
+import com.campcomputer.journeyofthehairs.entity.pickup.WeaponPickup;
+import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
 
 import java.awt.image.BufferedImage;
 
-public class World1Stage1 extends Map implements Weapons {
+public class World1Stage1 extends Map {
 	/**
 	 * This is the tile array that represents the map of level 1-1. It was created by a combination of ideas from all
 	 * original contributors of the project. It has several garden themed obstacles: potatoes, carrots, and tomatoes.
@@ -109,23 +110,23 @@ public class World1Stage1 extends Map implements Weapons {
 		worm.setX(32);
 		worm.setY(9);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon rifle = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RIFLE, engine);
+		WeaponPickup rifle = new WeaponPickup(Weapon.Weapons.RIFLE, engine);
 		rifle.setX(1);
 		rifle.setY(7);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon minigun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.MINIGUN, engine);
+		WeaponPickup minigun = new WeaponPickup(Weapon.Weapons.MINIGUN, engine);
 		minigun.setX(3);
 		minigun.setY(7);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon pistol = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.PISTOL, engine);
+		WeaponPickup pistol = new WeaponPickup(Weapon.Weapons.PISTOL, engine);
 		pistol.setX(5);
 		pistol.setY(7);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon shotgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.SHOTGUN, engine);
+		WeaponPickup shotgun = new WeaponPickup(Weapon.Weapons.SHOTGUN, engine);
 		shotgun.setX(9);
 		shotgun.setY(7);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon grenadeGun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.GRENADE_GUN, engine);
+		WeaponPickup grenadeGun = new WeaponPickup(Weapon.Weapons.GRENADE_GUN, engine);
 		grenadeGun.setX(11);
 		grenadeGun.setY(7);
 
@@ -138,11 +139,11 @@ public class World1Stage1 extends Map implements Weapons {
 		entities.add(stinkbug);
 		entities.add(worm);
 		entities.add(chuckNorris);
-//
-//		entities.add(rifle);
-//		entities.add(minigun);
-//		entities.add(pistol);
-//		entities.add(shotgun);
-//		entities.add(grenadeGun);
+
+		entities.add(rifle);
+		entities.add(minigun);
+		entities.add(pistol);
+		entities.add(shotgun);
+		entities.add(grenadeGun);
 	}
 }

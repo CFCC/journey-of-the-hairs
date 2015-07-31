@@ -12,10 +12,8 @@ public class ShotgunShot extends Shot {
 
 	public List<BufferedImage> bulletsRight;
 
-	public ShotgunShot(PhysicsEngine engine) {
-		super(engine);
-		setDamage(1);
-		setBulletSpeed(3);
+	public ShotgunShot(PhysicsEngine engine, boolean startsLeft) {
+		super(engine, startsLeft, 3, 1);
 	}
 
 	public void addImagesOfEntityToFrames() {

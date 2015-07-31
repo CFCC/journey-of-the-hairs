@@ -102,7 +102,7 @@ public class ChuckNorris extends Entity {
 	public void tick() {
 		super.tick();
 
-		if (isOnTopOfEntity(engine.getPlayer())) {
+		if (isOnTopOfEntity(getEngine().getPlayer())) {
 			/* It should attack any of the three attacks at random. Use round house kick at the end. ATTACK!
 			ChuckNorris does only one attack at a time
 			The roundhouse should not happen often. 51% of the punch happening. 40% of the laser eyes happening.
@@ -110,11 +110,11 @@ public class ChuckNorris extends Entity {
 			int randomChance = new Random().nextInt(100);
 
 			if (randomChance < 33) {
-				punch(engine.getPlayer());
+				punch(getEngine().getPlayer());
 			} else if (randomChance >= 33 && randomChance < 66) {
-				beardPunch(engine.getPlayer());
+				beardPunch(getEngine().getPlayer());
 			} else {
-				roundHouseKick(engine.getPlayer());
+				roundHouseKick(getEngine().getPlayer());
 			}
 
 		}

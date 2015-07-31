@@ -3,7 +3,7 @@ package com.campcomputer.journeyofthehairs.entity.creatures;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.weapon.Weapon;
+import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -30,13 +30,6 @@ public class Player extends Entity {
 	public int lives = 3;
 
 	/**
-	 * The weapon that the player currently has equipped. The player may have other weapons in their inventory,
-	 * but this is the only active one and is the one that is checked for Weapons Type and statistics such as damage,
-	 * bullet speed, and the amount of ammo left.
-	 */
-	public Weapon weapon;
-
-	/**
 	 * An array of the items the player has acquired through pickups. The player may choose to have every item be used
 	 * upon pickup in a settings menu, but by default, each weapon is added to the inventory. The inventory can be
 	 * accessed in-game by a hot key 'E', a la Minecraft.
@@ -54,6 +47,13 @@ public class Player extends Entity {
 	 * The buffered image for when the player is going backwards.
 	 */
 	List<BufferedImage> backwardFrames;
+
+	/**
+	 * The weapon that the player currently has equipped. The player may have other weapons in their inventory,
+	 * but this is the only active one and is the one that is checked for Weapons Type and statistics such as damage,
+	 * bullet speed, and the amount of ammo left.
+	 */
+	private Weapon weapon;
 
 	/**
 	 * This is the player's defense. It can only be increased by collecting armor or invincibility on
@@ -90,11 +90,8 @@ public class Player extends Entity {
 	@Override
 	public void setXVelocity(float xVel) {
 		super.setXVelocity(xVel);
-		if (xVel < 0) {
-			frames = backwardFrames;
-		}
-		if (xVel > 0) {
-			frames = forwardFrames;
+		if ((xVel < 0 && ! isFacingLeft()) || (xVel > 0 && isFacingLeft())) {
+			switchDirection();
 		}
 	}
 
@@ -107,12 +104,8 @@ public class Player extends Entity {
 	@Override
 	public void tick() {
 		super.tick();
-		if (frames == forwardFrames) {
-			isFacingLeft = false;
-		}
-		if (frames == backwardFrames) {
-			isFacingLeft = true;
-		}
+		frames = isFacingLeft() ? backwardFrames : forwardFrames;
+
 		getWeapon().lowerTicksTillFire();
 		if (getHealth() <= 0 && lives > 0) {
 			lives -= 1;

@@ -3,15 +3,16 @@ package com.campcomputer.journeyofthehairs.map;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
-import com.campcomputer.journeyofthehairs.Weapons;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
 import com.campcomputer.journeyofthehairs.entity.pickup.Health;
 import com.campcomputer.journeyofthehairs.entity.pickup.Portal;
+import com.campcomputer.journeyofthehairs.entity.pickup.WeaponPickup;
+import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
 
 import java.awt.image.BufferedImage;
 
-public class Cheese extends Map implements Weapons {
+public class Cheese extends Map {
 
 	/**
 	 * This map is made completely of cheese. The idea for the map originates to a joke between the two boys who
@@ -110,7 +111,7 @@ public class Cheese extends Map implements Weapons {
 		suicideStinkBug1.setY(10);
 		engine.addEntity(suicideStinkBug1);
 
-		com.campcomputer.journeyofthehairs.entity.pickup.Weapon railgun = new com.campcomputer.journeyofthehairs.entity.pickup.Weapon(Weapon.RAILGUN, engine) {
+		WeaponPickup railgun = new WeaponPickup(Weapon.Weapons.RAILGUN, engine) {
 			@Override
 			public void affectGame() {
 				Map.getMap(0);
