@@ -3,6 +3,7 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
+import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
 
 public abstract class Shot extends Entity {
@@ -23,12 +24,12 @@ public abstract class Shot extends Entity {
 
 	public void tick() {
 		for (Entity entity : getEngine().getEntities()) {
-			if (this.isOn(entity)) {
+			if (this.isOn(entity) && ! (entity instanceof Player)) {
 				entity.setHealth(entity.getHealth() - getDamage());
 				getEngine().removeEntity(this);
 			}
 		}
-		if (getEngine().getMap().getTiles()[getXVelocity() < 0 ? (int) getX() - 1 : (int) getX() + 1][(int) getY()] != Tile.AIR) {
+		if (getEngine().getMap().getTiles()[(int) getX()][(int) getY()] != Tile.AIR) {
 			getEngine().removeEntity(this);
 		}
 	}

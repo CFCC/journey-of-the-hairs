@@ -17,7 +17,7 @@ public enum Weapons {
 
 		@Override
 		public int getFireRate() {
-			return 1;
+			return 100;
 		}
 	}, SHOTGUN {
 		@Override
@@ -62,7 +62,7 @@ public enum Weapons {
 
 		@Override
 		public int getFireRate() {
-			return 1;
+			return 1000;
 		}
 	}, RAILGUN {
 		@Override
@@ -92,7 +92,7 @@ public enum Weapons {
 
 		@Override
 		public int getFireRate() {
-			return 1;
+			return 50;
 		}
 	};
 

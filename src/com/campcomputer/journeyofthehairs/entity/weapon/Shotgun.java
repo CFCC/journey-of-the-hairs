@@ -15,10 +15,12 @@ public class Shotgun extends Weapon {
 	}
 
 	@Override
-	public void shoot() {
-		super.shoot();
-		PhysicsEngine engine = getEngine();
-		ShotgunShot shot = new ShotgunShot(engine, engine.getPlayer().isFacingLeft());
-		engine.addEntity(shot);
+	public boolean shoot() {
+		if (super.shoot()) {
+			PhysicsEngine engine = getEngine();
+			ShotgunShot shot = new ShotgunShot(engine, engine.getPlayer().isFacingLeft());
+			engine.addEntity(shot);
+		}
+		return true;
 	}
 }

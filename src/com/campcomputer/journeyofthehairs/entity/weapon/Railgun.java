@@ -15,10 +15,12 @@ public class Railgun extends Weapon {
 	}
 
 	@Override
-	public void shoot() {
-		super.shoot();
-		PhysicsEngine engine = getEngine();
-		RailgunShot railgunShot = new RailgunShot(engine, engine.getPlayer().isFacingLeft());
-		engine.addEntity(railgunShot);
+	public boolean shoot() {
+		if (super.shoot()) {
+			PhysicsEngine engine = getEngine();
+			RailgunShot railgunShot = new RailgunShot(engine, engine.getPlayer().isFacingLeft());
+			engine.addEntity(railgunShot);
+		}
+		return true;
 	}
 }

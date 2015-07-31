@@ -4,6 +4,7 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
+import com.campcomputer.journeyofthehairs.map.World1Stage1;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -110,6 +111,7 @@ public class Player extends Entity {
 		if (getHealth() <= 0 && lives > 0) {
 			lives -= 1;
 			setHealth(MAX_HEALTH);
+			getEngine().setMap(new World1Stage1(getEngine()));
 		}
 
 		if (getHealth() <= 0 && lives <= 0) {

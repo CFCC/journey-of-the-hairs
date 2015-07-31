@@ -15,10 +15,12 @@ public class MiniGun extends Weapon {
 	}
 
 	@Override
-	public void shoot() {
-		super.shoot();
-		PhysicsEngine engine = getEngine();
-		Bullet bullet = new Bullet(engine, engine.getPlayer().isFacingLeft());
-		engine.addEntity(bullet);
+	public boolean shoot() {
+		if (super.shoot()) {
+			PhysicsEngine engine = getEngine();
+			Bullet bullet = new Bullet(engine, engine.getPlayer().isFacingLeft());
+			engine.addEntity(bullet);
+		}
+		return true;
 	}
 }

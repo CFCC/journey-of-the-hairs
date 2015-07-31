@@ -134,16 +134,19 @@ public class World1Stage1 extends Map {
 		portal.setX(17);
 		portal.setY(5);
 
-//		entities.add(portal);
-//		entities.add(dragonFly);
-//		entities.add(stinkbug);
-//		entities.add(worm);
-//		entities.add(chuckNorris);
+		entities.add(portal);
+		entities.add(dragonFly);
+		entities.add(stinkbug);
+		entities.add(worm);
+		entities.add(chuckNorris);
 //
 //		entities.add(rifle);
 //		entities.add(minigun);
 //		entities.add(pistol);
 //		entities.add(shotgun);
 //		entities.add(grenadeGun);
+
+		engine.getPlayer().setX(1);
+		engine.getPlayer().setY(1);
 	}
 }

@@ -32,4 +32,9 @@ public abstract class Pickup extends Entity {
 	}
 
 	public abstract void affectGame();
+
+	@Override
+	public boolean isAffectedByGravity() {
+		return false;
+	}
 }

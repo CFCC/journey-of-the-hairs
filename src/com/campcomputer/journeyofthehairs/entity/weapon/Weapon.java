@@ -135,14 +135,15 @@ public abstract class Weapon extends Entity {
 	/**
 	 * Abstract method for the weapon to shoot since they all might have different ways of shooting
 	 */
-	public void shoot() {
-		System.out.println(getAmmo() <= 0);
+	public boolean shoot() {
 		if (! canFire() || getAmmo() <= 0) {
-			return;
+			System.out.println(getTicksTillFire());
+			return false;
 		}
 
 		subtractAmmo();
 		resetTicksTillFire();
+		return true;
 	}
 
 	@Override
