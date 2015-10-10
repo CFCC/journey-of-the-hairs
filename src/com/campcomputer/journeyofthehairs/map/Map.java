@@ -1,6 +1,5 @@
 package com.campcomputer.journeyofthehairs.map;
 
-import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 
 import java.awt.image.BufferedImage;

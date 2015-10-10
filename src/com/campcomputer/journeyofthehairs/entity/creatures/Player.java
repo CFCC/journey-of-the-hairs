@@ -24,7 +24,6 @@ public class Player extends Entity {
 	/**
 	 * The amount of lives (left) the player has.
 	 * <p/>
-	 * TODO: When the player's health goes down to zero, they will lose a life and the level will restart.
 	 * Once their lives go down to zero, they will go to a "sorry, you lost" screen and be redirected back
 	 * to the main menu.
 	 */

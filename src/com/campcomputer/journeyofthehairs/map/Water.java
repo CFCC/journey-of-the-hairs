@@ -2,7 +2,6 @@ package com.campcomputer.journeyofthehairs.map;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.Tile;
 
 import java.awt.image.BufferedImage;
 

@@ -1,9 +1,9 @@
 package com.campcomputer.journeyofthehairs.panel;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
+import com.campcomputer.journeyofthehairs.map.Tile;
 
 import javax.swing.*;
 import java.awt.*;

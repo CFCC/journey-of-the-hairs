@@ -2,7 +2,6 @@ package com.campcomputer.journeyofthehairs.map;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.Tile;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
 import com.campcomputer.journeyofthehairs.entity.pickup.Health;

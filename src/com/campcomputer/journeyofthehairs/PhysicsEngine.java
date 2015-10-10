@@ -4,6 +4,7 @@ import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
 import com.campcomputer.journeyofthehairs.entity.weapon.Pistol;
 import com.campcomputer.journeyofthehairs.map.Map;
+import com.campcomputer.journeyofthehairs.map.Tile;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
