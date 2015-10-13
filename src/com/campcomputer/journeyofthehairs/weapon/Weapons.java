@@ -1,4 +1,4 @@
-package com.campcomputer.journeyofthehairs.entity.weapon;
+package com.campcomputer.journeyofthehairs.weapon;
 
 /**
  * Created by Jordan on 7/31/2015.
@@ -96,7 +96,7 @@ public enum Weapons {
 		}
 	};
 
-	public static com.campcomputer.journeyofthehairs.entity.weapon.Weapons get(Weapon weapon) {
+	public static com.campcomputer.journeyofthehairs.weapon.Weapons get(Weapon weapon) {
 		if (weapon instanceof Pistol) {
 			return PISTOL;
 		} else if (weapon instanceof Shotgun) {

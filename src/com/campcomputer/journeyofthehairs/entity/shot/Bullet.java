@@ -4,7 +4,7 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
+import com.campcomputer.journeyofthehairs.weapon.WeaponShots;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
@@ -26,7 +26,7 @@ public class Bullet extends Shot {
 	}
 
 	public void tick() {
-		if (frames == bulletLeft) {
+		if (isFacingLeft()) {
 			moveLeft();
 		} else {
 			moveRight();
@@ -36,10 +36,7 @@ public class Bullet extends Shot {
 			Point2D bPosition = new Point2D.Float(getX(), getY());
 			Point2D ePosition = new Point2D.Float(entity.getX(), entity.getY());
 			if ((bPosition.distance(ePosition) < 1f) && ! (entity instanceof Player) && ! (entity instanceof Bullet)) {
-				entity.takeDamage(entity);
-				if (entity.getHealth() <= 0) {
-					engine.removeEntity(entity);
-				}
+				entity.takeDamageFromPlayer();
 				engine.removeEntity(this);
 			}
 		}

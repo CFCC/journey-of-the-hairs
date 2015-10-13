@@ -4,7 +4,7 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
+import com.campcomputer.journeyofthehairs.weapon.WeaponShots;
 
 public class RailgunShot extends Shot {
 
@@ -30,7 +30,7 @@ public class RailgunShot extends Shot {
 				setXVelocity(0);
 			}
 			if (getY() == entity.getY() && ! (entity instanceof Player)) {
-				entity.takeDamage(entity);
+				entity.takeDamageFromPlayer();
 			}
 		}
 

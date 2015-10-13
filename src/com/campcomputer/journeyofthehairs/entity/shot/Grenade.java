@@ -4,7 +4,7 @@ import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
+import com.campcomputer.journeyofthehairs.weapon.WeaponShots;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;

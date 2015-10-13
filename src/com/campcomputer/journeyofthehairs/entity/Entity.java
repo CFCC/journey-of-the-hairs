@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
+import com.campcomputer.journeyofthehairs.weapon.Weapon;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
@@ -205,36 +205,34 @@ public abstract class Entity {
 	}
 
 	/**
-	 * Moves the entity left by taking away .1 from its xVelocity, setting its yVelocity to 0, and switching its direction
-	 * if need be.
+	 * Moves the entity left by taking away .15 from its xVelocity and switching its direction if need be.
 	 */
 	public void moveLeft() {
-		setXVelocity(- 0.2f);
+		setXVelocity(- 0.15f);
 		if (! isFacingLeft()) {
 			switchDirection();
 		}
 	}
 
 	/**
-	 * Moves the entity right by adding .1 to its xVelocity, setting its yVelocity to 0, and switching its direction
-	 * if need be.
+	 * Moves the entity right by adding .15 to its xVelocity and switching its direction if need be.
 	 */
 	public void moveRight() {
-		setXVelocity(0.2f);
+		setXVelocity(0.15f);
 		if (isFacingLeft()) {
 			switchDirection();
 		}
 	}
 
 	/**
-	 * Moves the entity up by setting its xVelocity to 0, and subtracting .3 from its yVelocity
+	 * Moves the entity up by subtracting .2 from its yVelocity
 	 */
 	public void moveUp() {
 		setYVelocity(- 0.2f);
 	}
 
 	/**
-	 * Moves the entity down by setting its xVelocity to 0, and adding .3 to its yVelocity
+	 * Moves the entity down by adding .2 to its yVelocity
 	 */
 	public void moveDown() {
 		setYVelocity(0.2f);
@@ -294,11 +292,12 @@ public abstract class Entity {
 	/**
 	 * Makes an entity take the appropriate amount of damage by getting the amount of bullets fired by the player's
 	 * weapon and multiplying it by the damage of each bullet
-	 *
-	 * @param entity the entity to take damage
 	 */
-	public void takeDamage(Entity entity) {
+	public void takeDamageFromPlayer() {
 		Weapon weapon = engine.getPlayer().getWeapon();
-		entity.setHealth(entity.getHealth() - (weapon.getShotType().getDamage() * weapon.getBulletNumber()));
+		setHealth(getHealth() - (weapon.getShotType().getDamage() * weapon.getBulletNumber()));
+		if (getHealth() <= 0) {
+			getEngine().removeEntity(this);
+		}
 	}
 }

@@ -3,8 +3,8 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.entity.weapon.WeaponShots;
 import com.campcomputer.journeyofthehairs.map.Tile;
+import com.campcomputer.journeyofthehairs.weapon.WeaponShots;
 
 public abstract class Shot extends Entity {
 	final private float bulletSpeed;  // Speed of the bullets

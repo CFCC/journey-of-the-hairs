@@ -3,8 +3,8 @@ package com.campcomputer.journeyofthehairs.entity.creatures;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.entity.weapon.Weapon;
 import com.campcomputer.journeyofthehairs.map.World1Stage1;
+import com.campcomputer.journeyofthehairs.weapon.Weapon;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;

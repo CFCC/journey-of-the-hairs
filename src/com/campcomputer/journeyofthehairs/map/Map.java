@@ -31,6 +31,7 @@ public class Map {
 	 */
 	protected ArrayList<Entity> entities = new ArrayList<Entity>();
 
+	// TODO: Implement all these methods
 	public static void saveMap(Map map) {
 		maps.add(map);
 	}

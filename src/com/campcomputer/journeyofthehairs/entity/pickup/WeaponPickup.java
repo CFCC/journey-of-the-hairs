@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.entity.pickup;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.weapon.*;
+import com.campcomputer.journeyofthehairs.weapon.*;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;

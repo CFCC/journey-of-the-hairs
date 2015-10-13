@@ -105,42 +105,35 @@ public class ChuckNorris extends Entity {
 		if (isOnTopOfEntity(getEngine().getPlayer())) {
 			/* It should attack any of the three attacks at random. Use round house kick at the end. ATTACK!
 			ChuckNorris does only one attack at a time
-			The roundhouse should not happen often. 51% of the punch happening. 40% of the laser eyes happening.
+			The roundhouse should not happen often. 51% of the punch happening. 40% of the beard punch happening.
 			While 9% of the roundhouse happening. */
 			int randomChance = new Random().nextInt(100);
 
-			if (randomChance < 33) {
+			if (randomChance < PUNCH_CHANCE) {
 				punch(getEngine().getPlayer());
-			} else if (randomChance >= 33 && randomChance < 66) {
+			} else if (randomChance < PUNCH_CHANCE + BEARD_PUNCH_CHANCE) {
 				beardPunch(getEngine().getPlayer());
 			} else {
 				roundHouseKick(getEngine().getPlayer());
 			}
-
 		}
 
 		heal();
 	}
 
 	public void punch(Entity entity) {
-		if (new Random().nextInt(100) < PUNCH_CHANCE) {
-			entity.setHealth(entity.getHealth() - PUNCH_DAMAGE);
-			frames = smackFrames;
-		}
+		entity.setHealth(entity.getHealth() - PUNCH_DAMAGE);
+		frames = smackFrames;
 	}
 
 	public void roundHouseKick(Entity entity) {
-		if (new Random().nextInt(100) < ROUND_HOUSE_CHANCE) {
-			entity.setHealth(entity.getHealth() - ROUND_HOUSE_KICK_DAMAGE);
-			frames = roundhouseKickFrames;
-		}
+		entity.setHealth(entity.getHealth() - ROUND_HOUSE_KICK_DAMAGE);
+		frames = roundhouseKickFrames;
 	}
 
 	public void beardPunch(Entity entity) {
-		if (new Random().nextInt(100) < BEARD_PUNCH_CHANCE) {
-			entity.setHealth(entity.getHealth() - BEARD_PUNCH_DAMAGE);
-			frames = punchFrames;
-		}
+		entity.setHealth(entity.getHealth() - BEARD_PUNCH_DAMAGE);
+		frames = punchFrames;
 	}
 
 	/**

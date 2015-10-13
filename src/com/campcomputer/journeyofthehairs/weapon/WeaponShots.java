@@ -1,4 +1,4 @@
-package com.campcomputer.journeyofthehairs.entity.weapon;
+package com.campcomputer.journeyofthehairs.weapon;
 
 /**
  * Created by Jordan on 7/31/2015.

@@ -1,4 +1,4 @@
-package com.campcomputer.journeyofthehairs.entity.weapon;
+package com.campcomputer.journeyofthehairs.weapon;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.shot.RifleShot;

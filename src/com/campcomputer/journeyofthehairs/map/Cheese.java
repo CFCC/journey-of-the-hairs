@@ -2,12 +2,10 @@ package com.campcomputer.journeyofthehairs.map;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
 import com.campcomputer.journeyofthehairs.entity.pickup.Health;
-import com.campcomputer.journeyofthehairs.entity.pickup.Portal;
 import com.campcomputer.journeyofthehairs.entity.pickup.WeaponPickup;
-import com.campcomputer.journeyofthehairs.entity.weapon.Weapons;
+import com.campcomputer.journeyofthehairs.weapon.Weapons;
 
 import java.awt.image.BufferedImage;
 
@@ -94,9 +92,7 @@ public class Cheese extends Map {
 	/**
 	 * The constructor for the level
 	 */
-	public Cheese(final PhysicsEngine engine, final Map currentMap) {
-		Map.saveMap(currentMap);
-
+	public Cheese(PhysicsEngine engine) {
 		map = cheeseMap;
 		image = theImage;
 
@@ -113,12 +109,8 @@ public class Cheese extends Map {
 		WeaponPickup railgun = new WeaponPickup(Weapons.RAILGUN, engine) {
 			@Override
 			public void affectGame() {
-				Map.getMap(0);
-				for (Entity entity : engine.getEntities()) {
-					if (entity instanceof Portal) {
-						engine.removeEntity(entity);
-					}
-				}
+				World1Stage1 w1s1 = new World1Stage1(getEngine());
+				getEngine().setMap(w1s1);
 			}
 		};
 		railgun.setX(cheeseMap.length - 4);

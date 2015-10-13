@@ -1,4 +1,4 @@
-package com.campcomputer.journeyofthehairs.entity.weapon;
+package com.campcomputer.journeyofthehairs.weapon;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
@@ -46,7 +46,7 @@ public abstract class Weapon extends Entity {
 
 	public Weapon(PhysicsEngine engine, int initialAmmo) {
 		super(engine);
-		this.weaponType = com.campcomputer.journeyofthehairs.entity.weapon.Weapons.get(this);
+		this.weaponType = com.campcomputer.journeyofthehairs.weapon.Weapons.get(this);
 
 		this.fireRate = weaponType.getFireRate();
 		this.bulletNumber = weaponType.getBulletNumber();
