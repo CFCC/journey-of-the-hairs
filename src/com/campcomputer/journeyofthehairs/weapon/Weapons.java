@@ -1,7 +1,8 @@
 package com.campcomputer.journeyofthehairs.weapon;
 
 /**
- * Created by Jordan on 7/31/2015.
+ * Enumeration of all of the possible weapons, how often they fire, what they fire, and how much of it they
+ * fire at one time
  */
 public enum Weapons {
 	PISTOL {

@@ -46,8 +46,8 @@ public class MapConverter {
 		File file = new File(args[0]);
 		BufferedImage image = ImageIO.read(file);
 		@SuppressWarnings("unchecked")
-		List<Integer>[][] coloridx = (List<Integer>[][]) new List[image.getWidth() / 64][image.getHeight() / 64];
-		for (List<Integer>[] colorList : coloridx) {
+		List<Integer>[][] colorIndices = (List<Integer>[][]) new List[image.getWidth() / 64][image.getHeight() / 64];
+		for (List<Integer>[] colorList : colorIndices) {
 			for (int j = 0; j < colorList.length; j++) {
 				colorList[j] = new ArrayList<Integer>();
 			}
@@ -57,7 +57,7 @@ public class MapConverter {
 			for (int y = 0; y < image.getHeight(); y++) {
 				int yi = y / 64;
 				int colorIndex = round(new Color(image.getRGB(x, y)));
-				coloridx[xi][yi].add(colorIndex);
+				colorIndices[xi][yi].add(colorIndex);
 			}
 		}
 
@@ -65,8 +65,8 @@ public class MapConverter {
 		for (int xi = 0; xi < grid.length; xi++) {
 			for (int yi = 0; yi < grid[xi].length; yi++) {
 				Map<Integer, Integer> count = new HashMap<Integer, Integer>();
-				List<Integer> colorIndices = coloridx[xi][yi];
-				for (int index : colorIndices) {
+				List<Integer> indices = colorIndices[xi][yi];
+				for (int index : indices) {
 					if (count.get(index) == null) {
 						count.put(index, 1);
 					} else {
@@ -77,15 +77,16 @@ public class MapConverter {
 				int maxColor = 0;
 				for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
 					int color = entry.getKey();
-					int countz = entry.getValue();
-					if (countz > max) {
-						max = countz;
+					int colorCount = entry.getValue();
+					if (colorCount > max) {
+						max = colorCount;
 						maxColor = color;
 					}
 				}
 				grid[xi][yi] = COLOR_CONSTANTS[maxColor];
 			}
 		}
+		//noinspection SpellCheckingInspection
 		System.out.println("import static com.campcomputer.journeyofthehairs.map.Tile.*;");
 		System.out.println();
 		System.out.println("/* Each line is one row of tiles; each column is one column */");
@@ -105,8 +106,6 @@ public class MapConverter {
 	}
 
 	public static int round(Color color) {
-
-		Color nearestColor = null;
 		double nearestDistance = 1000000;
 		int nearestIndex = - 1;
 
@@ -117,7 +116,6 @@ public class MapConverter {
 					+ Math.pow(color.getGreen() - constantColor.getGreen(), 2)
 					+ Math.pow(color.getBlue() - constantColor.getBlue(), 2));
 			if (nearestDistance > newDist) {
-				nearestColor = constantColor;
 				nearestDistance = newDist;
 				nearestIndex = i;
 			}

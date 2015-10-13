@@ -91,10 +91,10 @@ public class ChuckNorris extends Entity {
 	@Override
 	protected void addImagesOfEntityToFrames() {
 		standingFrames = new ArrayList<BufferedImage>();
-		standingFrames.add(Images.ReadImage("/frames/chucknorrissmack/1.png"));
-		punchFrames = Images.ReadFrames("chucknorrispunch");
-		smackFrames = Images.ReadFrames("chucknorrissmack");
-		roundhouseKickFrames = Images.ReadFrames("chucknorrisroundhousekick");
+		standingFrames.add(Images.ReadImage("/frames/chuckNorrisSmack/1.png"));
+		punchFrames = Images.ReadFrames("chuckNorrisPunch");
+		smackFrames = Images.ReadFrames("chuckNorrisSmack");
+		roundhouseKickFrames = Images.ReadFrames("chuckNorrisRoundHouseKick");
 		frames = standingFrames;
 	}
 

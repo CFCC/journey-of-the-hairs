@@ -1,7 +1,8 @@
 package com.campcomputer.journeyofthehairs.weapon;
 
 /**
- * Created by Jordan on 7/31/2015.
+ * An enumeration of possible weapon shots and their speed/damages. Shot themselves are individual entities,
+ * similar to a rocket, making it easier to have fewer dependencies
  */
 public enum WeaponShots {
 	SHOTGUN_SHOT {

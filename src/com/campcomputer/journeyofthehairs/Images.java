@@ -83,6 +83,7 @@ public class Images {
 		} else {
 			File frameDir = new File("images/frames/" + name);
 
+			//noinspection ConstantConditions
 			for (File file : frameDir.listFiles()) {
 				if (file.isFile()) {
 					frames.add(ReadImage("/frames/" + name + "/" + file.getName()));

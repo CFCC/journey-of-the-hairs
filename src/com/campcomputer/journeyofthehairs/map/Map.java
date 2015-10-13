@@ -47,7 +47,7 @@ public class Map {
 	public static ArrayList<Map> LoadMaps() throws IOException, ClassNotFoundException {
 		FileInputStream fin = new FileInputStream(fileName);
 		ObjectInputStream ois = new ObjectInputStream(fin);
-		ArrayList<Map> maps = (ArrayList<Map>) ois.readObject();
+		@SuppressWarnings("unchecked") ArrayList<Map> maps = (ArrayList<Map>) ois.readObject();
 		ois.close();
 		return maps;
 	}

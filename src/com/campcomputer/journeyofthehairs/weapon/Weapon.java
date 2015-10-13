@@ -55,6 +55,10 @@ public abstract class Weapon extends Entity {
 		this.ammoLeft = initialAmmo;
 	}
 
+	public Weapons getWeaponType() {
+		return weaponType;
+	}
+
 	public void tick() {
 		lowerTicksTillFire();
 	}
