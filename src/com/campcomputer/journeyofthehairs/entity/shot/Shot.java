@@ -12,7 +12,7 @@ public abstract class Shot extends Entity {
 	final private int damage;         // The damage of each bullet
 
 	public Shot(PhysicsEngine engine, boolean startsLeft, WeaponShots type) {
-		super(engine);
+		super(engine, 9000);
 		this.bulletSpeed = type.getBulletSpeed();
 		this.damage = type.getDamage();
 
@@ -25,7 +25,7 @@ public abstract class Shot extends Entity {
 	public void tick() {
 		for (Entity entity : getEngine().getEntities()) {
 			if (this.isOn(entity) && ! (entity instanceof Player)) {
-				entity.setHealth(entity.getHealth() - getDamage());
+				entity.takeDamage(getDamage());
 				getEngine().removeEntity(this);
 
 			}
@@ -33,6 +33,7 @@ public abstract class Shot extends Entity {
 		if (getEngine().getMap().getTiles()[(int) getX()][(int) getY()] != Tile.AIR) {
 			getEngine().removeEntity(this);
 		}
+		restoreHealth();
 	}
 
 	public int getDamage() {

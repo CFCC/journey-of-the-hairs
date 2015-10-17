@@ -45,7 +45,7 @@ public abstract class Weapon extends Entity {
 	private int ticksTillFire;
 
 	public Weapon(PhysicsEngine engine, int initialAmmo) {
-		super(engine);
+		super(engine, 9000);
 		this.weaponType = com.campcomputer.journeyofthehairs.weapon.Weapons.get(this);
 
 		this.fireRate = weaponType.getFireRate();
@@ -61,6 +61,7 @@ public abstract class Weapon extends Entity {
 
 	public void tick() {
 		lowerTicksTillFire();
+		restoreHealth();
 	}
 
 	/**

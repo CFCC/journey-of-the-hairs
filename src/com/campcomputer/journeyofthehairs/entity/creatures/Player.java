@@ -68,8 +68,7 @@ public class Player extends Entity {
 	 * @param engine is the super class for the player class
 	 */
 	public Player(PhysicsEngine engine) {
-		super(engine);
-		setHealth(MAX_HEALTH);
+		super(engine, MAX_HEALTH);
 	}
 
 	/**
@@ -109,13 +108,17 @@ public class Player extends Entity {
 		getWeapon().lowerTicksTillFire();
 		if (getHealth() <= 0 && lives > 0) {
 			lives -= 1;
-			setHealth(MAX_HEALTH);
+			restoreHealth();
 			getEngine().setMap(new World1Stage1(getEngine()));
 		}
 
 		if (getHealth() <= 0 && lives <= 0) {
 			System.exit(0);
 		}
+	}
+
+	public void heal(int health) {
+		this.health += health;
 	}
 
 	/**

@@ -25,8 +25,7 @@ public class DragonFly extends Entity {
 	 * Constructor
 	 */
 	public DragonFly(PhysicsEngine engine) {
-		super(engine);
-		setHealth(25);
+		super(engine, 25);
 	}
 
 	/**
@@ -73,7 +72,7 @@ public class DragonFly extends Entity {
 	 */
 	public void eat(Entity entity) {
 		// make the enemy lose health
-		entity.setHealth(entity.getHealth() - EATING_DAMAGE);
+		entity.takeDamage(EATING_DAMAGE);
 	}
 
 	/**
@@ -82,7 +81,7 @@ public class DragonFly extends Entity {
 	 * @param entity the thing to breathe fire on.
 	 */
 	public void breathFire(Entity entity) {
-		entity.setHealth(entity.getHealth() - BREATH_FIRE_DAMAGE);
+		entity.takeDamage(BREATH_FIRE_DAMAGE);
 	}
 
 	@Override

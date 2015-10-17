@@ -12,7 +12,7 @@ public class Current extends Entity {
 	 * Constructor
 	 */
 	public Current(PhysicsEngine engine) {
-		super(engine);
+		super(engine, 1);
 	}
 
 	@Override

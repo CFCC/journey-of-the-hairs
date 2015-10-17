@@ -12,7 +12,7 @@ public class Squid extends Entity {
 	 * Constructor
 	 */
 	public Squid(PhysicsEngine engine) {
-		super(engine);
+		super(engine, 1);
 	}
 
 	@Override

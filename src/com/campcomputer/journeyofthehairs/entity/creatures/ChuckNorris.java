@@ -84,8 +84,7 @@ public class ChuckNorris extends Entity {
 	List<BufferedImage> smackFrames;
 
 	public ChuckNorris(PhysicsEngine engine) {
-		super(engine);
-		setHealth(MAX_HEALTH);
+		super(engine, MAX_HEALTH);
 	}
 
 	@Override
@@ -118,21 +117,21 @@ public class ChuckNorris extends Entity {
 			}
 		}
 
-		heal();
+		restoreHealth();
 	}
 
 	public void punch(Entity entity) {
-		entity.setHealth(entity.getHealth() - PUNCH_DAMAGE);
+		entity.takeDamage(PUNCH_DAMAGE);
 		frames = smackFrames;
 	}
 
 	public void roundHouseKick(Entity entity) {
-		entity.setHealth(entity.getHealth() - ROUND_HOUSE_KICK_DAMAGE);
+		entity.takeDamage(ROUND_HOUSE_KICK_DAMAGE);
 		frames = roundhouseKickFrames;
 	}
 
 	public void beardPunch(Entity entity) {
-		entity.setHealth(entity.getHealth() - BEARD_PUNCH_DAMAGE);
+		entity.takeDamage(BEARD_PUNCH_DAMAGE);
 		frames = punchFrames;
 	}
 
@@ -142,15 +141,6 @@ public class ChuckNorris extends Entity {
 	@Override
 	public int getHeight() {
 		return HEIGHT;
-	}
-
-	/**
-	 * Chuck is super powerful. Even though his max health is very high, he could be attacked. For this
-	 * reason, he heals every tick, making him an even more difficult opponent. Each tick, any damage done is
-	 * erased completely, with the exception of the railgun.
-	 */
-	public void heal() {
-		setHealth(MAX_HEALTH);
 	}
 
 	/**

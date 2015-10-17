@@ -44,9 +44,9 @@ public class Grenade extends Shot {
 				if (! (entity instanceof Player)) {
 					double distance = getLocation().distance(entity.getLocation());
 					if (distance < WeaponShots.GRENADE_TIER_1_RANGE) {
-						entity.setHealth(entity.getHealth() - WeaponShots.GRENADE_TIER_1_DAMAGE);
+						entity.takeDamage(WeaponShots.GRENADE_TIER_1_DAMAGE);
 					} else if (distance < WeaponShots.GRENADE_TIER_2_RANGE) {
-						entity.setHealth(entity.getHealth() - WeaponShots.GRENADE_TIER_2_DAMAGE);
+						entity.takeDamage(WeaponShots.GRENADE_TIER_2_DAMAGE);
 					}
 				}
 			}

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public abstract class Pickup extends Entity {
 
 	public Pickup(PhysicsEngine engine) {
-		super(engine);
+		super(engine, 9000);
 	}
 
 	public void tick() {
@@ -25,10 +25,7 @@ public abstract class Pickup extends Entity {
 			}
 		}
 
-		currentFrame++;
-		if (currentFrame > frames.size() - 1) {
-			currentFrame = 0;
-		}
+		restoreHealth();
 	}
 
 	public abstract void affectGame();

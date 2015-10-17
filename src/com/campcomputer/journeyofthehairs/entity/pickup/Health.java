@@ -42,15 +42,15 @@ public class Health extends Pickup {
 	public void affectGame() {
 		Player player = getEngine().getPlayer();
 		if (frames == twenty) {
-			player.setHealth(player.getHealth() + 20);
+			player.heal(20);
 		} else if (frames == fifty) {
-			player.setHealth(player.getHealth() + 50);
+			player.heal(50);
 		} else if (frames == oneHundred) {
-			player.setHealth(player.getHealth() + 100);
+			player.heal(100);
 		}
 
 		if (player.getHealth() > Player.MAX_HEALTH) {
-			player.setHealth(Player.MAX_HEALTH);
+			player.restoreHealth();
 		}
 	}
 }

@@ -23,6 +23,12 @@ public abstract class Entity {
 	protected int currentFrame = 0;
 
 	/**
+	 * This is an entity's health - that is, how much damage they must receive before they
+	 * are removed from the entity list and the game
+	 */
+	protected int health = 1;
+
+	/**
 	 * This is a variable used in determining which direction an entity is facing. It is useful in a few
 	 * situations; usually, it decides which frame to paint on the map.
 	 */
@@ -34,11 +40,7 @@ public abstract class Entity {
 	 */
 	private PhysicsEngine engine;
 
-	/**
-	 * This is an entity's health - that is, how much damage they must receive before they
-	 * are removed from the entity list and the game
-	 */
-	private int health = 1;
+	private int maxHealth = 1;
 
 	/**
 	 * This is an entity's x coordinate (where they are horizontally on the map)
@@ -73,8 +75,10 @@ public abstract class Entity {
 	/**
 	 * Constructor for an entity. If it has no image assigned to the list frames, its image becomes cheese.png
 	 */
-	public Entity(PhysicsEngine engine) {
+	public Entity(PhysicsEngine engine, int maxHealth) {
 		this.engine = engine;
+		this.maxHealth = maxHealth;
+		this.health = maxHealth;
 		addImagesOfEntityToFrames();
 		if (frames.size() == 0) {
 			frames.add(Images.ReadImage("/images/cheese.png"));
@@ -83,6 +87,10 @@ public abstract class Entity {
 
 	public PhysicsEngine getEngine() {
 		return engine;
+	}
+
+	public void restoreHealth() {
+		health = maxHealth;
 	}
 
 	/**
@@ -127,11 +135,8 @@ public abstract class Entity {
 		return health;
 	}
 
-	/**
-	 * @param health the entity's new health. Usually used in tandem with getHealth to subtract or add
-	 */
-	public void setHealth(int health) {
-		this.health = health;
+	public void takeDamage(int damage) {
+		health -= damage;
 	}
 
 	/**
@@ -158,10 +163,10 @@ public abstract class Entity {
 	}
 
 	/**
-	 * @param yVel new y velocity for the entity
+	 * @param yVelocity new y velocity for the entity
 	 */
-	public void setYVelocity(float yVel) {
-		this.yVelocity = yVel;
+	public void setYVelocity(float yVelocity) {
+		this.yVelocity = yVelocity;
 	}
 
 	/**
@@ -259,13 +264,12 @@ public abstract class Entity {
 	 * TODO: Get rid of OOB band-aid
 	 */
 	public void tick() {
-		currentFrame++;
-		if (currentFrame > frames.size() - 1) {
+		if (++ currentFrame > frames.size() - 1) {
 			currentFrame = 0;
 		}
 
 		if (getY() > 12) {
-			setHealth(- 1);
+			health = - 1;
 		}
 	}
 
@@ -295,7 +299,7 @@ public abstract class Entity {
 	 */
 	public void takeDamageFromPlayer() {
 		Weapon weapon = engine.getPlayer().getWeapon();
-		setHealth(getHealth() - (weapon.getShotType().getDamage() * weapon.getBulletNumber()));
+		takeDamage(weapon.getShotType().getDamage() * weapon.getBulletNumber());
 		if (getHealth() <= 0) {
 			getEngine().removeEntity(this);
 		}

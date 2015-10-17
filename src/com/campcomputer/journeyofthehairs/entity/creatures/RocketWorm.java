@@ -35,8 +35,7 @@ public class RocketWorm extends Entity {
 	 * Constructor
 	 */
 	public RocketWorm(PhysicsEngine engine) {
-		super(engine);
-		setHealth(2);
+		super(engine, 2);
 	}
 
 	/**

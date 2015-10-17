@@ -22,8 +22,7 @@ public class SuicideStinkBug extends Entity {
 	 * Constructor for the bug
 	 */
 	public SuicideStinkBug(PhysicsEngine engine) {
-		super(engine);
-		setHealth(3);
+		super(engine, 3);
 	}
 
 	/**
@@ -61,7 +60,7 @@ public class SuicideStinkBug extends Entity {
 	 * The damage dealt is 10
 	 */
 	public void blowup() {
-		getEngine().getPlayer().setHealth(getEngine().getPlayer().getHealth() - EXPLODE_DAMAGE);
+		getEngine().getPlayer().takeDamage(EXPLODE_DAMAGE);
 		getEngine().removeEntity(this);
 	}
 

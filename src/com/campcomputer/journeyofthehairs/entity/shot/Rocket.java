@@ -45,7 +45,7 @@ public class Rocket extends Shot {
 		}
 
 		if (getEngine().isOnTopOfPlayer(this)) {
-			getEngine().getPlayer().setHealth(getEngine().getPlayer().getHealth() - ROCKET_DAMAGE);
+			getEngine().getPlayer().takeDamage(ROCKET_DAMAGE);
 			getEngine().removeEntity(this);
 		}
 	}

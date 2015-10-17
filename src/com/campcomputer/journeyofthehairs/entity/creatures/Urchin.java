@@ -12,7 +12,7 @@ public class Urchin extends Entity {
 	 * Constructor
 	 */
 	public Urchin(PhysicsEngine engine) {
-		super(engine);
+		super(engine, 1);
 	}
 
 	@Override

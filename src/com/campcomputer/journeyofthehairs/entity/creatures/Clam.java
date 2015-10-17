@@ -19,7 +19,7 @@ public class Clam extends Entity {
 	 * Constructor
 	 */
 	public Clam(PhysicsEngine engine, Pickup pickup) {
-		super(engine);
+		super(engine, 1);
 	}
 
 	@Override
