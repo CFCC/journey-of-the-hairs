@@ -1,12 +1,11 @@
 package com.campcomputer.journeyofthehairs.weapon;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.Entity;
 
 /**
  * Each weapon
  */
-public abstract class Weapon extends Entity {
+public abstract class Weapon {
 	/**
 	 * This is the shot type fired by the active weapon. It is a value of the enum WeaponShots (again,
 	 * shots vs ammo can be a bit confusing, but this uses shots since it refers to what is fired, not
@@ -27,6 +26,8 @@ public abstract class Weapon extends Entity {
 	 */
 	final private int fireRate;
 
+	private PhysicsEngine engine;
+
 	/**
 	 * This is the amount of ammo left in the weapon currently active. The term 'ammo' is
 	 * a bit ambiguous when referring to ammo in this class vs the pickup ammo vs the entity
@@ -45,7 +46,7 @@ public abstract class Weapon extends Entity {
 	private int ticksTillFire;
 
 	public Weapon(PhysicsEngine engine, int initialAmmo) {
-		super(engine, 9000);
+		this.engine = engine;
 		this.weaponType = com.campcomputer.journeyofthehairs.weapon.Weapons.get(this);
 
 		this.fireRate = weaponType.getFireRate();
@@ -55,13 +56,16 @@ public abstract class Weapon extends Entity {
 		this.ammoLeft = initialAmmo;
 	}
 
+	public PhysicsEngine getEngine() {
+		return engine;
+	}
+
 	public Weapons getWeaponType() {
 		return weaponType;
 	}
 
 	public void tick() {
 		lowerTicksTillFire();
-		restoreHealth();
 	}
 
 	/**

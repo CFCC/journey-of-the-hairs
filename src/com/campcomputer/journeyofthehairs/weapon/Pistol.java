@@ -10,11 +10,6 @@ public class Pistol extends Weapon {
 	}
 
 	@Override
-	protected void addImagesOfEntityToFrames() {
-
-	}
-
-	@Override
 	public boolean shoot() {
 		if (super.shoot()) {
 			PhysicsEngine engine = getEngine();
