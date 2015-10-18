@@ -1,8 +1,7 @@
-package com.campcomputer.journeyofthehairs.entity.creatures;
+package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.Entity;
 
 public class SuicideStinkBug extends Entity {
 
@@ -26,6 +25,13 @@ public class SuicideStinkBug extends Entity {
 	}
 
 	/**
+	 * Self explanatory
+	 */
+	@Override public void addImagesOfEntityToFrames() {
+		frames.add(Images.ReadImage("/images/entities/creatures/stinkbug.png"));
+	}
+
+	/**
 	 * Acts as an attack method for the bug.
 	 * If the player goes within 5 tiles of the bug on the X axis, it will begin to move.
 	 * If the distance between the two then becomes less than the constant for the explosion
@@ -44,14 +50,6 @@ public class SuicideStinkBug extends Entity {
 		} else if (getEngine().getPlayer().getX() > getX() && getEngine().getPlayer().getX() - getX() <= 5) {
 			moveRight();
 		}
-	}
-
-	/**
-	 * Self explanatory
-	 */
-	@Override
-	public void addImagesOfEntityToFrames() {
-		frames.add(Images.ReadImage("/images/entities/creatures/stinkbug.png"));
 	}
 
 	/**

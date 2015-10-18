@@ -3,8 +3,7 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.weapon.WeaponShots;
+import com.campcomputer.journeyofthehairs.entity.Player;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -26,15 +25,6 @@ public class Grenade extends Shot {
 		return true;
 	}
 
-	@Override
-	public void addImagesOfEntityToFrames() {
-		stasisFrames = new ArrayList<BufferedImage>();
-		explosionFrames = new ArrayList<BufferedImage>();
-
-		stasisFrames.add(Images.ReadImage("/images/entities/shots/grenade stasis.png"));
-		explosionFrames.add(Images.ReadImage("/images/entities/shots/grenade explosion.png"));
-	}
-
 	public void tick() {
 		if (timeLeft > 0) {
 			timeLeft--;
@@ -52,6 +42,13 @@ public class Grenade extends Shot {
 			}
 			getEngine().removeEntity(this);
 		}
+	}
 
+	@Override public void addImagesOfEntityToFrames() {
+		stasisFrames = new ArrayList<BufferedImage>();
+		explosionFrames = new ArrayList<BufferedImage>();
+
+		stasisFrames.add(Images.ReadImage("/images/entities/shots/grenade stasis.png"));
+		explosionFrames.add(Images.ReadImage("/images/entities/shots/grenade explosion.png"));
 	}
 }

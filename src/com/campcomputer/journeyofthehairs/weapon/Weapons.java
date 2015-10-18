@@ -1,5 +1,7 @@
 package com.campcomputer.journeyofthehairs.weapon;
 
+import com.campcomputer.journeyofthehairs.entity.shot.WeaponShots;
+
 /**
  * Enumeration of all of the possible weapons, how often they fire, what they fire, and how much of it they
  * fire at one time

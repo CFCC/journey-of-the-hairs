@@ -69,6 +69,8 @@ public class JourneyOfTheHairsFrame extends JFrame {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setSize(1024, 768);
 
+		setResizable(false);
+
 		Timer t = new Timer(TIMER_TICK, new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

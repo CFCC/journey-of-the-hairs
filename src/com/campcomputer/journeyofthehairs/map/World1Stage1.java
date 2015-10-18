@@ -2,10 +2,7 @@ package com.campcomputer.journeyofthehairs.map;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.creatures.ChuckNorris;
-import com.campcomputer.journeyofthehairs.entity.creatures.DragonFly;
-import com.campcomputer.journeyofthehairs.entity.creatures.RocketWorm;
-import com.campcomputer.journeyofthehairs.entity.creatures.SuicideStinkBug;
+import com.campcomputer.journeyofthehairs.entity.*;
 import com.campcomputer.journeyofthehairs.entity.pickup.Portal;
 import com.campcomputer.journeyofthehairs.entity.pickup.WeaponPickup;
 import com.campcomputer.journeyofthehairs.weapon.Weapons;

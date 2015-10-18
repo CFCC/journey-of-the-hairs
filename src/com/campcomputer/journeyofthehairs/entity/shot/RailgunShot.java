@@ -3,8 +3,7 @@ package com.campcomputer.journeyofthehairs.entity.shot;
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.entity.creatures.Player;
-import com.campcomputer.journeyofthehairs.weapon.WeaponShots;
+import com.campcomputer.journeyofthehairs.entity.Player;
 
 public class RailgunShot extends Shot {
 

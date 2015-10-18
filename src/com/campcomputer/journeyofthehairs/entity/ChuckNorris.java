@@ -1,8 +1,7 @@
-package com.campcomputer.journeyofthehairs.entity.creatures;
+package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.Entity;
 
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
@@ -87,6 +86,28 @@ public class ChuckNorris extends Entity {
 		super(engine, MAX_HEALTH);
 	}
 
+	public void punch(Entity entity) {
+		entity.takeDamage(PUNCH_DAMAGE);
+		frames = smackFrames;
+	}
+
+	public void roundHouseKick(Entity entity) {
+		entity.takeDamage(ROUND_HOUSE_KICK_DAMAGE);
+		frames = roundhouseKickFrames;
+	}
+
+	public void beardPunch(Entity entity) {
+		entity.takeDamage(BEARD_PUNCH_DAMAGE);
+		frames = punchFrames;
+	}
+
+	/**
+	 * This is simply an override method to @return his height, 4
+	 */
+	@Override public int getHeight() {
+		return HEIGHT;
+	}
+
 	@Override
 	protected void addImagesOfEntityToFrames() {
 		standingFrames = new ArrayList<BufferedImage>();
@@ -118,29 +139,6 @@ public class ChuckNorris extends Entity {
 		}
 
 		restoreHealth();
-	}
-
-	public void punch(Entity entity) {
-		entity.takeDamage(PUNCH_DAMAGE);
-		frames = smackFrames;
-	}
-
-	public void roundHouseKick(Entity entity) {
-		entity.takeDamage(ROUND_HOUSE_KICK_DAMAGE);
-		frames = roundhouseKickFrames;
-	}
-
-	public void beardPunch(Entity entity) {
-		entity.takeDamage(BEARD_PUNCH_DAMAGE);
-		frames = punchFrames;
-	}
-
-	/**
-	 * This is simply an override method to @return his height, 4
-	 */
-	@Override
-	public int getHeight() {
-		return HEIGHT;
 	}
 
 	/**

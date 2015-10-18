@@ -1,6 +1,7 @@
 package com.campcomputer.journeyofthehairs.weapon;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
+import com.campcomputer.journeyofthehairs.entity.shot.WeaponShots;
 
 /**
  * Each weapon
@@ -146,7 +147,6 @@ public abstract class Weapon {
 	 */
 	public boolean shoot() {
 		if (! canFire() || getAmmo() <= 0) {
-			System.out.println(getTicksTillFire());
 			return false;
 		}
 

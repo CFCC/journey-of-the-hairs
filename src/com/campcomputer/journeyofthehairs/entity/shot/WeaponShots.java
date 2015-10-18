@@ -1,4 +1,4 @@
-package com.campcomputer.journeyofthehairs.weapon;
+package com.campcomputer.journeyofthehairs.entity.shot;
 
 /**
  * An enumeration of possible weapon shots and their speed/damages. Shot themselves are individual entities,
@@ -65,9 +65,9 @@ public enum WeaponShots {
 		}
 	};
 
-	public static final int GRENADE_TIER_1_DAMAGE = 5;
+	public static final int GRENADE_TIER_1_DAMAGE = 50;
 
-	public static final int GRENADE_TIER_2_DAMAGE = 2;
+	public static final int GRENADE_TIER_2_DAMAGE = 20;
 
 	public static final int GRENADE_TIER_1_RANGE = 1;
 
@@ -75,19 +75,19 @@ public enum WeaponShots {
 
 	public static final int GRENADE_SPEED = 1;
 
-	public static final int BULLET_DAMAGE = 1;
+	public static final int BULLET_DAMAGE = 10;
 
 	public static final int BULLET_SPEED = 2;
 
-	public static final int RAILGUN_SHOT_DAMAGE = 9000;
+	public static final int RAILGUN_SHOT_DAMAGE = 90000;
 
 	public static final int RAILGUN_SHOT_SPEED = 1;
 
-	public static final int RIFLE_SHOT_DAMAGE = 1;
+	public static final int RIFLE_SHOT_DAMAGE = 10;
 
 	public static final int RIFLE_SHOT_SPEED = 2;
 
-	public static final int SHOTGUN_SHOT_DAMAGE = 1;
+	public static final int SHOTGUN_SHOT_DAMAGE = 10;
 
 	public static final int SHOTGUN_SHOT_SPEED = 3;
 

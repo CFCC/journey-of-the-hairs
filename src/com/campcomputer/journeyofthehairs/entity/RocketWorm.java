@@ -1,8 +1,7 @@
-package com.campcomputer.journeyofthehairs.entity.creatures;
+package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.Entity;
 import com.campcomputer.journeyofthehairs.entity.shot.Rocket;
 
 import java.awt.image.BufferedImage;
@@ -48,6 +47,17 @@ public class RocketWorm extends Entity {
 	}
 
 	/**
+	 * self explanatory
+	 */
+	@Override public void addImagesOfEntityToFrames() {
+		wormLeaveGround = Images.ReadFrames("wormLeaveGround");
+		wormEnterGround = Images.ReadFrames("wormEnterGround");
+		standing = new ArrayList<BufferedImage>(1);
+		standing.add(wormLeaveGround.get(0));
+		frames = standing;
+	}
+
+	/**
 	 * Checks to see if frames need to be switched, also checks to see if the worm needs to shoot a rocket
 	 */
 	@Override
@@ -76,15 +86,10 @@ public class RocketWorm extends Entity {
 	}
 
 	/**
-	 * self explanatory
+	 * The worm can only be attacked above ground. Override method
 	 */
-	@Override
-	public void addImagesOfEntityToFrames() {
-		wormLeaveGround = Images.ReadFrames("wormLeaveGround");
-		wormEnterGround = Images.ReadFrames("wormEnterGround");
-		standing = new ArrayList<BufferedImage>(1);
-		standing.add(wormLeaveGround.get(0));
-		frames = standing;
+	public boolean canBeAttacked() {
+		return frames != standing;
 	}
 
 	/**
@@ -105,12 +110,5 @@ public class RocketWorm extends Entity {
 		rocket.setX(getX());
 		rocket.setY(getY() + 1);
 		getEngine().addEntity(rocket);
-	}
-
-	/**
-	 * The worm can only be attacked above ground. Override method
-	 */
-	public boolean canBeAttacked() {
-		return frames != standing;
 	}
 }

@@ -2,7 +2,7 @@ package com.campcomputer.journeyofthehairs.panel;
 
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
 import com.campcomputer.journeyofthehairs.entity.Entity;
-import com.campcomputer.journeyofthehairs.entity.creatures.Player;
+import com.campcomputer.journeyofthehairs.entity.Player;
 import com.campcomputer.journeyofthehairs.map.Tile;
 
 import javax.swing.*;
@@ -24,7 +24,8 @@ public class GamePanel extends JPanel implements KeyListener {
 
 	private float[] dashPattern = {1, 1};
 
-	private BasicStroke tileStroke = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10, dashPattern, 0);
+	private BasicStroke tileStroke =
+			new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10, dashPattern, 0);
 
 	public GamePanel(PhysicsEngine thePhysicsEngine) {
 		super();
@@ -34,20 +35,21 @@ public class GamePanel extends JPanel implements KeyListener {
 		setFocusable(true);
 	}
 
-	@Override
-	public void keyTyped(KeyEvent e) {
+	@Override public void keyTyped(KeyEvent e) {
 	}
 
-	@Override
-	public void keyPressed(KeyEvent e) {
+	@Override public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
 			case KeyEvent.VK_A:
+			case KeyEvent.VK_LEFT:
 				engine.startMoveBackward();
 				break;
 			case KeyEvent.VK_D:
+			case KeyEvent.VK_RIGHT:
 				engine.startMoveForward();
 				break;
 			case KeyEvent.VK_W:
+			case KeyEvent.VK_UP:
 				engine.jump();
 				break;
 			case KeyEvent.VK_E:
@@ -59,20 +61,20 @@ public class GamePanel extends JPanel implements KeyListener {
 		}
 	}
 
-	@Override
-	public void keyReleased(KeyEvent e) {
+	@Override public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
 			case KeyEvent.VK_A:
+			case KeyEvent.VK_LEFT:
 				engine.endMoveBackward();
 				break;
 			case KeyEvent.VK_D:
+			case KeyEvent.VK_RIGHT:
 				engine.endMoveForward();
 				break;
 		}
 	}
 
-	@Override
-	public void paintComponent(Graphics g) {
+	@Override public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 
@@ -100,7 +102,8 @@ public class GamePanel extends JPanel implements KeyListener {
 	private void drawEntities(Graphics2D g2) {
 		for (Entity entity : engine.getEntities()) {
 			if (entity.getFrames().size() > 0) {
-				g2.drawImage(entity.getCurrentFrame(), null, (int) ((entity.getX() - xScreenPlace) * TILE_SIZE), (int) (entity.getY() * TILE_SIZE));
+				g2.drawImage(entity.getCurrentFrame(), null, (int) ((entity.getX() - xScreenPlace) * TILE_SIZE),
+				             (int) (entity.getY() * TILE_SIZE));
 			}
 		}
 	}
@@ -114,7 +117,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			xScreenPlace = engine.getMap().getTiles().length - 16;
 		}
 
-		g2.drawImage(engine.getMap().getImage(), null, (int) (- xScreenPlace * TILE_SIZE), 0);
+		g2.drawImage(engine.getMap().getImage(), null, (int) (-xScreenPlace * TILE_SIZE), 0);
 	}
 
 	private void drawTiles(Graphics2D g2) {
@@ -146,13 +149,14 @@ public class GamePanel extends JPanel implements KeyListener {
 				}
 				g2.setColor(color);
 				g2.setStroke(tileStroke);
-				g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE) + 1, y * TILE_SIZE + 1, TILE_SIZE - 2, TILE_SIZE - 2);
+				g2.drawRect((int) ((x - xScreenPlace) * TILE_SIZE) + 1, y * TILE_SIZE + 1, TILE_SIZE - 2,
+				            TILE_SIZE - 2);
 			}
 		}
 	}
 
 	public void toggleShowTiles() {
-		showTiles = ! showTiles;
+		showTiles = !showTiles;
 	}
 }
 

@@ -1,8 +1,7 @@
-package com.campcomputer.journeyofthehairs.entity.creatures;
+package com.campcomputer.journeyofthehairs.entity;
 
 import com.campcomputer.journeyofthehairs.Images;
 import com.campcomputer.journeyofthehairs.PhysicsEngine;
-import com.campcomputer.journeyofthehairs.entity.Entity;
 
 /**
  * This is one of the enemies, the dragonfly. Its origin was the misleading name. The game's creators decided
@@ -29,12 +28,45 @@ public class DragonFly extends Entity {
 	}
 
 	/**
+	 * Attempts to eat the entity. Since the DragonFlies are small, it doesn't do a lot of damage to a player, but the
+	 * dragonfly gains health from eating.
+	 *
+	 * @param entity the thing to eat
+	 */
+	public void eat(Entity entity) {
+		// make the enemy lose health
+		entity.takeDamage(EATING_DAMAGE);
+		health += EATING_DAMAGE; // TODO: bring heal method up from player to entity
+	}
+
+	/**
+	 * Breathe fire onto the given entity, usually a player. Instantly does a bunch of damage to it.
+	 *
+	 * @param entity the thing to breathe fire on.
+	 */
+	public void breathFire(Entity entity) {
+		if (Math.random() < 0.5) {
+			entity.takeDamage(BREATH_FIRE_DAMAGE);
+		}
+	}
+
+	@Override public boolean isAffectedByGravity() {
+		return false;
+	}
+
+	/**
+	 * Self explanatory
+	 */
+	@Override protected void addImagesOfEntityToFrames() {
+		frames.add(Images.ReadImage("/images/entities/creatures/dragonfly.png"));
+	}
+
+	/**
 	 * Checks to see how/where the fly should move and if it should attack
 	 */
-	@Override
-	public void tick() {
+	@Override public void tick() {
 		super.tick();
-		if (! getEngine().playerIsAbove(this)) {
+		if (!getEngine().playerIsAbove(this)) {
 			moveUp();
 		} else { //if (getEngine().playerIsAbove(this))
 			moveDown();
@@ -54,38 +86,7 @@ public class DragonFly extends Entity {
 				breathFire(player);
 			}
 		}
-	}
 
-	/**
-	 * Self explanatory
-	 */
-	@Override
-	protected void addImagesOfEntityToFrames() {
-		frames.add(Images.ReadImage("/images/entities/creatures/dragonfly.png"));
-	}
-
-	/**
-	 * Attempts to eat the entity. Since the DragonFlies are small, it doesn't do a lot of damage to a player, but the
-	 * dragonfly gains health from eating.
-	 *
-	 * @param entity the thing to eat
-	 */
-	public void eat(Entity entity) {
-		// make the enemy lose health
-		entity.takeDamage(EATING_DAMAGE);
-	}
-
-	/**
-	 * Breathe fire onto the given entity, usually a player. Instantly does a bunch of damage to it.
-	 *
-	 * @param entity the thing to breathe fire on.
-	 */
-	public void breathFire(Entity entity) {
-		entity.takeDamage(BREATH_FIRE_DAMAGE);
-	}
-
-	@Override
-	public boolean isAffectedByGravity() {
-		return false;
+		System.out.println("Dragonfly Health: " + getHealth());
 	}
 }
