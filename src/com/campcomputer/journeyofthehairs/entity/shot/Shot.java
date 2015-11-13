@@ -18,7 +18,7 @@ public abstract class Shot extends Entity {
 		setX(engine.getPlayer().getX());
 		setY(engine.getPlayer().getY());
 
-		setXVelocity(startsLeft ? - getBulletSpeed() : getBulletSpeed());
+		setXVelocity(startsLeft ? -getBulletSpeed() : getBulletSpeed());
 	}
 
 	public int getDamage() {
@@ -35,10 +35,9 @@ public abstract class Shot extends Entity {
 
 	public void tick() {
 		for (Entity entity : getEngine().getEntities()) {
-			if (this.isOn(entity) && ! (entity instanceof Player)) {
+			if (this.isOn(entity) && !(entity instanceof Player)) {
 				entity.takeDamage(getDamage());
 				getEngine().removeEntity(this);
-
 			}
 		}
 		if (getEngine().getMap().getTiles()[(int) getX()][(int) getY()] != Tile.AIR) {

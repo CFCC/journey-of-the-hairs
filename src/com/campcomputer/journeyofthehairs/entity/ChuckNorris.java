@@ -108,8 +108,7 @@ public class ChuckNorris extends Entity {
 		return HEIGHT;
 	}
 
-	@Override
-	protected void addImagesOfEntityToFrames() {
+	@Override protected void addImagesOfEntityToFrames() {
 		standingFrames = new ArrayList<BufferedImage>();
 		standingFrames.add(Images.ReadImage("/frames/chuckNorrisSmack/1.png"));
 		punchFrames = Images.ReadFrames("chuckNorrisPunch");
@@ -118,8 +117,7 @@ public class ChuckNorris extends Entity {
 		frames = standingFrames;
 	}
 
-	@Override
-	public void tick() {
+	@Override public void tick() {
 		super.tick();
 
 		if (isOnTopOfEntity(getEngine().getPlayer())) {
@@ -149,6 +147,7 @@ public class ChuckNorris extends Entity {
 	 * eP stands for Entity Position, and tP, while also standing for toilet paper, stands for this position
 	 *
 	 * @param entity the entity to be compared to Chuck Norris in location
+	 *
 	 * @return a boolean, true if the entity's position is on Chuck, false if not
 	 */
 	public boolean isOnTopOfEntity(Entity entity) {
@@ -173,8 +172,8 @@ public class ChuckNorris extends Entity {
 		Point2D tP11 = new Point2D.Float(x2, y4);
 		Point2D tP12 = new Point2D.Float(x3, y4);
 
-		return eP.distance(tP1) <= 2f || eP.distance(tP2) <= 2f || eP.distance(tP3) <= 2f || eP.distance(tP4) <= 2f
-		       || eP.distance(tP6) <= 2f || eP.distance(tP7) <= 2f || eP.distance(tP9) <= 2f || eP.distance(tP10) <= 2f
-		       || eP.distance(tP11) <= 2f || eP.distance(tP12) <= 2f;
+		return eP.distance(tP1) <= 2f || eP.distance(tP2) <= 2f || eP.distance(tP3) <= 2f || eP.distance(tP4) <= 2f ||
+		       eP.distance(tP6) <= 2f || eP.distance(tP7) <= 2f || eP.distance(tP9) <= 2f || eP.distance(tP10) <= 2f ||
+		       eP.distance(tP11) <= 2f || eP.distance(tP12) <= 2f;
 	}
 }

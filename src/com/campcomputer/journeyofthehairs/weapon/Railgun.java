@@ -9,8 +9,7 @@ public class Railgun extends Weapon {
 		super(engine, 1);
 	}
 
-	@Override
-	public boolean shoot() {
+	@Override public boolean shoot() {
 		if (super.shoot()) {
 			PhysicsEngine engine = getEngine();
 			RailgunShot railgunShot = new RailgunShot(engine, engine.getPlayer().isFacingLeft());

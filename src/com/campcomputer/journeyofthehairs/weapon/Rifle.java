@@ -9,8 +9,7 @@ public class Rifle extends Weapon {
 		super(engine, 10);
 	}
 
-	@Override
-	public boolean shoot() {
+	@Override public boolean shoot() {
 		if (super.shoot()) {
 			PhysicsEngine engine = getEngine();
 			RifleShot rifleShot = new RifleShot(engine, engine.getPlayer().isFacingLeft());

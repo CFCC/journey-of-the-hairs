@@ -6,15 +6,10 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.URL;
 import java.security.CodeSource;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -96,10 +91,10 @@ public class Images {
 
 	private static BufferedImage getBufferedImage(Image image) {
 		BufferedImage bufferedImage;
-		bufferedImage = GraphicsEnvironment.getLocalGraphicsEnvironment()
-		                                   .getDefaultScreenDevice()
-		                                   .getDefaultConfiguration()
-		                                   .createCompatibleImage(image.getWidth(null), image.getHeight(null), BufferedImage.TRANSLUCENT);
+		bufferedImage =
+				GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration()
+				                   .createCompatibleImage(image.getWidth(null), image.getHeight(null),
+				                                          BufferedImage.TRANSLUCENT);
 		bufferedImage.getGraphics().drawImage(image, 0, 0, null);
 		return bufferedImage;
 	}
@@ -133,7 +128,7 @@ public class Images {
 				}
 				int size = (int) zipEntry.getSize();
 				// -1 means unknown size.
-				if (size == - 1) {
+				if (size == -1) {
 					size = sizes.get(zipEntry.getName());
 				}
 				byte[] bite = new byte[size];
@@ -141,14 +136,13 @@ public class Images {
 				int chunk;
 				while ((size - readBytes) > 0) {
 					chunk = zipInputSteam.read(bite, readBytes, size - readBytes);
-					if (chunk == - 1) {
+					if (chunk == -1) {
 						break;
 					}
 					readBytes += chunk;
 				}
 				jaredFiles.put(zipEntry.getName(), bite);
 			}
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

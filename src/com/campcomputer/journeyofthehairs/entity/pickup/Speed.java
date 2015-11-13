@@ -10,13 +10,11 @@ public class Speed extends Pickup {
 		super(engine);
 	}
 
-	@Override
-	public void affectGame() {
+	@Override public void affectGame() {
 		//To change body of implemented methods use File | Settings | File Templates.
 	}
 
-	@Override
-	protected void addImagesOfEntityToFrames() {
+	@Override protected void addImagesOfEntityToFrames() {
 		//To change body of implemented methods use File | Settings | File Templates.
 	}
 }

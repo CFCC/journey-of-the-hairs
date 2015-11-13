@@ -22,8 +22,7 @@ public class Rocket extends Shot {
 		super(engine, true, WeaponShots.BULLET);
 	}
 
-	@Override
-	public void tick() {
+	@Override public void tick() {
 		super.tick();
 
 		float playerX = getEngine().getPlayer().getX();
@@ -31,14 +30,14 @@ public class Rocket extends Shot {
 
 		if (playerX < getX()) {
 			frames = rocketLeft;
-			setXVelocity(- 1 * SPEED_MAGNITUDE);
+			setXVelocity(-1 * SPEED_MAGNITUDE);
 		} else {
 			frames = rocketRight;
 			setXVelocity(SPEED_MAGNITUDE);
 		}
 
 		if (playerY < getY()) {
-			setYVelocity(- 1 * SPEED_MAGNITUDE);
+			setYVelocity(-1 * SPEED_MAGNITUDE);
 		} else {
 			setYVelocity(SPEED_MAGNITUDE);
 		}
@@ -49,8 +48,7 @@ public class Rocket extends Shot {
 		}
 	}
 
-	@Override
-	protected void addImagesOfEntityToFrames() {
+	@Override protected void addImagesOfEntityToFrames() {
 		rocketLeft = new ArrayList<BufferedImage>(1);
 		rocketRight = new ArrayList<BufferedImage>(1);
 

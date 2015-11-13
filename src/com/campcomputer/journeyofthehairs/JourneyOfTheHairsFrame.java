@@ -72,8 +72,7 @@ public class JourneyOfTheHairsFrame extends JFrame {
 		setResizable(false);
 
 		Timer t = new Timer(TIMER_TICK, new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
+			@Override public void actionPerformed(ActionEvent e) {
 				if (getContentPane() instanceof GamePanel) {
 					engine.tick();
 				}

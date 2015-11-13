@@ -9,8 +9,7 @@ public class GrenadeGun extends Weapon {
 		super(engine, 10);
 	}
 
-	@Override
-	public boolean shoot() {
+	@Override public boolean shoot() {
 		if (super.shoot()) {
 			PhysicsEngine engine = getEngine();
 			Grenade grenade = new Grenade(engine, engine.getPlayer().isFacingLeft());

@@ -38,8 +38,7 @@ public class Health extends Pickup {
 		oneHundred.add(Images.ReadImage("/images/entities/pickups/health/100.png"));
 	}
 
-	@Override
-	public void affectGame() {
+	@Override public void affectGame() {
 		Player player = getEngine().getPlayer();
 		if (frames == twenty) {
 			player.heal(20);

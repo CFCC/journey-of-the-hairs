@@ -146,7 +146,7 @@ public abstract class Weapon {
 	 * Abstract method for the weapon to shoot since they all might have different ways of shooting
 	 */
 	public boolean shoot() {
-		if (! canFire() || getAmmo() <= 0) {
+		if (!canFire() || getAmmo() <= 0) {
 			return false;
 		}
 
@@ -155,8 +155,7 @@ public abstract class Weapon {
 		return true;
 	}
 
-	@Override
-	public String toString() {
+	@Override public String toString() {
 		if (this instanceof GrenadeGun) {
 			return "Grenade Gun";
 		} else if (this instanceof MiniGun) {

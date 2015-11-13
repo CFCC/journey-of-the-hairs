@@ -42,16 +42,14 @@ public class Ammo extends Pickup {
 	/**
 	 * Adds ammo to the player's active weapon
 	 */
-	@Override
-	public void affectGame() {
+	@Override public void affectGame() {
 		getEngine().getPlayer().getWeapon().addAmmo(amount);
 	}
 
 	/**
 	 * Self explanatory. Loads images based on what type the instance is
 	 */
-	@Override
-	protected void addImagesOfEntityToFrames() {
+	@Override protected void addImagesOfEntityToFrames() {
 		switch (type) {
 			case GRENADE:
 				frames = new ArrayList<BufferedImage>(1);

@@ -9,8 +9,7 @@ public class Pistol extends Weapon {
 		super(engine, 100);
 	}
 
-	@Override
-	public boolean shoot() {
+	@Override public boolean shoot() {
 		if (super.shoot()) {
 			PhysicsEngine engine = getEngine();
 

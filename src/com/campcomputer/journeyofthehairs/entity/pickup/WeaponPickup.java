@@ -43,8 +43,7 @@ public class WeaponPickup extends Pickup {
 		}
 	}
 
-	@Override
-	public void affectGame() {
+	@Override public void affectGame() {
 		switch (type) {
 			case GRENADE_GUN:
 				getEngine().getPlayer().setWeapon(new GrenadeGun(getEngine()));
@@ -67,8 +66,7 @@ public class WeaponPickup extends Pickup {
 		}
 	}
 
-	@Override
-	protected void addImagesOfEntityToFrames() {
+	@Override protected void addImagesOfEntityToFrames() {
 		pistolFrame = new ArrayList<BufferedImage>();
 		minigunFrame = new ArrayList<BufferedImage>();
 		railgunFrame = new ArrayList<BufferedImage>();

@@ -37,8 +37,7 @@ public class SuicideStinkBug extends Entity {
 	 * If the distance between the two then becomes less than the constant for the explosion
 	 * range, it explodes.
 	 */
-	@Override
-	public void tick() {
+	@Override public void tick() {
 		super.tick();
 
 		if (getEngine().getDistanceBetweenEntityAndPlayer(this) < EXPLODE_RANGE) {
@@ -61,5 +60,4 @@ public class SuicideStinkBug extends Entity {
 		getEngine().getPlayer().takeDamage(EXPLODE_DAMAGE);
 		getEngine().removeEntity(this);
 	}
-
 }

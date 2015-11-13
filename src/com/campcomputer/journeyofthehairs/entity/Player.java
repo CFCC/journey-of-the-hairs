@@ -97,8 +97,7 @@ public class Player extends Entity {
 	 * <p/>
 	 * Also checks to see if the life variable needs to be lowered.
 	 */
-	@Override
-	public void tick() {
+	@Override public void tick() {
 		super.tick();
 		frames = isFacingLeft() ? backwardFrames : forwardFrames;
 

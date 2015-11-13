@@ -14,8 +14,7 @@ public class Urchin extends Entity {
 		super(engine, 1);
 	}
 
-	@Override
-	protected void addImagesOfEntityToFrames() {
+	@Override protected void addImagesOfEntityToFrames() {
 
 	}
 }

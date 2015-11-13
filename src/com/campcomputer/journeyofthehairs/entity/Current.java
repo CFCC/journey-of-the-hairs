@@ -14,8 +14,7 @@ public class Current extends Entity {
 		super(engine, 1);
 	}
 
-	@Override
-	protected void addImagesOfEntityToFrames() {
+	@Override protected void addImagesOfEntityToFrames() {
 		//To change body of implemented methods use File | Settings | File Templates.
 	}
 }

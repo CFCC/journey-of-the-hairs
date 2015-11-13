@@ -19,16 +19,17 @@ public class RailgunShot extends Shot {
 
 	public void tick() {
 		if (getEngine().getPlayer().isFacingLeft() && getXVelocity() > 0) {
-			setXVelocity(getBulletSpeed() * - 1);
-		} else if (! (getEngine().getPlayer().isFacingLeft()) && getXVelocity() > 0) {
+			setXVelocity(getBulletSpeed() * -1);
+		} else if (!(getEngine().getPlayer().isFacingLeft()) && getXVelocity() > 0) {
 			setXVelocity(getBulletSpeed());
 		}
 
 		for (Entity entity : getEngine().getEntities()) {
-			if (entity instanceof RailgunShot && (entity.getX() == this.getX() - 1 || entity.getX() == this.getX() + 1)) {
+			if (entity instanceof RailgunShot &&
+			    (entity.getX() == this.getX() - 1 || entity.getX() == this.getX() + 1)) {
 				setXVelocity(0);
 			}
-			if (getY() == entity.getY() && ! (entity instanceof Player)) {
+			if (getY() == entity.getY() && !(entity instanceof Player)) {
 				entity.takeDamageFromPlayer();
 			}
 		}

@@ -6,38 +6,31 @@ package com.campcomputer.journeyofthehairs.entity.shot;
  */
 public enum WeaponShots {
 	SHOTGUN_SHOT {
-		@Override
-		public int getDamage() {
+		@Override public int getDamage() {
 			return SHOTGUN_SHOT_DAMAGE;
 		}
 
-		@Override
-		public int getBulletSpeed() {
+		@Override public int getBulletSpeed() {
 			return SHOTGUN_SHOT_SPEED;
 		}
 	}, RIFLE_SHOT {
-		@Override
-		public int getDamage() {
+		@Override public int getDamage() {
 			return RIFLE_SHOT_DAMAGE;
 		}
 
-		@Override
-		public int getBulletSpeed() {
+		@Override public int getBulletSpeed() {
 			return RIFLE_SHOT_SPEED;
 		}
 	}, RAILGUN_SHOT {
-		@Override
-		public int getDamage() {
+		@Override public int getDamage() {
 			return RAILGUN_SHOT_DAMAGE;
 		}
 
-		@Override
-		public int getBulletSpeed() {
+		@Override public int getBulletSpeed() {
 			return RAILGUN_SHOT_SPEED;
 		}
 	}, GRENADE {
-		@Override
-		public int getDamage() {
+		@Override public int getDamage() {
 			return 0;
 		}
 
@@ -49,18 +42,15 @@ public enum WeaponShots {
 			return GRENADE_TIER_2_DAMAGE;
 		}
 
-		@Override
-		public int getBulletSpeed() {
+		@Override public int getBulletSpeed() {
 			return GRENADE_SPEED;
 		}
 	}, BULLET {
-		@Override
-		public int getDamage() {
+		@Override public int getDamage() {
 			return BULLET_DAMAGE;
 		}
 
-		@Override
-		public int getBulletSpeed() {
+		@Override public int getBulletSpeed() {
 			return BULLET_SPEED;
 		}
 	};

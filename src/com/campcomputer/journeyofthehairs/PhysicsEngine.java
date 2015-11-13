@@ -25,7 +25,7 @@ public class PhysicsEngine {
 	 * The amount of power given to an entity to jump. This upward force is naturally degraded by gravity. The lower
 	 * the number, the higher the entity jumps. At its current setting, the entity jumps 4 tiles high.
 	 */
-	private static final float JUMP_POWER = - 1.5f;
+	private static final float JUMP_POWER = -1.5f;
 
 	/**
 	 * The amount of sideways force applied to entities when they are moving. The higher the number, the faster, and
@@ -132,7 +132,7 @@ public class PhysicsEngine {
 	public void setMap(Map map) {
 		if (entities.size() > 0) {
 			for (Entity entity : entities) {
-				if (! (entity instanceof Player)) {
+				if (!(entity instanceof Player)) {
 					removeEntity(entity);
 				}
 			}
@@ -158,6 +158,7 @@ public class PhysicsEngine {
 	 * Calculates the distance between the character and a given entity
 	 *
 	 * @param entity: the entity to be used for comparison to the player
+	 *
 	 * @return the distance between the player and an entity in the form of a double
 	 */
 	public double getDistanceBetweenEntityAndPlayer(Entity entity) {
@@ -190,6 +191,7 @@ public class PhysicsEngine {
 	 * enemies that start attacking the player when Hair walks by them
 	 *
 	 * @param entity: the entity used for comparison
+	 *
 	 * @return boolean, true if the two are close, false if not
 	 */
 	public boolean isPlayerClose(Entity entity) {
@@ -204,6 +206,7 @@ public class PhysicsEngine {
 	 * on the map are tested instead to prevent this problem
 	 *
 	 * @param entity the entity to test
+	 *
 	 * @return true if both positions are the same, false if not
 	 */
 	public boolean isOnTopOfPlayer(Entity entity) {
@@ -215,6 +218,7 @@ public class PhysicsEngine {
 	 * entities' y coordinate
 	 *
 	 * @param entity the entity to test
+	 *
 	 * @return true if the entity is above the player, false if below
 	 */
 	public boolean playerIsAbove(Entity entity) {
@@ -226,6 +230,7 @@ public class PhysicsEngine {
 	 * both entities' x coordinate
 	 *
 	 * @param entity the entity to test
+	 *
 	 * @return true if the player is to the left of the entity, false if right
 	 */
 	public boolean playerIsToLeftOf(Entity entity) {
@@ -291,6 +296,7 @@ public class PhysicsEngine {
 	 * @param x         The x coordinate of the entity
 	 * @param y         The y coordinate of the entity
 	 * @param xVelocity The current horizontal velocity of the entity
+	 *
 	 * @return The new x coordinate of the entity. This coordinate is either however far the entity
 	 * can go with their current velocity or as far as they could go without crashing into a wall
 	 */
@@ -298,12 +304,14 @@ public class PhysicsEngine {
 		float newX = x + xVelocity;
 
 		if (xVelocity > 0) {
-			Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, getMap().getTiles().length - 1, getMap().getTiles()[0].length - 1);
+			Point rightWall = findFirstSolid(x + 1, y, 1, 0, 0, 0, getMap().getTiles().length - 1,
+			                                 getMap().getTiles()[0].length - 1);
 			if (rightWall.x < newX + 1) {
 				newX = rightWall.x - 1;
 			}
 		} else {
-			Point leftWall = findFirstSolid(x, y, - 1, 0, 0, 0, getMap().getTiles().length - 1, getMap().getTiles()[0].length - 1);
+			Point leftWall = findFirstSolid(x, y, -1, 0, 0, 0, getMap().getTiles().length - 1,
+			                                getMap().getTiles()[0].length - 1);
 			if (leftWall.x + 1 > newX) {
 				newX = leftWall.x + 1;
 			}
@@ -316,6 +324,7 @@ public class PhysicsEngine {
 	 * @param x         The x coordinate of the entity
 	 * @param y         The y coordinate of the entity
 	 * @param yVelocity The current vertical velocity of the entity
+	 *
 	 * @return The new y coordinate of the entity. This coordinate is either however far the entity
 	 * can go with their current velocity or as far as they could go without crashing into a wall.
 	 * Note that hit detection is only calculated when the entity is going downward to allow for jumping through
@@ -327,8 +336,10 @@ public class PhysicsEngine {
 
 		// Do vertical collision detection only if we are falling (allows for jumping up through platforms)
 		if (yVelocity > 0) {
-			Point nextPlatformOnLeftCorner = findFirstSolid(x, y + height, 0, 1, 0, 0, map.length - 1, map[0].length - 1);
-			Point nextPlatformOnRightCorner = findFirstSolid(x + 1, y + height, 0, 1, 0, 0, map.length - 1, map[0].length - 1);
+			Point nextPlatformOnLeftCorner =
+					findFirstSolid(x, y + height, 0, 1, 0, 0, map.length - 1, map[0].length - 1);
+			Point nextPlatformOnRightCorner =
+					findFirstSolid(x + 1, y + height, 0, 1, 0, 0, map.length - 1, map[0].length - 1);
 
 			int highestLandingPoint = (int) (nextPlatformOnLeftCorner.y - height);
 			if (nextPlatformOnRightCorner.y - height < highestLandingPoint) {
@@ -355,6 +366,7 @@ public class PhysicsEngine {
 	 * @param minY   the y at which testing is stopped, but only applies if dY is negative
 	 * @param maxX   the x at which testing is stopped, but only applies if dX is positive
 	 * @param maxY   the y at which testing is stopped, but only applies if dY is positive
+	 *
 	 * @return the first tile that isn't air found on the test line
 	 */
 	private Point findFirstSolid(float startX, float startY, int dX, int dY, int minX, int minY, int maxX, int maxY) {
@@ -396,7 +408,7 @@ public class PhysicsEngine {
 	 * Adds the opposite of the moving constant to the x velocity so the player moves backwards instead of forwards
 	 */
 	public void startMoveBackward() {
-		player.setXVelocity(- MOVE_SPEED);
+		player.setXVelocity(-MOVE_SPEED);
 	}
 
 	/**
@@ -413,9 +425,12 @@ public class PhysicsEngine {
 	 * TODO: Add width variable to let the player jump from the left edge of a ledge
 	 */
 	public void jump() {
-		boolean airLeft = getMap().getTiles()[((int) player.getX())][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
-		boolean airRight = getMap().getTiles()[((int) player.getX() + 1)][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
-		if (! (airLeft && airRight)) {
+		boolean airLeft =
+				getMap().getTiles()[((int) player.getX())][((int) (player.getY() + player.getHeight()))] == Tile.AIR;
+		boolean airRight =
+				getMap().getTiles()[((int) player.getX() + 1)][((int) (player.getY() + player.getHeight()))] ==
+				Tile.AIR;
+		if (!(airLeft && airRight)) {
 			player.setYVelocity(JUMP_POWER);
 		}
 	}

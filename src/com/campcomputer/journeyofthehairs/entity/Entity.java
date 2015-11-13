@@ -187,7 +187,7 @@ public abstract class Entity {
 	 * Simply inverts the isFacingLeft variable, effectively switching the console's impression of the entity's direction
 	 */
 	public void switchDirection() {
-		isFacingLeft = ! isFacingLeft;
+		isFacingLeft = !isFacingLeft;
 	}
 
 	/**
@@ -213,8 +213,8 @@ public abstract class Entity {
 	 * Moves the entity left by taking away .15 from its xVelocity and switching its direction if need be.
 	 */
 	public void moveLeft() {
-		setXVelocity(- 0.15f);
-		if (! isFacingLeft()) {
+		setXVelocity(-0.15f);
+		if (!isFacingLeft()) {
 			switchDirection();
 		}
 	}
@@ -233,7 +233,7 @@ public abstract class Entity {
 	 * Moves the entity up by subtracting .2 from its yVelocity
 	 */
 	public void moveUp() {
-		setYVelocity(- 0.2f);
+		setYVelocity(-0.2f);
 	}
 
 	/**
@@ -264,12 +264,12 @@ public abstract class Entity {
 	 * TODO: Get rid of OOB band-aid
 	 */
 	public void tick() {
-		if (++ currentFrame > frames.size() - 1) {
+		if (++currentFrame > frames.size() - 1) {
 			currentFrame = 0;
 		}
 
 		if (getY() > 12) {
-			health = - 1;
+			health = -1;
 		}
 	}
 

@@ -27,8 +27,7 @@ public class InstructionsPanel extends JPanel {
 		back.setPreferredSize(new Dimension(320, 80));
 		back.setFont(new Font(getFont().getName(), getFont().getStyle(), 35));
 		back.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
+			@Override public void actionPerformed(ActionEvent e) {
 				frame.switchTo(JourneyOfTheHairsFrame.Panels.MAIN_MENU);
 			}
 		});
@@ -60,8 +59,7 @@ public class InstructionsPanel extends JPanel {
 		repaint();
 	}
 
-	@Override
-	public void paintComponent(Graphics g) {
+	@Override public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.drawImage(backgroundImage, null, 0, 0);

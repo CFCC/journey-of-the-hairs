@@ -40,8 +40,7 @@ public class MainMenuPanel extends JPanel {
 		JButton startGame = new JButton("Start Game");
 		startGame.setPreferredSize(new Dimension(320, 80));
 		startGame.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
+			@Override public void actionPerformed(ActionEvent e) {
 				frame.switchTo(JourneyOfTheHairsFrame.Panels.GAME);
 			}
 		});
@@ -51,8 +50,7 @@ public class MainMenuPanel extends JPanel {
 		JButton about = new JButton("About");
 		about.setPreferredSize(new Dimension(320, 80));
 		about.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
+			@Override public void actionPerformed(ActionEvent e) {
 				frame.switchTo(JourneyOfTheHairsFrame.Panels.ABOUT);
 			}
 		});
@@ -62,8 +60,7 @@ public class MainMenuPanel extends JPanel {
 		JButton exit = new JButton("Exit");
 		exit.setPreferredSize(new Dimension(320, 80));
 		exit.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
+			@Override public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
@@ -73,8 +70,7 @@ public class MainMenuPanel extends JPanel {
 		JButton instructions = new JButton("Instructions");
 		instructions.setPreferredSize(new Dimension(320, 80));
 		instructions.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
+			@Override public void actionPerformed(ActionEvent e) {
 				frame.switchTo(JourneyOfTheHairsFrame.Panels.INSTRUCTIONS);
 			}
 		});
@@ -82,8 +78,7 @@ public class MainMenuPanel extends JPanel {
 		add(instructions);
 	}
 
-	@Override
-	public void paintComponent(Graphics g) {
+	@Override public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.drawImage(backgroundImage, null, 0, 0);

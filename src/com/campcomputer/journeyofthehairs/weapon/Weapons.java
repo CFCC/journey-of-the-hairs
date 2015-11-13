@@ -8,93 +8,75 @@ import com.campcomputer.journeyofthehairs.entity.shot.WeaponShots;
  */
 public enum Weapons {
 	PISTOL {
-		@Override
-		public WeaponShots getShotType() {
+		@Override public WeaponShots getShotType() {
 			return WeaponShots.BULLET;
 		}
 
-		@Override
-		public int getBulletNumber() {
+		@Override public int getBulletNumber() {
 			return 1;
 		}
 
-		@Override
-		public int getFireRate() {
+		@Override public int getFireRate() {
 			return 100;
 		}
 	}, SHOTGUN {
-		@Override
-		public WeaponShots getShotType() {
+		@Override public WeaponShots getShotType() {
 			return WeaponShots.SHOTGUN_SHOT;
 		}
 
-		@Override
-		public int getBulletNumber() {
+		@Override public int getBulletNumber() {
 			return 1;
 		}
 
-		@Override
-		public int getFireRate() {
+		@Override public int getFireRate() {
 			return 1;
 		}
 	}, RIFLE {
-		@Override
-		public WeaponShots getShotType() {
+		@Override public WeaponShots getShotType() {
 			return WeaponShots.RIFLE_SHOT;
 		}
 
-		@Override
-		public int getBulletNumber() {
+		@Override public int getBulletNumber() {
 			return 1;
 		}
 
-		@Override
-		public int getFireRate() {
+		@Override public int getFireRate() {
 			return 1;
 		}
 	}, MINIGUN {
-		@Override
-		public WeaponShots getShotType() {
+		@Override public WeaponShots getShotType() {
 			return WeaponShots.BULLET;
 		}
 
-		@Override
-		public int getBulletNumber() {
+		@Override public int getBulletNumber() {
 			return 1;
 		}
 
-		@Override
-		public int getFireRate() {
+		@Override public int getFireRate() {
 			return 1000;
 		}
 	}, RAILGUN {
-		@Override
-		public WeaponShots getShotType() {
+		@Override public WeaponShots getShotType() {
 			return WeaponShots.RAILGUN_SHOT;
 		}
 
-		@Override
-		public int getBulletNumber() {
+		@Override public int getBulletNumber() {
 			return 1;
 		}
 
-		@Override
-		public int getFireRate() {
+		@Override public int getFireRate() {
 			return 1;
 		}
 	}, GRENADE_GUN {
-		@Override
-		public WeaponShots getShotType() {
+		@Override public WeaponShots getShotType() {
 			return WeaponShots.GRENADE;
 		}
 
-		@Override
-		public int getBulletNumber() {
+		@Override public int getBulletNumber() {
 			return 1;
 		}
 
-		@Override
-		public int getFireRate() {
+		@Override public int getFireRate() {
 			return 50;
 		}
 	};

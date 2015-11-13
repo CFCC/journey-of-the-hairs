@@ -60,8 +60,7 @@ public class RocketWorm extends Entity {
 	/**
 	 * Checks to see if frames need to be switched, also checks to see if the worm needs to shoot a rocket
 	 */
-	@Override
-	public void tick() {
+	@Override public void tick() {
 		super.tick();
 		if (frames == wormLeaveGround && currentFrame == wormLeaveGround.size() - 1) {
 			currentFrame = 0;
@@ -82,7 +81,6 @@ public class RocketWorm extends Entity {
 			}
 			shootRocket();
 		}
-
 	}
 
 	/**

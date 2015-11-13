@@ -5,16 +5,15 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
 
 public class MapConverter {
 
-	public static final String[] COLOR_NAMES = new String[] {"black:null/*k*/", "blue:null/*b*/", "cyan:AIR",
-	                                                         "gray:null/*a*/", "green:null/*g*/", "magenta:null/*m*/", "orange:CARROT", "pink:LETTUCE",
-	                                                         "red:PLANT", "white:null/*w*/", "yellow:null/*y*/", "brown:GROUND"};
+	public static final String[] COLOR_NAMES =
+			new String[] {"black:null/*k*/", "blue:null/*b*/", "cyan:AIR", "gray:null/*a*/", "green:null/*g*/",
+					"magenta:null/*m*/", "orange:CARROT", "pink:LETTUCE", "red:PLANT", "white:null/*w*/",
+					"yellow:null/*y*/", "brown:GROUND"};
 
 	public static final Color[] CONSTANT_COLORS = new Color[COLOR_NAMES.length];
 
@@ -38,15 +37,14 @@ public class MapConverter {
 				}
 				CONSTANT_COLORS[i] = c;
 			}
-
 		}
 	}
 
 	public static void main(String[] args) throws IOException {
 		File file = new File(args[0]);
 		BufferedImage image = ImageIO.read(file);
-		@SuppressWarnings("unchecked")
-		List<Integer>[][] colorIndices = (List<Integer>[][]) new List[image.getWidth() / 64][image.getHeight() / 64];
+		@SuppressWarnings ("unchecked") List<Integer>[][] colorIndices =
+				(List<Integer>[][]) new List[image.getWidth() / 64][image.getHeight() / 64];
 		for (List<Integer>[] colorList : colorIndices) {
 			for (int j = 0; j < colorList.length; j++) {
 				colorList[j] = new ArrayList<Integer>();
@@ -107,14 +105,13 @@ public class MapConverter {
 
 	public static int round(Color color) {
 		double nearestDistance = 1000000;
-		int nearestIndex = - 1;
+		int nearestIndex = -1;
 
 		for (int i = 0, constantColorsLength = CONSTANT_COLORS.length; i < constantColorsLength; i++) {
 			Color constantColor = CONSTANT_COLORS[i];
-			double newDist = Math.sqrt(
-					Math.pow(color.getRed() - constantColor.getRed(), 2)
-					+ Math.pow(color.getGreen() - constantColor.getGreen(), 2)
-					+ Math.pow(color.getBlue() - constantColor.getBlue(), 2));
+			double newDist = Math.sqrt(Math.pow(color.getRed() - constantColor.getRed(), 2) +
+			                           Math.pow(color.getGreen() - constantColor.getGreen(), 2) +
+			                           Math.pow(color.getBlue() - constantColor.getBlue(), 2));
 			if (nearestDistance > newDist) {
 				nearestDistance = newDist;
 				nearestIndex = i;

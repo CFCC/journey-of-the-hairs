@@ -20,8 +20,7 @@ public class Grenade extends Shot {
 		super(engine, startsLeft, WeaponShots.GRENADE);
 	}
 
-	@Override
-	public boolean isAffectedByGravity() {
+	@Override public boolean isAffectedByGravity() {
 		return true;
 	}
 
@@ -31,7 +30,7 @@ public class Grenade extends Shot {
 		} else {
 
 			for (Entity entity : getEngine().getEntities()) {
-				if (! (entity instanceof Player)) {
+				if (!(entity instanceof Player)) {
 					double distance = getLocation().distance(entity.getLocation());
 					if (distance < WeaponShots.GRENADE_TIER_1_RANGE) {
 						entity.takeDamage(WeaponShots.GRENADE_TIER_1_DAMAGE);

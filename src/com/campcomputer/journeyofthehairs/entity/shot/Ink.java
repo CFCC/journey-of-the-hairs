@@ -8,8 +8,7 @@ public class Ink extends Shot {
 		super(engine, true, WeaponShots.BULLET);
 	}
 
-	@Override
-	protected void addImagesOfEntityToFrames() {
+	@Override protected void addImagesOfEntityToFrames() {
 
 	}
 }

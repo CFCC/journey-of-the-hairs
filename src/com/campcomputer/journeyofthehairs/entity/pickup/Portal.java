@@ -17,8 +17,7 @@ public class Portal extends Pickup {
 		frames = Images.ReadFrames("portal");
 	}
 
-	@Override
-	public void affectGame() {
+	@Override public void affectGame() {
 		Cheese cheese = new Cheese(getEngine());
 		getEngine().setMap(cheese);
 	}

@@ -11,6 +11,12 @@ public abstract class Pickup extends Entity {
 		super(engine, 9000);
 	}
 
+	public abstract void affectGame();
+
+	@Override public boolean isAffectedByGravity() {
+		return false;
+	}
+
 	public void tick() {
 		ArrayList<Pickup> pickups = new ArrayList<Pickup>();
 		for (Entity entity : getEngine().getEntities()) {
@@ -26,12 +32,5 @@ public abstract class Pickup extends Entity {
 		}
 
 		restoreHealth();
-	}
-
-	public abstract void affectGame();
-
-	@Override
-	public boolean isAffectedByGravity() {
-		return false;
 	}
 }
